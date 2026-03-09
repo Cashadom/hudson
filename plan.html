@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5PF6FCCW');</script>
+  <!-- End Google Tag Manager -->
+
+  <title>Nos ressources — Hudson Business Developer</title>
+  <meta name="description" content="Toutes les ressources Hudson sur la prospection B2B, le business developer externalisé, la téléprospection et la prise de rendez-vous qualifiés.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://www.hudson-ltd.com/plan">
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:       #0c1a2e;
+      --page:      #f6f5f2;
+      --page-alt:  #edecea;
+      --white:     #ffffff;
+      --red:       #bf1129;
+      --t-main:    #0c1a2e;
+      --t-mid:     #3b5070;
+      --t-muted:   #788fa8;
+      --border:    rgba(12,26,46,0.10);
+      --border-md: rgba(12,26,46,0.16);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--page);
+      color: var(--t-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* TOPBAR */
+    .topbar {
+      background: var(--ink);
+      padding: 0 48px;
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    @media (max-width: 600px) { .topbar { padding: 0 20px; } }
+
+    .topbar-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      letter-spacing: 0.12em;
+      color: var(--white);
+      text-decoration: none;
+    }
+    .topbar-logo span { color: var(--red); }
+
+    .back-home {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color .18s;
+    }
+    .back-home:hover { color: var(--white); }
+    .back-home::before { content: '←'; color: var(--red); }
+
+    /* HERO */
+    .hero {
+      background: var(--ink);
+      padding: 72px 48px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    @media (max-width: 600px) { .hero { padding: 48px 20px 44px; } }
+
+    .hero::after {
+      content: 'HUDSON';
+      position: absolute;
+      right: -30px;
+      bottom: -50px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 200px;
+      color: rgba(255,255,255,0.018);
+      letter-spacing: 0.02em;
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .hero-inner { max-width: 680px; }
+
+    .hero-eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+    .hero-eyebrow::before { content: ''; width: 22px; height: 1px; background: var(--red); }
+
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(44px, 5.5vw, 74px);
+      line-height: 0.93;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .hero h1 em { color: var(--red); font-style: normal; }
+
+    .hero-sub {
+      font-size: 15px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.42);
+      max-width: 500px;
+      line-height: 1.7;
+    }
+
+    /* MAIN */
+    main {
+      flex: 1;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 64px 48px 80px;
+      width: 100%;
+    }
+    @media (max-width: 600px) { main { padding: 40px 20px 60px; } }
+
+    /* CATEGORY BLOCK */
+    .cat-block {
+      margin-bottom: 64px;
+      animation: fadeUp .4s ease both;
+    }
+    .cat-block:nth-child(1) { animation-delay: .05s; }
+    .cat-block:nth-child(2) { animation-delay: .10s; }
+    .cat-block:nth-child(3) { animation-delay: .15s; }
+    .cat-block:nth-child(4) { animation-delay: .20s; }
+    .cat-block:nth-child(5) { animation-delay: .25s; }
+
+    .cat-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 22px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .cat-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .cat-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 24px;
+      letter-spacing: 0.06em;
+      color: var(--ink);
+    }
+
+    /* LINKS GRID */
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 3px;
+    }
+    @media (max-width: 500px) { .links-grid { grid-template-columns: 1fr; } }
+
+    .link-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 15px 18px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      transition: border-color .15s, background .15s, transform .15s;
+      position: relative;
+      overflow: hidden;
+    }
+    .link-item::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--red);
+      transform: scaleY(0);
+      transition: transform .18s;
+      transform-origin: bottom;
+    }
+    .link-item:hover {
+      border-color: var(--border-md);
+      background: #fafaf8;
+      transform: translateX(3px);
+    }
+    .link-item:hover::before { transform: scaleY(1); }
+
+    .link-title {
+      font-size: 13.5px;
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.4;
+    }
+
+    .link-arrow {
+      color: var(--red);
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      flex-shrink: 0;
+      opacity: 0;
+      transition: opacity .15s;
+    }
+    .link-item:hover .link-arrow { opacity: 1; }
+
+    /* CTA BAND */
+    .cta-band {
+      background: var(--ink);
+      padding: 40px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+    @media (max-width: 600px) { .cta-band { padding: 32px 20px; flex-direction: column; } }
+
+    .cta-band-text h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      letter-spacing: 0.05em;
+      color: var(--white);
+      margin-bottom: 5px;
+    }
+    .cta-band-text p {
+      font-size: 13.5px;
+      color: rgba(255,255,255,0.4);
+      font-weight: 300;
+    }
+
+    .cta-btn {
+      background: var(--red);
+      color: var(--white);
+      padding: 14px 28px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background .2s;
+      flex-shrink: 0;
+    }
+    .cta-btn:hover { background: #a10f23; }
+
+    /* FOOTER */
+    footer {
+      background: var(--ink);
+      padding: 20px 48px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    @media (max-width: 600px) { footer { padding: 18px 20px; flex-direction: column; text-align: center; } }
+
+    .foot-brand {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 15px;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.45);
+    }
+    .foot-brand span { color: var(--red); }
+
+    .foot-copy {
+      font-size: 11px;
+      color: rgba(255,255,255,0.2);
+      font-family: 'DM Mono', monospace;
+      letter-spacing: 0.05em;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PF6FCCW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <a href="https://www.hudson-ltd.com/" class="topbar-logo">HUDSON<span>.</span></a>
+  <a href="https://www.hudson-ltd.com/" class="back-home">Accueil</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Ressources & Services</div>
+    <h1>TOUT CE QUE VOUS<br>CHERCHEZ SUR<br><em>LA PROSPECTION B2B</em></h1>
+    <p class="hero-sub">Business developers externalisés, SDR, téléprospection, prise de rendez-vous — explorez nos pages par thématique.</p>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main>
+
+  <!-- CAT 1 : BUSINESS DEVELOPER -->
+  <div class="cat-block">
+    <div class="cat-header">
+      <div class="cat-icon">💼</div>
+      <span class="cat-title">Business Developer Externalisé</span>
+    </div>
+    <div class="links-grid">
+      <a href="/business-developer-externalise" class="link-item"><span class="link-title">Business developer externalisé</span><span class="link-arrow">→</span></a>
+      <a href="/recruter-business-developer" class="link-item"><span class="link-title">Recruter un business developer</span><span class="link-arrow">→</span></a>
+      <a href="/business-developer-freelance" class="link-item"><span class="link-title">Business developer freelance</span><span class="link-arrow">→</span></a>
+      <a href="/business-developer-b2b" class="link-item"><span class="link-title">Business developer B2B</span><span class="link-arrow">→</span></a>
+      <a href="/cout-business-developer" class="link-item"><span class="link-title">Coût d'un business developer</span><span class="link-arrow">→</span></a>
+      <a href="/salaire-business-developer" class="link-item"><span class="link-title">Salaire d'un business developer</span><span class="link-arrow">→</span></a>
+      <a href="/mission-business-developer" class="link-item"><span class="link-title">Les missions d'un business developer</span><span class="link-arrow">→</span></a>
+      <a href="/business-developer-startup" class="link-item"><span class="link-title">Business developer pour startup</span><span class="link-arrow">→</span></a>
+      <a href="/externalisation-commerciale" class="link-item"><span class="link-title">Externalisation commerciale</span><span class="link-arrow">→</span></a>
+      <a href="/agence-prospection-b2b" class="link-item"><span class="link-title">Agence de prospection B2B</span><span class="link-arrow">→</span></a>
+    </div>
+  </div>
+
+  <!-- CAT 2 : SDR & PROSPECTION -->
+  <div class="cat-block">
+    <div class="cat-header">
+      <div class="cat-icon">📞</div>
+      <span class="cat-title">SDR & Prospection Commerciale</span>
+    </div>
+    <div class="links-grid">
+      <a href="/sdr-externalise" class="link-item"><span class="link-title">SDR externalisé</span><span class="link-arrow">→</span></a>
+      <a href="/recruter-sdr" class="link-item"><span class="link-title">Recruter un SDR</span><span class="link-arrow">→</span></a>
+      <a href="/sdr-freelance" class="link-item"><span class="link-title">SDR freelance</span><span class="link-arrow">→</span></a>
+      <a href="/sdr-b2b" class="link-item"><span class="link-title">SDR B2B : rôle et missions</span><span class="link-arrow">→</span></a>
+      <a href="/campagne-prospection-b2b" class="link-item"><span class="link-title">Lancer une campagne de prospection B2B</span><span class="link-arrow">→</span></a>
+      <a href="/prospection-commerciale-externalisee" class="link-item"><span class="link-title">Prospection commerciale externalisée</span><span class="link-arrow">→</span></a>
+      <a href="/prospection-b2b" class="link-item"><span class="link-title">La prospection B2B</span><span class="link-arrow">→</span></a>
+      <a href="/prospection-ia" class="link-item"><span class="link-title">Prospection avec l'intelligence artificielle</span><span class="link-arrow">→</span></a>
+      <a href="/automatisation-prospection" class="link-item"><span class="link-title">Automatiser sa prospection</span><span class="link-arrow">→</span></a>
+      <a href="/prospection-linkedin-b2b" class="link-item"><span class="link-title">Prospection LinkedIn B2B</span><span class="link-arrow">→</span></a>
+    </div>
+  </div>
+
+  <!-- CAT 3 : TÉLÉPROSPECTION -->
+  <div class="cat-block">
+    <div class="cat-header">
+      <div class="cat-icon">🎯</div>
+      <span class="cat-title">Téléprospection B2B</span>
+    </div>
+    <div class="links-grid">
+      <a href="/teleprospection-b2b" class="link-item"><span class="link-title">Téléprospection B2B</span><span class="link-arrow">→</span></a>
+      <a href="/agence-teleprospection" class="link-item"><span class="link-title">Agence de téléprospection</span><span class="link-arrow">→</span></a>
+      <a href="/teleprospection-externalisee" class="link-item"><span class="link-title">Téléprospection externalisée</span><span class="link-arrow">→</span></a>
+      <a href="/script-teleprospection" class="link-item"><span class="link-title">Script de téléprospection</span><span class="link-arrow">→</span></a>
+      <a href="/campagne-cold-call" class="link-item"><span class="link-title">Campagne de cold call B2B</span><span class="link-arrow">→</span></a>
+      <a href="/externaliser-teleprospection" class="link-item"><span class="link-title">Externaliser sa téléprospection</span><span class="link-arrow">→</span></a>
+      <a href="/prise-rdv-telephone" class="link-item"><span class="link-title">Prise de RDV par téléphone</span><span class="link-arrow">→</span></a>
+      <a href="/teleprospection-saas" class="link-item"><span class="link-title">Téléprospection pour SaaS</span><span class="link-arrow">→</span></a>
+      <a href="/teleprospection-b2b-france" class="link-item"><span class="link-title">Téléprospection B2B en France</span><span class="link-arrow">→</span></a>
+      <a href="/service-prospection-telephone" class="link-item"><span class="link-title">Service de prospection téléphonique</span><span class="link-arrow">→</span></a>
+    </div>
+  </div>
+
+  <!-- CAT 4 : RDV QUALIFIÉS -->
+  <div class="cat-block">
+    <div class="cat-header">
+      <div class="cat-icon">📅</div>
+      <span class="cat-title">Prise de Rendez-vous Qualifiés</span>
+    </div>
+    <div class="links-grid">
+      <a href="/prise-rendez-vous-b2b" class="link-item"><span class="link-title">Prise de rendez-vous B2B</span><span class="link-arrow">→</span></a>
+      <a href="/rdv-qualifies-b2b" class="link-item"><span class="link-title">RDV qualifiés B2B</span><span class="link-arrow">→</span></a>
+      <a href="/acheter-rdv-qualifies" class="link-item"><span class="link-title">Acheter des RDV qualifiés</span><span class="link-arrow">→</span></a>
+      <a href="/generation-leads-b2b" class="link-item"><span class="link-title">Génération de leads B2B</span><span class="link-arrow">→</span></a>
+      <a href="/leads-b2b" class="link-item"><span class="link-title">Leads B2B : comment en générer</span><span class="link-arrow">→</span></a>
+      <a href="/prospects-b2b" class="link-item"><span class="link-title">Trouver des prospects B2B</span><span class="link-arrow">→</span></a>
+      <a href="/appointment-setting" class="link-item"><span class="link-title">Appointment setting B2B</span><span class="link-arrow">→</span></a>
+      <a href="/agence-lead-generation" class="link-item"><span class="link-title">Agence de lead generation</span><span class="link-arrow">→</span></a>
+      <a href="/externaliser-generation-leads" class="link-item"><span class="link-title">Externaliser la génération de leads</span><span class="link-arrow">→</span></a>
+      <a href="/service-rdv-b2b" class="link-item"><span class="link-title">Service de prise de RDV B2B</span><span class="link-arrow">→</span></a>
+    </div>
+  </div>
+
+  <!-- CAT 5 : RECRUTEMENT COMMERCIAL -->
+  <div class="cat-block">
+    <div class="cat-header">
+      <div class="cat-icon">🤝</div>
+      <span class="cat-title">Recrutement Commercial</span>
+    </div>
+    <div class="links-grid">
+      <a href="/recruter-commercial" class="link-item"><span class="link-title">Recruter un commercial B2B</span><span class="link-arrow">→</span></a>
+      <a href="/recruter-closer" class="link-item"><span class="link-title">Recruter un closer</span><span class="link-arrow">→</span></a>
+      <a href="/recruter-business-developer-startup" class="link-item"><span class="link-title">Recruter un business developer pour startup</span><span class="link-arrow">→</span></a>
+      <a href="/alternatives-recrutement-commercial" class="link-item"><span class="link-title">Alternatives au recrutement commercial classique</span><span class="link-arrow">→</span></a>
+      <a href="/cout-recrutement-commercial" class="link-item"><span class="link-title">Coût d'un recrutement commercial</span><span class="link-arrow">→</span></a>
+      <a href="/recruter-commercial-saas" class="link-item"><span class="link-title">Recruter un commercial SaaS</span><span class="link-arrow">→</span></a>
+      <a href="/recrutement-sdr-b2b" class="link-item"><span class="link-title">Recrutement SDR B2B</span><span class="link-arrow">→</span></a>
+      <a href="/recruter-teleprospecteur" class="link-item"><span class="link-title">Recruter un téléprospecteur</span><span class="link-arrow">→</span></a>
+      <a href="/recruter-account-executive" class="link-item"><span class="link-title">Recruter un account executive</span><span class="link-arrow">→</span></a>
+      <a href="/sdr-interne-vs-externalise" class="link-item"><span class="link-title">SDR interne vs externalisé : comparatif</span><span class="link-arrow">→</span></a>
+    </div>
+  </div>
+
+  <!-- CTA BAND -->
+  <div class="cta-band">
+    <div class="cta-band-text">
+      <h3>PRÊT À LANCER VOTRE CAMPAGNE ?</h3>
+      <p>Activation sous 72h — SDR, closers et téléprospecteurs disponibles immédiatement.</p>
+    </div>
+    <a href="https://www.hudson-ltd.com/#contact" class="cta-btn">Lancer ma campagne</a>
+  </div>
+
+</main>
+
+<!-- FOOTER MINIMAL -->
+<footer>
+  <div class="foot-brand">HUDSON BUSINESS DEVELOPER<span>.</span> — AIX-EN-PROVENCE</div>
+  <div class="foot-copy">© 2026</div>
+</footer>
+
+</body>
+</html>
