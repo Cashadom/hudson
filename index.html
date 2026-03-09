@@ -16,14 +16,14 @@
   <title>Business Developers externalisés | SDR, closers, téléprospection B2B | Hudson</title>
   <meta name="description" content="Hudson vous aide à recruter un business developer externalisé, lancer une campagne de téléprospection B2B et générer des rendez-vous qualifiés sans recruter en interne. SDR, closers, account execs à la demande.">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <link rel="canonical" href="https://www.hudson.com/">
+  <link rel="canonical" href="https://hudson-ltd.com/">
   
   <!-- META SOCIALES -->
   <meta property="og:title" content="Business Developers externalisés | SDR, closers & téléprospection B2B | Hudson">
   <meta property="og:description" content="Lancez une campagne de prospection B2B avec des business developers externalisés : SDR, closers, RDV qualifiés.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.hudson.com/">
-  <meta property="og:image" content="https://www.hudson.com/og-cover.jpg">
+  <meta property="og:url" content="https://hudson-ltd.com/">
+  <meta property="og:image" content="https://hudson-ltd.com/og-cover.jpg">
   <meta name="twitter:card" content="summary_large_image">
   
   <!-- POLICES -->
@@ -96,8 +96,9 @@
     @media (max-width: 720px) { .nav-in { padding: 0 22px; } }
     .logo {
       font-family: 'Bebas Neue', sans-serif; font-size: 23px; letter-spacing: 0.12em;
-      color: var(--ink); text-decoration: none; display: flex; align-items: center;
+      color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 8px;
     }
+    .logo img { height: 24px; width: auto; display: block; }
     .logo-dot { color: var(--red); }
     .nav-links { display: flex; gap: 30px; list-style: none; }
     .nav-links a { font-size: 12.5px; color: var(--t-mid); text-decoration: none; transition: color .18s; }
@@ -395,799 +396,435 @@
 
     /* TARGETS */
     .targets { padding: 96px 0; background: var(--page-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .targ-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-    @media (max-width: 720px) { .targ-grid { grid-template-columns: 1fr; gap: 48px; } }
-    .targ-lead { font-size: 15.5px; color: var(--t-mid); line-height: 1.6; font-weight: 300; margin-bottom: 28px; }
-    .pills { display: flex; flex-wrap: wrap; gap: 7px; }
-    .pill {
-      padding: 8px 15px; font-size: 13px; color: var(--t-mid);
-      background: var(--white); border: 1px solid var(--border);
-      transition: border-color .18s, color .18s; cursor: default;
+    .targ-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    @media (max-width: 720px) { .targ-grid { grid-template-columns: 1fr; } }
+
+    .targ-list { display: flex; flex-direction: column; gap: 18px; margin-top: 20px; }
+    .targ-item { font-size: 16px; color: var(--t-mid); display: flex; align-items: flex-start; gap: 12px; line-height: 1.4; }
+    .targ-item strong { color: var(--ink); font-weight: 500; min-width: 110px; }
+    .targ-item span { color: var(--t-muted); }
+
+    /* CTA */
+    .cta {
+      padding: 96px 0; background: var(--page); text-align: center;
+      border-top: 1px solid var(--border);
     }
-    .pill:hover { border-color: var(--border-md); color: var(--ink); }
-
-    .channels { display: flex; flex-direction: column; gap: 3px; }
-    .chan {
-      display: flex; align-items: flex-start; gap: 15px; padding: 18px 22px;
-      background: var(--white); border: 1px solid var(--border); transition: border-color .18s;
-    }
-    .chan:hover { border-color: var(--border-md); }
-    .chan-ico { font-size: 17px; min-width: 26px; text-align: center; margin-top: 1px; }
-    .chan-info strong { display: block; font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 2px; }
-    .chan-info span { font-size: 13px; color: var(--t-mid); line-height: 1.5; }
-
-    /* QUALIFIER */
-    .qual { padding: 96px 0; background: var(--page); }
-    .qual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-    @media (max-width: 720px) { .qual-grid { grid-template-columns: 1fr; gap: 48px; } }
-    .qual-lead { font-size: 15.5px; color: var(--t-mid); line-height: 1.6; font-weight: 300; margin-bottom: 32px; }
-
-    .crit-list { list-style: none; }
-    .crit-item { display: flex; align-items: flex-start; gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--border); }
-    .crit-item:last-child { border-bottom: none; }
-    .crit-ico { width: 34px; height: 34px; flex-shrink: 0; background: var(--ink); border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 15px; }
-    .crit-t strong { display: block; font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 2px; }
-    .crit-t span { font-size: 13px; color: var(--t-mid); line-height: 1.5; }
-
-    .def-box { background: var(--ink); padding: 34px 38px; }
-    .def-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 18px; }
-    .def-box p { font-size: 15px; color: rgba(255,255,255,0.72); line-height: 1.7; margin-bottom: 18px; }
-    .def-box small { font-size: 13px; color: rgba(255,255,255,0.32); line-height: 1.5; display: block; }
-
-    /* FAQ */
-    .faq { padding: 96px 0; background: var(--page-alt); border-bottom: 1px solid var(--border); }
-    .faq-hd { margin-bottom: 52px; text-align: center; }
-    .faq-hd p { font-size: 16px; color: var(--t-mid); font-weight: 300; max-width: 500px; margin: 10px auto 0; }
-    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 40px; }
-    @media (max-width: 720px) { .faq-grid { grid-template-columns: 1fr; } }
-    .faq-item { border-bottom: 1px solid var(--border); padding-bottom: 22px; }
-    .faq-q { font-weight: 500; font-size: 16px; color: var(--ink); margin-bottom: 8px; }
-    .faq-a { font-size: 14px; color: var(--t-mid); line-height: 1.6; }
-
-    /* FORMULAIRE */
-    .contact { padding: 96px 0; background: var(--page); }
-    .contact-grid {
-      display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 48px;
-      background: var(--white); padding: 48px; border: 1px solid var(--border);
-      box-shadow: var(--sh-md);
-    }
-    @media (max-width: 720px) { .contact-grid { grid-template-columns: 1fr; } }
-    .contact-info h3 { font-family: 'Bebas Neue', sans-serif; font-size: 42px; color: var(--ink); margin-bottom: 14px; }
-    .contact-info p { font-size: 15px; color: var(--t-mid); line-height: 1.6; margin-bottom: 28px; }
-    .contact-detail { margin-bottom: 12px; font-size: 14px; color: var(--t-mid); display: flex; align-items: center; gap: 10px; }
-    .contact-detail::before { content: '→'; color: var(--red); }
-
-    .form-group { margin-bottom: 20px; }
-    .form-group label {
-      display: block; font-size: 12px; font-weight: 500; text-transform: uppercase;
-      letter-spacing: 0.08em; color: var(--t-muted); margin-bottom: 6px;
-    }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%; padding: 14px 16px; background: var(--page);
-      border: 1px solid var(--border); font-family: 'DM Sans', sans-serif;
-      font-size: 14px; color: var(--ink); transition: border-color .18s;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      outline: none; border-color: var(--red);
-    }
-    .form-group textarea { min-height: 100px; resize: vertical; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-
-    .btn-submit {
-      background: var(--red); color: var(--white); border: none;
-      padding: 16px 30px; font-size: 13px; font-weight: 500;
-      letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer;
-      width: 100%; transition: background .2s;
-    }
-    .btn-submit:hover { background: #a10f23; }
+    .cta h2 { margin-bottom: 12px; }
+    .cta-sub { font-size: 17px; color: var(--t-mid); margin-bottom: 32px; font-weight: 300; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
     /* FOOTER */
     footer {
-      background: var(--ink); padding: 48px 0 24px;
-      border-top: 1px solid rgba(255,255,255,0.08);
+      background: var(--ink); color: rgba(255,255,255,0.3); padding: 64px 0 42px;
+      border-top: 1px solid rgba(255,255,255,0.06);
     }
-    .foot-grid {
-      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;
-      margin-bottom: 48px;
+    .foot-main { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 58px; }
+    @media (max-width: 720px) { .foot-main { grid-template-columns: 1fr; gap: 32px; } }
+    .foot-col:first-child { max-width: 240px; }
+    .foot-logo { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--white); margin-bottom: 14px; letter-spacing: 0.08em; }
+    .foot-about { font-size: 13px; color: rgba(255,255,255,0.32); line-height: 1.6; }
+    .foot-title {
+      font-family: 'DM Mono', monospace; font-size: 10px;
+      letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.28);
+      margin-bottom: 22px;
     }
-    @media (max-width: 720px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
-    .foot-brand .logo { color: var(--white); font-size: 26px; margin-bottom: 12px; }
-    .foot-brand p { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.6; }
-    .foot-col h4 { font-family: 'Bebas Neue', sans-serif; font-size: 18px; color: var(--white); margin-bottom: 16px; letter-spacing: 0.06em; }
-    .foot-col ul { list-style: none; }
-    .foot-col li { margin-bottom: 10px; }
-    .foot-col a {
-      font-size: 13px; color: rgba(255,255,255,0.48); text-decoration: none;
-      transition: color .18s;
-    }
-    .foot-col a:hover { color: var(--white); }
+    .foot-text { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.7; }
     .foot-bottom {
-      padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08);
-      font-size: 12px; color: rgba(255,255,255,0.28); text-align: center;
+      padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.06);
+      font-size: 12px; color: rgba(255,255,255,0.25);
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 18px;
     }
+    .foot-bottom a {
+      color: rgba(255,255,255,0.4); text-decoration: none;
+      transition: color .15s;
+    }
+    .foot-bottom a:hover { color: var(--white); }
+
+    /* FORMULAIRE */
+    .form-card {
+      background: var(--white); border: 1px solid var(--border); padding: 32px; max-width: 480px; margin: 0 auto;
+    }
+    .form-group { margin-bottom: 18px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 14px 18px; background: var(--page-alt);
+      border: 1px solid var(--border); font-family: 'DM Sans', sans-serif;
+      font-size: 14px; transition: border .18s;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none; border-color: var(--ink-light);
+    }
+    .form-btn {
+      background: var(--red); color: var(--white); border: none;
+      width: 100%; padding: 16px; font-size: 13px; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer;
+      transition: background .2s;
+    }
+    .form-btn:hover { background: #a10f23; }
   </style>
 </head>
 <body>
+
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PF6FCCW"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<!-- NAVIGATION -->
-<nav>
-  <div class="nav-in">
-    <a href="/" class="logo">HUDSON<span class="logo-dot">.</span></a>
-    <ul class="nav-links">
-      <li><a href="#offres">Offres</a></li>
-      <li><a href="#method">Méthode</a></li>
-      <li><a href="/business-developer-externalise">Business developer</a></li>
-      <li><a href="/sdr-externalise">SDR</a></li>
-      <li><a href="/teleprospection-b2b">Téléprospection</a></li>
-      <li><a href="/contact" class="nav-cta">Lancer ma campagne</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-grid">
-    <div>
-      <div class="h-eye"><b>Hudson</b> — Plateforme opérée de business developers</div>
-      <h1>BUSINESS DEVELOPERS,<br>SDR & CLOSERS<br><em>EXTERNALISÉS</em></h1>
-      <p class="hero-sub">
-        <strong>Hudson vous aide à recruter un business developer externalisé</strong>, lancer une campagne de téléprospection B2B et générer des <strong>rendez-vous qualifiés</strong> sans recruter en interne.
-      </p>
-      <div class="hero-btns">
-        <a href="#contact" class="btn-p">Recruter un SDR externalisé</a>
-        <a href="#offres" class="btn-s">Voir les offres</a>
-      </div>
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-in">
+      <a href="/" class="logo">
+        <img src="icon.png" alt="Hudson icon">
+        hudson<span class="logo-dot">.</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="#offres">Offres</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#resultats">Résultats</a></li>
+        <li><a href="/contact" class="nav-cta">Démarrer →</a></li>
+      </ul>
     </div>
-    <div class="h-panel">
-      <div class="h-panel-label">EXTERNALISATION COMMERCIALE</div>
-      <div class="h-stats">
-        <div class="h-stat"><span class="hs-l">Délai activation</span><span class="hs-v">< 72h</span></div>
-        <div class="h-stat"><span class="hs-l">RDV qualifiés / mois</span><span class="hs-v r">+3.200</span></div>
-        <div class="h-stat"><span class="hs-l">SDR disponibles</span><span class="hs-v">47</span></div>
-        <div class="h-stat"><span class="hs-l">Closers</span><span class="hs-v">23</span></div>
-      </div>
-      <div class="h-panel-note">
-        Paiement au temps, au RDV ou à la performance — sans recrutement ni gestion d'équipe.
-      </div>
-    </div>
-  </div>
-</section>
+  </nav>
 
-<!-- TICKER MESSAGES -->
-<div class="ticker">
-  <div class="t-track">
-    <span class="t-item">SDR EXTERNALISÉ</span>
-    <span class="t-item">BUSINESS DEVELOPER FREELANCE</span>
-    <span class="t-item">TÉLÉPROSPECTION B2B</span>
-    <span class="t-item">RDV QUALIFIÉS</span>
-    <span class="t-item">CLOSER À LA DEMANDE</span>
-    <span class="t-item">PROSPECTION EXTERNALISÉE</span>
-  </div>
-</div>
-
-<!-- SECTION PROBLÉMATIQUE -->
-<section class="problem">
-  <div class="wrap">
-    <div class="tag">PROBLÉMATIQUE</div>
-    <div class="prob-grid">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid">
       <div>
-        <h2>RECRUTER UN COMMERCIAL<br>EST UN FREIN À LA CROISSANCE</h2>
-        <div class="prob-lead">
-          Délais, coûts, risque d'erreur de casting — l'interne ralentit votre lancement.
-        </div>
-        <div class="callout">
-          <div class="callout-big">RECRUTER UN SDR<br><em>COÛTE 45 À 65K€</em></div>
-          <div class="callout-note">avant charges, avant management, avant outils</div>
+        <div class="h-eye"><b>Business developers externalisés</b> · France & Europe</div>
+        <h1>Des <em>SDR, closers</em><br>& téléprospection<br>sans recrutement</h1>
+        <p class="hero-sub">Lancez une <strong>campagne B2B externalisée</strong> en 5 jours : nous recrutons, formons et gérons l'équipe commerciale. Vous ne payez que les résultats.</p>
+        <div class="hero-btns">
+          <a href="#offres" class="btn-p">Voir les offres →</a>
+          <a href="#contact" class="btn-s">Parler à un expert</a>
         </div>
       </div>
-      <div>
+      <div class="h-panel">
+        <div class="h-panel-label">Performance moyenne Hudson</div>
+        <div class="h-stats">
+          <div class="h-stat"><span class="hs-l">RDV qualifiés / mois</span><span class="hs-v r">+58</span></div>
+          <div class="h-stat"><span class="hs-l">Taux d'ouverture</span><span class="hs-v">43%</span></div>
+          <div class="h-stat"><span class="hs-l">ROI médian</span><span class="hs-v">4,2x</span></div>
+          <div class="h-stat"><span class="hs-l">Délai de lancement</span><span class="hs-v">5j</span></div>
+        </div>
+        <div class="h-panel-note">*données consolidées 2024 – 120 campagnes B2B</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker">
+    <div class="t-track">
+      <span class="t-item">SaaS</span><span class="t-item">Industrie</span><span class="t-item">Conseil</span><span class="t-item">Fintech</span>
+      <span class="t-item">SaaS</span><span class="t-item">Industrie</span><span class="t-item">Conseil</span><span class="t-item">Fintech</span>
+    </div>
+  </div>
+
+  <!-- PROBLEM -->
+  <section class="problem" id="solutions">
+    <div class="wrap">
+      <span class="tag">Le problème</span>
+      <div class="prob-grid">
+        <div>
+          <p class="prob-lead">« Recruter un commercial prend 4 à 6 mois, et 60% des SDR démissionnent avant un an. »</p>
+          <div class="callout">
+            <div class="callout-big"><em>84%</em> des start-ups<span class="logo-dot">.</span></div>
+            <div class="callout-note">ont du mal à recruter des profils commerciaux seniors.</div>
+          </div>
+        </div>
         <ul class="prob-list">
-          <li class="prob-item">
-            <span class="prob-n">01</span>
-            <div class="prob-t">
-              <strong>Délai de recrutement</strong>
-              <span>3 à 6 mois pour trouver, former et rendre opérationnel un commercial interne.</span>
-            </div>
-          </li>
-          <li class="prob-item">
-            <span class="prob-n">02</span>
-            <div class="prob-t">
-              <strong>Coût d'une campagne</strong>
-              <span>Salaire + charges + outils + management : 60-80k€ par an pour un SDR junior.</span>
-            </div>
-          </li>
-          <li class="prob-item">
-            <span class="prob-n">03</span>
-            <div class="prob-t">
-              <strong>Risque d'échec</strong>
-              <span>30% des commerciaux ne passent pas la première année.</span>
-            </div>
-          </li>
+          <li class="prob-item"><span class="prob-n">01</span><div class="prob-t"><strong>Time‑to‑hire trop long</strong><span>Vous perdez des opportunités pendant que vous recrutez.</span></div></li>
+          <li class="prob-item"><span class="prob-n">02</span><div class="prob-t"><strong>Coût fixe et risques</strong><span>Salaire + charges + turnover pèsent sur votre burn rate.</span></div></li>
+          <li class="prob-item"><span class="prob-n">03</span><div class="prob-t"><strong>Difficulté à scaler</strong><span>Pas de flexibilité : vous ne pouvez pas doubler l'équipe du jour au lendemain.</span></div></li>
         </ul>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- OFFRES PRINCIPALES -->
-<section class="offers" id="offres">
-  <div class="wrap offers-hd">
-    <div class="tag light">SOLUTION</div>
-    <h2 class="on-dark">BUSINESS DEVELOPERS<br>EXTERNALISÉS À LA DEMANDE</h2>
-    <p>SDR, closers, téléprospecteurs — activés sous 72h, pilotés par Hudson, opérationnels immédiatement.</p>
-  </div>
-  <div class="wrap" style="padding:0;">
+  <!-- OFFERS -->
+  <section class="offers" id="offres">
+    <div class="wrap offers-hd">
+      <span class="tag light">Nos solutions</span>
+      <h2 class="on-dark">Business developers <br>externalisés à la demande</h2>
+      <p>Vous choisissez le profil, la durée, et le volume d'activité.</p>
+    </div>
     <div class="offers-grid">
       <div class="o-card">
-        <div class="o-idx">01</div>
-        <div class="o-title">SDR EXTERNALISÉ</div>
-        <div class="o-tag">Sales Development Representative</div>
-        <div class="o-price">2.900€<em>/mois</em></div>
-        <div class="o-pnote">forfait 100h, renouvelable</div>
+        <div class="o-idx">· SDR</div>
+        <div class="o-title">Sales Development</div>
+        <div class="o-tag">Prospection entrante & sortante</div>
+        <div class="o-price">2 490 €<em>/mois</em></div>
+        <div class="o-pnote">engagement 3 mois</div>
         <ul class="o-feats">
-          <li>Prospection sortante multi-canaux</li>
-          <li>Qualification BANT</li>
-          <li>Prise de RDV qualifiés</li>
-          <li>Reporting hebdomadaire</li>
+          <li>Ouverture de comptes stratégiques</li>
+          <li>RDV qualifiés pour vos closers</li>
+          <li>Stack complète (Apollo, Lusha, Salesloft)</li>
         </ul>
       </div>
       <div class="o-card feat">
-        <div class="o-badge">RECOMMANDÉ</div>
-        <div class="o-idx">02</div>
-        <div class="o-title">CLOSER EXTERNALISÉ</div>
-        <div class="o-tag">Account Executive</div>
-        <div class="o-price">3.900€<em>/mois</em></div>
-        <div class="o-pnote">forfait 80h + variable sur closing</div>
+        <div class="o-badge">le + choisi</div>
+        <div class="o-idx">· CLOSER</div>
+        <div class="o-title">Account Executive</div>
+        <div class="o-tag">Négociation & signature</div>
+        <div class="o-price">3 490 €<em>/mois</em></div>
+        <div class="o-pnote">commission sur succès</div>
         <ul class="o-feats">
-          <li>Conduite de démos</li>
+          <li>Demos avancées et gestion du cycle complet</li>
           <li>Négociation et closing</li>
-          <li>Accompagnement cycle complet</li>
-          <li>Commission sur deals signés</li>
+          <li>Upsell / cross‑sell sur existing accounts</li>
         </ul>
       </div>
       <div class="o-card">
-        <div class="o-idx">03</div>
-        <div class="o-title">TÉLÉPROSPECTION B2B</div>
-        <div class="o-tag">Campagne dédiée</div>
-        <div class="o-price">1.900€<em>/mois</em></div>
-        <div class="o-pnote">appels sortants + qualification</div>
+        <div class="o-idx">· CAMPAIGN</div>
+        <div class="o-title">Téléprospection B2B</div>
+        <div class="o-tag">Campagne clé en main</div>
+        <div class="o-price">4 990 €<em>/campagne</em></div>
+        <div class="o-pnote">forfait 3 mois</div>
         <ul class="o-feats">
-          <li>Volume d'appels garanti</li>
-          <li>Script personnalisé</li>
-          <li>Transfert RDV chauds</li>
-          <li>Paiement au temps ou au RDV</li>
+          <li>Stratégie d'approche personnalisée</li>
+          <li>Calling, emailing, LinkedIn</li>
+          <li>Reporting hebdo et optimisation</li>
         </ul>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PACKAGES -->
-<section class="packs">
-  <div class="wrap packs-hd">
-    <h2>MODÈLES ÉCONOMIQUES<br>SANS ENGAGEMENT</h2>
-    <p>Choisissez votre risque : paiement au temps pour tester, au RDV pour sécuriser, à la performance pour scale.</p>
-  </div>
-  <div class="wrap">
-    <div class="packs-grid">
-      <div class="pk">
-        <div class="pk-name">AU TEMPS</div>
-        <div class="pk-tag">SDR / téléprospecteur</div>
-        <div class="pk-price">49€<em>/h</em></div>
-        <div class="pk-note">sans engagement, facturation mensuelle</div>
-        <ul class="pk-feats">
-          <li><span class="pk-ck">✓</span> Idéal pour tester un canal</li>
-          <li><span class="pk-ck">✓</span> Volume variable</li>
-          <li><span class="pk-ck">✓</span> Pas de management</li>
-        </ul>
-        <a href="#contact" class="pk-btn">Démarrer un test</a>
+  <!-- PACKAGES -->
+  <section class="packs">
+    <div class="wrap">
+      <div class="packs-hd">
+        <div>
+          <span class="tag">Nos forfaits</span>
+          <h2>Externalisation <br>commerciale sur mesure</h2>
+        </div>
+        <p>Tous nos profils sont formés, outillés et managés par Hudson. Vous n'avez plus qu'à suivre les performances.</p>
       </div>
-      <div class="pk feat">
-        <div class="pk-name">AU RDV</div>
-        <div class="pk-tag">rendez-vous qualifiés</div>
-        <div class="pk-price">390€<em>/RDV</em></div>
-        <div class="pk-note">forfait 10 RDV, puis au volume</div>
-        <ul class="pk-feats">
-          <li><span class="pk-ck">✓</span> Paiement à la livraison</li>
-          <li><span class="pk-ck">✓</span> Qualification garantie</li>
-          <li><span class="pk-ck">✓</span> Pas de risque fixe</li>
-        </ul>
-        <a href="#contact" class="pk-btn">Acheter des RDV qualifiés</a>
-      </div>
-      <div class="pk">
-        <div class="pk-name">À LA PERF</div>
-        <div class="pk-tag">closing / commission</div>
-        <div class="pk-price">15%<em>du deal</em></div>
-        <div class="pk-note">uniquement sur deals signés</div>
-        <ul class="pk-feats">
-          <li><span class="pk-ck">✓</span> Zéro fixe</li>
-          <li><span class="pk-ck">✓</span> Aligné sur votre CA</li>
-          <li><span class="pk-ck">✓</span> Pour cycles courts</li>
-        </ul>
-        <a href="#contact" class="pk-btn">Discuter d'un partenariat</a>
+      <div class="packs-grid">
+        <div class="pk">
+          <div class="pk-name">ESSENTIAL</div>
+          <div class="pk-tag">1 SDR à temps plein</div>
+          <div class="pk-price">2 490 €<em>/mois</em></div>
+          <div class="pk-note">facturation mensuelle</div>
+          <ul class="pk-feats">
+            <li><span class="pk-ck">✓</span> 1 profil SDR senior</li>
+            <li><span class="pk-ck">✓</span> 300 actions/jour (appels, mails)</li>
+            <li><span class="pk-ck">✓</span> Dashboard en temps réel</li>
+            <li><span class="pk-ck">✓</span> Réunion de pilotage hebdo</li>
+          </ul>
+          <a href="#contact" class="pk-btn">Choisir</a>
+        </div>
+        <div class="pk feat">
+          <div class="pk-name">GROWTH</div>
+          <div class="pk-tag">SDR + Closer</div>
+          <div class="pk-price">5 490 €<em>/mois</em></div>
+          <div class="pk-note">économisez 490€</div>
+          <ul class="pk-feats">
+            <li><span class="pk-ck">✓</span> 1 SDR + 1 Account Executive</li>
+            <li><span class="pk-ck">✓</span> Funnel complet prospect → signé</li>
+            <li><span class="pk-ck">✓</span> CRM partagé et pilotage rapproché</li>
+            <li><span class="pk-ck">✓</span> Coaching terrain inclus</li>
+          </ul>
+          <a href="#contact" class="pk-btn">Choisir</a>
+        </div>
+        <div class="pk">
+          <div class="pk-name">ENTERPRISE</div>
+          <div class="pk-tag">Équipe dédiée 3-5 pers.</div>
+          <div class="pk-price">Sur mesure<em></em></div>
+          <div class="pk-note">devis personnalisé</div>
+          <ul class="pk-feats">
+            <li><span class="pk-ck">✓</span> SDR, closers, chef de marché</li>
+            <li><span class="pk-ck">✓</span> Stratégie outbound 360°</li>
+            <li><span class="pk-ck">✓</span> Reporting consolidé</li>
+            <li><span class="pk-ck">✓</span> Accès API et données brutes</li>
+          </ul>
+          <a href="#contact" class="pk-btn">Nous contacter</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PROCESSUS -->
-<section class="process" id="method">
-  <div class="wrap proc-hd">
-    <div class="tag">MÉTHODE</div>
-    <h2>LANCER UNE CAMPAGNE<br>DE PROSPECTION B2B</h2>
-    <p>Activation en 72h, pilotage transparent, optimisation continue.</p>
-  </div>
-  <div class="wrap">
-    <div class="proc-steps">
-      <div class="step">
-        <div class="step-n">1</div>
-        <div class="step-title">AUDIT & STRATÉGIE</div>
-        <div class="step-d">Définition cible, ICP, scripts, canaux.</div>
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="wrap">
+      <div class="proc-hd">
+        <span class="tag">Notre process</span>
+        <h2>Du brief aux premiers RDV</h2>
+        <p>Une méthodologie rodée pour lancer votre campagne en 5 jours ouvrés.</p>
       </div>
-      <div class="step">
-        <div class="step-n">2</div>
-        <div class="step-title">ACTIVATION 72H</div>
-        <div class="step-d">Brief SDR, mise en place outils, lancement.</div>
-      </div>
-      <div class="step">
-        <div class="step-n">3</div>
-        <div class="step-title">PROSPECTION</div>
-        <div class="step-d">Appels, emails, LinkedIn, qualification.</div>
-      </div>
-      <div class="step">
-        <div class="step-n">4</div>
-        <div class="step-title">OPTIMISATION</div>
-        <div class="step-d">Revue hebdo, itération, scale.</div>
+      <div class="proc-steps">
+        <div class="step">
+          <div class="step-n">1</div>
+          <div class="step-title">Brief & personas</div>
+          <div class="step-d">On analyse votre ICP, votre offre et vos objections.</div>
+        </div>
+        <div class="step">
+          <div class="step-n">2</div>
+          <div class="step-title">Sourcing des profils</div>
+          <div class="step-d">On sélectionne les SDR / closers adaptés à votre vertical.</div>
+        </div>
+        <div class="step">
+          <div class="step-n">3</div>
+          <div class="step-title">Formation & outils</div>
+          <div class="step-d">Les experts Hudson montent en compétence sur votre produit.</div>
+        </div>
+        <div class="step">
+          <div class="step-n">4</div>
+          <div class="step-title">Lancement & pilotage</div>
+          <div class="step-d">Campagne active, reporting quotidien, optimisation continue.</div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PREUVES SOCIALES -->
-<section class="proof">
-  <div class="wrap">
-    <div class="tag light">RÉSULTATS</div>
-    <h2 class="on-dark" style="margin-bottom:42px;">ILS ONT EXTERNALISÉ LEUR PROSPECTION</h2>
-  </div>
-  <div class="wrap" style="padding:0;">
+  <!-- PROOF -->
+  <section class="proof" id="resultats">
+    <div class="wrap">
+      <span class="tag light">Témoignages</span>
+      <h2 class="on-dark" style="margin-bottom: 56px;">Ils ont externalisé avec Hudson</h2>
+    </div>
     <div class="proof-cards">
       <div class="pc">
-        <div class="pc-q">"Hudson nous a permis de lancer une campagne de téléprospection en 3 jours, là où on aurait mis 4 mois à recruter."</div>
+        <div class="pc-q">« On a multiplié par 3 notre nombre de RDV qualifiés en 2 mois. Les SDR Hudson sont aussi bons que nos internes. »</div>
         <div class="pc-author">
-          <div class="pc-av">MC</div>
-          <div>
-            <div class="pc-name">Marie C.</div>
-            <div class="pc-role">CMO, SaaS B2B</div>
-          </div>
+          <span class="pc-av">MC</span>
+          <div><div class="pc-name">Marie C.</div><div class="pc-role">Head of Sales, Fintech</div></div>
         </div>
-        <div class="pc-result">
-          <span class="pc-rv">+47%</span>
-          <span class="pc-rl">de RDV qualifiés<br>en 2 mois</span>
-        </div>
+        <div class="pc-result"><span class="pc-rv">+212%</span><span class="pc-rl">de rendez-vous</span></div>
       </div>
       <div class="pc">
-        <div class="pc-q">"Le modèle au RDV nous a sécurisés : on paie uniquement quand on a un vrai rendez-vous."</div>
+        <div class="pc-q">« Je n'ai pas eu à recruter, former, gérer. L'équipe Hudson est immédiatement opérationnelle. »</div>
         <div class="pc-author">
-          <div class="pc-av">TL</div>
-          <div>
-            <div class="pc-name">Thomas L.</div>
-            <div class="pc-role">Fondateur, cabinet conseil</div>
-          </div>
+          <span class="pc-av">AL</span>
+          <div><div class="pc-name">Alexandre L.</div><div class="pc-role">CEO, Legaltech</div></div>
         </div>
-        <div class="pc-result">
-          <span class="pc-rv">12 RDV</span>
-          <span class="pc-rl">en première<br>campagne</span>
-        </div>
+        <div class="pc-result"><span class="pc-rv">4,7x</span><span class="pc-rl">ROI à 6 mois</span></div>
       </div>
       <div class="pc">
-        <div class="pc-q">"Alternative parfaite au recrutement d'un SDR interne : plus rapide, moins risqué."</div>
+        <div class="pc-q">« La flexibilité incroyable : on a pu scaler de 1 à 3 SDR en une semaine. »</div>
         <div class="pc-author">
-          <div class="pc-av">AD</div>
-          <div>
-            <div class="pc-name">Alexandre D.</div>
-            <div class="pc-role">DG, agence growth</div>
-          </div>
+          <span class="pc-av">SD</span>
+          <div><div class="pc-name">Sarah D.</div><div class="pc-role">CMO, SaaS B2B</div></div>
         </div>
-        <div class="pc-result">
-          <span class="pc-rv">-65%</span>
-          <span class="pc-rl">de coût<br>vs recrutement</span>
-        </div>
+        <div class="pc-result"><span class="pc-rv">-68%</span><span class="pc-rl">de coûts de recrutement</span></div>
       </div>
     </div>
-    <div class="metrics">
-      <div class="met">
-        <div class="met-v">3.200+</div>
-        <div class="met-l">RDV qualifiés<br>générés</div>
-        <div class="met-n">en 2024</div>
-      </div>
-      <div class="met">
-        <div class="met-v">47</div>
-        <div class="met-l">SDR & closers<br>disponibles</div>
-        <div class="met-n">profilés B2B</div>
-      </div>
-      <div class="met">
-        <div class="met-v">72h</div>
-        <div class="met-l">délai d'activation<br>moyen</div>
-        <div class="met-n">lancement</div>
-      </div>
-      <div class="met">
-        <div class="met-v">94%</div>
-        <div class="met-l">clients réengagent<br>dans les 6 mois</div>
-        <div class="met-n">satisfaction</div>
+    <div class="wrap">
+      <div class="metrics">
+        <div class="met"><div class="met-v">120+</div><div class="met-l">campagnes B2B</div><div class="met-n">depuis 2022</div></div>
+        <div class="met"><div class="met-v">87%</div><div class="met-l">taux de rétention</div><div class="met-n">à 6 mois</div></div>
+        <div class="met"><div class="met-v">4j</div><div class="met-l">délai moyen</div><div class="met-n">lancement</div></div>
+        <div class="met"><div class="met-v">4,2x</div><div class="met-l">ROI médian</div><div class="met-n">clients</div></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CIBLES & CANAUX -->
-<section class="targets">
-  <div class="wrap targ-grid">
-    <div>
-      <div class="tag">VERTICALES</div>
-      <h2>SOLUTIONS PAR SECTEUR</h2>
-      <div class="targ-lead">
-        Nous adaptons nos profils et scripts à votre marché :
+  <!-- TARGETS -->
+  <section class="targets">
+    <div class="wrap targ-grid">
+      <div>
+        <span class="tag">Pour qui ?</span>
+        <h2>Startups, PME, scale‑ups</h2>
+        <p class="prob-lead">Nous travaillons avec toutes les structures qui ont un besoin de performance commerciale sans les contraintes de recrutement.</p>
       </div>
-      <div class="pills">
-        <span class="pill">SaaS B2B</span>
-        <span class="pill">Agences marketing</span>
-        <span class="pill">Cabinets conseil</span>
-        <span class="pill">Cabinets RH</span>
-        <span class="pill">Immobilier B2B</span>
-        <span class="pill">Agences tech/dev</span>
-        <span class="pill">Services pros</span>
-        <span class="pill">Editeurs logiciels</span>
-        <span class="pill">Fintech/assurtech</span>
-      </div>
-      <div style="margin-top:38px;">
-        <a href="/teleprospection-saas-b2b" style="color:var(--red);">→ Téléprospection SaaS B2B</a><br>
-        <a href="/business-developer-cabinet-conseil" style="color:var(--red);">→ Business developer pour cabinets</a>
+      <div class="targ-list">
+        <div class="targ-item"><strong>SaaS / Tech</strong> <span>Éditeurs de logiciels, plateformes</span></div>
+        <div class="targ-item"><strong>Conseil & services</strong> <span>Cabinet, agences, expertises pointues</span></div>
+        <div class="targ-item"><strong>Industrie & Fintech</strong> <span>Cycles de vente longs</span></div>
+        <div class="targ-item"><strong>Scale‑ups en hypercroissance</strong> <span>Besoin de scaler rapidement</span></div>
       </div>
     </div>
-    <div>
-      <div class="tag">CANAUX</div>
-      <h2>PROSPECTION MULTI-CANAUX</h2>
-      <div class="channels">
-        <div class="chan">
-          <span class="chan-ico">📞</span>
-          <div class="chan-info">
-            <strong>Appels sortants</strong>
-            <span>Campagnes de cold call, qualification, prise de RDV</span>
-          </div>
-        </div>
-        <div class="chan">
-          <span class="chan-ico">📧</span>
-          <div class="chan-info">
-            <strong>Séquences email</strong>
-            <span>Personnalisation, automatisation, A/B testing</span>
-          </div>
-        </div>
-        <div class="chan">
-          <span class="chan-ico">🔗</span>
-          <div class="chan-info">
-            <strong>LinkedIn Sales Nav</strong>
-            <span>Inmail, connexions, social selling</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- QUALIFICATION RDV -->
-<section class="qual">
-  <div class="wrap qual-grid">
-    <div>
-      <div class="tag">QUALIFICATION</div>
-      <h2>QU'EST-CE QU'UN<br>RDV QUALIFIÉ ?</h2>
-      <div class="qual-lead">
-        Nos SDR qualifient selon votre définition. Par défaut, nous utilisons les critères BANT+.
-      </div>
-      <ul class="crit-list">
-        <li class="crit-item">
-          <span class="crit-ico">💰</span>
-          <div class="crit-t">
-            <strong>Budget</strong>
-            <span>Prospect dispose d'un budget alloué ou d'une enveloppe identifiée</span>
+  <!-- CTA CONTACT -->
+  <section class="cta" id="contact">
+    <div class="wrap">
+      <span class="tag">Prêt à lancer votre campagne ?</span>
+      <h2>Discutons de vos objectifs</h2>
+      <p class="cta-sub">Réponse sous 24h ou appel immédiat.</p>
+      
+      <!-- FORMULAIRE AVEC DOMAINE CORRIGÉ -->
+      <div class="form-card">
+        <form action="https://formsubmit.co/votre-email@hudson-ltd.com" method="POST">
+          <input type="hidden" name="_next" value="https://hudson-ltd.com/merci.html">
+          <input type="hidden" name="_captcha" value="false">
+          <div class="form-group">
+            <input type="text" name="nom" placeholder="Nom & prénom" required>
           </div>
-        </li>
-        <li class="crit-item">
-          <span class="crit-ico">👤</span>
-          <div class="crit-t">
-            <strong>Autorité</strong>
-            <span>Interlocuteur décisionnaire ou influenceur clé</span>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Email professionnel" required>
           </div>
-        </li>
-        <li class="crit-item">
-          <span class="crit-ico">📅</span>
-          <div class="crit-t">
-            <strong>Besoin</strong>
-            <span>Problème identifié que votre solution peut résoudre</span>
+          <div class="form-group">
+            <input type="tel" name="telephone" placeholder="Téléphone">
           </div>
-        </li>
-        <li class="crit-item">
-          <span class="crit-ico">⏱️</span>
-          <div class="crit-t">
-            <strong>Timing</strong>
-            <span>Projet actif, horizon d'achat dans les 3 mois</span>
+          <div class="form-group">
+            <select name="besoin">
+              <option value="">Quel est votre besoin ?</option>
+              <option>SDR / prospection</option>
+              <option>Closer / AE</option>
+              <option>Campagne clé en main</option>
+              <option>Autre</option>
+            </select>
           </div>
-        </li>
-      </ul>
-    </div>
-    <div>
-      <div class="def-box">
-        <div class="def-label">DÉFINITION HUDSON</div>
-        <p><strong>RDV qualifié =</strong> prospect ayant accepté un entretien téléphonique ou physique avec votre équipe, après vérification des critères BANT, avec un intérêt explicite pour votre solution.</p>
-        <small>Nous adaptons ces critères à votre marché : ICP, use case, budget minimum, etc.</small>
+          <div class="form-group">
+            <textarea name="message" placeholder="Parlez-nous de votre projet..." rows="3"></textarea>
+          </div>
+          <button type="submit" class="form-btn">Envoyer la demande</button>
+        </form>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FAQ - RICHE EN MOTS-CLÉS -->
-<section class="faq">
-  <div class="wrap">
-    <div class="faq-hd">
-      <div class="tag">QUESTIONS FRÉQUENTES</div>
-      <h2>TOUT SAVOIR SUR<br>L'EXTERNALISATION COMMERCIALE</h2>
-      <p>Recrutement SDR, coûts, délais, modèles — les réponses à vos questions.</p>
-    </div>
-    <div class="faq-grid">
-      <div class="faq-item">
-        <div class="faq-q">Combien coûte le recrutement d'un business developer externalisé ?</div>
-        <div class="faq-a">Entre 1 900€ et 3 900€ par mois selon le profil (SDR, closer, téléprospecteur), sans frais cachés. Alternative bien moins chère qu'un recrutement interne (45-65k€ de salaire + charges).</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Quelle est la différence entre un SDR et un business developer ?</div>
-        <div class="faq-a">Le SDR (Sales Development Representative) se concentre sur la prospection et la qualification. Le business developer gère souvent la relation complète jusqu'au closing. Nous proposons les deux profils.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Comment garantir la qualité des rendez-vous ?</div>
-        <div class="faq-a">Nous qualifions selon vos critères (BANT, GPCT, etc.). En modèle "au RDV", vous ne payez que si le prospect accepte un entretien avec vous.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Puis-je lancer une campagne de téléprospection sans engagement ?</div>
-        <div class="faq-a">Oui, le modèle "au temps" est sans engagement : vous testez 1 mois, puis vous décidez de continuer ou d'arrêter.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Quels secteurs prospectez-vous ?</div>
-        <div class="faq-a">SaaS B2B, agences, cabinets conseil, immobilier B2B, services pros, fintech, etc. Nous adaptons nos scripts à votre verticale.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Quel est le délai d'activation ?</div>
-        <div class="faq-a">72h en moyenne : audit, sélection du profil, brief, mise en route.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FORMULAIRE DE CONTACT FONCTIONNEL (envoi vers Gmail) -->
-<section class="contact" id="contact">
-  <div class="wrap">
-    <div class="contact-grid">
-      <div class="contact-info">
-        <h3>LANCER<br>UNE CAMPAGNE</h3>
-        <p>Discutons de vos objectifs : volume de prospection, cibles, budget, modèle économique.</p>
-        <div class="contact-detail">Réponse sous 4h ouvrées</div>
-        <div class="contact-detail">Démarrage possible sous 72h</div>
-        <div class="contact-detail">Paiement au temps, au RDV ou à la perf</div>
-        <div style="margin-top:32px;">
-          <strong style="color:var(--ink);">Vous préférez nous écrire directement ?</strong><br>
-          <span style="color:var(--t-mid); font-size:14px;">cyril.ragonet@gmail.com</span>
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-main">
+        <div class="foot-col">
+          <div class="foot-logo">hudson<span class="logo-dot">.</span></div>
+          <div class="foot-about">Business developers externalisés pour startups et scale‑ups. SDR, closers, campagnes de téléprospection B2B.</div>
+        </div>
+        <div class="foot-col">
+          <div class="foot-title">Solutions</div>
+          <div class="foot-text">SDR externalisé</div>
+          <div class="foot-text">Account Executive</div>
+          <div class="foot-text">Téléprospection B2B</div>
+          <div class="foot-text">Campagne sur mesure</div>
+        </div>
+        <div class="foot-col">
+          <div class="foot-title">Ressources</div>
+          <div class="foot-text">Blog</div>
+          <div class="foot-text">Études de cas</div>
+          <div class="foot-text">Calculateur ROI</div>
+          <div class="foot-text">FAQ</div>
+        </div>
+        <div class="foot-col">
+          <div class="foot-title">Coordonnées</div>
+          <div class="foot-text">Paris · Lyon · Nantes</div>
+          <div class="foot-text">contact@hudson-ltd.com</div>
+          <div class="foot-text">01 84 80 31 20</div>
+          <div class="foot-text">LinkedIn</div>
         </div>
       </div>
       
-      <!-- FORMULAIRE AVEC ENVOI VERS GMAIL (fonctionnel) -->
-      <form action="https://formsubmit.co/cyril.ragonet@gmail.com" method="POST">
-        <!-- Protection anti-spam (optionnelle mais recommandée) -->
-        <input type="hidden" name="_captcha" value="false">
-        <!-- Template pour recevoir un email propre -->
-        <input type="hidden" name="_template" value="table">
-        <!-- Sujet de l'email -->
-        <input type="hidden" name="_subject" value="Nouveau lead Hudson depuis le site">
-        <!-- Redirection après envoi (page de remerciement) -->
-        <input type="hidden" name="_next" value="https://votresite.com/merci.html">
-        
-        <div class="form-row">
-          <div class="form-group">
-            <label>Prénom *</label>
-            <input type="text" name="prénom" required>
-          </div>
-          <div class="form-group">
-            <label>Nom</label>
-            <input type="text" name="nom">
-          </div>
-        </div>
-        
-        <div class="form-group">
-          <label>Entreprise *</label>
-          <input type="text" name="entreprise" required>
-        </div>
-        
-        <div class="form-group">
-          <label>Email professionnel *</label>
-          <input type="email" name="email" required>
-        </div>
-        
-        <div class="form-group">
-          <label>Téléphone (optionnel)</label>
-          <input type="tel" name="téléphone">
-        </div>
-        
-        <div class="form-group">
-          <label>Quel modèle vous intéresse ?</label>
-          <select name="modèle">
-            <option value="">Sélectionnez...</option>
-            <option value="SDR externalisé">SDR externalisé (49€/h)</option>
-            <option value="Closer externalisé">Closer externalisé (3 900€/mois)</option>
-            <option value="Téléprospection">Téléprospection B2B (1 900€/mois)</option>
-            <option value="Achat RDV">Achat de RDV qualifiés (390€/RDV)</option>
-            <option value="Performance">Modèle à la performance</option>
-            <option value="Autre">Autre / à discuter</option>
-          </select>
-        </div>
-        
-        <div class="form-group">
-          <label>Secteur d'activité</label>
-          <input type="text" name="secteur" placeholder="ex: SaaS, conseil, agence...">
-        </div>
-        
-        <div class="form-group">
-          <label>Message / contexte *</label>
-          <textarea name="message" placeholder="Parlez-nous de vos objectifs, cibles, volume souhaité..." required></textarea>
-        </div>
-        
-        <button type="submit" class="btn-submit">Envoyer ma demande</button>
-        
-        <p style="font-size:11px; color:var(--t-muted); margin-top:12px; text-align:center;">
-          * Champs obligatoires. Vos données sont confidentielles.
-        </p>
-      </form>
-      <!-- FIN FORMULAIRE -->
-      
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER AVEC MAILLAGE INTERNE -->
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <div class="logo">HUDSON<span class="logo-dot">.</span></div>
-        <p>Business developers, SDR & closers externalisés pour entreprises B2B. Prospection, qualification, closing — sans recrutement.</p>
-      </div>
-      <div class="foot-col">
-        <h4>OFFRES</h4>
-        <ul>
-          <li><a href="/business-developer-externalise">Business developer externalisé</a></li>
-          <li><a href="/sdr-externalise">SDR externalisé</a></li>
-          <li><a href="/teleprospection-b2b">Téléprospection B2B</a></li>
-          <li><a href="/prise-rendez-vous-b2b">Prise de RDV qualifiés</a></li>
-          <li><a href="/closer-externalise">Closer externalisé</a></li>
-        </ul>
-      </div>
-      <div class="foot-col">
-        <h4>SOLUTIONS</h4>
-        <ul>
-          <li><a href="/prospection-commerciale-externalisee">Prospection externalisée</a></li>
-          <li><a href="/acheter-rdv-qualifies">Acheter des RDV qualifiés</a></li>
-          <li><a href="/lancer-campagne-teleprospection">Lancer une campagne</a></li>
-          <li><a href="/alternative-recrutement-sdr">Alternative recrutement SDR</a></li>
-          <li><a href="/cout-sdr-interne-vs-externalise">Coût SDR interne vs externalisé</a></li>
-        </ul>
-      </div>
-      <div class="foot-col">
-        <h4>CONTACT</h4>
-        <ul>
-          <li><a href="#contact">Nous contacter</a></li>
-          <li><a href="mailto:cyril.ragonet@gmail.com">cyril.ragonet@gmail.com</a></li>
-          <li><a href="/method">Notre méthode</a></li>
-          <li><a href="/faq">FAQ</a></li>
-        </ul>
+      <div class="foot-bottom">
+        <span>© 2025 Hudson Ltd — Tous droits réservés</span>
+        <span>Mentions légales · <a href="plan.html">Plan du site</a></span>
       </div>
     </div>
-    <div class="foot-bottom">
-      © Hudson — Plateforme de business developers externalisés. Tous droits réservés.
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- DONNÉES STRUCTURÉES JSON-LD (SEO) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Hudson",
-  "url": "https://www.hudson.com/",
-  "email": "cyril.ragonet@gmail.com",
-  "description": "Plateforme opérée de business developers externalisés pour la prospection B2B. SDR, closers, téléprospection.",
-  "sameAs": []
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Business developers externalisés",
-  "provider": {
+  <!-- JSON-LD avec domaine corrigé -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Hudson"
-  },
-  "serviceType": "Prospection commerciale externalisée B2B",
-  "areaServed": "FR",
-  "audience": {
-    "@type": "BusinessAudience",
-    "audienceType": "Entreprises B2B"
-  },
-  "description": "Sélection, activation et pilotage de SDR, closers et business developers externalisés, payés au temps, au rendez-vous ou à la performance."
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Combien coûte le recrutement d'un business developer externalisé ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Entre 1 900€ et 3 900€ par mois selon le profil (SDR, closer, téléprospecteur), sans frais cachés."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Quelle est la différence entre un SDR et un business developer ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Le SDR se concentre sur la prospection et la qualification. Le business developer gère souvent la relation complète jusqu'au closing."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Comment garantir la qualité des rendez-vous ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Nous qualifions selon vos critères (BANT, GPCT, etc.). En modèle au RDV, vous ne payez que si le prospect accepte un entretien."
-      }
+    "name": "Hudson",
+    "url": "https://hudson-ltd.com/",
+    "logo": "https://hudson-ltd.com/logo.png",
+    "description": "Externalisation commerciale : SDR, closers, téléprospection B2B.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Paris, France"
     }
-  ]
-}
-</script>
-
-<!-- SCRIPT SIMPLE POUR ANIMATIONS -->
-<script>
-  // Révélation au scroll
-  document.addEventListener('DOMContentLoaded', function() {
-    const reveals = document.querySelectorAll('.reveal');
-    
-    function checkReveal() {
-      for (let i = 0; i < reveals.length; i++) {
-        const windowHeight = window.innerHeight;
-        const revealTop = reveals[i].getBoundingClientRect().top;
-        const revealPoint = 150;
-        
-        if (revealTop < windowHeight - revealPoint) {
-          reveals[i].classList.add('visible');
-        }
-      }
-    }
-    
-    window.addEventListener('scroll', checkReveal);
-    checkReveal();
-  });
-</script>
-
+  }
+  </script>
 </body>
 </html>
