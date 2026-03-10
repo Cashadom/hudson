@@ -141,7 +141,7 @@
 
     .hero h1 {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(60px, 7vw, 108px);
+      font-size: clamp(48px, 6vw, 88px); /* MODIFIÉ : réduit pour mobile */
       line-height: 0.93; letter-spacing: 0.02em; color: var(--white);
       margin-bottom: 26px;
       animation: up .6s ease both .2s;
@@ -648,7 +648,7 @@
       <div class="proc-hd">
         <span class="tag">Notre process</span>
         <h2>Du brief aux premiers RDV</h2>
-        <p>Une méthodologie rodée pour lancer votre campagne en 5 jours ouvrés.</p>
+        <p>Une <a href="kpi-hudson.html" style="color: inherit; text-decoration: underline; text-decoration-color: var(--red);">méthodologie rodée</a> pour lancer votre campagne en 5 jours ouvrés.</p> <!-- MODIFIÉ : lien ajouté -->
       </div>
       <div class="proc-steps">
         <div class="step">
@@ -741,9 +741,9 @@
       <h2>Discutons de vos objectifs</h2>
       <p class="cta-sub">Réponse sous 24h ou appel immédiat.</p>
       
-      <!-- FORMULAIRE AVEC DOMAINE CORRIGÉ -->
+      <!-- FORMULAIRE AVEC EMAIL CORRIGÉ -->
       <div class="form-card">
-        <form action="https://formsubmit.co/votre-email@hudson-ltd.com" method="POST">
+        <form action="https://formsubmit.co/contact@hudson-ltd.com" method="POST"> <!-- MODIFIÉ : email remplacé -->
           <input type="hidden" name="_next" value="https://hudson-ltd.com/merci.html">
           <input type="hidden" name="_captcha" value="false">
           <div class="form-group">
@@ -806,7 +806,10 @@
       
       <div class="foot-bottom">
         <span>© 2026 Hudson Ltd — Tous droits réservés</span>
-        <span>Mentions légales · <a href="plan.html">Plan du site</a></span>
+        <span>
+          <a href="mentions-legales.html">Mentions légales</a> · <!-- MODIFIÉ : lien ajouté -->
+          <a href="plan.html">Plan du site</a>
+        </span>
       </div>
     </div>
   </footer>
