@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S2912LSCRX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S2912LSCRX');
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),
+          dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5PF6FCCW');
+  </script>
+
+  <script>
+    dataLayer.push({
+      'page_type':'seo_tool',
+      'page_topic':'comparateur_roi_prospection_b2b'
+    });
+  </script>
+
+  <title>Comparateur ROI prospection B2B 2026 : coût, RDV, CAC, rentabilité | Hudson</title>
+  <meta name="description" content="Calculez le ROI réel d'une campagne SDR, téléprospection ou business developer externalisé : chiffre d'affaires estimé, CAC, seuil de rentabilité et nombre de rendez-vous nécessaires.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://www.hudson-ltd.com/comparateur">
+
+  <meta property="og:title" content="Comparateur ROI prospection B2B | Hudson">
+  <meta property="og:description" content="Estimateur interactif de rentabilité commerciale : RDV, closing, panier moyen, CAC et ROI.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.hudson-ltd.com/comparateur">
+  <meta property="og:site_name" content="Hudson">
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{
+      --ink:#0c1a2e;
+      --page:#f6f5f2;
+      --page-alt:#edecea;
+      --white:#ffffff;
+      --red:#bf1129;
+      --t-mid:#3b5070;
+      --t-muted:#788fa8;
+      --border:rgba(12,26,46,.10);
+      --border-strong:rgba(12,26,46,.16);
+      --success:#0f7b53;
+      --warn:#a76a00;
+    }
+
+    html{scroll-behavior:smooth;}
+    body{
+      font-family:'DM Sans',sans-serif;
+      background:var(--page);
+      color:var(--ink);
+      -webkit-font-smoothing:antialiased;
+    }
+
+    .wrap{max-width:980px;margin:0 auto;padding:0 40px;}
+    @media(max-width:600px){.wrap{padding:0 20px;}}
+
+    .topbar{
+      background:var(--ink);
+      height:54px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 40px;
+      position:sticky;
+      top:0;
+      z-index:50;
+    }
+    @media(max-width:600px){.topbar{padding:0 20px;}}
+    .logo{
+      font-family:'Bebas Neue',sans-serif;
+      font-size:19px;
+      letter-spacing:.12em;
+      color:var(--white);
+      text-decoration:none;
+    }
+    .logo span{color:var(--red);}
+    .back{
+      font-family:'DM Mono',monospace;
+      font-size:10px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,.4);
+      text-decoration:none;
+      display:flex;
+      align-items:center;
+      gap:7px;
+      transition:color .18s;
+    }
+    .back:hover{color:var(--white);}
+    .back::before{content:'←';color:var(--red);}
+
+    .hero{
+      background:var(--ink);
+      padding:64px 40px 56px;
+    }
+    @media(max-width:600px){.hero{padding:46px 20px 38px;}}
+    .eyebrow{
+      font-family:'DM Mono',monospace;
+      font-size:10px;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+      color:var(--red);
+      display:flex;
+      align-items:center;
+      gap:9px;
+      margin-bottom:18px;
+    }
+    .eyebrow::before{
+      content:'';
+      width:20px;
+      height:1px;
+      background:var(--red);
+    }
+    h1{
+      font-family:'Bebas Neue',sans-serif;
+      font-size:clamp(40px,5vw,66px);
+      line-height:.93;
+      letter-spacing:.02em;
+      color:var(--white);
+      margin-bottom:18px;
+    }
+    h1 em{color:var(--red);font-style:normal;}
+    .hero-intro{
+      font-size:15px;
+      font-weight:300;
+      color:rgba(255,255,255,.52);
+      max-width:660px;
+      line-height:1.7;
+    }
+
+    .content{padding:56px 0 84px;}
+
+    h2{
+      font-family:'Bebas Neue',sans-serif;
+      font-size:clamp(24px,3vw,36px);
+      letter-spacing:.03em;
+      color:var(--ink);
+      margin:48px 0 16px;
+      line-height:1;
+    }
+    h2:first-of-type{margin-top:0;}
+    p{
+      font-size:15px;
+      color:var(--t-mid);
+      line-height:1.75;
+      margin-bottom:18px;
+      font-weight:300;
+    }
+    p strong{color:var(--ink);font-weight:500;}
+
+    .tool-shell{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:28px;
+      margin-top:30px;
+    }
+    @media(max-width:880px){
+      .tool-shell{grid-template-columns:1fr;}
+    }
+
+    .panel{
+      background:var(--white);
+      border:1px solid var(--border);
+    }
+
+    .panel-head{
+      background:var(--page-alt);
+      border-bottom:1px solid var(--border);
+      padding:18px 22px;
+    }
+    .panel-kicker{
+      font-family:'DM Mono',monospace;
+      font-size:10px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--t-muted);
+      margin-bottom:8px;
+    }
+    .panel-title{
+      font-family:'Bebas Neue',sans-serif;
+      font-size:24px;
+      letter-spacing:.04em;
+      color:var(--ink);
+      line-height:1;
+    }
+
+    .panel-body{padding:22px;}
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:16px;
+    }
+    @media(max-width:640px){
+      .form-grid{grid-template-columns:1fr;}
+    }
+
+    .field label{
+      display:block;
+      font-family:'DM Mono',monospace;
+      font-size:10px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:var(--t-muted);
+      margin-bottom:8px;
+    }
+
+    .field input{
+      width:100%;
+      border:1px solid var(--border);
+      background:var(--white);
+      color:var(--ink);
+      padding:14px 14px;
+      font-size:15px;
+      font-family:'DM Sans',sans-serif;
+      outline:none;
+      transition:border-color .15s, box-shadow .15s;
+    }
+    .field input:focus{
+      border-color:var(--red);
+      box-shadow:0 0 0 3px rgba(191,17,41,.08);
+    }
+
+    .actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:22px;
+    }
+
+    .btn{
+      border:none;
+      cursor:pointer;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 22px;
+      font-size:12px;
+      font-weight:500;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      transition:all .18s;
+    }
+    .btn-primary{
+      background:var(--red);
+      color:var(--white);
+    }
+    .btn-primary:hover{background:#a40f24;}
+    .btn-secondary{
+      background:var(--page-alt);
+      color:var(--ink);
+      border:1px solid var(--border);
+    }
+    .btn-secondary:hover{border-color:var(--border-strong);}
+
+    .results-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:3px;
+    }
+    @media(max-width:640px){
+      .results-grid{grid-template-columns:1fr;}
+    }
+
+    .result-card{
+      background:var(--white);
+      border:1px solid var(--border);
+      padding:18px 18px 16px;
+    }
+    .result-card.featured{
+      border-top:3px solid var(--red);
+    }
+    .result-label{
+      font-family:'DM Mono',monospace;
+      font-size:9px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--t-muted);
+      margin-bottom:10px;
+    }
+    .result-card.featured .result-label{color:var(--red);}
+    .result-value{
+      font-family:'Bebas Neue',sans-serif;
+      font-size:34px;
+      line-height:.95;
+      color:var(--ink);
+      letter-spacing:.02em;
+      margin-bottom:8px;
+    }
+    .result-note{
+      font-size:13px;
+      color:var(--t-mid);
+      line-height:1.55;
+    }
+
+    .advice{
+      background:var(--ink);
+      padding:26px 28px;
+      border-left:3px solid var(--red);
+      margin-top:24px;
+    }
+    .advice-title{
+      font-family:'DM Mono',monospace;
+      font-size:10px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--red);
+      margin-bottom:10px;
+    }
+    .advice p{
+      color:rgba(255,255,255,.72);
+      margin:0;
+    }
+    .advice strong{color:var(--white);}
+
+    .highlight{
+      background:var(--page-alt);
+      border:1px solid var(--border);
+      padding:24px 26px;
+      margin:32px 0;
+    }
+
+    .list{
+      list-style:none;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin:18px 0 28px;
+    }
+    .list li{
+      display:flex;
+      align-items:flex-start;
+      gap:12px;
+      font-size:14.5px;
+      color:var(--t-mid);
+      line-height:1.6;
+    }
+    .list li::before{
+      content:'→';
+      color:var(--red);
+      font-family:'DM Mono',monospace;
+      font-size:11px;
+      margin-top:4px;
+      flex-shrink:0;
+    }
+
+    .link-hub{
+      background:var(--page-alt);
+      border:1px solid var(--border);
+      padding:28px 32px;
+      margin-top:48px;
+    }
+    .link-hub-title{
+      font-family:'DM Mono',monospace;
+      font-size:10px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--t-muted);
+      margin-bottom:16px;
+    }
+    .link-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:8px;
+    }
+    .link-grid a{
+      font-size:13px;
+      color:var(--t-mid);
+      text-decoration:none;
+      padding:12px 14px;
+      background:var(--white);
+      border:1px solid var(--border);
+      transition:border-color .15s,color .15s,transform .15s;
+    }
+    .link-grid a:hover{
+      border-color:var(--red);
+      color:var(--ink);
+      transform:translateX(2px);
+    }
+
+    .faq{
+      border-top:1px solid var(--border);
+      margin-top:48px;
+      padding-top:40px;
+    }
+    .faq-title{
+      font-family:'Bebas Neue',sans-serif;
+      font-size:28px;
+      letter-spacing:.04em;
+      color:var(--ink);
+      margin-bottom:28px;
+    }
+    .faq-item{
+      border-bottom:1px solid var(--border);
+      padding:18px 0;
+    }
+    .faq-q{
+      font-weight:500;
+      font-size:15px;
+      color:var(--ink);
+      margin-bottom:8px;
+    }
+    .faq-a{
+      font-size:13.5px;
+      color:var(--t-mid);
+      line-height:1.65;
+    }
+
+    .cta-block{
+      background:var(--red);
+      padding:40px;
+      margin-top:56px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+    @media(max-width:600px){
+      .cta-block{flex-direction:column;padding:32px 20px;}
+    }
+    .cta-block h3{
+      font-family:'Bebas Neue',sans-serif;
+      font-size:28px;
+      letter-spacing:.04em;
+      color:var(--white);
+      margin-bottom:4px;
+    }
+    .cta-block p{
+      font-size:13.5px;
+      color:rgba(255,255,255,.72);
+      margin:0;
+      font-weight:300;
+    }
+    .cta-btn{
+      background:var(--white);
+      color:var(--red);
+      padding:14px 28px;
+      font-size:12px;
+      font-weight:500;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      text-decoration:none;
+      white-space:nowrap;
+      flex-shrink:0;
+    }
+
+    footer{
+      background:var(--ink);
+      padding:18px 40px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:8px;
+      border-top:1px solid rgba(255,255,255,.07);
+    }
+    @media(max-width:600px){
+      footer{padding:16px 20px;flex-direction:column;text-align:center;}
+    }
+    .foot-brand{
+      font-family:'Bebas Neue',sans-serif;
+      font-size:14px;
+      letter-spacing:.1em;
+      color:rgba(255,255,255,.4);
+    }
+    .foot-brand span{color:var(--red);}
+    .foot-meta{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+    .foot-link{
+      font-family:'DM Mono',monospace;
+      font-size:11px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,.26);
+      text-decoration:none;
+    }
+    .foot-link:hover{color:rgba(255,255,255,.7);}
+    .foot-copy{
+      font-size:11px;
+      color:rgba(255,255,255,.18);
+      font-family:'DM Mono',monospace;
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"Comparateur ROI prospection B2B",
+    "applicationCategory":"BusinessApplication",
+    "operatingSystem":"Any",
+    "url":"https://www.hudson-ltd.com/comparateur",
+    "description":"Comparateur de rentabilité pour estimer le ROI d'une campagne SDR, téléprospection ou business developer externalisé."
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Combien de rendez-vous faut-il pour rentabiliser une campagne de prospection B2B ?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Le seuil de rentabilité dépend du panier moyen, du taux de show et du taux de closing. Ce comparateur le calcule automatiquement pour estimer le nombre minimum de rendez-vous nécessaires."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Quel bon taux de closing retenir pour une simulation B2B ?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"En B2B PME, un taux de closing de 15 à 30% sur des rendez-vous bien qualifiés est une base réaliste. En dessous de 15%, il faut souvent revoir la qualification ou l'offre."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Le comparateur fonctionne-t-il pour un SDR externalisé ou de la téléprospection ?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Oui. L'outil fonctionne pour toute campagne de prospection pilotée au rendez-vous : SDR externalisé, téléprospection B2B, business developer freelance ou équipe interne."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PF6FCCW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+  <div class="topbar">
+    <a href="https://www.hudson-ltd.com/" class="logo">HUDSON<span>.</span></a>
+    <a href="/plan" class="back">Toutes les pages</a>
+  </div>
+
+  <div class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Outil SEO & Conversion</div>
+      <h1>COMPARATEUR ROI<br><em>PROSPECTION B2B</em></h1>
+      <p class="hero-intro">
+        Simulez la rentabilité réelle d'une campagne de prospection commerciale : nombre de clients signés, chiffre d'affaires estimé, CAC, ROI et seuil de rentabilité en rendez-vous.
+      </p>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="wrap">
+
+      <h2>ESTIMER LE RETOUR SUR INVESTISSEMENT D'UNE CAMPAGNE</h2>
+      <p>
+        Ce comparateur permet d'évaluer en quelques secondes la performance potentielle d'une campagne <strong>SDR</strong>, de <strong>téléprospection B2B</strong> ou de <strong>business development externalisé</strong>. Il part d'une logique simple : combien de rendez-vous sont nécessaires pour signer des clients, couvrir le coût mensuel et générer un retour sur investissement positif.
+      </p>
+
+      <div class="tool-shell">
+        <div class="panel">
+          <div class="panel-head">
+            <div class="panel-kicker">Entrées de simulation</div>
+            <div class="panel-title">Paramètres commerciaux</div>
+          </div>
+          <div class="panel-body">
+            <div class="form-grid">
+              <div class="field">
+                <label for="rdv">RDV mensuels visés</label>
+                <input id="rdv" type="number" value="20" min="0" step="1">
+              </div>
+              <div class="field">
+                <label for="show">Taux de show (%)</label>
+                <input id="show" type="number" value="80" min="0" max="100" step="1">
+              </div>
+              <div class="field">
+                <label for="closing">Taux de closing (%)</label>
+                <input id="closing" type="number" value="25" min="0" max="100" step="1">
+              </div>
+              <div class="field">
+                <label for="panier">Panier moyen (€)</label>
+                <input id="panier" type="number" value="3000" min="0" step="100">
+              </div>
+              <div class="field">
+                <label for="cout">Coût mensuel (€)</label>
+                <input id="cout" type="number" value="2900" min="0" step="100">
+              </div>
+              <div class="field">
+                <label for="duree">Durée de mission (mois)</label>
+                <input id="duree" type="number" value="3" min="1" step="1">
+              </div>
+            </div>
+
+            <div class="actions">
+              <button class="btn btn-primary" type="button" onclick="calculer()">Calculer le ROI</button>
+              <button class="btn btn-secondary" type="button" onclick="resetCalculateur()">Réinitialiser</button>
+            </div>
+
+            <div class="advice" id="adviceBox">
+              <div class="advice-title">Lecture du résultat</div>
+              <p id="adviceText">
+                Un bon scénario combine un <strong>taux de show élevé</strong>, un <strong>closing supérieur à 20%</strong> et un panier moyen suffisant pour absorber le coût de prospection.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <div class="panel-kicker">Sorties calculées</div>
+            <div class="panel-title">Résultats estimés</div>
+          </div>
+          <div class="panel-body">
+            <div class="results-grid">
+              <div class="result-card featured">
+                <div class="result-label">Clients signés / mois</div>
+                <div class="result-value" id="clients">4.0</div>
+                <div class="result-note">Projection théorique basée sur vos rendez-vous, votre taux de show et votre taux de closing.</div>
+              </div>
+
+              <div class="result-card">
+                <div class="result-label">CA mensuel estimé</div>
+                <div class="result-value" id="caMensuel">12 000 €</div>
+                <div class="result-note">Chiffre d'affaires potentiel produit par la campagne sur un mois type.</div>
+              </div>
+
+              <div class="result-card">
+                <div class="result-label">ROI estimé</div>
+                <div class="result-value" id="roi">314 %</div>
+                <div class="result-note">Retour sur investissement calculé à partir du CA estimé et du coût mensuel.</div>
+              </div>
+
+              <div class="result-card">
+                <div class="result-label">CAC estimé</div>
+                <div class="result-value" id="cac">725 €</div>
+                <div class="result-note">Coût d'acquisition client théorique selon les paramètres renseignés.</div>
+              </div>
+
+              <div class="result-card">
+                <div class="result-label">Seuil de rentabilité</div>
+                <div class="result-value" id="breakeven">4.8 RDV</div>
+                <div class="result-note">Nombre minimum de rendez-vous à tenir chaque mois pour couvrir le coût.</div>
+              </div>
+
+              <div class="result-card">
+                <div class="result-label">CA total sur mission</div>
+                <div class="result-value" id="caTotal">36 000 €</div>
+                <div class="result-note">Projection de chiffre d'affaires sur la durée totale de mission indiquée.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="highlight">
+        <p>
+          <strong>Exemple :</strong> avec 20 RDV mensuels, 80% de show, 25% de closing, un panier moyen à 3 000€ et un coût mensuel à 2 900€, la campagne projette environ <strong>4 clients signés</strong> et <strong>12 000€ de CA mensuel estimé</strong>.
+        </p>
+      </div>
+
+      <h2>COMMENT INTERPRÉTER LE COMPARATEUR</h2>
+      <ul class="list">
+        <li><strong>Clients signés / mois :</strong> c'est votre capacité théorique à transformer des rendez-vous qualifiés en ventes.</li>
+        <li><strong>CA mensuel estimé :</strong> il permet d'évaluer si votre offre supporte économiquement la prospection.</li>
+        <li><strong>CAC estimé :</strong> plus il est bas par rapport à votre panier moyen, plus le modèle est sain.</li>
+        <li><strong>Seuil de rentabilité :</strong> indicateur clé pour savoir combien de rendez-vous vous devez vraiment sécuriser chaque mois.</li>
+      </ul>
+
+      <h2>PAGES À RELIER POUR BOOSTER LE SEO</h2>
+      <p>
+        Pour maximiser le trafic, cette page doit renvoyer vers trois pages de support fortement liées à l'intention business : un calculateur de coût, une page sur le nombre de rendez-vous à obtenir et une page service sur le modèle SDR. Cela aide Google à comprendre le cluster sémantique et améliore la conversion.
+      </p>
+
+      <div class="link-hub">
+        <div class="link-hub-title">Liens vers les 3 pages à pousser</div>
+        <div class="link-grid">
+          <a href="/calculateur-cout-sdr">Calculateur coût SDR interne vs externalisé</a>
+          <a href="/combien-de-rdv-pour-rentabiliser-la-prospection">Combien de RDV pour rentabiliser la prospection ?</a>
+          <a href="/simulateur-roi-prospection-b2b">Simulateur ROI prospection B2B</a>
+        </div>
+      </div>
+
+      <div class="link-hub">
+        <div class="link-hub-title">Pages business liées</div>
+        <div class="link-grid">
+          <a href="/sdr-interne-vs-externalise">SDR interne vs externalisé</a>
+          <a href="/recruter-teleprospecteur">Recruter un téléprospecteur B2B</a>
+          <a href="/recruter-account-executive">Recruter un Account Executive</a>
+          <a href="/sdr-externalise">SDR externalisé</a>
+          <a href="/teleprospection-b2b">Téléprospection B2B</a>
+          <a href="/business-developer-externalise">Business developer externalisé</a>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="faq-title">FAQ — Comparateur ROI prospection B2B</div>
+
+        <div class="faq-item">
+          <div class="faq-q">Quel bon taux de closing utiliser pour une simulation B2B ?</div>
+          <div class="faq-a">Une hypothèse réaliste se situe souvent entre 15% et 30% sur des rendez-vous bien qualifiés. Si votre closing est inférieur à 15%, la priorité est généralement la qualification ou l'offre, pas le volume.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Le comparateur fonctionne-t-il pour la téléprospection externalisée ?</div>
+          <div class="faq-a">Oui. Le modèle convient à la téléprospection B2B, au SDR externalisé, à un business developer freelance ou à une équipe interne, dès lors que le pilotage se fait au rendez-vous et au taux de transformation.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">À partir de quel panier moyen la prospection devient-elle rentable ?</div>
+          <div class="faq-a">Cela dépend surtout du couple panier moyen / closing. Plus votre panier moyen est faible, plus il faut un show élevé, un très bon closing ou un coût d'acquisition très maîtrisé pour conserver une marge correcte.</div>
+        </div>
+      </div>
+
+      <div class="cta-block">
+        <div>
+          <h3>VOUS VOULEZ UNE ESTIMATION RÉELLE ?</h3>
+          <p>Hudson vous aide à modéliser un volume de RDV réaliste selon votre marché, votre panier moyen et votre taux de closing.</p>
+        </div>
+        <a href="https://www.hudson-ltd.com/#contact" class="cta-btn">Demander mon estimation</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="foot-brand">HUDSON BUSINESS DEVELOPER<span>.</span> — AIX-EN-PROVENCE</div>
+    <div class="foot-meta">
+      <a href="/glossaire" class="foot-link">Glossaire</a>
+      <a href="/plan" class="foot-link">Plan</a>
+      <a href="/mentions-legales" class="foot-link">Mentions légales</a>
+      <div class="foot-copy">© 2026</div>
+    </div>
+  </footer>
+
+  <script>
+    function euro(n) {
+      return new Intl.NumberFormat('fr-FR', {
+        style: 'currency',
+        currency: 'EUR',
+        maximumFractionDigits: 0
+      }).format(n);
+    }
+
+    function numberFr(n, digits = 1) {
+      return new Intl.NumberFormat('fr-FR', {
+        minimumFractionDigits: digits,
+        maximumFractionDigits: digits
+      }).format(n);
+    }
+
+    function calculer() {
+      const rdv = parseFloat(document.getElementById('rdv').value) || 0;
+      const show = (parseFloat(document.getElementById('show').value) || 0) / 100;
+      const closing = (parseFloat(document.getElementById('closing').value) || 0) / 100;
+      const panier = parseFloat(document.getElementById('panier').value) || 0;
+      const cout = parseFloat(document.getElementById('cout').value) || 0;
+      const duree = parseFloat(document.getElementById('duree').value) || 1;
+
+      const clients = rdv * show * closing;
+      const caMensuel = clients * panier;
+      const roi = cout > 0 ? ((caMensuel - cout) / cout) * 100 : 0;
+      const cac = clients > 0 ? (cout / clients) : 0;
+      const breakeven = (panier * show * closing) > 0 ? (cout / (panier * show * closing)) : 0;
+      const caTotal = caMensuel * duree;
+
+      document.getElementById('clients').textContent = numberFr(clients, 1);
+      document.getElementById('caMensuel').textContent = euro(caMensuel);
+      document.getElementById('roi').textContent = numberFr(roi, 0) + ' %';
+      document.getElementById('cac').textContent = clients > 0 ? euro(cac) : '—';
+      document.getElementById('breakeven').textContent = numberFr(breakeven, 1) + ' RDV';
+      document.getElementById('caTotal').textContent = euro(caTotal);
+
+      let advice = '';
+
+      if (panier < 1500) {
+        advice = "Panier moyen bas : la prospection peut rester rentable, mais elle exige un closing solide et un coût d'acquisition très maîtrisé.";
+      } else if (closing < 0.15) {
+        advice = "Taux de closing faible : avant d'augmenter le volume, travaillez la qualification des rendez-vous et la proposition de valeur.";
+      } else if (show < 0.60) {
+        advice = "Taux de show faible : la priorité est d'améliorer les confirmations, rappels et le cadrage du rendez-vous.";
+      } else if (roi >= 200) {
+        advice = "Très bon scénario : votre modèle semble absorber efficacement le coût de prospection. Le sujet devient alors le volume exécutable.";
+      } else if (roi > 0) {
+        advice = "Scénario rentable mais perfectible : améliorez le show, le closing ou le panier moyen pour créer plus de marge.";
+      } else {
+        advice = "Scénario non rentable à ce stade : revoyez le coût, l'offre, le panier moyen ou la qualité des rendez-vous générés.";
+      }
+
+      document.getElementById('adviceText').innerHTML = advice;
+    }
+
+    function resetCalculateur() {
+      document.getElementById('rdv').value = 20;
+      document.getElementById('show').value = 80;
+      document.getElementById('closing').value = 25;
+      document.getElementById('panier').value = 3000;
+      document.getElementById('cout').value = 2900;
+      document.getElementById('duree').value = 3;
+      calculer();
+    }
+
+    calculer();
+  </script>
+</body>
+</html>
