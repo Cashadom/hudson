@@ -44,12 +44,7 @@
     .back:hover { color: var(--white); }
     .back::before { content: '←'; color: var(--red); }
 
-    /* ─ HERO ─ */
-    .hero { background: var(--ink); padding: 56px 48px 48px; }
-    @media (max-width: 600px) { .hero { padding: 40px 20px 34px; } }
-    .eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--red); display: flex; align-items: center; gap: 9px; margin-bottom: 16px; }
-    .eyebrow::before { content: ''; width: 20px; height: 1px; background: var(--red); }
-    h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(38px, 5vw, 60px); line-height: .93; letter-spacing: .02em; color: var(--white); margin-bottom: 14px; }
+1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(38px, 5vw, 60px); line-height: .93; letter-spacing: .02em; color: var(--white); margin-bottom: 14px; }
     h1 em { color: var(--red); font-style: normal; }
     .hero-sub { font-size: 14px; color: rgba(255,255,255,.45); font-family: 'DM Mono', monospace; letter-spacing: .08em; }
 
@@ -137,8 +132,19 @@
 <div class="hero">
   <div class="eyebrow">Informations légales</div>
   <h1>MENTIONS LÉGALES<br>&amp; <em>POLITIQUE DE COOKIES</em></h1>
-  <p class="hero-sub">Dernière mise à jour — Janvier 2026</p>
+  <p class="hero-sub">Consulté le <span id="ts"></span></p>
 </div>
+<script>
+  (function(){
+    var d   = new Date();
+    var jours = ['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+    var mois  = ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+    var h   = String(d.getHours()).padStart(2,'0');
+    var min = String(d.getMinutes()).padStart(2,'0');
+    document.getElementById('ts').textContent =
+      jours[d.getDay()] + ' ' + d.getDate() + ' ' + mois[d.getMonth()] + ' ' + d.getFullYear() + ' — ' + h + 'h' + min;
+  })();
+</script>
 
 <div class="content">
 
