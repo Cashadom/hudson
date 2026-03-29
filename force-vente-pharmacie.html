@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Force de Vente Pharmaceutique | Hudson</title>
+  <meta name="description" content="Hudson accompagne les laboratoires pharmaceutiques avec une force de vente externalisée en officine : ciblage, prise de commande, merchandising, réassort et appui référencement.">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{
+      --ink:#0c1a2e;
+      --page:#f6f5f2;
+      --page-alt:#edecea;
+      --white:#ffffff;
+      --red:#bf1129;
+      --green:#0a6640;
+      --green-light:#e6f2ec;
+      --t-mid:#3b5070;
+      --t-muted:#788fa8;
+      --border:rgba(12,26,46,.10);
+      --border-md:rgba(12,26,46,.16);
+    }
+    html{scroll-behavior:smooth;}
+    body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-webkit-font-smoothing:antialiased;}
+    .wrap{max-width:860px;margin:0 auto;padding:0 40px;}
+    @media(max-width:600px){.wrap{padding:0 20px;}}
+
+    /* TOPBAR */
+    .topbar{background:var(--ink);height:54px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;position:sticky;top:0;z-index:50;}
+    @media(max-width:600px){.topbar{padding:0 20px;}}
+    .logo{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:.12em;color:var(--white);text-decoration:none;}
+    .logo span{color:var(--red);}
+    .back{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4);text-decoration:none;display:flex;align-items:center;gap:7px;transition:color .18s;}
+    .back:hover{color:var(--white);}
+    .back::before{content:'←';color:var(--red);}
+
+    /* PHARMA BANNER */
+    .pharma-banner{width:100%;height:220px;overflow:hidden;position:relative;background:linear-gradient(135deg, #0a3d2e 0%, #0a6640 40%, #1a8a5a 70%, #0c1a2e 100%);display:flex;align-items:center;justify-content:center;}
+    .pharma-banner img{width:100%;height:100%;object-fit:cover;display:block;}
+    .pharma-banner-placeholder{display:flex;flex-direction:column;align-items:center;gap:10px;opacity:.5;}
+    .pharma-banner-placeholder svg{width:54px;height:54px;}
+    .pharma-banner-placeholder span{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.6);}
+    .pharma-banner-overlay{position:absolute;inset:0;background:linear-gradient(to right, rgba(12,26,46,.55) 0%, transparent 60%);}
+    .pharma-banner-tag{position:absolute;bottom:18px;left:40px;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:8px;}
+    .pharma-banner-tag::before{content:'';width:18px;height:1px;background:var(--red);}
+    @media(max-width:600px){.pharma-banner{height:160px;}.pharma-banner-tag{left:20px;}}
+
+    /* HERO */
+    .hero{background:var(--ink);padding:56px 40px 48px;}
+    @media(max-width:600px){.hero{padding:38px 20px 32px;}}
+    .eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);display:flex;align-items:center;gap:9px;margin-bottom:18px;}
+    .eyebrow::before{content:'';width:20px;height:1px;background:var(--red);}
+    h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(38px,5vw,64px);line-height:.93;letter-spacing:.02em;color:var(--white);margin-bottom:18px;}
+    h1 em{color:var(--red);font-style:normal;}
+    .hero-intro{font-size:15px;font-weight:300;color:rgba(255,255,255,.5);max-width:580px;line-height:1.7;}
+    .hero-price{display:inline-flex;align-items:baseline;gap:6px;margin-top:22px;background:rgba(191,17,41,.12);border:1px solid rgba(191,17,41,.3);padding:10px 18px;}
+    .hero-price-val{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--red);line-height:1;}
+    .hero-price-label{font-size:13px;color:rgba(255,255,255,.5);font-weight:300;}
+
+    /* CONTENT */
+    .content{padding:56px 0 72px;}
+    h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,36px);letter-spacing:.03em;color:var(--ink);margin:48px 0 16px;line-height:1;}
+    h2:first-of-type{margin-top:0;}
+    p{font-size:15px;color:var(--t-mid);line-height:1.75;margin-bottom:18px;font-weight:300;}
+    p strong{color:var(--ink);font-weight:500;}
+    .highlight{background:var(--ink);padding:28px 32px;border-left:3px solid var(--red);margin:32px 0;}
+    .highlight p{color:rgba(255,255,255,.65);margin:0;}
+    .highlight strong{color:var(--white);}
+
+    /* ICON LIST */
+    .icon-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin:20px 0 28px;}
+    .icon-list li{display:flex;align-items:flex-start;gap:12px;font-size:14.5px;color:var(--t-mid);line-height:1.55;}
+    .icon-list li::before{content:'→';color:var(--red);font-family:'DM Mono',monospace;font-size:11px;margin-top:3px;flex-shrink:0;}
+
+    /* STATS */
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin:36px 0;}
+    @media(max-width:500px){.stats{grid-template-columns:1fr;}}
+    .stat{background:var(--white);border:1px solid var(--border);padding:22px 20px;}
+    .stat-v{font-family:'Bebas Neue',sans-serif;font-size:38px;color:var(--ink);line-height:1;margin-bottom:4px;}
+    .stat-v em{color:var(--red);font-style:normal;}
+    .stat-l{font-size:12.5px;color:var(--t-muted);line-height:1.4;}
+
+    /* MISSIONS GRID */
+    .missions{display:grid;grid-template-columns:repeat(2,1fr);gap:3px;margin:24px 0 36px;}
+    @media(max-width:500px){.missions{grid-template-columns:1fr;}}
+    .mission-card{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--red);padding:22px 20px;}
+    .mission-icon{font-size:22px;margin-bottom:10px;display:block;}
+    .mission-title{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.05em;color:var(--ink);margin-bottom:6px;}
+    .mission-desc{font-size:13px;color:var(--t-mid);line-height:1.55;}
+
+    /* USE CASES */
+    .use-cases{display:flex;flex-direction:column;gap:0;margin:24px 0 32px;}
+    .use-case{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid var(--border);}
+    .use-case:last-child{border-bottom:none;}
+    .use-case-n{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--red);line-height:1;min-width:32px;}
+    .use-case-body strong{display:block;font-size:14.5px;font-weight:500;color:var(--ink);margin-bottom:4px;}
+    .use-case-body span{font-size:13.5px;color:var(--t-mid);line-height:1.55;}
+
+    /* TARIF */
+    .tarif-block{background:var(--ink);padding:32px;margin:32px 0;display:flex;align-items:center;gap:32px;flex-wrap:wrap;}
+    .tarif-main{display:flex;flex-direction:column;gap:4px;}
+    .tarif-val{font-family:'Bebas Neue',sans-serif;font-size:52px;color:var(--red);line-height:1;}
+    .tarif-unit{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4);}
+    .tarif-desc{font-size:13.5px;color:rgba(255,255,255,.55);line-height:1.65;max-width:400px;font-weight:300;}
+    .tarif-desc strong{color:var(--white);font-weight:500;}
+    @media(max-width:560px){.tarif-block{flex-direction:column;gap:18px;padding:24px 20px;}}
+
+    /* FAQ */
+    .faq{border-top:1px solid var(--border);margin-top:48px;padding-top:40px;}
+    .faq-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:.04em;color:var(--ink);margin-bottom:28px;}
+    .faq-item{border-bottom:1px solid var(--border);padding:18px 0;}
+    .faq-q{font-weight:500;font-size:15px;color:var(--ink);margin-bottom:8px;}
+    .faq-a{font-size:13.5px;color:var(--t-mid);line-height:1.65;}
+
+    /* CTA */
+    .cta-block{background:var(--red);padding:40px;margin-top:56px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+    @media(max-width:600px){.cta-block{flex-direction:column;padding:32px 20px;}}
+    .cta-block h3{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:.04em;color:var(--white);margin-bottom:4px;}
+    .cta-block p{font-size:13.5px;color:rgba(255,255,255,.7);margin:0;font-weight:300;}
+    .cta-btn{background:var(--white);color:var(--red);padding:14px 28px;font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;white-space:nowrap;flex-shrink:0;transition:background .2s;}
+    .cta-btn:hover{background:rgba(255,255,255,.9);}
+
+    /* FOOTER */
+    footer{background:var(--ink);padding:28px 40px;border-top:1px solid rgba(255,255,255,.07);}
+    @media(max-width:600px){footer{padding:22px 20px;}}
+    .footer-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+    @media(max-width:600px){.footer-inner{flex-direction:column;text-align:center;gap:18px;}}
+    .foot-brand{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:.1em;color:rgba(255,255,255,.4);}
+    .foot-brand span{color:var(--red);}
+    .footer-links{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+    @media(max-width:600px){.footer-links{justify-content:center;}}
+    .footer-links a{font-size:12.5px;color:rgba(255,255,255,.35);text-decoration:none;transition:color .18s;display:flex;align-items:center;gap:6px;}
+    .footer-links a:hover{color:var(--white);}
+    .footer-links a.tel-link{color:rgba(255,255,255,.55);font-family:'DM Mono',monospace;font-size:11.5px;letter-spacing:.06em;border:1px solid rgba(255,255,255,.12);padding:7px 14px;}
+    .footer-links a.tel-link:hover{border-color:var(--red);color:var(--white);}
+    .footer-links a.tel-link::before{content:'📞';font-size:10px;}
+    .foot-copy{font-size:11px;color:rgba(255,255,255,.18);font-family:'DM Mono',monospace;margin-top:14px;text-align:center;}
+
+    /* ANIMATIONS */
+    @keyframes up{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+    .hero>*{animation:up .5s ease both;}
+    .eyebrow{animation-delay:.05s;}h1{animation-delay:.15s;}.hero-intro{animation-delay:.25s;}.hero-price{animation-delay:.32s;}
+  </style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <a href="https://www.hudson-ltd.com/" class="logo">HUDSON<span>.</span></a>
+  <a href="https://www.hudson-ltd.com/" class="back">Accueil</a>
+</div>
+
+<!-- PHARMA BANNER -->
+<div class="pharma-banner">
+  <!-- Remplacez le bloc ci-dessous par : <img src="pharma.png" alt="Force de vente pharmaceutique Hudson"> -->
+  <div class="pharma-banner-placeholder">
+    <svg viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="14" width="50" height="30" rx="3" stroke="white" stroke-width="1.5"/>
+      <circle cx="27" cy="29" r="8" stroke="white" stroke-width="1.5"/>
+      <line x1="27" y1="24" x2="27" y2="34" stroke="white" stroke-width="1.5"/>
+      <line x1="22" y1="29" x2="32" y2="29" stroke="white" stroke-width="1.5"/>
+      <path d="M10 14V10C10 8.9 10.9 8 12 8H22L27 3L32 8H42C43.1 8 44 8.9 44 10V14" stroke="white" stroke-width="1.5"/>
+    </svg>
+    <span>pharma.png — à intégrer ici</span>
+  </div>
+  <div class="pharma-banner-overlay"></div>
+  <div class="pharma-banner-tag">Force de vente · Secteur pharmaceutique</div>
+</div>
+
+<!-- HERO -->
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">Pour les laboratoires pharmaceutiques</div>
+  <h1>FORCE DE VENTE<br><em>EN OFFICINE</em></h1>
+  <p class="hero-intro">Hudson mobilise une force de vente dédiée auprès des pharmacies pour le compte de laboratoires. Ciblage, présentation de gamme, prise de commande directe — sans les contraintes d'une équipe interne.</p>
+  <div class="hero-price">
+    <span class="hero-price-val">2€</span>
+    <span class="hero-price-label">par visite téléphonique officine — sans engagement</span>
+  </div>
+</div></div>
+
+<!-- CONTENT -->
+<div class="content"><div class="wrap">
+
+  <h2>MISSIONS AUPRÈS DES OFFICINES</h2>
+  <p>Hudson intervient comme <strong>force de vente externalisée</strong> pour présenter vos produits en pharmacie, suivre les rotations et soutenir votre réseau terrain. Chaque mission est pilotée sur-mesure selon votre gamme, votre segmentation et vos objectifs commerciaux.</p>
+
+  <div class="missions">
+    <div class="mission-card">
+      <span class="mission-icon">🎯</span>
+      <div class="mission-title">Ciblage des officines</div>
+      <div class="mission-desc">Sélection et qualification des pharmacies selon la famille de produits, le potentiel de vente et la zone géographique.</div>
+    </div>
+    <div class="mission-card">
+      <span class="mission-icon">💊</span>
+      <div class="mission-title">Présentation de gamme</div>
+      <div class="mission-desc">Pitch produit adapté à l'interlocuteur officinal : pharmacien titulaire, adjoint ou préparateur.</div>
+    </div>
+    <div class="mission-card">
+      <span class="mission-icon">🛒</span>
+      <div class="mission-title">Prise de commande directe</div>
+      <div class="mission-desc">Transformation immédiate en commande lors du contact téléphonique — sans délai ni intermédiaire.</div>
+    </div>
+    <div class="mission-card">
+      <span class="mission-icon">🔄</span>
+      <div class="mission-title">Réassort & suivi rotations</div>
+      <div class="mission-desc">Relance des officines pour assurer la continuité des stocks et éviter les ruptures linéaires.</div>
+    </div>
+    <div class="mission-card">
+      <span class="mission-icon">📅</span>
+      <div class="mission-title">Prise de RDV délégué</div>
+      <div class="mission-desc">Qualification et organisation des rendez-vous pour vos délégués pharmaceutiques terrain.</div>
+    </div>
+    <div class="mission-card">
+      <span class="mission-icon">📦</span>
+      <div class="mission-title">Merchandising & sell-out</div>
+      <div class="mission-desc">Conseils de mise en avant, d'implantation et d'animation pour maximiser la visibilité en rayon et le sell-out officine.</div>
+    </div>
+    <div class="mission-card">
+      <span class="mission-icon">🏥</span>
+      <div class="mission-title">Appui référencement</div>
+      <div class="mission-desc">Soutien aux démarches de référencement auprès des centrales d'achat et groupements pharmaceutiques.</div>
+    </div>
+    <div class="mission-card">
+      <span class="mission-icon">📊</span>
+      <div class="mission-title">Reporting & suivi</div>
+      <div class="mission-desc">Compte-rendu détaillé de chaque contact, indicateurs de conversion et recommandations hebdomadaires.</div>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <p><strong>Une force de vente téléphonique dédiée pharmacie, à 2€ la visite.</strong> Idéal pour augmenter la couverture officinale sans les coûts d'un réseau terrain full-time. Résultats mesurables dès le premier mois.</p>
+  </div>
+
+  <h2>TROIS CAS D'USAGE TYPES</h2>
+  <div class="use-cases">
+    <div class="use-case">
+      <div class="use-case-n">01</div>
+      <div class="use-case-body">
+        <strong>Soutien à une force terrain existante</strong>
+        <span>Hudson prend en charge les officines hors-secteur ou en période de surcharge, pour que vos représentants se concentrent sur leurs comptes prioritaires.</span>
+      </div>
+    </div>
+    <div class="use-case">
+      <div class="use-case-n">02</div>
+      <div class="use-case-body">
+        <strong>Couverture d'un secteur vacant</strong>
+        <span>Départ d'un délégué, zone non couverte, lancement dans une nouvelle région — Hudson maintient la pression commerciale sans interruption.</span>
+      </div>
+    </div>
+    <div class="use-case">
+      <div class="use-case-n">03</div>
+      <div class="use-case-body">
+        <strong>Renforcement d'une équipe multicartes</strong>
+        <span>Vos agents multicartes ne peuvent pas couvrir toutes les officines à la fréquence souhaitée. Hudson complète leur action en téléphonique sur les comptes secondaires.</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>TARIF & FONCTIONNEMENT</h2>
+  <div class="tarif-block">
+    <div class="tarif-main">
+      <div class="tarif-val">2€</div>
+      <div class="tarif-unit">par visite téléphonique officine</div>
+    </div>
+    <div class="tarif-desc">
+      Pas d'engagement long terme. <strong>Vous définissez le volume, la cible et les objectifs</strong> — Hudson se charge du reste. Chaque visite fait l'objet d'un compte-rendu qualifié. Listes d'officines fournies ou intégrées selon vos fichiers existants.
+    </div>
+  </div>
+
+  <ul class="icon-list">
+    <li><strong>Aucun engagement de durée</strong> — campagne activable sous 5 jours ouvrés</li>
+    <li><strong>Profils formés au secteur pharmaceutique</strong> — discours adapté à l'environnement officinal</li>
+    <li><strong>Script co-construit</strong> avec vos équipes marketing et médicales</li>
+    <li><strong>Ciblage par famille de produits</strong>, type d'officine, géographie et potentiel</li>
+    <li><strong>Reporting hebdomadaire</strong> avec taux de joignabilité, conversion et verbatims</li>
+  </ul>
+
+  <!-- FAQ -->
+  <div class="faq">
+    <div class="faq-title">QUESTIONS FRÉQUENTES</div>
+    <div class="faq-item">
+      <div class="faq-q">Hudson fournit-il les fichiers d'officines ?</div>
+      <div class="faq-a">Oui, Hudson peut constituer et enrichir les listes d'officines selon vos critères (zone, type, groupement, potentiel). Vous pouvez aussi fournir votre propre fichier CRM — les deux approches sont compatibles.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Comment se déroule le brief produit ?</div>
+      <div class="faq-a">Un onboarding est organisé en début de mission avec vos équipes marketing et/ou médicales. Le script est co-rédigé, validé par vous, puis itéré au fil des premiers retours terrain.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Est-ce compatible avec un réseau de délégués existant ?</div>
+      <div class="faq-a">Absolument. Hudson intervient en complémentarité de votre force terrain — sur les secteurs vacants, les comptes secondaires ou en renfort temporaire lors de pics d'activité ou de réorganisations.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Peut-on cibler des groupements ou centrales spécifiques ?</div>
+      <div class="faq-a">Oui. Hudson peut concentrer l'action sur des officines membres d'un groupement particulier (PHR, Giphar, Optipharm, etc.) pour soutenir votre référencement ou vos accords cadres.</div>
+    </div>
+  </div>
+
+</div></div>
+
+<!-- CTA BLOCK -->
+<div class="wrap">
+  <div class="cta-block">
+    <div>
+      <h3>LANCER UNE CAMPAGNE OFFICINE</h3>
+      <p>À partir de 2€ la visite téléphonique — sans engagement. Brief sous 48h.</p>
+    </div>
+    <a href="tel:0695368383" class="cta-btn">📞 &nbsp;06 95 36 83 83</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="foot-brand">HUDSON BUSINESS DEVELOPER<span>.</span> — AIX-EN-PROVENCE</div>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.hudson-ltd.com/">← Accueil Hudson</a>
+      <a href="tel:0695368383" class="tel-link">06 95 36 83 83</a>
+    </div>
+  </div>
+  <div class="foot-copy">© 2026 Hudson Business Developer — Force de vente pharmaceutique externalisée</div>
+</footer>
+
+</body>
+</html>
