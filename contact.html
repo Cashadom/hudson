@@ -59,7 +59,22 @@
       --sh-md:     0 8px 30px rgba(12,26,46,0.10);
     }
 
-    body { font-family: 'DM Sans', sans-serif; background: var(--page); color: var(--t-main); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    body { 
+      font-family: 'DM Sans', sans-serif; 
+      background: var(--ink);  /* fond sombre qui servira de base pour l'image plein écran */
+      color: var(--t-main); 
+      overflow-x: hidden; 
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+    /* fond prêt à recevoir écran.png : on applique un dégradé subtil mais l'image viendra par-dessus si besoin */
+    .contact-hero {
+      background: radial-gradient(circle at 10% 20%, rgba(12,26,46,0.95), var(--ink));
+      position: relative;
+    }
+    /* si vous souhaitez que l'image couvre toute la zone, décommentez la ligne ci-dessous et placez votre image */
+    /* .contact-hero::before { content: ''; position: absolute; inset: 0; background: url('ecran.png') center/cover no-repeat; opacity: 0.3; pointer-events: none; } */
+    
     .wrap { max-width: 1140px; margin: 0 auto; padding: 0 48px; }
     @media (max-width: 720px) { .wrap { padding: 0 22px; } }
 
@@ -102,7 +117,8 @@
 
     /* BACKLINKS BAR : seulement 2 liens */
     .backlinks-bar {
-      background: var(--page-alt);
+      background: rgba(237,236,234,0.92);
+      backdrop-filter: blur(4px);
       border-bottom: 1px solid var(--border);
       padding: 12px 0;
     }
@@ -134,11 +150,10 @@
       color: var(--red);
     }
 
-    /* PAGE CONTACT - version épurée */
+    /* PAGE CONTACT - version épurée, fond image-ready */
     .contact-hero {
       padding: 140px 0 96px;
-      background: var(--ink);
-      position: relative;
+      background: radial-gradient(circle at 30% 20%, rgba(15,30,50,0.97), var(--ink));
     }
     .contact-grid {
       display: grid;
@@ -184,30 +199,8 @@
       font-weight: bold;
       font-size: 16px;
     }
-    /* version sans icône ni texte "🔗" */
-    .pagesjaunes-link {
-      margin-top: 32px;
-      background: rgba(191,17,41,0.12);
-      padding: 14px 20px;
-      border-radius: 6px;
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 13px;
-      font-family: 'DM Mono', monospace;
-    }
-    .pagesjaunes-link a {
-      color: var(--white);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(255,255,255,0.3);
-      font-weight: 500;
-    }
-    .pagesjaunes-link a:hover {
-      color: var(--red);
-      border-bottom-color: var(--red);
-    }
 
-    /* Carte contact */
+    /* Carte contact - version minimaliste sans "Bureau", sans emojis superflus, sans mentions "disponible pro" ni "interventions nationales" */
     .direct-contact-card {
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.1);
@@ -264,19 +257,30 @@
       color: rgba(255,255,255,0.7);
     }
     .contact-info-list li:last-child { border-bottom: none; }
-    .contact-info-list .emoji { font-size: 20px; min-width: 32px; }
+    /* icones simplifiées (texte uniquement) */
+    .contact-info-list .label-icon {
+      font-weight: 400;
+      min-width: 32px;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.5px;
+    }
     .contact-info-list a {
       color: var(--white);
       text-decoration: none;
       border-bottom: 1px dotted rgba(255,255,255,0.3);
     }
+    .contact-info-list a:hover {
+      border-bottom-color: var(--red);
+    }
+    /* Zone Latam mise à jour : uniquement pays demandés */
     .zones {
       margin-top: 16px;
       background: rgba(191,17,41,0.12);
       padding: 12px 16px;
       border-left: 2px solid var(--red);
       font-size: 12px;
-      color: rgba(255,255,255,0.6);
+      color: rgba(255,255,255,0.65);
+      line-height: 1.5;
     }
 
     /* FOOTER */
@@ -383,10 +387,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<!-- SECTION CONTACT PRINCIPALE : sans formulaire, texte intégral demandé -->
+<!-- SECTION CONTACT PRINCIPALE : fond prêt pour écran.png, aucun bloc Pages Jaunes, coordonnées épurées -->
 <section class="contact-hero">
   <div class="wrap contact-grid">
-    <!-- Colonne gauche : texte exact (sans icône superflue) -->
+    <!-- Colonne gauche : texte demandé -->
     <div class="contact-left">
       <div class="tag" style="color: rgba(255,255,255,0.5);">Contact direct</div>
       <h1>Prenez contact<br> avec notre équipe</h1>
@@ -396,15 +400,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><span class="check">✓</span> Proposition d’équipe SDR / Closer adaptée</li>
         <li><span class="check">✓</span> Simulation de ROI et calendrier de lancement</li>
       </div>
-      
-      <!-- Bloc Pages Jaunes sans aucun emoji ni "🔗" -->
-      <div class="pagesjaunes-link">
-        
-        </a>
-      </div>
+      <!-- Le bloc Pages Jaunes a été complètement retiré (suppression de l'encart) -->
     </div>
 
-    <!-- Carte de contact avec coordonnées Cyril Ragonet, ligne Bureau ajustée -->
+    <!-- Carte de contact avec Cyril Ragonet, nettoyée (pas de "Bureau", pas de "interventions nationales", pas de "disponible pro") -->
     <div class="direct-contact-card">
       <div class="direct-label">✦ Votre interlocuteur principal</div>
       <div class="contact-person">
@@ -415,12 +414,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
       <ul class="contact-info-list">
-        <li><span class="emoji">📞</span> <strong>Tél :</strong> <a href="tel:+33695368383">06 95 36 83 83</a> (disponible pro)</li>
-        <li><span class="emoji">✉️</span> <strong>Email :</strong> <a href="mailto:cyril.ragonet@gmail.com">cyril.ragonet@gmail.com</a></li>
-        <li><span class="emoji">📍</span> <strong>Bureau :</strong> Aix-en-Provence <span style="color:rgba(255,255,255,0.4);">•</span> Interventions nationales</li>
+        <li><span class="label-icon">📞</span> <a href="tel:+33695368383">06 95 36 83 83</a></li>
+        <li><span class="label-icon">✉️</span> <a href="mailto:cyril.ragonet@gmail.com">cyril.ragonet@gmail.com</a></li>
+        <li><span class="label-icon">📍</span> Aix-en-Provence</li>
       </ul>
       <div class="zones">
-        🌍 <strong>Zones d'intervention :</strong> France · Suisse · Belgique · Espagne · Latam (Mexique, Brésil, Colombie, Chili, Argentine)
+        🌍 <strong>Zones d'intervention :</strong> France · Suisse · Belgique · Espagne · Latam (Argentine, Mexique, Colombie, Pérou, Chili, Brésil)
       </div>
     </div>
   </div>
