@@ -120,23 +120,65 @@
     .nav-cta:hover { background: var(--ink-mid) !important; }
     @media (max-width: 860px) { .nav-links { display: none; } }
 
-    /* HERO */
+    /* HERO AVEC VIDEO DE FOND */
     .hero {
       padding: 144px 0 92px;
-      background: var(--ink); position: relative; overflow: hidden;
+      position: relative;
+      overflow: hidden;
     }
+    
+    /* Vidéo de fond */
+    .hero-video-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      opacity: 0.4; /* Opacité à 40% */
+      pointer-events: none; /* Pour pouvoir cliquer à travers la vidéo */
+    }
+    
+    /* Overlay sombre pour améliorer la lisibilité du texte */
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--ink);
+      z-index: 1;
+      opacity: 0.85;
+    }
+    
+    /* Contenu au-dessus de la vidéo */
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Anciens pseudo-éléments supprimés ou adaptés */
     .hero::before, .hero::after {
-      content: ''; position: absolute; border-radius: 50%; pointer-events: none;
-      border: 1px solid rgba(255,255,255,0.035);
+      display: none;
     }
-    .hero::before { width: 540px; height: 540px; right: -100px; top: -120px; }
-    .hero::after  { width: 320px; height: 320px; right: 60px; top: 20px; }
 
     .hero-grid {
-      max-width: 1140px; margin: 0 auto; padding: 0 48px;
-      display: grid; grid-template-columns: 1fr 380px; gap: 72px; align-items: center;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 48px;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 72px;
+      align-items: center;
     }
-    @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; padding: 0 22px; gap: 48px; } }
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        padding: 0 22px;
+        gap: 48px;
+      }
+    }
 
     .h-eye {
       font-family: 'DM Mono', monospace; font-size: 11px;
@@ -150,7 +192,7 @@
 
     .hero h1 {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(48px, 6vw, 88px); /* MODIFIÉ : réduit pour mobile */
+      font-size: clamp(48px, 6vw, 88px);
       line-height: 0.93; letter-spacing: 0.02em; color: var(--white);
       margin-bottom: 26px;
       animation: up .6s ease both .2s;
@@ -179,9 +221,16 @@
       padding: 15px 26px; font-size: 13px; font-weight: 400;
       letter-spacing: 0.06em; text-decoration: none;
       border: 1px solid rgba(255,255,255,0.17);
-      transition: border-color .2s, color .2s; display: inline-block;
+      transition: border-color .2s, color .2s; display: inline-flex;
+      align-items: center;
+      gap: 10px;
     }
     .btn-s:hover { border-color: rgba(255,255,255,0.38); color: var(--white); }
+    
+    .btn-s img {
+      height: 28px;
+      vertical-align: middle;
+    }
 
     .h-panel {
       background: rgba(255,255,255,0.042);
@@ -495,29 +544,41 @@
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO AVEC VIDEO DE FOND EN BOUCLE -->
   <section class="hero">
-    <div class="hero-grid">
-      <div>
-        <div class="h-eye"><b>Business developers externalisés</b> · France & Europe</div>
-        <h1>Des <em>SDR, closers</em><br>& téléprospection<br>sans recrutement</h1>
-        <p class="hero-sub">Lancez une <strong>campagne B2B externalisée</strong> en 5 jours : nous recrutons, formons et gérons l'équipe commerciale. Vous ne payez que les résultats.</p>
-        <div class="hero-btns">
-          <a href="#offres" class="btn-p">Voir les offres →</a>
-          <a href="/promoteurs" class="btn-s">
-  <img src="immo.png" style="height: 28px; vertical-align: middle; margin-right: 10px;"> Deal Maker Immobilier
-</a>
+    <!-- Vidéo en arrière-plan : lecture automatique, muette, boucle, opacité 40% -->
+    <video class="hero-video-bg" autoplay muted loop playsinline>
+      <source src="office.mp4" type="video/mp4">
+      <!-- Fallback texte si la vidéo ne se charge pas -->
+      Votre navigateur ne supporte pas la lecture de vidéo.
+    </video>
+    <!-- Overlay sombre pour lisibilité (optionnel mais recommandé) -->
+    <div class="hero-overlay"></div>
+    
+    <!-- Contenu -->
+    <div class="hero-content">
+      <div class="hero-grid">
+        <div>
+          <div class="h-eye"><b>Business developers externalisés</b> · France & Europe</div>
+          <h1>Des <em>SDR, closers</em><br>& téléprospection<br>sans recrutement</h1>
+          <p class="hero-sub">Lancez une <strong>campagne B2B externalisée</strong> en 5 jours : nous recrutons, formons et gérons l'équipe commerciale. Vous ne payez que les résultats.</p>
+          <div class="hero-btns">
+            <a href="#offres" class="btn-p">Voir les offres →</a>
+            <a href="/promoteurs" class="btn-s">
+              <img src="immo.png" alt="icone immobilier"> Deal Maker Immobilier
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="h-panel">
-        <div class="h-panel-label">Performance moyenne Hudson</div>
-        <div class="h-stats">
-          <div class="h-stat"><span class="hs-l">RDV qualifiés / mois</span><span class="hs-v r">+58</span></div>
-          <div class="h-stat"><span class="hs-l">Taux d'ouverture</span><span class="hs-v">43%</span></div>
-          <div class="h-stat"><span class="hs-l">ROI médian</span><span class="hs-v">4,2x</span></div>
-          <div class="h-stat"><span class="hs-l">Délai de lancement</span><span class="hs-v">5j</span></div>
+        <div class="h-panel">
+          <div class="h-panel-label">Performance moyenne Hudson</div>
+          <div class="h-stats">
+            <div class="h-stat"><span class="hs-l">RDV qualifiés / mois</span><span class="hs-v r">+58</span></div>
+            <div class="h-stat"><span class="hs-l">Taux d'ouverture</span><span class="hs-v">43%</span></div>
+            <div class="h-stat"><span class="hs-l">ROI médian</span><span class="hs-v">4,2x</span></div>
+            <div class="h-stat"><span class="hs-l">Délai de lancement</span><span class="hs-v">5j</span></div>
+          </div>
+          <div class="h-panel-note">*données consolidées 2024 – 120 campagnes B2B</div>
         </div>
-        <div class="h-panel-note">*données consolidées 2024 – 120 campagnes B2B</div>
       </div>
     </div>
   </section>
@@ -544,8 +605,8 @@
         </div>
         <ul class="prob-list">
           <li class="prob-item"><span class="prob-n">01</span><div class="prob-t"><strong>Time‑to‑hire trop long</strong><span>Vous perdez des opportunités pendant que vous recrutez.</span></div></li>
-<li class="prob-item"><span class="prob-n">02</span><div class="prob-t"><a href="comparateur.html" style="text-decoration: none; color: inherit;"><strong>Coût fixe et risques</strong></a><span>Salaire + charges + turnover pèsent sur votre burn rate.</span></div></li>
-<li class="prob-item"><span class="prob-n">03</span><div class="prob-t"><strong>Difficulté à scaler</strong><span>Pas de flexibilité : vous ne pouvez pas doubler l'équipe du jour au lendemain.</span></div></li>
+          <li class="prob-item"><span class="prob-n">02</span><div class="prob-t"><a href="comparateur.html" style="text-decoration: none; color: inherit;"><strong>Coût fixe et risques</strong></a><span>Salaire + charges + turnover pèsent sur votre burn rate.</span></div></li>
+          <li class="prob-item"><span class="prob-n">03</span><div class="prob-t"><strong>Difficulté à scaler</strong><span>Pas de flexibilité : vous ne pouvez pas doubler l'équipe du jour au lendemain.</span></div></li>
         </ul>
       </div>
     </div>
@@ -659,7 +720,7 @@
       <div class="proc-hd">
         <span class="tag">Notre process</span>
         <h2>Du brief aux premiers RDV</h2>
-        <p>Une <a href="kpi-hudson.html" style="color: inherit; text-decoration: underline; text-decoration-color: var(--red);">méthodologie rodée</a> pour lancer votre campagne en 5 jours ouvrés.</p> <!-- MODIFIÉ : lien ajouté -->
+        <p>Une <a href="kpi-hudson.html" style="color: inherit; text-decoration: underline; text-decoration-color: var(--red);">méthodologie rodée</a> pour lancer votre campagne en 5 jours ouvrés.</p>
       </div>
       <div class="proc-steps">
         <div class="step">
@@ -729,21 +790,21 @@
   </section>
 
   <!-- TARGETS -->
-<section class="targets">
-  <div class="wrap targ-grid">
-    <div>
-      <span class="tag">Pour qui ?</span>
-      <h2>Startups, PME, scale‑ups</h2>
-      <p class="prob-lead">Nous travaillons avec <strong><a href="missions-type.html" style="text-decoration: none; color: inherit;">toutes les structures</a></strong> qui ont un besoin de performance commerciale sans les contraintes de recrutement.</p>
+  <section class="targets">
+    <div class="wrap targ-grid">
+      <div>
+        <span class="tag">Pour qui ?</span>
+        <h2>Startups, PME, scale‑ups</h2>
+        <p class="prob-lead">Nous travaillons avec <strong><a href="missions-type.html" style="text-decoration: none; color: inherit;">toutes les structures</a></strong> qui ont un besoin de performance commerciale sans les contraintes de recrutement.</p>
+      </div>
+      <div class="targ-list">
+        <div class="targ-item"><strong>SaaS / Tech</strong> <span>Éditeurs de logiciels, plateformes</span></div>
+        <div class="targ-item"><strong>Conseil & services</strong> <span>Cabinet, agences, expertises pointues</span></div>
+        <div class="targ-item"><strong>Industrie & Fintech</strong> <span>Cycles de vente longs</span></div>
+        <div class="targ-item"><strong>Scale‑ups en hypercroissance</strong> <span>Besoin de scaler rapidement</span></div>
+      </div>
     </div>
-    <div class="targ-list">
-      <div class="targ-item"><strong>SaaS / Tech</strong> <span>Éditeurs de logiciels, plateformes</span></div>
-      <div class="targ-item"><strong>Conseil & services</strong> <span>Cabinet, agences, expertises pointues</span></div>
-      <div class="targ-item"><strong>Industrie & Fintech</strong> <span>Cycles de vente longs</span></div>
-      <div class="targ-item"><strong>Scale‑ups en hypercroissance</strong> <span>Besoin de scaler rapidement</span></div>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- CTA CONTACT -->
   <section class="cta" id="contact">
@@ -753,61 +814,56 @@
       <p class="cta-sub">Réponse sous 24h ou appel immédiat.</p>
       
       <!-- Formulaire Powr -->
-<div class="powr-form-builder" id="97af3054_1773179127"></div>
-<script src="https://www.powr.io/powr.js?platform=html"></script>
+      <div class="powr-form-builder" id="97af3054_1773179127"></div>
+      <script src="https://www.powr.io/powr.js?platform=html"></script>
     </div>
   </section>
 
   <!-- FOOTER -->
-<footer>
-  <div class="wrap">
-    <div class="foot-main">
-
-      <div class="foot-col">
-        <div class="foot-logo">hudson<span class="logo-dot">.</span></div>
-        <div class="foot-about">Business developers externalisés pour startups et scale‑ups. SDR, closers, campagnes de téléprospection B2B.</div>
-      </div>
-
-      <div class="foot-col">
-        <div class="foot-title">Solutions</div>
-        <div class="foot-text">SDR externalisé</div>
-        <div class="foot-text">Account Executive</div>
-        <div class="foot-text">Téléprospection B2B</div>
-        <div class="foot-text">Campagne sur mesure</div>
-        <div class="foot-text">
-          <a href="/growth-engine" style="color:#38bdf8;text-decoration:none;font-family:'Bebas Neue',sans-serif;letter-spacing:.08em;display:inline-flex;align-items:center;gap:6px;">
-            GROWTH ENGINE <span style="font-size:12px;">→</span>
-          </a>
+  <footer>
+    <div class="wrap">
+      <div class="foot-main">
+        <div class="foot-col">
+          <div class="foot-logo">hudson<span class="logo-dot">.</span></div>
+          <div class="foot-about">Business developers externalisés pour startups et scale‑ups. SDR, closers, campagnes de téléprospection B2B.</div>
+        </div>
+        <div class="foot-col">
+          <div class="foot-title">Solutions</div>
+          <div class="foot-text">SDR externalisé</div>
+          <div class="foot-text">Account Executive</div>
+          <div class="foot-text">Téléprospection B2B</div>
+          <div class="foot-text">Campagne sur mesure</div>
+          <div class="foot-text">
+            <a href="/growth-engine" style="color:#38bdf8;text-decoration:none;font-family:'Bebas Neue',sans-serif;letter-spacing:.08em;display:inline-flex;align-items:center;gap:6px;">
+              GROWTH ENGINE <span style="font-size:12px;">→</span>
+            </a>
+          </div>
+        </div>
+        <div class="foot-col">
+          <div class="foot-title">Ressources</div>
+          <div class="foot-text">Blog</div>
+          <div class="foot-text">Études de cas</div>
+          <div class="foot-text">Calculateur ROI</div>
+          <div class="foot-text">FAQ</div>
+        </div>
+        <div class="foot-col">
+          <div class="foot-title">Coordonnées</div>
+          <div class="foot-text">Aix en Provence</div>
+          <div class="foot-text">cyril.ragonet@gmail.com</div>
+          <div class="foot-text">06 95 36 83 83</div>
+          <div class="foot-text"><a href="https://www.linkedin.com/in/cyril-r-74102a102/" style="color:#87CEEB;text-decoration:none;">LinkedIn</a></div>
+          <div class="foot-text"><a href="intelligence-hub.html" style="color:#bf1129;text-decoration:none;text-transform:uppercase;">→ INTELLIGENCE HUB</a></div>
         </div>
       </div>
-
-      <div class="foot-col">
-        <div class="foot-title">Ressources</div>
-        <div class="foot-text">Blog</div>
-        <div class="foot-text">Études de cas</div>
-        <div class="foot-text">Calculateur ROI</div>
-        <div class="foot-text">FAQ</div>
+      <div class="foot-bottom">
+        <span>© 2026 Hudson Ltd — Tous droits réservés</span>
+        <span>
+          <a href="mentions-legales.html">Mentions légales</a> ·
+          <a href="plan.html">Plan du site</a>
+        </span>
       </div>
-
-      <div class="foot-col">
-        <div class="foot-title">Coordonnées</div>
-        <div class="foot-text">Aix en Provence</div>
-        <div class="foot-text">cyril.ragonet@gmail.com</div>
-        <div class="foot-text">06 95 36 83 83</div>
-        <div class="foot-text"><a href="https://www.linkedin.com/in/cyril-r-74102a102/" style="color:#87CEEB;text-decoration:none;">LinkedIn</a></div>
-        <div class="foot-text"><a href="intelligence-hub.html" style="color:#bf1129;text-decoration:none;text-transform:uppercase;">→ INTELLIGENCE HUB</a></div>
-      </div>
-
     </div>
-    <div class="foot-bottom">
-      <span>© 2026 Hudson Ltd — Tous droits réservés</span>
-      <span>
-        <a href="mentions-legales.html">Mentions légales</a> ·
-        <a href="plan.html">Plan du site</a>
-      </span>
-    </div>
-  </div>
-</footer>
+  </footer>
 
   <!-- JSON-LD avec domaine corrigé -->
   <script type="application/ld+json">
