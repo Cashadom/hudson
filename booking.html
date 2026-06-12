@@ -60,13 +60,19 @@
       text-decoration: none;
     }
     .topbar-logo span { color: var(--red); }
-    .badge-tag {
+    .back-link {
       background: rgba(255,255,255,0.08);
       padding: 5px 12px;
       border-radius: 40px;
       font-size: 11px;
       font-family: 'DM Mono', monospace;
       color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .back-link:hover {
+      color: var(--white);
+      background: rgba(255,255,255,0.15);
     }
 
     .booking-container {
@@ -373,14 +379,19 @@
       color: rgba(255,255,255,0.4);
     }
     footer .foot-brand span { color: var(--red); }
+    .foot-copy {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      color: rgba(255,255,255,0.2);
+    }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div class="topbar">
-  <a href="#" class="topbar-logo">HUDSON<span>.</span></a>
-  <div class="badge-tag">Agenda · Créneau 6h (9h–18h)</div>
+  <a href="https://www.hudson-ltd.com" class="topbar-logo">HUDSON<span>.</span></a>
+  <a href="https://www.hudson-ltd.com" class="back-link">← Retour à l'accueil</a>
 </div>
 
 <div class="booking-container">
@@ -444,8 +455,6 @@
 
 <script>
   const DAYS = ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];
-  // UN SEUL CRÉNEAU DE 6H ENTRE 9h ET 18h
-  // Ici 9h-18h = 6h. Vous pouvez modifier startHour et endHour (ex: 10h-16h, 11h-17h, 12h-18h)
   const SLOTS = [
     { label: '9h–18h', startHour: 9, endHour: 18, duration: '6h' }
   ];
