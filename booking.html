@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Agenda — Hudson | Réservation créneaux 6h</title>
+  <meta name="description" content="Agenda Hudson — réservation de créneaux de 6h entre 9h et 18h, sélection multiple, règle des 24h.">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --ink: #0c1a2e;
+      --page: #f6f5f2;
+      --page-alt: #edecea;
+      --white: #ffffff;
+      --red: #bf1129;
+      --t-mid: #3b5070;
+      --t-muted: #788fa8;
+      --border: rgba(12, 26, 46, 0.10);
+      --border-md: rgba(12, 26, 46, 0.16);
+      --green-soft: #E1F5EE;
+      --green-border: #9FE1CB;
+      --orange-soft: #FAEEDA;
+      --orange-border: #FAC775;
+      --blue-soft: #E6F1FB;
+      --blue-border: #378ADD;
+    }
+
+    body {
+      font-family: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      background: var(--page);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .topbar {
+      background: var(--ink);
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    @media (max-width: 600px) {
+      .topbar { padding: 0 20px; }
+    }
+    .topbar-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      letter-spacing: 0.12em;
+      color: var(--white);
+      text-decoration: none;
+    }
+    .topbar-logo span { color: var(--red); }
+    .badge-tag {
+      background: rgba(255,255,255,0.08);
+      padding: 5px 12px;
+      border-radius: 40px;
+      font-size: 11px;
+      font-family: 'DM Mono', monospace;
+      color: rgba(255,255,255,0.55);
+    }
+
+    .booking-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 48px 3rem;
+    }
+    @media (max-width: 700px) {
+      .booking-container { padding: 1.5rem 20px 2rem; }
+    }
+
+    .booking-header {
+      margin-bottom: 2rem;
+      border-left: 3px solid var(--red);
+      padding-left: 1.2rem;
+    }
+    .booking-header h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.3rem;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      line-height: 1.1;
+    }
+    .booking-header h1 span { color: var(--red); }
+    .booking-header p {
+      color: var(--t-muted);
+      font-size: 0.85rem;
+      margin-top: 8px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 1.8rem;
+      background: var(--white);
+      padding: 1.2rem 1.5rem;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+    }
+    @media (max-width: 800px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--t-mid);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    input, select {
+      height: 44px;
+      border-radius: 12px;
+      border: 1px solid var(--border-md);
+      background: var(--page);
+      padding: 0 14px;
+      font-size: 14px;
+      font-family: 'DM Sans', monospace;
+      transition: 0.15s;
+    }
+    input:focus, select:focus {
+      outline: none;
+      border-color: var(--red);
+      box-shadow: 0 0 0 2px rgba(191, 17, 41, 0.2);
+    }
+
+    .week-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 1.5rem 0 1.2rem;
+      gap: 12px;
+    }
+    .week-nav button {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 40px;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .week-nav button:hover {
+      background: var(--page-alt);
+      border-color: var(--t-muted);
+    }
+    .week-label {
+      font-weight: 600;
+      font-size: 1rem;
+      background: var(--white);
+      padding: 6px 20px;
+      border-radius: 40px;
+      border: 1px solid var(--border);
+    }
+
+    .legend {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      padding: 5px 12px;
+      border-radius: 40px;
+      font-weight: 500;
+    }
+    .badge.available { background: var(--green-soft); color: #0F6E56; border: 0.5px solid var(--green-border); }
+    .badge.booked-b { background: var(--blue-soft); color: #185FA5; border: 0.5px solid var(--blue-border); }
+    .badge.soon { background: var(--orange-soft); color: #854F0B; border: 0.5px solid var(--orange-border); }
+    .badge.past-b { background: var(--page-alt); color: var(--t-muted); border: 0.5px solid var(--border); }
+    .badge.selected { background: var(--ink); color: white; border-color: var(--ink); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+      margin-bottom: 2rem;
+    }
+    .day-col {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .day-head {
+      font-size: 12px;
+      font-weight: 600;
+      text-align: center;
+      padding: 8px 0;
+      background: var(--white);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      text-transform: uppercase;
+      color: var(--t-mid);
+    }
+    .day-head.today {
+      background: var(--ink);
+      color: white;
+      border-color: var(--ink);
+    }
+    .slot {
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      padding: 14px 6px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.12s;
+      background: var(--white);
+    }
+    .slot.available {
+      border-color: #C0E0D3;
+      background: #F9FDFB;
+    }
+    .slot.available:hover:not(.booked):not(.past):not(.too-soon) {
+      background: var(--green-soft);
+      border-color: var(--green-border);
+    }
+    .slot.booked {
+      background: var(--blue-soft);
+      border-color: var(--blue-border);
+      cursor: default;
+      opacity: 0.9;
+    }
+    .slot.past {
+      background: var(--page-alt);
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .slot.too-soon {
+      background: var(--orange-soft);
+      border-color: var(--orange-border);
+      cursor: not-allowed;
+    }
+    .slot.selected-for-booking {
+      background: var(--ink);
+      border-color: var(--red);
+      color: white;
+      transform: scale(0.98);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .slot.selected-for-booking .slot-time,
+    .slot.selected-for-booking .slot-dur {
+      color: white;
+    }
+    .slot-time {
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .slot-dur {
+      font-size: 10px;
+      margin-top: 4px;
+      opacity: 0.8;
+    }
+    .slot-client, .slot-mission {
+      font-size: 10px;
+      margin-top: 6px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .validate-bar {
+      background: var(--white);
+      border-radius: 60px;
+      padding: 12px 20px;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      border: 1px solid var(--border);
+    }
+    .selected-counter {
+      font-size: 13px;
+      font-weight: 500;
+      background: var(--page-alt);
+      padding: 5px 14px;
+      border-radius: 30px;
+    }
+    .btn-validate {
+      background: var(--red);
+      color: white;
+      border: none;
+      padding: 10px 28px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn-validate:hover { opacity: 0.85; transform: scale(0.97); }
+    .btn-clear {
+      background: transparent;
+      border: 1px solid var(--border);
+      padding: 8px 20px;
+      border-radius: 40px;
+      cursor: pointer;
+    }
+
+    .confirm-banner {
+      background: var(--green-soft);
+      border-left: 4px solid #0F6E56;
+      border-radius: 14px;
+      padding: 12px 18px;
+      margin-bottom: 1rem;
+      display: none;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .bookings-list {
+      margin-top: 1rem;
+    }
+    .bookings-list h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    .booking-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 12px 16px;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .booking-info { font-size: 14px; font-weight: 500; }
+    .booking-meta { font-size: 12px; color: var(--t-muted); margin-top: 3px; }
+    .del-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 6px 14px;
+      cursor: pointer;
+    }
+    .del-btn:hover { background: #FCEBEB; border-color: #F09595; }
+
+    footer {
+      background: var(--ink);
+      padding: 20px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 2.5rem;
+    }
+    footer .foot-brand {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 14px;
+      color: rgba(255,255,255,0.4);
+    }
+    footer .foot-brand span { color: var(--red); }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="topbar">
+  <a href="#" class="topbar-logo">HUDSON<span>.</span></a>
+  <div class="badge-tag">Agenda · Créneau 6h (9h–18h)</div>
+</div>
+
+<div class="booking-container">
+  <div class="booking-header">
+    <h1>AGENDA <span>HUDSON</span></h1>
+    <p>Créneau de 6h par jour (9h–18h) · Sélectionnez plusieurs jours → validez · Réservation impossible -24h</p>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label>Nom du client</label>
+      <input type="text" id="clientName" placeholder="ex. Bouygues, SFR..." />
+    </div>
+    <div class="form-group">
+      <label>Mission</label>
+      <select id="mission">
+        <option value="Téléprospection">Téléprospection</option>
+        <option value="Administratif">Administratif</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Email de l'annonceur (contact)</label>
+      <input type="email" id="contactEmail" placeholder="ex. jean.dupont@entreprise.com" />
+    </div>
+  </div>
+
+  <div id="confirmBanner" class="confirm-banner"></div>
+
+  <div class="week-nav">
+    <button id="prevWeek">← Semaine préc.</button>
+    <span class="week-label" id="weekLabel"></span>
+    <button id="nextWeek">Semaine suiv. →</button>
+  </div>
+
+  <div class="legend">
+    <span class="badge available">✔ Disponible</span>
+    <span class="badge booked-b">🔒 Réservé</span>
+    <span class="badge soon">⏱ &lt;24h</span>
+    <span class="badge past-b">⛔ Passé</span>
+    <span class="badge selected">⭐ Sélectionné</span>
+  </div>
+
+  <div class="grid" id="slotsGrid"></div>
+
+  <div class="validate-bar">
+    <div class="selected-counter" id="selectedCounter">0 créneau(x) sélectionné(s)</div>
+    <div style="display: flex; gap: 12px;">
+      <button id="clearSelectionBtn" class="btn-clear">Effacer sélection</button>
+      <button id="validateMultipleBtn" class="btn-validate">✅ Valider les créneaux</button>
+    </div>
+  </div>
+
+  <div class="bookings-list" id="bookingsList"></div>
+  <div style="font-size: 11px; color: var(--t-muted); margin-top: 16px; text-align: right;">* localStorage — réservations persistantes · Email annonceur obligatoire et valide</div>
+</div>
+
+<footer>
+  <div class="foot-brand">HUDSON BUSINESS DEVELOPER<span>.</span> — AIX-EN-PROVENCE</div>
+  <div class="foot-copy">© 2026 · agenda multi-réservations</div>
+</footer>
+
+<script>
+  const DAYS = ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];
+  // UN SEUL CRÉNEAU DE 6H ENTRE 9h ET 18h
+  // Ici 9h-18h = 6h. Vous pouvez modifier startHour et endHour (ex: 10h-16h, 11h-17h, 12h-18h)
+  const SLOTS = [
+    { label: '9h–18h', startHour: 9, endHour: 18, duration: '6h' }
+  ];
+  const STORAGE_KEY = 'hudson_agenda_v6';
+  let weekOffset = 0;
+  let selectedSlots = new Set();
+
+  function getBookings() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); } catch(e) { return []; }
+  }
+  function saveBookings(bookings) { localStorage.setItem(STORAGE_KEY, JSON.stringify(bookings)); }
+
+  function getMondayOfWeek(offset) {
+    const now = new Date();
+    const day = now.getDay();
+    const diffToMonday = day === 0 ? -6 : 1 - day;
+    const monday = new Date(now);
+    monday.setHours(0,0,0,0);
+    monday.setDate(now.getDate() + diffToMonday + (offset * 7));
+    return monday;
+  }
+
+  function formatDateKey(date, startHour) { return `${date.toISOString().slice(0,10)}_${startHour}`; }
+  function isBooked(key) { return getBookings().some(b => b.key === key); }
+  function getBookingByKey(key) { return getBookings().find(b => b.key === key); }
+
+  function isPastSlot(date, startHour) {
+    const d = new Date(date); d.setHours(startHour, 0, 0, 0);
+    return d < new Date();
+  }
+  function isTooSoonSlot(date, startHour) {
+    const d = new Date(date); d.setHours(startHour, 0, 0, 0);
+    const diff = d - new Date();
+    return diff > 0 && diff < 24 * 3600 * 1000;
+  }
+
+  function isValidEmail(email) {
+    const re = /^[^\s@]+@([^\s@]+\.)+[^\s@]+$/;
+    return re.test(email);
+  }
+
+  function formatDateFR(d) { return d.toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' }); }
+  function formatShort(d) { return d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' }); }
+  function escapeHtml(str) { if(!str) return ''; return str.replace(/[&<>]/g, function(m){ if(m==='&') return '&amp;'; if(m==='<') return '&lt;'; if(m==='>') return '&gt;'; return m;}); }
+
+  function renderWeek() {
+    const mon = getMondayOfWeek(weekOffset);
+    const sat = new Date(mon); sat.setDate(mon.getDate()+5);
+    document.getElementById('weekLabel').innerText = `Du ${formatShort(mon)} au ${formatShort(sat)}`;
+    const grid = document.getElementById('slotsGrid');
+    grid.innerHTML = '';
+
+    for(let d=0; d<6; d++) {
+      const date = new Date(mon); date.setDate(mon.getDate() + d);
+      const col = document.createElement('div'); col.className = 'day-col';
+      const isToday = date.toDateString() === new Date().toDateString();
+      const head = document.createElement('div');
+      head.className = `day-head ${isToday ? 'today' : ''}`;
+      head.innerText = `${DAYS[d]} ${date.getDate()}`;
+      col.appendChild(head);
+
+      for(const slot of SLOTS) {
+        const key = formatDateKey(date, slot.startHour);
+        const booked = isBooked(key);
+        const past = isPastSlot(date, slot.startHour);
+        const tooSoon = !past && isTooSoonSlot(date, slot.startHour);
+        const bookingData = getBookingByKey(key);
+        const isSelected = selectedSlots.has(key);
+
+        let slotClass = 'slot';
+        if(booked) slotClass += ' booked';
+        else if(past) slotClass += ' past';
+        else if(tooSoon) slotClass += ' too-soon';
+        else slotClass += ' available';
+
+        if(isSelected && !booked && !past && !tooSoon) slotClass += ' selected-for-booking';
+
+        const slotDiv = document.createElement('div');
+        slotDiv.className = slotClass;
+
+        let innerHtml = `<div class="slot-time">${slot.label}</div><div class="slot-dur">${slot.duration}</div>`;
+        if(bookingData) {
+          innerHtml += `<div class="slot-client">${escapeHtml(bookingData.client)}</div><div class="slot-mission">${bookingData.mission}</div>`;
+        }
+        slotDiv.innerHTML = innerHtml;
+
+        if(!booked && !past && !tooSoon) {
+          slotDiv.style.cursor = 'pointer';
+          slotDiv.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if(selectedSlots.has(key)) {
+              selectedSlots.delete(key);
+            } else {
+              selectedSlots.add(key);
+            }
+            updateSelectedCounter();
+            renderWeek();
+          });
+        } else if(tooSoon) slotDiv.title = "Réservation impossible moins de 24h avant";
+        else if(past) slotDiv.title = "Créneau passé";
+        else if(booked) slotDiv.title = "Déjà réservé";
+        col.appendChild(slotDiv);
+      }
+      grid.appendChild(col);
+    }
+    renderBookingList();
+    updateSelectedCounter();
+  }
+
+  function updateSelectedCounter() {
+    const count = selectedSlots.size;
+    const counterEl = document.getElementById('selectedCounter');
+    if(counterEl) {
+      counterEl.innerText = `${count} créneau(x) sélectionné(s)`;
+    }
+  }
+
+  function validateMultipleSlots() {
+    const client = document.getElementById('clientName').value.trim();
+    const mission = document.getElementById('mission').value;
+    const contactEmail = document.getElementById('contactEmail').value.trim();
+
+    if(!client) {
+      const inp = document.getElementById('clientName');
+      inp.focus(); 
+      inp.style.boxShadow = '0 0 0 2px rgba(191,17,41,0.5)';
+      setTimeout(()=>inp.style.boxShadow='', 1000);
+      alert("Veuillez saisir le nom du client");
+      return;
+    }
+    
+    if(!contactEmail) {
+      const emailInp = document.getElementById('contactEmail');
+      emailInp.focus(); 
+      emailInp.style.boxShadow = '0 0 0 2px rgba(191,17,41,0.5)';
+      setTimeout(()=>emailInp.style.boxShadow='', 1000);
+      alert("L'email de l'annonceur est obligatoire");
+      return;
+    }
+    if(!isValidEmail(contactEmail)) {
+      const emailInp = document.getElementById('contactEmail');
+      emailInp.focus();
+      emailInp.style.boxShadow = '0 0 0 2px rgba(191,17,41,0.5)';
+      setTimeout(()=>emailInp.style.boxShadow='', 1000);
+      alert("Email invalide. Format requis : nom@domaine.com");
+      return;
+    }
+
+    if(selectedSlots.size === 0) {
+      alert("Aucun créneau sélectionné. Cliquez sur les créneaux disponibles pour les sélectionner.");
+      return;
+    }
+
+    const existingBookings = getBookings();
+    const newBookings = [];
+    const errors = [];
+
+    for(const key of selectedSlots) {
+      const [dateStr, startHourStr] = key.split('_');
+      const startHour = parseInt(startHourStr);
+      const slotDate = new Date(dateStr + 'T00:00:00');
+      if(isBooked(key)) errors.push(`${dateStr} : déjà réservé`);
+      else if(isPastSlot(slotDate, startHour)) errors.push(`${dateStr} : créneau passé`);
+      else if(isTooSoonSlot(slotDate, startHour)) errors.push(`${dateStr} : <24h impossible`);
+    }
+
+    if(errors.length > 0) {
+      alert("Certains créneaux ne peuvent pas être réservés:\n" + errors.join("\n"));
+      const toDelete = [];
+      for(const key of selectedSlots) {
+        const [dateStr, startHourStr] = key.split('_');
+        const startHour = parseInt(startHourStr);
+        const slotDate = new Date(dateStr + 'T00:00:00');
+        if(isBooked(key) || isPastSlot(slotDate, startHour) || isTooSoonSlot(slotDate, startHour)) {
+          toDelete.push(key);
+        }
+      }
+      toDelete.forEach(key => selectedSlots.delete(key));
+      renderWeek();
+      return;
+    }
+
+    for(const key of selectedSlots) {
+      const [dateStr, startHourStr] = key.split('_');
+      const startHour = parseInt(startHourStr);
+      const slotLabel = SLOTS.find(s => s.startHour === startHour)?.label || '9h–18h';
+      const endHour = SLOTS.find(s => s.startHour === startHour)?.endHour || 18;
+      newBookings.push({
+        key: key,
+        client: client,
+        mission: mission,
+        contactEmail: contactEmail,
+        date: dateStr,
+        startHour: startHour,
+        endHour: endHour,
+        label: slotLabel,
+        duration: '6h'
+      });
+    }
+
+    const allBookings = [...existingBookings, ...newBookings];
+    saveBookings(allBookings);
+
+    const banner = document.getElementById('confirmBanner');
+    const plural = newBookings.length > 1 ? 's' : '';
+    const joursListe = newBookings.map(b => {
+      const d = new Date(b.date + 'T00:00:00');
+      return formatDateFR(d);
+    }).join(', ');
+    
+    banner.innerHTML = `<strong>✓ ${newBookings.length} créneau${plural} réservé${plural} :</strong> ${escapeHtml(client)} — ${mission}<br>📧 ${escapeHtml(contactEmail)} · ${joursListe} (6h)`;
+    banner.style.display = 'block';
+    setTimeout(() => banner.style.display = 'none', 5000);
+
+    selectedSlots.clear();
+    renderWeek();
+  }
+
+  function clearSelection() {
+    selectedSlots.clear();
+    renderWeek();
+    const banner = document.getElementById('confirmBanner');
+    banner.innerHTML = `🔄 Sélection effacée`;
+    banner.style.display = 'block';
+    setTimeout(() => banner.style.display = 'none', 1800);
+  }
+
+  function deleteBooking(keyToDelete) {
+    const newBookings = getBookings().filter(b => b.key !== keyToDelete);
+    saveBookings(newBookings);
+    renderWeek();
+  }
+
+  function renderBookingList() {
+    const bookings = getBookings();
+    const container = document.getElementById('bookingsList');
+    if(!bookings.length) { container.innerHTML = ''; return; }
+    const sorted = [...bookings].sort((a,b)=>a.key.localeCompare(b.key));
+    let html = `<h3>📅 Réservations (${bookings.length})</h3>`;
+    for(const b of sorted) {
+      const eventDate = new Date(b.date + 'T00:00:00');
+      const formatted = formatDateFR(eventDate);
+      const slotLabel = b.label || '9h–18h';
+      const emailInfo = b.contactEmail ? ` · 📧 ${escapeHtml(b.contactEmail)}` : '';
+      html += `
+        <div class="booking-item">
+          <div>
+            <div class="booking-info"><strong>${escapeHtml(b.client)}</strong> — ${b.mission}${emailInfo}</div>
+            <div class="booking-meta">${formatted} · ${slotLabel} (6h)</div>
+          </div>
+          <button class="del-btn" data-key="${b.key}">Annuler</button>
+        </div>
+      `;
+    }
+    container.innerHTML = html;
+    document.querySelectorAll('.del-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const key = btn.getAttribute('data-key');
+        if(confirm("Supprimer cette réservation ?")) deleteBooking(key);
+      });
+    });
+  }
+
+  document.getElementById('prevWeek').addEventListener('click', () => { weekOffset--; selectedSlots.clear(); renderWeek(); });
+  document.getElementById('nextWeek').addEventListener('click', () => { weekOffset++; selectedSlots.clear(); renderWeek(); });
+  document.getElementById('validateMultipleBtn').addEventListener('click', validateMultipleSlots);
+  document.getElementById('clearSelectionBtn').addEventListener('click', clearSelection);
+
+  renderWeek();
+</script>
+</body>
+</html>
