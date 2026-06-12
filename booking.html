@@ -363,6 +363,16 @@
       cursor: pointer;
     }
     .del-btn:hover { background: #FCEBEB; border-color: #F09595; }
+    .sync-status {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      background: var(--page-alt);
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    .sync-status.online { background: var(--green-soft); color: #0F6E56; }
+    .sync-status.offline { background: var(--orange-soft); color: #854F0B; }
 
     footer {
       background: var(--ink);
@@ -399,6 +409,8 @@
     <h1>AGENDA <span>HUDSON</span></h1>
     <p>Créneau de 6h par jour (9h–18h) · Sélectionnez plusieurs jours → validez · Réservation impossible -24h</p>
   </div>
+
+  <div id="syncStatus" class="sync-status">🔄 Synchronisation...</div>
 
   <div class="form-row">
     <div class="form-group">
@@ -445,27 +457,91 @@
   </div>
 
   <div class="bookings-list" id="bookingsList"></div>
-  <div style="font-size: 11px; color: var(--t-muted); margin-top: 16px; text-align: right;">* localStorage — réservations persistantes · Email annonceur obligatoire et valide</div>
+  <div style="font-size: 11px; color: var(--t-muted); margin-top: 16px; text-align: right;">* ☁️ Réservations synchronisées en ligne · Accessibles partout</div>
 </div>
 
 <footer>
   <div class="foot-brand">HUDSON BUSINESS DEVELOPER<span>.</span> — AIX-EN-PROVENCE</div>
-  <div class="foot-copy">© 2026 · agenda multi-réservations</div>
+  <div class="foot-copy">© 2026 · agenda synchronisé</div>
 </footer>
 
 <script>
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyF5ioT3wfCNpAehHGyd2VNK2mmsvFg9KVHtIFYhL_d-lsv7xivokJopYQ-sLY6lc7h/exec';
   const DAYS = ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];
   const SLOTS = [
     { label: '9h–18h', startHour: 9, endHour: 18, duration: '6h' }
   ];
-  const STORAGE_KEY = 'hudson_agenda_v6';
+  const STORAGE_KEY = 'hudson_agenda_online';
+  
   let weekOffset = 0;
   let selectedSlots = new Set();
+  let onlineBookings = [];
 
-  function getBookings() {
-    try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); } catch(e) { return []; }
+  // ========== SYNC AVEC GOOGLE SHEETS ==========
+  async function loadBookingsFromSheet() {
+    try {
+      const response = await fetch(GOOGLE_SCRIPT_URL);
+      const data = await response.json();
+      onlineBookings = Array.isArray(data) ? data : [];
+      document.getElementById('syncStatus').innerHTML = '✅ Synchronisé en ligne';
+      document.getElementById('syncStatus').className = 'sync-status online';
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(onlineBookings));
+      return onlineBookings;
+    } catch (error) {
+      console.error('Erreur chargement:', error);
+      document.getElementById('syncStatus').innerHTML = '⚠️ Mode hors ligne (cache local)';
+      document.getElementById('syncStatus').className = 'sync-status offline';
+      const cached = localStorage.getItem(STORAGE_KEY);
+      onlineBookings = cached ? JSON.parse(cached) : [];
+      return onlineBookings;
+    }
   }
-  function saveBookings(bookings) { localStorage.setItem(STORAGE_KEY, JSON.stringify(bookings)); }
+
+  async function saveBookingToSheet(booking) {
+    try {
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(booking)
+      });
+      return true;
+    } catch (error) {
+      console.error('Erreur sauvegarde:', error);
+      return false;
+    }
+  }
+
+  async function deleteBookingFromSheet(keyToDelete) {
+    try {
+      await fetch(`${GOOGLE_SCRIPT_URL}?delete=${encodeURIComponent(keyToDelete)}`, {
+        method: 'GET',
+        mode: 'no-cors'
+      });
+      return true;
+    } catch (error) {
+      console.error('Erreur suppression:', error);
+      return false;
+    }
+  }
+
+  async function syncAllBookings(bookings) {
+    for (const booking of bookings) {
+      await saveBookingToSheet(booking);
+    }
+    await loadBookingsFromSheet();
+  }
+
+  // ========== FONCTIONS AGENDA ==========
+  function getBookings() { return onlineBookings; }
+  
+  function saveBookings(bookings) {
+    onlineBookings = bookings;
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(onlineBookings));
+  }
+
+  function isBooked(key) { return getBookings().some(b => b.key === key); }
+  function getBookingByKey(key) { return getBookings().find(b => b.key === key); }
 
   function getMondayOfWeek(offset) {
     const now = new Date();
@@ -478,8 +554,6 @@
   }
 
   function formatDateKey(date, startHour) { return `${date.toISOString().slice(0,10)}_${startHour}`; }
-  function isBooked(key) { return getBookings().some(b => b.key === key); }
-  function getBookingByKey(key) { return getBookings().find(b => b.key === key); }
 
   function isPastSlot(date, startHour) {
     const d = new Date(date); d.setHours(startHour, 0, 0, 0);
@@ -572,46 +646,29 @@
     }
   }
 
-  function validateMultipleSlots() {
+  async function validateMultipleSlots() {
     const client = document.getElementById('clientName').value.trim();
     const mission = document.getElementById('mission').value;
     const contactEmail = document.getElementById('contactEmail').value.trim();
 
     if(!client) {
-      const inp = document.getElementById('clientName');
-      inp.focus(); 
-      inp.style.boxShadow = '0 0 0 2px rgba(191,17,41,0.5)';
-      setTimeout(()=>inp.style.boxShadow='', 1000);
       alert("Veuillez saisir le nom du client");
       return;
     }
-    
     if(!contactEmail) {
-      const emailInp = document.getElementById('contactEmail');
-      emailInp.focus(); 
-      emailInp.style.boxShadow = '0 0 0 2px rgba(191,17,41,0.5)';
-      setTimeout(()=>emailInp.style.boxShadow='', 1000);
       alert("L'email de l'annonceur est obligatoire");
       return;
     }
     if(!isValidEmail(contactEmail)) {
-      const emailInp = document.getElementById('contactEmail');
-      emailInp.focus();
-      emailInp.style.boxShadow = '0 0 0 2px rgba(191,17,41,0.5)';
-      setTimeout(()=>emailInp.style.boxShadow='', 1000);
       alert("Email invalide. Format requis : nom@domaine.com");
       return;
     }
-
     if(selectedSlots.size === 0) {
-      alert("Aucun créneau sélectionné. Cliquez sur les créneaux disponibles pour les sélectionner.");
+      alert("Aucun créneau sélectionné");
       return;
     }
 
-    const existingBookings = getBookings();
-    const newBookings = [];
     const errors = [];
-
     for(const key of selectedSlots) {
       const [dateStr, startHourStr] = key.split('_');
       const startHour = parseInt(startHourStr);
@@ -620,28 +677,15 @@
       else if(isPastSlot(slotDate, startHour)) errors.push(`${dateStr} : créneau passé`);
       else if(isTooSoonSlot(slotDate, startHour)) errors.push(`${dateStr} : <24h impossible`);
     }
-
     if(errors.length > 0) {
-      alert("Certains créneaux ne peuvent pas être réservés:\n" + errors.join("\n"));
-      const toDelete = [];
-      for(const key of selectedSlots) {
-        const [dateStr, startHourStr] = key.split('_');
-        const startHour = parseInt(startHourStr);
-        const slotDate = new Date(dateStr + 'T00:00:00');
-        if(isBooked(key) || isPastSlot(slotDate, startHour) || isTooSoonSlot(slotDate, startHour)) {
-          toDelete.push(key);
-        }
-      }
-      toDelete.forEach(key => selectedSlots.delete(key));
-      renderWeek();
+      alert("Erreurs:\n" + errors.join("\n"));
       return;
     }
 
+    const newBookings = [];
     for(const key of selectedSlots) {
       const [dateStr, startHourStr] = key.split('_');
       const startHour = parseInt(startHourStr);
-      const slotLabel = SLOTS.find(s => s.startHour === startHour)?.label || '9h–18h';
-      const endHour = SLOTS.find(s => s.startHour === startHour)?.endHour || 18;
       newBookings.push({
         key: key,
         client: client,
@@ -649,27 +693,32 @@
         contactEmail: contactEmail,
         date: dateStr,
         startHour: startHour,
-        endHour: endHour,
-        label: slotLabel,
-        duration: '6h'
+        endHour: 18,
+        label: '9h–18h',
+        duration: '6h',
+        timestamp: new Date().toISOString()
       });
     }
 
-    const allBookings = [...existingBookings, ...newBookings];
-    saveBookings(allBookings);
-
+    for(const booking of newBookings) {
+      await saveBookingToSheet(booking);
+    }
+    
+    await loadBookingsFromSheet();
+    
     const banner = document.getElementById('confirmBanner');
     const plural = newBookings.length > 1 ? 's' : '';
-    const joursListe = newBookings.map(b => {
-      const d = new Date(b.date + 'T00:00:00');
-      return formatDateFR(d);
-    }).join(', ');
-    
-    banner.innerHTML = `<strong>✓ ${newBookings.length} créneau${plural} réservé${plural} :</strong> ${escapeHtml(client)} — ${mission}<br>📧 ${escapeHtml(contactEmail)} · ${joursListe} (6h)`;
+    banner.innerHTML = `<strong>✓ ${newBookings.length} créneau${plural} réservé${plural} (en ligne)</strong><br>${escapeHtml(client)} — ${mission}<br>📧 ${escapeHtml(contactEmail)}`;
     banner.style.display = 'block';
-    setTimeout(() => banner.style.display = 'none', 5000);
+    setTimeout(() => banner.style.display = 'none', 4000);
 
     selectedSlots.clear();
+    renderWeek();
+  }
+
+  async function deleteBooking(keyToDelete) {
+    await deleteBookingFromSheet(keyToDelete);
+    await loadBookingsFromSheet();
     renderWeek();
   }
 
@@ -682,28 +731,21 @@
     setTimeout(() => banner.style.display = 'none', 1800);
   }
 
-  function deleteBooking(keyToDelete) {
-    const newBookings = getBookings().filter(b => b.key !== keyToDelete);
-    saveBookings(newBookings);
-    renderWeek();
-  }
-
   function renderBookingList() {
     const bookings = getBookings();
     const container = document.getElementById('bookingsList');
     if(!bookings.length) { container.innerHTML = ''; return; }
     const sorted = [...bookings].sort((a,b)=>a.key.localeCompare(b.key));
-    let html = `<h3>📅 Réservations (${bookings.length})</h3>`;
+    let html = `<h3>📅 Réservations en ligne (${bookings.length})</h3>`;
     for(const b of sorted) {
       const eventDate = new Date(b.date + 'T00:00:00');
       const formatted = formatDateFR(eventDate);
-      const slotLabel = b.label || '9h–18h';
       const emailInfo = b.contactEmail ? ` · 📧 ${escapeHtml(b.contactEmail)}` : '';
       html += `
         <div class="booking-item">
           <div>
             <div class="booking-info"><strong>${escapeHtml(b.client)}</strong> — ${b.mission}${emailInfo}</div>
-            <div class="booking-meta">${formatted} · ${slotLabel} (6h)</div>
+            <div class="booking-meta">${formatted} · 9h–18h (6h)</div>
           </div>
           <button class="del-btn" data-key="${b.key}">Annuler</button>
         </div>
@@ -723,7 +765,12 @@
   document.getElementById('validateMultipleBtn').addEventListener('click', validateMultipleSlots);
   document.getElementById('clearSelectionBtn').addEventListener('click', clearSelection);
 
-  renderWeek();
+  // Initialisation
+  async function init() {
+    await loadBookingsFromSheet();
+    renderWeek();
+  }
+  init();
 </script>
 </body>
 </html>
