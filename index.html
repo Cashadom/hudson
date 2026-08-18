@@ -17,16 +17,15 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-S2912LSCRX');
 </script>
-  
+
   <!-- META PRINCIPALES SEO -->
   <title>Business Developers externalisés | SDR, closers, téléprospection B2B | Hudson</title>
   <meta name="description" content="Hudson vous aide à recruter un business developer externalisé, lancer une campagne de téléprospection B2B et générer des rendez-vous qualifiés sans recruter en interne. SDR, closers, account execs à la demande.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://hudson-ltd.com/">
-  
+
   <!-- META SOCIALES -->
   <meta property="og:title" content="Business Developers externalisés | SDR, closers & téléprospection B2B | Hudson">
   <meta property="og:description" content="Lancez une campagne de prospection B2B avec des business developers externalisés : SDR, closers, RDV qualifiés.">
@@ -34,12 +33,11 @@
   <meta property="og:url" content="https://hudson-ltd.com/">
   <meta property="og:image" content="https://hudson-ltd.com/og-cover.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  
+
   <!-- POLICES -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-  
+
   <style>
-    /* STYLES EXISTANTS CONSERVÉS */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -88,9 +86,6 @@
     }
     h2.on-dark { color: var(--white); }
 
-    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.55s ease, transform 0.55s ease; }
-    .reveal.visible { opacity: 1; transform: none; }
-
     /* NAVIGATION */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 60;
@@ -120,14 +115,12 @@
     .nav-cta:hover { background: var(--ink-mid) !important; }
     @media (max-width: 860px) { .nav-links { display: none; } }
 
-    /* HERO AVEC VIDEO DE FOND */
+    /* HERO */
     .hero {
       padding: 144px 0 92px;
       position: relative;
       overflow: hidden;
     }
-    
-    /* Vidéo de fond */
     .hero-video-bg {
       position: absolute;
       top: 0;
@@ -136,11 +129,9 @@
       height: 100%;
       object-fit: cover;
       z-index: 0;
-      opacity: 0.6; /* Opacité à 40% */
-      pointer-events: none; /* Pour pouvoir cliquer à travers la vidéo */
+      opacity: 0.6;
+      pointer-events: none;
     }
-    
-    /* Overlay sombre pour améliorer la lisibilité du texte */
     .hero-overlay {
       position: absolute;
       top: 0;
@@ -151,16 +142,9 @@
       z-index: 1;
       opacity: 0.85;
     }
-    
-    /* Contenu au-dessus de la vidéo */
     .hero-content {
       position: relative;
       z-index: 2;
-    }
-    
-    /* Anciens pseudo-éléments supprimés ou adaptés */
-    .hero::before, .hero::after {
-      display: none;
     }
 
     .hero-grid {
@@ -226,7 +210,6 @@
       gap: 10px;
     }
     .btn-s:hover { border-color: rgba(255,255,255,0.38); color: var(--white); }
-    
     .btn-s img {
       height: 28px;
       vertical-align: middle;
@@ -235,7 +218,7 @@
     .h-panel {
       background: rgba(255,255,255,0.042);
       border: 1px solid rgba(255,255,255,0.085);
-      padding: 32px;
+      padding: 32px 34px;
       animation: up .65s ease both .28s;
     }
     @media (max-width: 900px) { .h-panel { display: none; } }
@@ -247,23 +230,34 @@
       margin-bottom: 22px; padding-bottom: 14px;
       border-bottom: 1px solid rgba(255,255,255,0.07);
     }
-    .h-stats { display: flex; flex-direction: column; }
-    .h-stat {
-      display: flex; justify-content: space-between; align-items: baseline;
-      padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,0.06);
+    .h-panel-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
-    .h-stat:last-child { border-bottom: none; }
-    .hs-l { font-size: 12.5px; color: rgba(255,255,255,0.42); }
-    .hs-v { font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 0.04em; color: var(--white); }
-    .hs-v.r { color: var(--red); }
-    .h-panel-note {
-      margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.07);
-      font-size: 11px; color: rgba(255,255,255,0.22); line-height: 1.55; font-style: italic;
+    .h-panel-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 13.5px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.4;
+    }
+    .h-panel-item::before {
+      content: '—';
+      color: var(--red);
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      flex-shrink: 0;
+    }
+    .h-panel-item strong {
+      color: rgba(255,255,255,0.85);
+      font-weight: 400;
     }
 
     @keyframes up { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
 
-    /* TICKER */
+    /* TICKER — nouveau */
     .ticker {
       background: var(--page-alt); border-bottom: 1px solid var(--border);
       padding: 10px 0; overflow: hidden; white-space: nowrap;
@@ -289,12 +283,15 @@
     .callout {
       background: var(--ink); padding: 30px 34px; border-left: 3px solid var(--red);
     }
-    .callout-big {
-      font-family: 'Bebas Neue', sans-serif; font-size: 46px;
-      letter-spacing: 0.04em; line-height: 1; color: var(--white); margin-bottom: 9px;
+    .callout-text {
+      font-size: 15px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.6;
     }
-    .callout-big em { color: var(--red); font-style: normal; }
-    .callout-note { font-size: 12.5px; color: rgba(255,255,255,0.42); line-height: 1.5; }
+    .callout-text strong {
+      color: var(--white);
+      font-weight: 400;
+    }
 
     .prob-list { list-style: none; }
     .prob-item {
@@ -338,121 +335,209 @@
     .o-feats li { font-size: 13px; color: rgba(255,255,255,0.52); display: flex; align-items: flex-start; gap: 9px; line-height: 1.45; }
     .o-feats li::before { content: '→'; color: var(--red); font-family: 'DM Mono', monospace; flex-shrink: 0; font-size: 10px; margin-top: 2px; }
 
-    /* PACKAGES */
-    .packs { padding: 96px 0; background: var(--page-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .packs-hd { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 52px; align-items: end; }
-    @media (max-width: 720px) { .packs-hd { grid-template-columns: 1fr; gap: 14px; } }
-    .packs-hd p { font-size: 15.5px; color: var(--t-mid); line-height: 1.6; font-weight: 300; }
-
-    .packs-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
-    @media (max-width: 720px) { .packs-grid { grid-template-columns: 1fr; } }
-
-    .pk {
-      background: var(--white); border: 1px solid var(--border);
-      padding: 36px 30px; box-shadow: var(--sh-sm);
-      transition: box-shadow .2s, transform .2s;
+    /* MANIFESTO */
+    .manifesto {
+      padding: 72px 0 80px;
+      background: var(--page-alt);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
     }
-    .pk:hover { box-shadow: var(--sh-md); transform: translateY(-3px); }
-    .pk.feat { background: var(--ink); border-color: var(--ink); }
-    .pk-name { font-family: 'Bebas Neue', sans-serif; font-size: 36px; letter-spacing: 0.05em; color: var(--ink); margin-bottom: 4px; }
-    .pk.feat .pk-name { color: var(--white); }
-    .pk-tag { font-size: 13px; color: var(--t-muted); margin-bottom: 26px; line-height: 1.45; }
-    .pk.feat .pk-tag { color: rgba(255,255,255,0.4); }
-    .pk-price { font-family: 'Bebas Neue', sans-serif; font-size: 54px; line-height: 1; color: var(--ink); margin-bottom: 3px; }
-    .pk-price em { font-size: 24px; font-style: normal; color: var(--t-muted); }
-    .pk.feat .pk-price { color: var(--white); }
-    .pk.feat .pk-price em { color: rgba(255,255,255,0.3); }
-    .pk-note { font-size: 11.5px; color: var(--t-muted); margin-bottom: 26px; }
-    .pk.feat .pk-note { color: rgba(255,255,255,0.3); }
-    .pk-feats { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
-    .pk-feats li { font-size: 13.5px; color: var(--t-mid); display: flex; align-items: flex-start; gap: 9px; }
-    .pk.feat .pk-feats li { color: rgba(255,255,255,0.65); }
-    .pk-ck {
-      width: 16px; height: 16px; border-radius: 50%; flex-shrink: 0;
-      background: rgba(12,26,46,0.07); border: 1px solid var(--border-md);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 8px; color: var(--ink); margin-top: 3px;
+    .manifesto blockquote {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(36px, 5vw, 64px);
+      line-height: 1.1;
+      color: var(--ink);
+      max-width: 820px;
+      margin: 0 auto 20px;
+      font-style: italic;
     }
-    .pk.feat .pk-ck { background: rgba(191,17,41,0.15); border-color: rgba(191,17,41,0.3); color: var(--red); }
-    .pk-btn {
-      width: 100%; padding: 13px; text-align: center; display: block;
-      font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
-      text-decoration: none; border: 1px solid var(--border-md); color: var(--ink);
-      background: transparent; transition: all .2s;
+    .manifesto blockquote em { color: var(--red); font-style: normal; }
+    .manifesto p {
+      font-size: 16px;
+      color: var(--t-mid);
+      font-weight: 300;
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.6;
     }
-    .pk-btn:hover { background: var(--ink); color: var(--white); border-color: var(--ink); }
-    .pk.feat .pk-btn { background: var(--red); color: var(--white); border-color: var(--red); }
-    .pk.feat .pk-btn:hover { background: #a10f23; border-color: #a10f23; }
 
     /* PROCESS */
-    .process { padding: 96px 0; background: var(--page); }
+    .process { padding: 96px 0; background: var(--page-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
     .proc-hd { text-align: center; margin-bottom: 68px; }
     .proc-hd h2 { margin-top: 8px; margin-bottom: 12px; }
     .proc-hd p { font-size: 15.5px; color: var(--t-mid); font-weight: 300; max-width: 460px; margin: 0 auto; line-height: 1.6; }
 
-    .proc-steps { display: grid; grid-template-columns: repeat(4,1fr); position: relative; }
+    .proc-steps {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 12px;
+      position: relative;
+    }
     @media (max-width: 720px) { .proc-steps { grid-template-columns: 1fr 1fr; gap: 24px; } }
-    .proc-steps::before {
-      content: ''; position: absolute; top: 25px; left: 10%; right: 10%;
-      height: 1px; background: var(--border); z-index: 0;
-    }
-    @media (max-width: 720px) { .proc-steps::before { display: none; } }
 
-    .step { padding: 0 24px; text-align: center; position: relative; z-index: 1; }
+    .step {
+      padding: 0 12px;
+      text-align: center;
+      position: relative;
+    }
+    .step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      right: -6px;
+      width: 12px;
+      height: 1px;
+      background: var(--border-md);
+    }
+    @media (max-width: 720px) { .step:not(:last-child)::after { display: none; } }
+
     .step-n {
-      width: 50px; height: 50px; border-radius: 50%;
-      background: var(--page); border: 1px solid var(--border-md);
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 20px;
-      font-family: 'DM Mono', monospace; font-size: 12.5px; color: var(--t-muted);
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--t-faint);
+      margin-bottom: 12px;
     }
-    .step:first-child .step-n { background: var(--ink); color: var(--white); border-color: var(--ink); }
-    .step-title { font-family: 'Bebas Neue', sans-serif; font-size: 19px; letter-spacing: 0.05em; color: var(--ink); margin-bottom: 8px; }
-    .step-d { font-size: 13px; color: var(--t-mid); line-height: 1.55; }
+    .step-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .step-d {
+      font-size: 13px;
+      color: var(--t-mid);
+      line-height: 1.55;
+    }
 
-    /* PROOF */
-    .proof { padding: 96px 0; background: var(--ink); }
+    /* METHODE */
+    .method {
+      padding: 96px 0;
+      background: var(--ink);
+    }
+    .method .tag.light { margin-bottom: 8px; }
+    .method h2.on-dark { margin-bottom: 48px; }
 
-    .proof-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; margin-bottom: 3px; }
-    @media (max-width: 720px) { .proof-cards { grid-template-columns: 1fr; } }
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 2px;
+    }
+    @media (max-width: 720px) { .method-grid { grid-template-columns: 1fr; } }
 
-    .pc {
+    .mc {
       background: rgba(255,255,255,0.038);
       border: 1px solid rgba(255,255,255,0.07);
       padding: 34px 30px;
     }
-    .pc-q {
-      font-family: 'Instrument Serif', serif; font-style: italic;
-      font-size: 15.5px; color: rgba(255,255,255,0.72); line-height: 1.65; margin-bottom: 22px;
+    .mc-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.22);
+      margin-bottom: 12px;
     }
-    .pc-author { display: flex; align-items: center; gap: 11px; }
-    .pc-av {
-      width: 36px; height: 36px; border-radius: 50%;
-      background: var(--ink-mid); border: 1px solid rgba(255,255,255,0.1);
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Bebas Neue', sans-serif; font-size: 15px;
-      color: rgba(255,255,255,0.38); flex-shrink: 0;
+    .mc-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 24px;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      margin-bottom: 6px;
     }
-    .pc-name { font-size: 13px; font-weight: 500; color: var(--white); }
-    .pc-role { font-size: 12px; color: rgba(255,255,255,0.32); margin-top: 2px; }
-    .pc-result {
-      margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.07);
-      display: flex; align-items: center; gap: 11px;
+    .mc-desc {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.5;
+      margin-bottom: 12px;
     }
-    .pc-rv { font-family: 'Bebas Neue', sans-serif; font-size: 30px; color: var(--red); line-height: 1; }
-    .pc-rl { font-size: 12px; color: rgba(255,255,255,0.3); line-height: 1.4; }
+    .mc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .mc-list li {
+      font-size: 13px;
+      color: rgba(255,255,255,0.45);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .mc-list li::before {
+      content: '—';
+      color: var(--red);
+      font-family: 'DM Mono', monospace;
+    }
 
-    .metrics { display: grid; grid-template-columns: repeat(4,1fr); border: 1px solid rgba(255,255,255,0.07); }
-    @media (max-width: 720px) { .metrics { grid-template-columns: 1fr 1fr; } }
-    .met {
-      padding: 30px 26px; border-right: 1px solid rgba(255,255,255,0.07);
+    /* DIVISION HEALTHCARE — NOUVEAU */
+    .healthcare {
+      padding: 80px 0 96px;
+      background: var(--page);
+      border-bottom: 1px solid var(--border);
     }
-    .met:last-child { border-right: none; }
-    .met-v { font-family: 'Bebas Neue', sans-serif; font-size: 46px; color: var(--white); line-height: 1; margin-bottom: 5px; }
-    .met-l { font-size: 12.5px; color: rgba(255,255,255,0.32); line-height: 1.4; }
-    .met-n { font-size: 11px; color: rgba(255,255,255,0.18); margin-top: 4px; font-style: italic; }
+    .healthcare-grid {
+      display: grid;
+      grid-template-columns: 42% 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    @media (max-width: 720px) {
+      .healthcare-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+    .healthcare-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid var(--border);
+    }
+    .healthcare-content .tag { margin-bottom: 12px; }
+    .healthcare-content h2 {
+      font-size: clamp(32px, 3.5vw, 52px);
+      margin-bottom: 16px;
+    }
+    .healthcare-content .hc-desc {
+      font-size: 15.5px;
+      color: var(--t-mid);
+      line-height: 1.7;
+      margin-bottom: 18px;
+      font-weight: 300;
+    }
+    .hc-pillars {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      margin-bottom: 24px;
+    }
+    .hc-pillars span {
+      font-size: 12px;
+      color: var(--t-mid);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+    .hc-pillars span::before {
+      content: '— ';
+      color: var(--red);
+    }
+    .hc-btn {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      padding: 14px 30px;
+      font-size: 12.5px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background .2s;
+    }
+    .hc-btn:hover { background: #a10f23; }
 
-    /* TARGETS */
+    /* TARGETS — modifié */
     .targets { padding: 96px 0; background: var(--page-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
     .targ-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
     @media (max-width: 720px) { .targ-grid { grid-template-columns: 1fr; } }
@@ -469,7 +554,6 @@
     }
     .cta h2 { margin-bottom: 12px; }
     .cta-sub { font-size: 17px; color: var(--t-mid); margin-bottom: 32px; font-weight: 300; }
-    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
     /* FOOTER */
     footer {
@@ -497,27 +581,6 @@
       transition: color .15s;
     }
     .foot-bottom a:hover { color: var(--white); }
-
-    /* FORMULAIRE */
-    .form-card {
-      background: var(--white); border: 1px solid var(--border); padding: 32px; max-width: 480px; margin: 0 auto;
-    }
-    .form-group { margin-bottom: 18px; }
-    .form-group input, .form-group select, .form-group textarea {
-      width: 100%; padding: 14px 18px; background: var(--page-alt);
-      border: 1px solid var(--border); font-family: 'DM Sans', sans-serif;
-      font-size: 14px; transition: border .18s;
-    }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-      outline: none; border-color: var(--ink-light);
-    }
-    .form-btn {
-      background: var(--red); color: var(--white); border: none;
-      width: 100%; padding: 16px; font-size: 13px; font-weight: 500;
-      letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer;
-      transition: background .2s;
-    }
-    .form-btn:hover { background: #a10f23; }
   </style>
 </head>
 <body>
@@ -538,24 +601,18 @@
         <li><a href="#solutions">Solutions</a></li>
         <li><a href="#offres">Offres</a></li>
         <li><a href="#process">Process</a></li>
-        <li><a href="#resultats">Résultats</a></li>
+        <li><a href="#method">Méthode</a></li>
         <li><a href="/contact" class="nav-cta">Démarrer →</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- HERO AVEC VIDEO DE FOND EN BOUCLE -->
+  <!-- HERO -->
   <section class="hero">
-    <!-- Vidéo en arrière-plan : lecture automatique, muette, boucle, opacité 40% -->
     <video class="hero-video-bg" autoplay muted loop playsinline>
       <source src="office.mp4" type="video/mp4">
-      <!-- Fallback texte si la vidéo ne se charge pas -->
-      Votre navigateur ne supporte pas la lecture de vidéo.
     </video>
-    <!-- Overlay sombre pour lisibilité (optionnel mais recommandé) -->
     <div class="hero-overlay"></div>
-    
-    <!-- Contenu -->
     <div class="hero-content">
       <div class="hero-grid">
         <div>
@@ -570,24 +627,25 @@
           </div>
         </div>
         <div class="h-panel">
-          <div class="h-panel-label">Performance moyenne Hudson</div>
-          <div class="h-stats">
-            <div class="h-stat"><span class="hs-l">RDV qualifiés / mois</span><span class="hs-v r">+58</span></div>
-            <div class="h-stat"><span class="hs-l">Taux d'ouverture</span><span class="hs-v">43%</span></div>
-            <div class="h-stat"><span class="hs-l">ROI médian</span><span class="hs-v">4,2x</span></div>
-            <div class="h-stat"><span class="hs-l">Délai de lancement</span><span class="hs-v">5j</span></div>
+          <div class="h-panel-label">Ce que nous prenons en charge</div>
+          <div class="h-panel-list">
+            <div class="h-panel-item"><strong>Prospection</strong> — ciblage, approches multicanal</div>
+            <div class="h-panel-item"><strong>Qualification</strong> — identification des décideurs</div>
+            <div class="h-panel-item"><strong>Prise de rendez-vous</strong> — mise en relation qualifiée</div>
+            <div class="h-panel-item"><strong>Suivi commercial</strong> — relances et closing</div>
           </div>
-          <div class="h-panel-note">*données consolidées 2024 – 120 campagnes B2B</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TICKER -->
+  <!-- TICKER — nouveau -->
   <div class="ticker">
     <div class="t-track">
-      <span class="t-item">SaaS</span><span class="t-item">Industrie</span><span class="t-item">Conseil</span><span class="t-item">Fintech</span>
-      <span class="t-item">SaaS</span><span class="t-item">Industrie</span><span class="t-item">Conseil</span><span class="t-item">Fintech</span>
+      <span class="t-item">Healthcare</span><span class="t-item">Laboratoires</span><span class="t-item">SaaS</span>
+      <span class="t-item">Conseil</span><span class="t-item">Industrie</span><span class="t-item">Services B2B</span>
+      <span class="t-item">Healthcare</span><span class="t-item">Laboratoires</span><span class="t-item">SaaS</span>
+      <span class="t-item">Conseil</span><span class="t-item">Industrie</span><span class="t-item">Services B2B</span>
     </div>
   </div>
 
@@ -597,15 +655,14 @@
       <span class="tag">Le problème</span>
       <div class="prob-grid">
         <div>
-          <p class="prob-lead">« Recruter un commercial prend 4 à 6 mois, et 60% des SDR démissionnent avant un an. »</p>
+          <p class="prob-lead">« Recruter, former et manager une équipe commerciale demande du temps avant même le premier rendez-vous généré. »</p>
           <div class="callout">
-            <div class="callout-big"><em>84%</em> des start-ups<span class="logo-dot">.</span></div>
-            <div class="callout-note">ont du mal à recruter des profils commerciaux seniors.</div>
+            <div class="callout-text"><strong>Un process long, coûteux et incertain.</strong> Chaque recrutement est un pari, chaque départ une perte de compétence et de temps.</div>
           </div>
         </div>
         <ul class="prob-list">
-          <li class="prob-item"><span class="prob-n">01</span><div class="prob-t"><strong>Time‑to‑hire trop long</strong><span>Vous perdez des opportunités pendant que vous recrutez.</span></div></li>
-          <li class="prob-item"><span class="prob-n">02</span><div class="prob-t"><a href="comparateur.html" style="text-decoration: none; color: inherit;"><strong>Coût fixe et risques</strong></a><span>Salaire + charges + turnover pèsent sur votre burn rate.</span></div></li>
+          <li class="prob-item"><span class="prob-n">01</span><div class="prob-t"><strong>Time‑to‑market trop long</strong><span>Vous perdez des opportunités pendant que vous recrutez.</span></div></li>
+          <li class="prob-item"><span class="prob-n">02</span><div class="prob-t"><a href='/comparateur' style='text-decoration: none; color: inherit;'><strong>Coût fixe et risques</strong></a><span>Salaire + charges + turnover pèsent sur votre structure.</span></div></li>
           <li class="prob-item"><span class="prob-n">03</span><div class="prob-t"><strong>Difficulté à scaler</strong><span>Pas de flexibilité : vous ne pouvez pas doubler l'équipe du jour au lendemain.</span></div></li>
         </ul>
       </div>
@@ -660,57 +717,11 @@
     </div>
   </section>
 
-  <!-- PACKAGES -->
-  <section class="packs">
+  <!-- MANIFESTO -->
+  <section class="manifesto">
     <div class="wrap">
-      <div class="packs-hd">
-        <div>
-          <span class="tag">Nos forfaits</span>
-          <h2>Externalisation <br>commerciale sur mesure</h2>
-        </div>
-        <p>Tous nos profils sont formés, outillés et managés par Hudson. Vous n'avez plus qu'à suivre les performances.</p>
-      </div>
-      <div class="packs-grid">
-        <div class="pk">
-          <div class="pk-name">ESSENTIAL</div>
-          <div class="pk-tag">1 SDR à temps plein</div>
-          <div class="pk-price">1 490 €<em>/mois</em></div>
-          <div class="pk-note">facturation mensuelle</div>
-          <ul class="pk-feats">
-            <li><span class="pk-ck">✓</span> 1 profil SDR senior</li>
-            <li><span class="pk-ck">✓</span> 100 actions/jour (appels, mails)</li>
-            <li><span class="pk-ck">✓</span> Dashboard en temps réel</li>
-            <li><span class="pk-ck">✓</span> Réunion de pilotage hebdo</li>
-          </ul>
-          <a href="#contact" class="pk-btn">Choisir</a>
-        </div>
-        <div class="pk feat">
-          <div class="pk-name">GROWTH</div>
-          <div class="pk-tag">SDR + Closer</div>
-          <div class="pk-price">5 490 €<em>/mois</em></div>
-          <div class="pk-note">économisez 490€</div>
-          <ul class="pk-feats">
-            <li><span class="pk-ck">✓</span> 1 SDR + 1 Account Executive</li>
-            <li><span class="pk-ck">✓</span> Funnel complet prospect → signé</li>
-            <li><span class="pk-ck">✓</span> CRM partagé et pilotage rapproché</li>
-            <li><span class="pk-ck">✓</span> Coaching terrain inclus</li>
-          </ul>
-          <a href="#contact" class="pk-btn">Choisir</a>
-        </div>
-        <div class="pk">
-          <div class="pk-name">ENTERPRISE</div>
-          <div class="pk-tag">Équipe dédiée 3-5 pers.</div>
-          <div class="pk-price">Sur mesure<em></em></div>
-          <div class="pk-note">devis personnalisé</div>
-          <ul class="pk-feats">
-            <li><span class="pk-ck">✓</span> SDR, closers, chef de marché</li>
-            <li><span class="pk-ck">✓</span> Stratégie outbound 360°</li>
-            <li><span class="pk-ck">✓</span> Reporting consolidé</li>
-            <li><span class="pk-ck">✓</span> Accès API et données brutes</li>
-          </ul>
-          <a href="#contact" class="pk-btn">Nous contacter</a>
-        </div>
-      </div>
+      <blockquote>« Votre équipe commerciale, <em>sans construire</em> une équipe commerciale. »</blockquote>
+      <p>Hudson vous apporte la performance d'une force de vente dédiée, sans les contraintes de recrutement, de management ni de turnover.</p>
     </div>
   </section>
 
@@ -720,26 +731,26 @@
       <div class="proc-hd">
         <span class="tag">Notre process</span>
         <h2>Du brief aux premiers RDV</h2>
-        <p>Une <a href="kpi-hudson.html" style="color: inherit; text-decoration: underline; text-decoration-color: var(--red);">méthodologie rodée</a> pour lancer votre campagne en 5 jours ouvrés.</p>
+        <p>Une <a href='/kpi-hudson' style='color: inherit; text-decoration: underline; text-decoration-color: var(--red);'>méthodologie rodée</a> pour lancer votre campagne en 5 jours ouvrés.</p>
       </div>
       <div class="proc-steps">
         <div class="step">
-          <div class="step-n">1</div>
+          <div class="step-n">01</div>
           <div class="step-title">Brief & personas</div>
           <div class="step-d">On analyse votre ICP, votre offre et vos objections.</div>
         </div>
         <div class="step">
-          <div class="step-n">2</div>
+          <div class="step-n">02</div>
           <div class="step-title">Sourcing des profils</div>
           <div class="step-d">On sélectionne les SDR / closers adaptés à votre vertical.</div>
         </div>
         <div class="step">
-          <div class="step-n">3</div>
+          <div class="step-n">03</div>
           <div class="step-title">Formation & outils</div>
           <div class="step-d">Les experts Hudson montent en compétence sur votre produit.</div>
         </div>
         <div class="step">
-          <div class="step-n">4</div>
+          <div class="step-n">04</div>
           <div class="step-title">Lancement & pilotage</div>
           <div class="step-d">Campagne active, reporting quotidien, optimisation continue.</div>
         </div>
@@ -747,73 +758,90 @@
     </div>
   </section>
 
-  <!-- PROOF -->
-  <section class="proof" id="resultats">
+  <!-- METHODE -->
+  <section class="method" id="method">
     <div class="wrap">
-      <span class="tag light">Témoignages</span>
-      <h2 class="on-dark" style="margin-bottom: 56px;">Ils ont externalisé avec Hudson</h2>
+      <span class="tag light">Méthode Hudson</span>
+      <h2 class="on-dark">Ce que nous pilotons pour vous</h2>
     </div>
-    <div class="proof-cards">
-      <div class="pc">
-        <div class="pc-q">« On a multiplié par 3 notre nombre de RDV qualifiés en 2 mois. Les SDR Hudson sont aussi bons que nos internes. »</div>
-        <div class="pc-author">
-          <span class="pc-av">MC</span>
-          <div><div class="pc-name">Marie C.</div><div class="pc-role">Head of Sales, Fintech</div></div>
-        </div>
-        <div class="pc-result"><span class="pc-rv">+212%</span><span class="pc-rl">de rendez-vous</span></div>
+    <div class="method-grid">
+      <div class="mc">
+        <div class="mc-label">· Périmètre 1</div>
+        <div class="mc-title">Prospection</div>
+        <div class="mc-desc">Ciblage et approches multicanal</div>
+        <ul class="mc-list">
+          <li>Identification des décideurs</li>
+          <li>Appels, emailing, LinkedIn</li>
+        </ul>
       </div>
-      <div class="pc">
-        <div class="pc-q">« Je n'ai pas eu à recruter, former, gérer. L'équipe Hudson est immédiatement opérationnelle. »</div>
-        <div class="pc-author">
-          <span class="pc-av">AL</span>
-          <div><div class="pc-name">Alexandre L.</div><div class="pc-role">CEO, Legaltech</div></div>
-        </div>
-        <div class="pc-result"><span class="pc-rv">4,7x</span><span class="pc-rl">ROI à 6 mois</span></div>
+      <div class="mc">
+        <div class="mc-label">· Périmètre 2</div>
+        <div class="mc-title">Qualification</div>
+        <div class="mc-desc">Filtrage et priorisation</div>
+        <ul class="mc-list">
+          <li>Analyse des besoins</li>
+          <li>Mise en relation qualifiée</li>
+        </ul>
       </div>
-      <div class="pc">
-        <div class="pc-q">« La flexibilité incroyable : on a pu scaler de 1 à 3 SDR en une semaine. »</div>
-        <div class="pc-author">
-          <span class="pc-av">SD</span>
-          <div><div class="pc-name">Sarah D.</div><div class="pc-role">CMO, SaaS B2B</div></div>
-        </div>
-        <div class="pc-result"><span class="pc-rv">-68%</span><span class="pc-rl">de coûts de recrutement</span></div>
-      </div>
-    </div>
-    <div class="wrap">
-      <div class="metrics">
-        <div class="met"><div class="met-v">120+</div><div class="met-l">campagnes B2B</div><div class="met-n">depuis 2022</div></div>
-        <div class="met"><div class="met-v">87%</div><div class="met-l">taux de rétention</div><div class="met-n">à 6 mois</div></div>
-        <div class="met"><div class="met-v">4j</div><div class="met-l">délai moyen</div><div class="met-n">lancement</div></div>
-        <div class="met"><div class="met-v">4,2x</div><div class="met-l">ROI médian</div><div class="met-n">clients</div></div>
+      <div class="mc">
+        <div class="mc-label">· Périmètre 3</div>
+        <div class="mc-title">Suivi & closing</div>
+        <div class="mc-desc">Relances et négociation</div>
+        <ul class="mc-list">
+          <li>Gestion des objections</li>
+          <li>Reporting et optimisation</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- TARGETS -->
+  <!-- DIVISION HEALTHCARE — NOUVEAU -->
+  <section class="healthcare">
+    <div class="wrap">
+      <div class="healthcare-grid">
+        <img src="pharma.png" alt="Hudson Division Healthcare" class="healthcare-image">
+        <div class="healthcare-content">
+          <span class="tag">Division Healthcare</span>
+          <h2>Développement commercial auprès du réseau officinal</h2>
+          <p class="hc-desc">Hudson accompagne les laboratoires, marques de santé et acteurs de l'OTC dans leur développement auprès des pharmacies françaises.</p>
+          <div class="hc-pillars">
+            <span>Ouverture de comptes</span>
+            <span>Présentation de gammes</span>
+            <span>Réassort</span>
+            <span>Lancements produits</span>
+            <span>Prise de rendez-vous</span>
+            <span>Suivi commercial</span>
+          </div>
+          <p class="hc-desc" style="font-size:14px;color:var(--t-muted);margin-bottom:24px;">Nos équipes peuvent intervenir à distance et en marque blanche pour renforcer ponctuellement ou durablement votre couverture commerciale auprès des officines.</p>
+          <a href="https://hudson-ltd.com/agent-ia-prospection-pharma" class="hc-btn">Découvrir la division Healthcare →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARGETS — modifié -->
   <section class="targets">
     <div class="wrap targ-grid">
       <div>
         <span class="tag">Pour qui ?</span>
-        <h2>Startups, PME, scale‑ups</h2>
-        <p class="prob-lead">Nous travaillons avec <strong><a href="missions-type.html" style="text-decoration: none; color: inherit;">toutes les structures</a></strong> qui ont un besoin de performance commerciale sans les contraintes de recrutement.</p>
+        <h2>Entreprises, laboratoires & organisations B2B</h2>
+        <p class="prob-lead">Nous travaillons avec <strong><a href='/missions-type' style='text-decoration: none; color: inherit;'>toutes les structures</a></strong> qui ont un besoin de performance commerciale sans les contraintes de recrutement.</p>
       </div>
       <div class="targ-list">
+        <div class="targ-item"><strong>Healthcare & laboratoires</strong> <span>Pharmacies, OTC, dermocosmétique, dispositifs médicaux</span></div>
         <div class="targ-item"><strong>SaaS / Tech</strong> <span>Éditeurs de logiciels, plateformes</span></div>
         <div class="targ-item"><strong>Conseil & services</strong> <span>Cabinet, agences, expertises pointues</span></div>
-        <div class="targ-item"><strong>Industrie & Fintech</strong> <span>Cycles de vente longs</span></div>
-        <div class="targ-item"><strong>Scale‑ups en hypercroissance</strong> <span>Besoin de scaler rapidement</span></div>
+        <div class="targ-item"><strong>Industrie</strong> <span>Fabricants et entreprises à cycles commerciaux structurés</span></div>
       </div>
     </div>
   </section>
 
-  <!-- CTA CONTACT -->
+  <!-- CTA CONTACT — POWR conservé -->
   <section class="cta" id="contact">
     <div class="wrap">
       <span class="tag">Prêt à lancer votre campagne ?</span>
       <h2>Discutons de vos objectifs</h2>
       <p class="cta-sub">Réponse sous 24h ou appel immédiat.</p>
-      
-      <!-- Formulaire Powr -->
       <div class="powr-form-builder" id="97af3054_1773179127"></div>
       <script src="https://www.powr.io/powr.js?platform=html"></script>
     </div>
@@ -825,7 +853,7 @@
       <div class="foot-main">
         <div class="foot-col">
           <div class="foot-logo">hudson<span class="logo-dot">.</span></div>
-          <div class="foot-about">Business developers externalisés pour startups et scale‑ups. SDR, closers, campagnes de téléprospection B2B.</div>
+          <div class="foot-about">Business developers externalisés pour startups, laboratoires et scale‑ups. SDR, closers, campagnes de téléprospection B2B.</div>
         </div>
         <div class="foot-col">
           <div class="foot-title">Solutions</div>
@@ -852,20 +880,20 @@
           <div class="foot-text">cyril.ragonet@gmail.com</div>
           <div class="foot-text">06 95 36 83 83</div>
           <div class="foot-text"><a href="https://www.linkedin.com/in/cyril-r-74102a102/" style="color:#87CEEB;text-decoration:none;">LinkedIn</a></div>
-          <div class="foot-text"><a href="intelligence-hub.html" style="color:#bf1129;text-decoration:none;text-transform:uppercase;">→ INTELLIGENCE HUB</a></div>
+          <div class="foot-text"><a href='/intelligence-hub' style='color:#bf1129;text-decoration:none;text-transform:uppercase;'>→ INTELLIGENCE HUB</a></div>
         </div>
       </div>
       <div class="foot-bottom">
         <span>© 2026 Hudson Ltd — Tous droits réservés</span>
         <span>
-          <a href="mentions-legales.html">Mentions légales</a> ·
-          <a href="plan.html">Plan du site</a>
+          <a href='/mentions-legales'>Mentions légales</a> ·
+          <a href='/plan'>Plan du site</a>
         </span>
       </div>
     </div>
   </footer>
 
-  <!-- JSON-LD avec domaine corrigé -->
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
