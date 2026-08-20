@@ -4,439 +4,797 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>https://hudson-ltd.com/</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
+
 <url>
-  <loc>https://hudson-ltd.com/comparateur</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/kpi-hudson</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/missions-type</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <loc>https://hudson-ltd.com/plan</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/intelligence-hub</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hudson-ltd.com/plan</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <loc>https://hudson-ltd.com/business-lab</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hudson-ltd.com/sdr-interne-vs-externalise</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://hudson-ltd.com/comparateur</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hudson-ltd.com/recruter-teleprospecteur</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://hudson-ltd.com/kpi-hudson</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hudson-ltd.com/recruter-account-executive</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/sdr-externalise</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/teleprospection-b2b</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/business-developer-externalise</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://hudson-ltd.com/missions-type</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/glossaire</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/hudson-ai-agents</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/contact</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/mentions-legales</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/booking</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/promoteurs</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/rapport-missions</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<!-- BUSINESS DEVELOPER EXTERNALISÉ -->
+<url>
+  <loc>https://hudson-ltd.com/business-developer-externalise</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/recruter-business-developer</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/business-developer-freelance</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/business-developer-b2b</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/cout-business-developer</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/salaire-business-developer</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/mission-business-developer</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/business-developer-startup</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/externalisation-commerciale</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/agence-prospection-b2b</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+<!-- SDR & PROSPECTION -->
+<url>
+  <loc>https://hudson-ltd.com/sdr-externalise</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/recruter-sdr</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/sdr-freelance</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/sdr-b2b</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/campagne-prospection-b2b</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/prospection-commerciale-externalisee</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/prospection-b2b</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/prospection-ia</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/automatisation-prospection</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/prospection-linkedin-b2b</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/video-prospection-b2b</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/formation-sdr-video</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+<!-- TÉLÉPROSPECTION -->
+<url>
+  <loc>https://hudson-ltd.com/teleprospection-b2b</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/agence-teleprospection</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/teleprospection-externalisee</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/script-teleprospection</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/campagne-cold-call</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/externaliser-teleprospection</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/prise-rdv-telephone</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/teleprospection-saas</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/teleprospection-b2b-france</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/service-prospection-telephone</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
+
+<!-- PRISE DE RDV QUALIFIÉS -->
 <url>
   <loc>https://hudson-ltd.com/prise-rendez-vous-b2b</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/rdv-qualifies-b2b</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/acheter-rdv-qualifies</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/generation-leads-b2b</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/leads-b2b</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/prospects-b2b</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/appointment-setting</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/agence-lead-generation</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/externaliser-generation-leads</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/recruter-commercial</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/recruter-closer</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/recruter-business-developer-startup</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/alternatives-recrutement-commercial</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/cout-recrutement-commercial</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/recruter-commercial-saas</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/recrutement-sdr-b2b</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/hudson-ai-agents</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/agent-qualification-bant</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/agent-scoring-leads</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/agent-script-teleprospection</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/agent-relance-prospects</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/agent-ciblage-icp</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/agent-roi-prospection</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/agent-audit-prospection</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/agent-plan-campagne-outbound</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/agent-preparation-objections</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/agent-generation-liste-prospects</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/agent-sdr-virtuel</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/agent-closing-readiness</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/agent-priorisation-leads</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/agent-recap-appel-commercial</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/agent-sequence-outbound</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/agent-analyse-pipeline</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/agent-rdv-qualifies</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/agent-playbook-commercial</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/agent-qualification-call</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/agent-persona-b2b</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/closer-externalise</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/qualification-rdv-methode-bant</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+<!-- RECRUTEMENT COMMERCIAL -->
+<url>
+  <loc>https://hudson-ltd.com/recruter-commercial</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://hudson-ltd.com/commission-variable-sdr-closer-b2b</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <loc>https://hudson-ltd.com/recruter-closer</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://hudson-ltd.com/rapport-missions</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <loc>https://hudson-ltd.com/recruter-business-developer-startup</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
+<url>
+  <loc>https://hudson-ltd.com/alternatives-recrutement-commercial</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/cout-recrutement-commercial</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/recruter-commercial-saas</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/recrutement-sdr-b2b</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/recruter-teleprospecteur</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/recruter-account-executive</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/sdr-interne-vs-externalise</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/closer-externalise</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+<!-- INTELLIGENCE COMMERCIALE, IA & MARCHÉS (NOUVEAU BUSINESS LAB) -->
+<url>
+  <loc>https://hudson-ltd.com/detecter-marche-b2b</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/signaux-commerciaux-b2b</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/signal-to-sales-b2b</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/web-signals-prospection</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/recrutement-signal-business</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/sources-prospection-b2b</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/pipeline-commercial-long-terme</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/memoire-commerciale-b2b</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/bots-hudson-sales-intelligence</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/business-development-humain-ia</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/machine-commerciale-b2b</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/timing-commercial-b2b</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/construire-base-prospects-b2b</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/ouvrir-nouveau-marche-b2b</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/developpement-commercial-international</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/tester-marche-etranger</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/business-development-europe</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/business-development-latam</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/business-development-augmente</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+<!-- CRÉER SON AGENCE / ACADEMY -->
+<url>
+  <loc>https://hudson-ltd.com/creer-agence-business-development</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/lancer-agence-prospection-b2b</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/business-development-academy</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/stack-agence-business-development</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/tendances-business-development-2027</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/ressources-opportunites-commerciales</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/growth-engine</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+<!-- AGENTS IA HUDSON (tous les agent-*.html) -->
+<url>
+  <loc>https://hudson-ltd.com/agent-analyse-pipeline</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-audit-prospection</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-ciblage-icp</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-closing-readiness</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-generation-liste-prospects</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-ia-prospection-banque</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-ia-prospection-industrie</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-ia-prospection-pharma</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-ia-prospection-recrutement</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-ia-prospection-saas</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-ia-prospection-startup</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-persona-b2b</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-plan-campagne-outbound</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-playbook-commercial</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-preparation-objections</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-priorisation-leads</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-qualification-bant</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-qualification-call</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-rdv-qualifies</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-recap-appel-commercial</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-relance-prospects</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-roi-prospection</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-scoring-leads</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-script-teleprospection</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-sdr-virtuel</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/agent-sequence-outbound</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+<!-- ÉTUDES DE CAS -->
+<url>
+  <loc>https://hudson-ltd.com/etude-cas-generation-leads-startup</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/etude-cas-prospection-saas</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/etude-cas-sdr-externalise-scaleup</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/etude-cas-teleprospection-industrie</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+<!-- PAGES PAR VILLE / LOCALISATION (PRIORITÉ 0.51) -->
 <url>
   <loc>https://hudson-ltd.com/teleprospection-paris</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/teleprospection-lyon</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
+  <loc>https://hudson-ltd.com/teleprospection-marseille</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/teleprospection-bordeaux</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/teleprospection-lille</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/teleprospection-nantes</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/teleprospection-strasbourg</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/teleprospection-grenoble</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/teleprospection-montpellier</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/teleprospection-nice</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/teleprospection-rennes</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/teleprospection-toulouse</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+<url>
   <loc>https://hudson-ltd.com/sdr-externalise-paris</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://hudson-ltd.com/business-developer-paris</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://hudson-ltd.com/recruter-teleprospecteur-paris</loc>
-  <lastmod>2026-03-12T16:06:30+00:00</lastmod>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 
+<!-- RECRUTEMENTS PAR VILLE (TÉLÉPROSPECTEURS) -->
+<url>
+  <loc>https://hudson-ltd.com/recruter-teleprospecteur-paris</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/recruter-teleprospecteur-lyon</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/recruter-teleprospecteur-marseille</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/recruter-teleprospecteur-bordeaux</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/recruter-teleprospecteur-lille</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/recruter-teleprospecteur-nantes</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/recruter-teleprospecteur-strasbourg</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/recruter-teleprospecteur-grenoble</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/recruter-teleprospecteur-montpellier</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/recruter-teleprospecteur-nice</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/recruter-teleprospecteur-rennes</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/recruter-teleprospecteur-toulouse</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+<!-- PAGES COMPLÉMENTAIRES -->
+<url>
+  <loc>https://hudson-ltd.com/force-vente-pharmacie</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/force-vente-pharmacie-2</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/commission-variable-sdr-closer-b2b</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hudson-ltd.com/hudson-business-lab</loc>
+  <lastmod>2026-08-20T10:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
 
 </urlset>
