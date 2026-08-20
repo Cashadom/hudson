@@ -13,7 +13,7 @@
   <!-- End Google Tag Manager -->
 
   <title>Nos ressources — Hudson Business Developer</title>
-  <meta name="description" content="Toutes les ressources Hudson sur la prospection B2B, le business developer externalisé, la téléprospection et la prise de rendez-vous qualifiés.">
+  <meta name="description" content="Toutes les ressources Hudson sur la prospection B2B, le business developer externalisé, la téléprospection, la prise de rendez-vous qualifiés, l'intelligence commerciale et l'IA.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://www.hudson-ltd.com/plan">
 
@@ -46,7 +46,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* TOPBAR */
     .topbar {
       background: var(--ink);
       padding: 0 48px;
@@ -85,7 +84,6 @@
     .back-home:hover { color: var(--white); }
     .back-home::before { content: '←'; color: var(--red); }
 
-    /* HERO */
     .hero {
       background: var(--ink);
       padding: 72px 48px 60px;
@@ -141,7 +139,6 @@
       line-height: 1.7;
     }
 
-    /* MAIN */
     main {
       flex: 1;
       max-width: 1140px;
@@ -151,7 +148,6 @@
     }
     @media (max-width: 600px) { main { padding: 40px 20px 60px; } }
 
-    /* CATEGORY BLOCK */
     .cat-block {
       margin-bottom: 64px;
       animation: fadeUp .4s ease both;
@@ -161,6 +157,7 @@
     .cat-block:nth-child(3) { animation-delay: .15s; }
     .cat-block:nth-child(4) { animation-delay: .20s; }
     .cat-block:nth-child(5) { animation-delay: .25s; }
+    .cat-block:nth-child(6) { animation-delay: .30s; }
 
     .cat-header {
       display: flex;
@@ -189,7 +186,6 @@
       color: var(--ink);
     }
 
-    /* LINKS GRID */
     .links-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -244,7 +240,6 @@
     }
     .link-item:hover .link-arrow { opacity: 1; }
 
-    /* CTA BAND */
     .cta-band {
       background: var(--ink);
       padding: 40px 48px;
@@ -285,7 +280,6 @@
     }
     .cta-btn:hover { background: #a10f23; }
 
-    /* FOOTER */
     footer {
       background: var(--ink);
       padding: 20px 48px;
@@ -305,6 +299,31 @@
       color: rgba(255,255,255,0.45);
     }
     .foot-brand span { color: var(--red); }
+
+    .foot-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .foot-links a {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      text-decoration: none;
+      transition: color .15s;
+    }
+    .foot-links a:hover { color: var(--white); }
+    .foot-links .talent-link {
+      background: var(--red);
+      padding: 4px 14px;
+      border-radius: 2px;
+      color: #fff;
+      font-weight: 500;
+    }
+    .foot-links .talent-link:hover { background: #a10f23; }
 
     .foot-copy {
       font-size: 11px;
@@ -337,7 +356,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="hero-inner">
     <div class="hero-eyebrow">Ressources & Services</div>
     <h1>TOUT CE QUE VOUS<br>CHERCHEZ SUR<br><em>LA PROSPECTION B2B</em></h1>
-    <p class="hero-sub">Business developers externalisés, SDR, téléprospection, prise de rendez-vous — explorez nos pages par thématique.</p>
+    <p class="hero-sub">Business developers externalisés, SDR, téléprospection, prise de rendez-vous, intelligence commerciale, IA, international — explorez nos pages par thématique.</p>
   </div>
 </div>
 
@@ -444,20 +463,60 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
+  <!-- CAT 6 : INTELLIGENCE COMMERCIALE & IA (NOUVEAU) -->
+  <div class="cat-block">
+    <div class="cat-header">
+      <div class="cat-icon">🧠</div>
+      <span class="cat-title">Intelligence Commerciale & IA</span>
+    </div>
+    <div class="links-grid">
+      <a href="/detecter-marche-b2b" class="link-item"><span class="link-title">Détecter un marché avant de le prospecter</span><span class="link-arrow">→</span></a>
+      <a href="/signaux-commerciaux-b2b" class="link-item"><span class="link-title">Les signaux qui annoncent un futur client</span><span class="link-arrow">→</span></a>
+      <a href="/signal-to-sales-b2b" class="link-item"><span class="link-title">Du signal au rendez-vous commercial</span><span class="link-arrow">→</span></a>
+      <a href="/web-signals-prospection" class="link-item"><span class="link-title">Web Signals : quand Internet devient une source de prospects</span><span class="link-arrow">→</span></a>
+      <a href="/recrutement-signal-business" class="link-item"><span class="link-title">Recrutement : un signal commercial sous-exploité</span><span class="link-arrow">→</span></a>
+      <a href="/sources-prospection-b2b" class="link-item"><span class="link-title">Les sources de données de la prospection moderne</span><span class="link-arrow">→</span></a>
+      <a href="/pipeline-commercial-long-terme" class="link-item"><span class="link-title">Construire un pipeline qui dure</span><span class="link-arrow">→</span></a>
+      <a href="/memoire-commerciale-b2b" class="link-item"><span class="link-title">La mémoire commerciale : votre actif invisible</span><span class="link-arrow">→</span></a>
+      <a href="/bots-hudson-sales-intelligence" class="link-item"><span class="link-title">Les Bots Hudson : chercher avant d'appeler</span><span class="link-arrow">→</span></a>
+      <a href="/business-development-humain-ia" class="link-item"><span class="link-title">Human + AI Business Development</span><span class="link-arrow">→</span></a>
+      <a href="/machine-commerciale-b2b" class="link-item"><span class="link-title">Construire une machine commerciale B2B</span><span class="link-arrow">→</span></a>
+      <a href="/timing-commercial-b2b" class="link-item"><span class="link-title">Prospecter au bon moment plutôt que prospecter plus</span><span class="link-arrow">→</span></a>
+      <a href="/construire-base-prospects-b2b" class="link-item"><span class="link-title">De zéro à 1 000 comptes cibles</span><span class="link-arrow">→</span></a>
+      <a href="/ouvrir-nouveau-marche-b2b" class="link-item"><span class="link-title">Ouvrir un nouveau marché avec une équipe externalisée</span><span class="link-arrow">→</span></a>
+      <a href="/developpement-commercial-international" class="link-item"><span class="link-title">Internationaliser son développement commercial</span><span class="link-arrow">→</span></a>
+      <a href="/tester-marche-etranger" class="link-item"><span class="link-title">Tester un pays avant de s'y implanter</span><span class="link-arrow">→</span></a>
+      <a href="/business-development-europe" class="link-item"><span class="link-title">Business Development Europe</span><span class="link-arrow">→</span></a>
+      <a href="/business-development-latam" class="link-item"><span class="link-title">Business Development LATAM</span><span class="link-arrow">→</span></a>
+      <a href="/creer-agence-business-development" class="link-item"><span class="link-title">Créer son agence de Business Development</span><span class="link-arrow">→</span></a>
+      <a href="/lancer-agence-prospection-b2b" class="link-item"><span class="link-title">Lancer une agence de prospection B2B</span><span class="link-arrow">→</span></a>
+      <a href="/business-development-academy" class="link-item"><span class="link-title">Hudson Business Development Academy</span><span class="link-arrow">→</span></a>
+      <a href="/stack-agence-business-development" class="link-item"><span class="link-title">La stack d'une agence de Business Development</span><span class="link-arrow">→</span></a>
+      <a href="/tendances-business-development-2027" class="link-item"><span class="link-title">Tendances Business Development 2027</span><span class="link-arrow">→</span></a>
+      <a href="/business-development-augmente" class="link-item"><span class="link-title">Le Business Development augmenté</span><span class="link-arrow">→</span></a>
+    </div>
+  </div>
+
   <!-- CTA BAND -->
   <div class="cta-band">
     <div class="cta-band-text">
       <h3>PRÊT À LANCER VOTRE CAMPAGNE ?</h3>
-      <p>Activation sous 72h — SDR, closers et téléprospecteurs disponibles immédiatement.</p>
+      <p>Activation sous 72h — SDR, closers, téléprospecteurs, intelligence commerciale et IA à votre service.</p>
     </div>
     <a href="https://www.hudson-ltd.com/#contact" class="cta-btn">Lancer ma campagne</a>
   </div>
 
 </main>
 
-<!-- FOOTER MINIMAL -->
+<!-- FOOTER -->
 <footer>
   <div class="foot-brand">HUDSON BUSINESS DEVELOPER<span>.</span> — AIX-EN-PROVENCE</div>
+  <div class="foot-links">
+    <a href="/hudson-business-lab.html">Hudson Business Lab</a>
+    <a href="https://talent.hudson-ltd.com/" class="talent-link" target="_blank">Talents — Recrutement</a>
+    <a href="/intelligence-hub">Intelligence Hub</a>
+    <a href="/plan">Plan du site</a>
+  </div>
   <div class="foot-copy">© 2026</div>
 </footer>
 
