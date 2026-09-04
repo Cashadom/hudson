@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -129,7 +130,7 @@
       height: 100%;
       object-fit: cover;
       z-index: 0;
-      opacity: 0.6;
+      opacity: 0.48;
       pointer-events: none;
     }
     .hero-overlay {
@@ -257,7 +258,7 @@
 
     @keyframes up { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
 
-    /* TICKER — nouveau */
+    /* TICKER — modifié */
     .ticker {
       background: var(--page-alt); border-bottom: 1px solid var(--border);
       padding: 10px 0; overflow: hidden; white-space: nowrap;
@@ -471,7 +472,7 @@
       font-family: 'DM Mono', monospace;
     }
 
-    /* DIVISION HEALTHCARE — NOUVEAU */
+    /* DIVISION HEALTHCARE — enrichi */
     .healthcare {
       padding: 80px 0 96px;
       background: var(--page);
@@ -523,6 +524,25 @@
       content: '— ';
       color: var(--red);
     }
+    .hc-univers {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 12px;
+      margin-bottom: 20px;
+      padding: 16px 18px;
+      background: var(--red-soft);
+      border-radius: 8px;
+      border-left: 3px solid var(--red);
+    }
+    .hc-univers span {
+      font-size: 12px;
+      color: var(--t-main);
+      font-weight: 500;
+    }
+    .hc-univers span::before {
+      content: '▪ ';
+      color: var(--red);
+    }
     .hc-btn {
       display: inline-block;
       background: var(--red);
@@ -546,6 +566,7 @@
     .targ-item { font-size: 16px; color: var(--t-mid); display: flex; align-items: flex-start; gap: 12px; line-height: 1.4; }
     .targ-item strong { color: var(--ink); font-weight: 500; min-width: 110px; }
     .targ-item span { color: var(--t-muted); }
+    .targ-item a { color: var(--red); text-decoration: underline; }
 
     /* CTA */
     .cta {
@@ -617,8 +638,8 @@
       <div class="hero-grid">
         <div>
           <div class="h-eye"><b>Business developers externalisés</b> · France & Europe</div>
-          <h1>Des <em>SDR, closers</em><br>& téléprospection<br>sans recrutement</h1>
-          <p class="hero-sub">Lancez une <strong>campagne B2B externalisée</strong> en 5 jours : nous recrutons, formons et gérons l'équipe commerciale. Vous ne payez que les résultats.</p>
+          <h1>Le développement d'affaires à 360°<br><em>— de la data</em><br>aux détections de projets</h1>
+          <p class="hero-sub">Lancez une <strong>campagne B2B externalisée</strong> en 5 jours : nous recrutons, formons et gérons l'équipe commerciale.</p>
           <div class="hero-btns">
             <a href="#offres" class="btn-p">Voir les offres →</a>
             <a href="https://campaign.hudson-ltd.com/" class="btn-s" target="_blank" rel="noopener noreferrer">
@@ -639,12 +660,12 @@
     </div>
   </section>
 
-  <!-- TICKER — nouveau -->
+  <!-- TICKER — modifié (suppression des doublons "Laboratoires") -->
   <div class="ticker">
     <div class="t-track">
-      <span class="t-item">Healthcare</span><span class="t-item">Laboratoires</span><span class="t-item">SaaS</span>
+      <span class="t-item">Healthcare</span><span class="t-item">SaaS</span>
       <span class="t-item">Conseil</span><span class="t-item">Industrie</span><span class="t-item">Services B2B</span>
-      <span class="t-item">Healthcare</span><span class="t-item">Laboratoires</span><span class="t-item">SaaS</span>
+      <span class="t-item">Healthcare</span><span class="t-item">SaaS</span>
       <span class="t-item">Conseil</span><span class="t-item">Industrie</span><span class="t-item">Services B2B</span>
     </div>
   </div>
@@ -795,7 +816,7 @@
     </div>
   </section>
 
-  <!-- DIVISION HEALTHCARE — NOUVEAU -->
+  <!-- DIVISION HEALTHCARE — enrichie avec les univers -->
   <section class="healthcare">
     <div class="wrap">
       <div class="healthcare-grid">
@@ -804,6 +825,18 @@
           <span class="tag">Division Healthcare</span>
           <h2>Développement commercial auprès du réseau officinal</h2>
           <p class="hc-desc">Hudson accompagne les laboratoires, marques de santé et acteurs de l'OTC dans leur développement auprès des pharmacies françaises.</p>
+          
+          <div class="hc-univers">
+            <span>Cosmétique & dermocosmétique</span>
+            <span>Compléments alimentaires</span>
+            <span>Nutricosmétique</span>
+            <span>Génériques</span>
+            <span>Formation</span>
+            <span>Services aux officines</span>
+            <span>Merchandising</span>
+            <span>Optimisation du linéaire</span>
+          </div>
+
           <div class="hc-pillars">
             <span>Ouverture de comptes</span>
             <span>Présentation de gammes</span>
@@ -824,14 +857,13 @@
     <div class="wrap targ-grid">
       <div>
         <span class="tag">Pour qui ?</span>
-        <h2>Entreprises, laboratoires & organisations B2B</h2>
-        <p class="prob-lead">Nous travaillons avec <strong><a href='/missions-type' style='text-decoration: none; color: inherit;'>toutes les structures</a></strong> qui ont un besoin de performance commerciale sans les contraintes de recrutement.</p>
+        <h2>Une prospection téléphonique qui qualifie, étudie le marché, et fait remonter les tendances, signaux faibles et signaux forts</h2>
       </div>
       <div class="targ-list">
         <div class="targ-item"><strong>Healthcare & laboratoires</strong> <span>Pharmacies, OTC, dermocosmétique, dispositifs médicaux</span></div>
         <div class="targ-item"><strong>SaaS / Tech</strong> <span>Éditeurs de logiciels, plateformes</span></div>
-        <div class="targ-item"><strong>Conseil & services</strong> <span>Cabinet, agences, expertises pointues</span></div>
-        <div class="targ-item"><strong>Industrie</strong> <span>Fabricants et entreprises à cycles commerciaux structurés</span></div>
+        <div class="targ-item"><strong>Conseil & services</strong> <span><a href="https://hudson-ltd.com/global" target="_blank">Voir la Global Optimization Database →</a> — Cabinet, agences</span></div>
+        <div class="targ-item"><strong>Industrie & Ingénierie</strong> <span>Fabricants et entreprises à cycles commerciaux structurés</span></div>
       </div>
     </div>
   </section>
@@ -910,3 +942,4 @@
   </script>
 </body>
 </html>
+```
