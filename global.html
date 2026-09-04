@@ -1,0 +1,3282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5PF6FCCW');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S2912LSCRX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S2912LSCRX');
+  </script>
+
+  <!-- META SEO -->
+  <title>HUDSON-GOD — Global Optimization Database · Supply Chain Benchmark</title>
+  <meta name="description" content="HUDSON Global Optimization Database structures documented operational evidence for warehouse, logistics and industrial benchmarking. 12 metric families, 1,000+ references, audited sources.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://hudson-ltd.com/">
+
+  <!-- META SOCIALES -->
+  <meta property="og:title" content="HUDSON-GOD — Global Optimization Database">
+  <meta property="og:description" content="Supply Chain and operations benchmarking: 12 metric families, 1,000+ references, documented evidence.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hudson-ltd.com/">
+  <meta property="og:image" content="https://hudson-ltd.com/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    :root{
+      --navy:#071c33;
+      --navy-2:#0b2947;
+      --navy-3:#103653;
+
+      --sea:#2f8da8;
+      --sea-dark:#21748d;
+      --sea-soft:#eaf6f9;
+
+      --red:#a62532;
+      --red-dark:#811d28;
+      --red-soft:#faeef0;
+
+      --ink:#14253a;
+      --text:#425468;
+      --muted:#718193;
+
+      --line:#dfe6ec;
+      --line-soft:#edf1f4;
+
+      --white:#ffffff;
+      --offwhite:#f5f7f9;
+      --softblue:#f2f7fa;
+
+      --shadow:
+        0 22px 65px rgba(8,32,57,.10);
+
+      --shadow-soft:
+        0 12px 35px rgba(8,32,57,.07);
+
+      --max:1380px;
+    }
+
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+
+      font-family:
+        Inter,
+        "IBM Plex Sans",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      color:var(--ink);
+      background:#fff;
+
+      font-size:15px;
+      line-height:1.55;
+
+      overflow-x:hidden;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+    button{
+      font:inherit;
+    }
+
+    .container{
+      width:min(var(--max), calc(100% - 56px));
+      margin:auto;
+    }
+
+    .red{
+      color:var(--red);
+    }
+
+    .sea{
+      color:var(--sea-dark);
+    }
+
+    .section{
+      padding:92px 0;
+    }
+
+    .section-soft{
+      background:var(--offwhite);
+    }
+
+    .kicker{
+      display:flex;
+      align-items:center;
+      gap:10px;
+
+      margin-bottom:15px;
+
+      font-size:10px;
+      line-height:1;
+
+      font-weight:750;
+
+      letter-spacing:.14em;
+      text-transform:uppercase;
+
+      color:var(--sea-dark);
+    }
+
+    .kicker::before{
+      content:"";
+      width:28px;
+      height:2px;
+
+      background:var(--red);
+    }
+
+    h1,
+    h2,
+    h3{
+      margin-top:0;
+      letter-spacing:-.035em;
+    }
+
+    h1{
+      margin-bottom:20px;
+
+      font-size:clamp(42px,5.2vw,72px);
+      line-height:1.02;
+      font-weight:680;
+    }
+
+    h2{
+      margin-bottom:18px;
+
+      font-size:clamp(30px,3.5vw,49px);
+      line-height:1.08;
+      font-weight:670;
+    }
+
+    h3{
+      margin-bottom:6px;
+
+      font-size:17px;
+      line-height:1.3;
+      font-weight:650;
+    }
+
+    p{
+      margin-top:0;
+    }
+
+    .lead{
+      max-width:720px;
+
+      color:var(--text);
+
+      font-size:17px;
+      line-height:1.7;
+    }
+
+    /* =========================================================
+       BUTTONS
+    ========================================================= */
+
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:11px;
+
+      margin-top:28px;
+    }
+
+    .button{
+      min-height:45px;
+
+      padding:0 20px;
+
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+
+      border-radius:5px;
+
+      font-size:12px;
+      font-weight:650;
+
+      transition:.18s ease;
+    }
+
+    .button:hover{
+      transform:translateY(-1px);
+    }
+
+    .button-primary{
+      color:#fff;
+
+      background:var(--red);
+      border:1px solid var(--red);
+    }
+
+    .button-primary:hover{
+      background:var(--red-dark);
+      border-color:var(--red-dark);
+    }
+
+    .button-outline{
+      background:#fff;
+      color:var(--navy);
+
+      border:1px solid #cad4dd;
+    }
+
+    .button-outline:hover{
+      border-color:var(--sea);
+    }
+
+    .button-light{
+      color:#fff;
+
+      border:1px solid rgba(255,255,255,.42);
+    }
+
+    /* =========================================================
+       HEADER
+    ========================================================= */
+
+    .site-header{
+      height:76px;
+
+      display:flex;
+      align-items:center;
+
+      background:#fff;
+    }
+
+    .nav{
+      height:100%;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:30px;
+    }
+
+    .brand{
+      min-width:250px;
+      line-height:1;
+    }
+
+    .brand img{
+      height:42px;
+      width:auto;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:27px;
+    }
+
+    .nav-links a{
+      color:#33475c;
+
+      font-size:11px;
+      font-weight:550;
+    }
+
+    .nav-links a:hover{
+      color:var(--navy);
+    }
+
+    .nav-links .nav-cta{
+      padding:10px 16px;
+
+      color:#fff;
+
+      background:var(--red);
+
+      border-radius:4px;
+    }
+
+    /* =========================================================
+       OFFSET PUBLIC FRAME
+    ========================================================= */
+
+    .site-frame{
+      width:min(1500px, calc(100% - 44px));
+
+      margin:0 auto 28px;
+
+      border-radius:
+        34px
+        34px
+        12px
+        12px;
+
+      overflow:hidden;
+
+      box-shadow:var(--shadow);
+
+      border:1px solid #e3e8ed;
+
+      background:#fff;
+    }
+
+    /* =========================================================
+       HERO — IMG1 AS BACKGROUND
+    ========================================================= */
+
+    .hero{
+      min-height:610px;
+
+      position:relative;
+
+      display:flex;
+      align-items:center;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,.97) 0%,
+          rgba(255,255,255,.93) 36%,
+          rgba(255,255,255,.70) 62%,
+          rgba(255,255,255,.32) 100%
+        ),
+        url("img1.png") center/cover no-repeat;
+    }
+
+    .hero::after{
+      content:"";
+
+      position:absolute;
+      inset:0;
+
+      pointer-events:none;
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(47,141,168,.04),
+          rgba(255,255,255,0)
+        );
+    }
+
+    .hero-grid{
+      position:relative;
+      z-index:2;
+
+      display:grid;
+
+      grid-template-columns:
+        minmax(420px,.82fr)
+        minmax(420px,1.18fr);
+
+      gap:65px;
+
+      align-items:center;
+
+      padding:75px 0 92px;
+    }
+
+    .hero-copy{
+      max-width:610px;
+    }
+
+    .hero-copy .lead{
+      max-width:585px;
+    }
+
+    .hero-title-sub{
+      color:var(--sea-dark);
+    }
+
+    /* WHITE OFFSET FLOATING PANEL */
+
+    .hero-panel{
+      position:relative;
+
+      margin-top:18px;
+
+      padding:31px;
+
+      border-radius:13px;
+
+      background:rgba(255,255,255,.95);
+
+      border:1px solid rgba(205,216,224,.85);
+
+      box-shadow:
+        0 24px 60px rgba(6,29,50,.14);
+
+      backdrop-filter:blur(7px);
+      -webkit-backdrop-filter:blur(7px);
+    }
+
+    .hero-panel::before{
+      content:"";
+
+      position:absolute;
+
+      top:-10px;
+      right:38px;
+
+      width:74px;
+      height:4px;
+
+      background:var(--red);
+
+      border-radius:10px;
+    }
+
+    .hero-panel-grid{
+      display:grid;
+
+      grid-template-columns:1fr 1fr;
+
+      gap:10px;
+    }
+
+    /* =========================================================
+       INTERACTIVE CONCEPT CARD — 12 METRIC FAMILIES
+    ========================================================= */
+
+    .concept-card{
+      position:relative;
+
+      min-height:125px;
+
+      padding:18px 18px 16px 55px;
+
+      border:1px solid transparent;
+      border-radius:9px;
+
+      background:#fff;
+
+      cursor:pointer;
+
+      transition:
+        .18s ease background,
+        .18s ease border-color,
+        .18s ease transform,
+        .18s ease box-shadow;
+    }
+
+    .concept-card:hover,
+    .concept-card.is-open{
+      transform:translateY(-2px);
+
+      background:var(--softblue);
+
+      border-color:#cee1e8;
+
+      box-shadow:var(--shadow-soft);
+    }
+
+    .concept-icon{
+      position:absolute;
+
+      left:17px;
+      top:18px;
+
+      width:28px;
+      height:28px;
+
+      display:grid;
+      place-items:center;
+
+      border:1px solid var(--sea);
+
+      border-radius:50%;
+
+      color:var(--sea-dark);
+
+      font-size:12px;
+      font-weight:750;
+    }
+
+    .concept-card strong{
+      display:block;
+
+      margin-bottom:4px;
+
+      color:var(--navy);
+
+      font-size:12px;
+    }
+
+    .concept-card > span{
+      display:block;
+
+      color:#66788a;
+
+      font-size:10.5px;
+      line-height:1.45;
+    }
+
+    .concept-more{
+      display:inline-block;
+
+      margin-top:9px;
+
+      color:var(--sea-dark);
+
+      font-size:9px;
+      font-weight:750;
+
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+
+    /* POPOVER */
+
+    .concept-popover{
+      position:absolute;
+
+      z-index:50;
+
+      left:18px;
+      right:18px;
+      top:calc(100% + 9px);
+
+      display:none;
+
+      padding:15px;
+
+      color:#fff;
+
+      background:var(--navy);
+
+      border-radius:8px;
+
+      box-shadow:
+        0 18px 45px rgba(6,29,50,.22);
+
+      font-size:11px;
+      line-height:1.55;
+    }
+
+    .concept-popover::before{
+      content:"";
+
+      position:absolute;
+
+      top:-6px;
+      left:28px;
+
+      width:12px;
+      height:12px;
+
+      background:var(--navy);
+
+      transform:rotate(45deg);
+    }
+
+    .concept-card:hover .concept-popover,
+    .concept-card.is-open .concept-popover{
+      display:block;
+    }
+
+    .concept-popover strong{
+      color:#fff;
+
+      font-size:11px;
+
+      margin-bottom:5px;
+    }
+
+    .concept-popover p{
+      margin:0;
+
+      color:#c8d6e0;
+    }
+
+    /* =========================================================
+       SECTION 2 — IMG2 BACKGROUND
+    ========================================================= */
+
+    .source-section{
+      position:relative;
+
+      min-height:430px;
+
+      display:flex;
+      align-items:center;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,.98) 0%,
+          rgba(255,255,255,.90) 36%,
+          rgba(255,255,255,.45) 62%,
+          rgba(255,255,255,.18) 100%
+        ),
+        url("img2.png") center/cover no-repeat;
+
+      border-top:1px solid var(--line);
+    }
+
+    .source-section::before{
+      content:"";
+
+      position:absolute;
+
+      left:-2%;
+      top:-18px;
+
+      width:104%;
+      height:38px;
+
+      background:#fff;
+
+      transform:rotate(-1deg);
+    }
+
+    .source-grid{
+      position:relative;
+      z-index:2;
+
+      display:grid;
+
+      grid-template-columns:
+        .82fr
+        1.18fr;
+
+      gap:70px;
+
+      align-items:center;
+
+      padding:70px 0 64px;
+    }
+
+    .source-copy{
+      max-width:520px;
+    }
+
+    .image-panel{
+      height:265px;
+
+      border-radius:11px;
+
+      overflow:hidden;
+
+      background:#fff;
+
+      border:1px solid #dae2e8;
+
+      box-shadow:var(--shadow-soft);
+    }
+
+    .image-panel img{
+      width:100%;
+      height:100%;
+
+      object-fit:cover;
+    }
+
+    /* =========================================================
+       DATA FLOW
+    ========================================================= */
+
+    .flow-strip{
+      position:relative;
+
+      background:#fff;
+
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+
+    .flow-grid{
+      display:grid;
+
+      grid-template-columns:repeat(4,1fr);
+    }
+
+    .flow-item{
+      position:relative;
+
+      min-height:145px;
+
+      padding:25px 25px 25px 58px;
+
+      border-right:1px solid var(--line-soft);
+
+      cursor:pointer;
+
+      transition:.18s;
+    }
+
+    .flow-item:last-child{
+      border-right:0;
+    }
+
+    .flow-item:hover,
+    .flow-item.is-open{
+      background:var(--sea-soft);
+    }
+
+    .flow-icon{
+      position:absolute;
+
+      left:20px;
+      top:26px;
+
+      width:27px;
+      height:27px;
+
+      display:grid;
+      place-items:center;
+
+      border:1px solid var(--sea);
+
+      border-radius:7px;
+
+      color:var(--sea-dark);
+
+      font-size:11px;
+      font-weight:750;
+    }
+
+    .flow-item small{
+      display:block;
+
+      margin-bottom:5px;
+
+      color:var(--sea-dark);
+
+      font-size:9px;
+      font-weight:750;
+
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .flow-item strong{
+      display:block;
+
+      margin-bottom:4px;
+
+      color:var(--navy);
+
+      font-size:12px;
+    }
+
+    .flow-item p{
+      margin:0;
+
+      color:#697a8b;
+
+      font-size:10px;
+      line-height:1.5;
+    }
+
+    .flow-detail{
+      display:none;
+
+      margin-top:10px;
+      padding-top:10px;
+
+      border-top:1px solid #cddde4;
+
+      color:#3f5669;
+
+      font-size:10px;
+      line-height:1.5;
+    }
+
+    .flow-item:hover .flow-detail,
+    .flow-item.is-open .flow-detail{
+      display:block;
+    }
+
+    /* =========================================================
+       GLOBAL BAND — IMG3 BACKGROUND
+    ========================================================= */
+
+    .global-band{
+      min-height:270px;
+
+      position:relative;
+
+      display:flex;
+      align-items:center;
+
+      color:#fff;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(7,28,51,.96),
+          rgba(7,28,51,.72)
+        ),
+        url("img3.png") center/cover no-repeat;
+    }
+
+    .global-band-grid{
+      display:grid;
+
+      grid-template-columns:.75fr 1.25fr;
+
+      gap:80px;
+
+      align-items:center;
+
+      padding:50px 0;
+    }
+
+    .global-band h2{
+      margin:0;
+
+      color:#fff;
+
+      font-size:33px;
+    }
+
+    .global-band p{
+      margin:0;
+
+      color:#c7d4de;
+
+      max-width:700px;
+    }
+
+    /* =========================================================
+       COMPARABILITY
+    ========================================================= */
+
+    .compare{
+      padding:88px 0;
+
+      background:#fff;
+    }
+
+    .compare-grid{
+      display:grid;
+
+      grid-template-columns:
+        .9fr
+        1.1fr;
+
+      gap:75px;
+
+      align-items:center;
+    }
+
+    .compare-photo{
+      min-height:440px;
+
+      overflow:hidden;
+
+      border-radius:12px;
+
+      box-shadow:var(--shadow-soft);
+
+      background:var(--offwhite);
+    }
+
+    .compare-photo img{
+      width:100%;
+      height:440px;
+
+      object-fit:cover;
+    }
+
+    .compare-copy{
+      max-width:650px;
+    }
+
+    .compare-list{
+      display:grid;
+      gap:10px;
+
+      margin-top:30px;
+    }
+
+    .compare-row{
+      position:relative;
+
+      padding:15px 18px 15px 50px;
+
+      border:1px solid var(--line);
+
+      border-radius:7px;
+
+      background:#fff;
+
+      cursor:pointer;
+
+      transition:.18s;
+    }
+
+    .compare-row:hover,
+    .compare-row.is-open{
+      background:var(--softblue);
+
+      border-color:#cfe0e7;
+    }
+
+    .compare-check{
+      position:absolute;
+
+      left:16px;
+      top:15px;
+
+      width:22px;
+      height:22px;
+
+      display:grid;
+      place-items:center;
+
+      color:var(--sea-dark);
+
+      border:1px solid var(--sea);
+
+      border-radius:50%;
+
+      font-size:10px;
+      font-weight:800;
+    }
+
+    .compare-row strong{
+      display:block;
+
+      color:var(--navy);
+
+      font-size:12px;
+    }
+
+    .compare-row span{
+      display:block;
+
+      margin-top:2px;
+
+      color:#718193;
+
+      font-size:10px;
+    }
+
+    .compare-extra{
+      display:none;
+
+      margin-top:9px;
+      padding-top:9px;
+
+      border-top:1px solid #d4e2e7;
+
+      color:#425c70;
+
+      font-size:10px;
+    }
+
+    .compare-row:hover .compare-extra,
+    .compare-row.is-open .compare-extra{
+      display:block;
+    }
+
+    /* =========================================================
+       COMPARABILITY FACTORS
+    ========================================================= */
+
+    .factor-band{
+      background:#f7f9fb;
+
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+
+    .factor-head{
+      padding-top:30px;
+
+      text-align:center;
+
+      color:var(--navy);
+
+      font-size:12px;
+      font-weight:650;
+    }
+
+    .factor-grid{
+      display:grid;
+
+      grid-template-columns:repeat(6,1fr);
+
+      padding:28px 0 35px;
+    }
+
+    .factor{
+      position:relative;
+
+      text-align:center;
+
+      padding:0 15px;
+
+      border-right:1px solid var(--line);
+
+      cursor:pointer;
+    }
+
+    .factor:last-child{
+      border-right:0;
+    }
+
+    .factor-icon{
+      width:38px;
+      height:38px;
+
+      margin:0 auto 9px;
+
+      display:grid;
+      place-items:center;
+
+      border:1px solid var(--sea);
+
+      border-radius:50%;
+
+      color:var(--sea-dark);
+
+      font-size:13px;
+    }
+
+    .factor strong{
+      display:block;
+
+      color:var(--navy);
+
+      font-size:10px;
+    }
+
+    .factor-tip{
+      position:absolute;
+
+      z-index:30;
+
+      display:none;
+
+      width:220px;
+
+      left:50%;
+      bottom:calc(100% + 14px);
+
+      transform:translateX(-50%);
+
+      padding:13px;
+
+      text-align:left;
+
+      color:#fff;
+
+      background:var(--navy);
+
+      border-radius:7px;
+
+      box-shadow:var(--shadow-soft);
+
+      font-size:10px;
+      line-height:1.5;
+    }
+
+    .factor:hover .factor-tip,
+    .factor.is-open .factor-tip{
+      display:block;
+    }
+
+    /* =========================================================
+       TRUST / METHODOLOGY — IMG4
+    ========================================================= */
+
+    .trust{
+      padding:95px 0;
+
+      background:#fff;
+    }
+
+    .trust-grid{
+      display:grid;
+
+      grid-template-columns:1fr 1fr;
+
+      gap:0;
+
+      overflow:hidden;
+
+      border-radius:12px;
+
+      box-shadow:var(--shadow-soft);
+
+      border:1px solid var(--line);
+    }
+
+    .trust-photo{
+      min-height:500px;
+    }
+
+    .trust-photo img{
+      width:100%;
+      height:100%;
+
+      min-height:500px;
+
+      object-fit:cover;
+    }
+
+    .trust-copy{
+      padding:52px;
+
+      background:var(--navy);
+
+      color:#fff;
+    }
+
+    .trust-copy h2{
+      color:#fff;
+    }
+
+    .trust-copy > p{
+      color:#c6d3dc;
+    }
+
+    .evidence-types{
+      display:grid;
+
+      grid-template-columns:1fr 1fr;
+
+      gap:10px;
+
+      margin-top:28px;
+    }
+
+    .evidence-type{
+      position:relative;
+
+      padding:16px;
+
+      border:1px solid rgba(255,255,255,.14);
+
+      border-radius:7px;
+
+      cursor:pointer;
+
+      transition:.18s;
+    }
+
+    .evidence-type:hover,
+    .evidence-type.is-open{
+      background:rgba(255,255,255,.07);
+
+      border-color:rgba(111,184,203,.65);
+    }
+
+    .evidence-type strong{
+      display:block;
+
+      color:var(--sea-light);
+
+      font-size:10px;
+
+      margin-bottom:5px;
+    }
+
+    .evidence-type span{
+      display:block;
+
+      color:#aebdca;
+
+      font-size:10px;
+    }
+
+    .evidence-detail{
+      display:none;
+
+      margin-top:10px;
+      padding-top:10px;
+
+      border-top:1px solid rgba(255,255,255,.12);
+
+      color:#d7e2e9;
+
+      font-size:10px;
+      line-height:1.5;
+    }
+
+    .evidence-type:hover .evidence-detail,
+    .evidence-type.is-open .evidence-detail{
+      display:block;
+    }
+
+    /* =========================================================
+       METRICS
+    ========================================================= */
+
+    .metrics{
+      padding:88px 0;
+
+      background:var(--offwhite);
+    }
+
+    .metrics-head{
+      max-width:730px;
+
+      margin-bottom:40px;
+    }
+
+    .metric-grid{
+      display:grid;
+
+      grid-template-columns:repeat(3,1fr);
+
+      gap:12px;
+    }
+
+    .metric{
+      position:relative;
+
+      min-height:185px;
+
+      padding:25px;
+
+      background:#fff;
+
+      border:1px solid var(--line);
+
+      border-radius:8px;
+
+      cursor:pointer;
+
+      transition:.18s;
+    }
+
+    .metric:hover,
+    .metric.is-open{
+      transform:translateY(-3px);
+
+      border-color:#c9dfe7;
+
+      box-shadow:var(--shadow-soft);
+    }
+
+    .metric small{
+      display:block;
+
+      color:var(--red);
+
+      font-size:9px;
+      font-weight:750;
+
+      text-transform:uppercase;
+
+      letter-spacing:.1em;
+
+      margin-bottom:17px;
+    }
+
+    .metric strong{
+      display:block;
+
+      margin-bottom:8px;
+
+      color:var(--navy);
+
+      font-size:16px;
+    }
+
+    .metric p{
+      margin:0;
+
+      color:#6b7c8d;
+
+      font-size:11px;
+      line-height:1.55;
+    }
+
+    .metric-detail{
+      display:none;
+
+      margin-top:12px;
+      padding-top:12px;
+
+      border-top:1px solid var(--line);
+
+      color:#40586b;
+
+      font-size:10px;
+      line-height:1.5;
+    }
+
+    .metric:hover .metric-detail,
+    .metric.is-open .metric-detail{
+      display:block;
+    }
+
+    /* =========================================================
+       FINAL — IMG5 BACKGROUND
+    ========================================================= */
+
+    .final{
+      min-height:455px;
+
+      position:relative;
+
+      display:flex;
+      align-items:center;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,.97) 0%,
+          rgba(255,255,255,.91) 47%,
+          rgba(255,255,255,.40) 100%
+        ),
+        url("img5.png") center/cover no-repeat;
+    }
+
+    .final-copy{
+      max-width:670px;
+
+      padding:85px 0;
+    }
+
+    .final-copy h2{
+      color:var(--navy);
+    }
+
+    .final-copy p{
+      color:#536678;
+
+      max-width:620px;
+    }
+
+    .disclaimer{
+      margin-top:27px;
+
+      max-width:620px;
+
+      padding-left:16px;
+
+      border-left:3px solid var(--red);
+
+      color:#738497;
+
+      font-size:10px;
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer{
+      padding:47px 0 25px;
+
+      background:var(--navy);
+
+      color:#9eb0bf;
+    }
+
+    .footer-grid{
+      display:grid;
+
+      grid-template-columns:
+        1.7fr 1fr 1fr 1fr;
+
+      gap:45px;
+    }
+
+    .footer-brand img{
+      height:34px;
+      width:auto;
+    }
+
+    .footer-brand p{
+      margin-top:18px;
+
+      max-width:330px;
+
+      color:#879cab;
+
+      font-size:10px;
+    }
+
+    footer h4{
+      margin:0 0 12px;
+
+      color:#fff;
+
+      font-size:10px;
+
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    footer a{
+      display:block;
+
+      margin:7px 0;
+
+      color:#8fa3b3;
+
+      font-size:10px;
+    }
+
+    footer a:hover{
+      color:#fff;
+    }
+
+    .footer-bottom{
+      margin-top:34px;
+      padding-top:20px;
+
+      display:flex;
+      justify-content:space-between;
+
+      border-top:1px solid rgba(255,255,255,.08);
+
+      color:#637d90;
+
+      font-size:9px;
+    }
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media(max-width:1050px){
+
+      .nav-links a:not(.nav-cta){
+        display:none;
+      }
+
+      .hero-grid,
+      .source-grid,
+      .compare-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero-panel{
+        margin-top:0;
+      }
+
+      .flow-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .factor-grid{
+        grid-template-columns:repeat(3,1fr);
+
+        gap:25px 0;
+      }
+
+      .trust-grid{
+        grid-template-columns:1fr;
+      }
+
+      .metric-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .global-band-grid{
+        grid-template-columns:1fr;
+
+        gap:20px;
+      }
+    }
+
+    @media(max-width:720px){
+
+      .container{
+        width:calc(100% - 30px);
+      }
+
+      .site-frame{
+        width:calc(100% - 16px);
+
+        border-radius:20px 20px 8px 8px;
+      }
+
+      .site-header{
+        height:68px;
+      }
+
+      .brand img{
+        height:34px;
+      }
+
+      .hero{
+        background:
+          linear-gradient(
+            rgba(255,255,255,.91),
+            rgba(255,255,255,.94)
+          ),
+          url("img1.png") center/cover no-repeat;
+      }
+
+      .hero-grid{
+        padding:55px 0 70px;
+      }
+
+      .hero-panel-grid{
+        grid-template-columns:1fr;
+      }
+
+      .source-section{
+        background:
+          linear-gradient(
+            rgba(255,255,255,.90),
+            rgba(255,255,255,.92)
+          ),
+          url("img2.png") center/cover no-repeat;
+      }
+
+      .flow-grid{
+        grid-template-columns:1fr;
+      }
+
+      .global-band-grid{
+        padding:42px 0;
+      }
+
+      .compare-photo,
+      .compare-photo img{
+        min-height:300px;
+        height:300px;
+      }
+
+      .factor-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .factor-tip{
+        width:170px;
+      }
+
+      .trust-copy{
+        padding:30px 22px;
+      }
+
+      .evidence-types{
+        grid-template-columns:1fr;
+      }
+
+      .metric-grid{
+        grid-template-columns:1fr;
+      }
+
+      .final{
+        background:
+          linear-gradient(
+            rgba(255,255,255,.90),
+            rgba(255,255,255,.93)
+          ),
+          url("img5.png") center/cover no-repeat;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+
+      .footer-bottom{
+        flex-direction:column;
+        gap:6px;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header">
+
+  <div class="container nav">
+
+    <a href="#" class="brand">
+      <img src="logoh.png" alt="HUDSON" />
+    </a>
+
+
+    <nav class="nav-links">
+
+      <a href="#platform">
+        Platform
+      </a>
+
+      <a href="#methodology">
+        Methodology
+      </a>
+
+      <a href="#evidence">
+        Evidence
+      </a>
+
+      <a href="#comparability">
+        Comparability
+      </a>
+
+      <a href="#metrics">
+        Metrics
+      </a>
+
+      <a
+        href="#platform"
+        class="nav-cta"
+      >
+        Explore Hudson
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     OFFSET MAIN FRAME
+========================================================= -->
+
+<main class="site-frame">
+
+
+<!-- =========================================================
+     1 — HERO — IMG1.PNG IN BACKGROUND
+========================================================= -->
+
+<section
+  class="hero"
+  id="platform"
+>
+
+  <div class="container hero-grid">
+
+
+    <div class="hero-copy">
+
+      <div class="kicker">
+        Global Operations Evidence
+      </div>
+
+      <h1>
+        Global evidence.<br>
+        Operational context.<br>
+        <span class="red">
+          Better decisions.
+        </span>
+      </h1>
+
+      <p class="lead">
+        HUDSON structures documented operational evidence
+        to help warehouse, logistics and industrial teams
+        compare performance, identify relevant operating peers
+        and explore improvement opportunities.
+      </p>
+
+
+      <div class="actions">
+
+        <a
+          href="#comparability"
+          class="button button-primary"
+        >
+          Explore the Benchmark Logic →
+        </a>
+
+        <a
+          href="#methodology"
+          class="button button-outline"
+        >
+          How HUDSON works
+        </a>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- FLOATING WHITE PANEL — 12 METRIC FAMILIES -->
+
+    <div class="hero-panel">
+
+      <div class="hero-panel-grid">
+
+
+        <article class="concept-card interact">
+
+          <div class="concept-icon">
+            1
+          </div>
+
+          <strong>
+            Service Level
+          </strong>
+
+          <span>
+            OTIF, Fill Rate, On-Time Delivery, Order Accuracy
+          </span>
+
+          <div class="concept-more">
+            Learn more
+          </div>
+
+          <div class="concept-popover">
+
+            <strong>
+              Service &amp; Quality Metrics
+            </strong>
+
+            <p>
+              Service Level / taux de service, OTIF (On Time In Full),
+              Fill Rate / taux de disponibilité, Perfect Order Rate,
+              On-Time Delivery, Order Accuracy, Backorder Rate,
+              Stockout Rate, Return Rate, taux d'erreur de préparation,
+              taux de commandes complètes.
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="concept-card interact">
+
+          <div class="concept-icon">
+            2
+          </div>
+
+          <strong>
+            Inventory
+          </strong>
+
+          <span>
+            Turnover, DIO, Safety Stock, Inventory Accuracy
+          </span>
+
+          <div class="concept-more">
+            Learn more
+          </div>
+
+          <div class="concept-popover">
+
+            <strong>
+              Inventory Management
+            </strong>
+
+            <p>
+              Inventory Turnover / rotation des stocks,
+              Days Inventory Outstanding (DIO), Stock Coverage,
+              Average Inventory, Safety Stock, Inventory Accuracy,
+              Obsolescence Rate, Working Capital immobilisé,
+              SKU Capacity.
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="concept-card interact">
+
+          <div class="concept-icon">
+            3
+          </div>
+
+          <strong>
+            Demand Planning
+          </strong>
+
+          <span>
+            Forecast Accuracy, MAPE, WAPE, Forecast Bias
+          </span>
+
+          <div class="concept-more">
+            Learn more
+          </div>
+
+          <div class="concept-popover">
+
+            <strong>
+              Forecasting Performance
+            </strong>
+
+            <p>
+              Forecast Accuracy, Forecast Error, MAPE,
+              WAPE (Weighted Absolute Percentage Error),
+              Forecast Bias, Demand Planning Accuracy,
+              Forecast Improvement, variation forecast vs actual.
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="concept-card interact">
+
+          <div class="concept-icon">
+            4
+          </div>
+
+          <strong>
+            Lead Times
+          </strong>
+
+          <span>
+            Order Cycle, Supplier Lead Time, Dock-to-Stock
+          </span>
+
+          <div class="concept-more">
+            Learn more
+          </div>
+
+          <div class="concept-popover">
+
+            <strong>
+              Time Performance
+            </strong>
+
+            <p>
+              Order Lead Time, Order Cycle Time, Delivery Lead Time,
+              Supplier Lead Time, Replenishment Lead Time,
+              Dock-to-Stock Time, Picking Time, Processing Time,
+              Manufacturing Lead Time.
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="concept-card interact">
+
+          <div class="concept-icon">
+            5
+          </div>
+
+          <strong>
+            Logistics Costs
+          </strong>
+
+          <span>
+            Cost/Order, Cost/Pick, Cost/Pallet, Cost/Unit
+          </span>
+
+          <div class="concept-more">
+            Learn more
+          </div>
+
+          <div class="concept-popover">
+
+            <strong>
+              Cost Performance
+            </strong>
+
+            <p>
+              Logistics Cost per Unit, Cost per Order,
+              Cost per Shipment, Cost per Line, Cost per Pick,
+              Fulfilment Cost per Order, Warehouse Cost per Order,
+              Transportation Cost, Cost-to-Serve,
+              coût de stockage, coût de main-d'œuvre,
+              coût logistique / CA, coût par palette manipulée.
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="concept-card interact">
+
+          <div class="concept-icon">
+            6
+          </div>
+
+          <strong>
+            Productivity
+          </strong>
+
+          <span>
+            Picks/FTE, Orders/FTE, Output/Operator
+          </span>
+
+          <div class="concept-more">
+            Learn more
+          </div>
+
+          <div class="concept-popover">
+
+            <strong>
+              Labour Performance
+            </strong>
+
+            <p>
+              Picks per Hour, Lines per Hour, Orders per Hour,
+              Units per Hour, Cases per Hour, Pallets per Hour,
+              Output per Operator, Orders per FTE, Picks per FTE,
+              Productivity Increase %, heures de travail par commande.
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="concept-card interact">
+
+          <div class="concept-icon">
+            7
+          </div>
+
+          <strong>
+            Throughput
+          </strong>
+
+          <span>
+            Orders/hour, Pallets/hour, Peak Throughput
+          </span>
+
+          <div class="concept-more">
+            Learn more
+          </div>
+
+          <div class="concept-popover">
+
+            <strong>
+              Processing Capacity
+            </strong>
+
+            <p>
+              Orders/hour, Order Lines/hour, Units/hour,
+              Cases/hour, Pallets/hour, Parcels/hour,
+              Containers/hour, Daily Throughput, Peak Throughput,
+              capacité nominale, capacité réellement observée,
+              Peak vs Average.
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="concept-card interact">
+
+          <div class="concept-icon">
+            8
+          </div>
+
+          <strong>
+            Storage Capacity
+          </strong>
+
+          <span>
+            Pallets/m², Density, Space Utilization
+          </span>
+
+          <div class="concept-more">
+            Learn more
+          </div>
+
+          <div class="concept-popover">
+
+            <strong>
+              Density &amp; Space Performance
+            </strong>
+
+            <p>
+              Pallet Positions, Tote Locations, Bin Locations,
+              SKU Capacity, Storage Capacity, Pallets/m²,
+              Pallets/m³, Storage Density, Space Utilization,
+              Capacity Utilization, Floor Area, Racking Height.
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="concept-card interact">
+
+          <div class="concept-icon">
+            9
+          </div>
+
+          <strong>
+            Labour
+          </strong>
+
+          <span>
+            FTE, Labor Reduction %, Output per Employee
+          </span>
+
+          <div class="concept-more">
+            Learn more
+          </div>
+
+          <div class="concept-popover">
+
+            <strong>
+              Workforce Performance
+            </strong>
+
+            <p>
+              Nombre de FTE, Operators / shift, Labor Reduction %,
+              FTE Reduction, Labor Hours, Labor Cost,
+              Output per Employee, Productivity per Operator,
+              postes supprimés/redéployés, dépendance à la main-d'œuvre temporaire.
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="concept-card interact">
+
+          <div class="concept-icon">
+            10
+          </div>
+
+          <strong>
+            Quality
+          </strong>
+
+          <span>
+            Picking Accuracy, Error Rate, Uptime
+          </span>
+
+          <div class="concept-more">
+            Learn more
+          </div>
+
+          <div class="concept-popover">
+
+            <strong>
+              Operational Quality
+            </strong>
+
+            <p>
+              Picking Accuracy, Order Accuracy, Error Rate,
+              Damage Rate, Returns, Inventory Accuracy,
+              Mis-pick Rate, Perfect Order Rate, Uptime, Downtime.
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="concept-card interact">
+
+          <div class="concept-icon">
+            11
+          </div>
+
+          <strong>
+            Automation
+          </strong>
+
+          <span>
+            AS/RS, AMR, AGV, GTP, Robotics, WMS
+          </span>
+
+          <div class="concept-more">
+            Learn more
+          </div>
+
+          <div class="concept-popover">
+
+            <strong>
+              Technology &amp; Automation
+            </strong>
+
+            <p>
+              AS/RS pallet, AS/RS miniload, AutoStore / cube storage,
+              Goods-to-Person (GTP), AMR, AGV, Shuttle,
+              Automated Picking, Pick-to-Light, Voice Picking,
+              Sortation, Conveyors, Automated Palletizing,
+              Robotics, WMS / WES / WCS.
+              Pour chaque technologie : capacité, débit, surface,
+              nombre de robots, stations, opérateurs, productivité,
+              disponibilité, gains avant/après.
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="concept-card interact">
+
+          <div class="concept-icon">
+            12
+          </div>
+
+          <strong>
+            Transformation
+          </strong>
+
+          <span>
+            Before/After, ROI, Payback, Annual Savings
+          </span>
+
+          <div class="concept-more">
+            Learn more
+          </div>
+
+          <div class="concept-popover">
+
+            <strong>
+              Change &amp; Investment Performance
+            </strong>
+
+            <p>
+              Throughput +62 %, Labor -31 %, Storage capacity +45 %,
+              Space requirement -38 %, Order accuracy 98,7 % → 99,8 %,
+              Lead time 18 h → 7 h, Inventory -22 %,
+              Logistics cost/order -17 %, CAPEX, Payback Period,
+              ROI, Operating Cost Reduction, Labor Cost Savings,
+              Annual Savings, Total Cost of Ownership.
+            </p>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     2 — FROM GLOBAL EVIDENCE — IMG2.PNG BACKGROUND
+========================================================= -->
+
+<section class="source-section">
+
+  <div class="container source-grid">
+
+
+    <div class="source-copy">
+
+      <div class="kicker">
+        The database
+      </div>
+
+      <h2>
+        From global evidence<br>to <span class="red">operational performance.</span>
+      </h2>
+
+      <p class="lead">
+        Public operational evidence is fragmented across case studies,
+        operator publications, technical documents, reports,
+        professional media and other sources.
+      </p>
+
+      <p>
+        HUDSON turns that fragmented material into structured
+        operational records without treating collection itself
+        as validation.
+      </p>
+
+    </div>
+
+
+    <div class="image-panel">
+
+      <img
+        src="img6.png"
+        alt="Global operational data and warehouse evidence"
+      />
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INTERACTIVE PIPELINE
+========================================================= -->
+
+<section class="flow-strip">
+
+  <div class="container flow-grid">
+
+
+    <article class="flow-item interact">
+
+      <div class="flow-icon">
+        1
+      </div>
+
+      <small>
+        Collect
+      </small>
+
+      <strong>
+        Discover sources
+      </strong>
+
+      <p>
+        Identify operational material with potential evidence value.
+      </p>
+
+      <div class="flow-detail">
+        Harvester is deliberately broad at discovery stage.
+        A collected web page remains an unverified candidate,
+        not a validated benchmark.
+      </div>
+
+    </article>
+
+
+
+    <article class="flow-item interact">
+
+      <div class="flow-icon">
+        2
+      </div>
+
+      <small>
+        Structure
+      </small>
+
+      <strong>
+        Extract candidates
+      </strong>
+
+      <p>
+        Facilities, interventions and quantitative observations.
+      </p>
+
+      <div class="flow-detail">
+        Farmer converts usable source material into structured
+        candidates while keeping unknown values unknown rather
+        than filling missing context.
+      </div>
+
+    </article>
+
+
+
+    <article class="flow-item interact">
+
+      <div class="flow-icon">
+        3
+      </div>
+
+      <small>
+        Resolve
+      </small>
+
+      <strong>
+        Investigate evidence
+      </strong>
+
+      <p>
+        Clarify source, scope, unit and facility identity.
+      </p>
+
+      <div class="flow-detail">
+        Evidence Resolver can investigate incomplete or ambiguous
+        records and propose repairs, but it cannot validate evidence
+        or promote a record by itself.
+      </div>
+
+    </article>
+
+
+
+    <article class="flow-item interact">
+
+      <div class="flow-icon">
+        4
+      </div>
+
+      <small>
+        Review
+      </small>
+
+      <strong>
+        Control benchmark use
+      </strong>
+
+      <p>
+        Explicit review before an observation becomes benchmark-ready.
+      </p>
+
+      <div class="flow-detail">
+        Reviewer is the promotion gate. Source, metric, unit,
+        scope and comparability must be explicitly checked before
+        a quantitative observation can enter the validated benchmark layer.
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     3 — IMG3.PNG IN BACKGROUND
+========================================================= -->
+
+<section
+  class="global-band"
+  id="evidence"
+>
+
+  <div class="container global-band-grid">
+
+
+    <div>
+
+      <h2>
+        Evidence.<br>
+        Context.<br>
+        <span class="red">
+          Optimization.
+        </span>
+      </h2>
+
+    </div>
+
+
+    <div>
+
+      <p>
+        The objective is not to accumulate articles.
+        It is to build a structured evidence layer in which
+        one facility can be documented by several sources,
+        several observations and several interventions while
+        provenance remains visible.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     COMPARABILITY — IMG4.PNG
+========================================================= -->
+
+<section
+  class="compare"
+  id="comparability"
+>
+
+  <div class="container compare-grid">
+
+
+    <div class="compare-photo">
+
+      <img
+        src="img4.png"
+        alt="Comparable warehouse and distribution operation"
+      />
+
+    </div>
+
+
+    <div class="compare-copy">
+
+      <div class="kicker">
+        Operational comparability
+      </div>
+
+      <h2>
+        Similar operations do not always belong to the
+        <span class="red">same industry.</span>
+      </h2>
+
+      <p class="lead">
+        HUDSON is designed to compare the operation behind the company name.
+        A relevant reference may come from another industry or country
+        when the operating characteristics are sufficiently close.
+      </p>
+
+
+      <div class="compare-list">
+
+
+        <article class="compare-row interact">
+
+          <div class="compare-check">
+            ✓
+          </div>
+
+          <strong>
+            Compare operating profiles
+          </strong>
+
+          <span>
+            Scale, storage, throughput, flow and automation.
+          </span>
+
+          <div class="compare-extra">
+            Geography and industry provide context, but physical
+            operating characteristics can be more important when
+            assessing whether a result is transferable.
+          </div>
+
+        </article>
+
+
+
+        <article class="compare-row interact">
+
+          <div class="compare-check">
+            ✓
+          </div>
+
+          <strong>
+            Keep differences visible
+          </strong>
+
+          <span>
+            Comparability is classified rather than assumed.
+          </span>
+
+          <div class="compare-extra">
+            HUDSON can distinguish comparable, partially comparable,
+            not comparable and insufficient-context situations
+            instead of presenting every reference as equivalent.
+          </div>
+
+        </article>
+
+
+
+        <article class="compare-row interact">
+
+          <div class="compare-check">
+            ✓
+          </div>
+
+          <strong>
+            Use documented outcomes
+          </strong>
+
+          <span>
+            Published operational results remain linked to evidence.
+          </span>
+
+          <div class="compare-extra">
+            A case may provide throughput, labour, capacity,
+            accuracy or economic results. The benchmark should use
+            only observations whose context and scope are sufficiently resolved.
+          </div>
+
+        </article>
+
+
+
+        <article class="compare-row interact">
+
+          <div class="compare-check">
+            ✓
+          </div>
+
+          <strong>
+            Build targets from evidence
+          </strong>
+
+          <span>
+            A target is not simply copied from one facility.
+          </span>
+
+          <div class="compare-extra">
+            The long-term objective is to build evidence-supported
+            operating envelopes from several relevant observations
+            rather than presenting one reference site as a universal model.
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INTERACTIVE FACTORS
+========================================================= -->
+
+<section class="factor-band">
+
+  <div class="container">
+
+    <div class="factor-head">
+      What can make two operations comparable?
+    </div>
+
+
+    <div class="factor-grid">
+
+
+      <div class="factor interact">
+
+        <div class="factor-tip">
+          Surface area, pallet positions, physical footprint
+          and facility configuration help determine whether
+          two operations operate at a similar scale.
+        </div>
+
+        <div class="factor-icon">
+          ◫
+        </div>
+
+        <strong>
+          Facility scale
+        </strong>
+
+      </div>
+
+
+      <div class="factor interact">
+
+        <div class="factor-tip">
+          Pallet, case, piece, fulfilment, storage,
+          manufacturing logistics or mixed flows can produce
+          very different operating constraints.
+        </div>
+
+        <div class="factor-icon">
+          ⇄
+        </div>
+
+        <strong>
+          Flow structure
+        </strong>
+
+      </div>
+
+
+      <div class="factor interact">
+
+        <div class="factor-tip">
+          Throughput must be compared using compatible units
+          and scopes: warehouse total, subsystem, line,
+          process or equipment are not interchangeable.
+        </div>
+
+        <div class="factor-icon">
+          ↗
+        </div>
+
+        <strong>
+          Throughput
+        </strong>
+
+      </div>
+
+
+      <div class="factor interact">
+
+        <div class="factor-tip">
+          Headcount alone is rarely enough. Shift structure,
+          operating hours and output per labour unit provide
+          more meaningful comparison.
+        </div>
+
+        <div class="factor-icon">
+          ◎
+        </div>
+
+        <strong>
+          Labour model
+        </strong>
+
+      </div>
+
+
+      <div class="factor interact">
+
+        <div class="factor-tip">
+          AS/RS, AMR, AGV, goods-to-person, conveyors,
+          sortation, WMS/WES and other interventions can materially
+          change the operating model.
+        </div>
+
+        <div class="factor-icon">
+          ⚙
+        </div>
+
+        <strong>
+          Automation
+        </strong>
+
+      </div>
+
+
+      <div class="factor interact">
+
+        <div class="factor-tip">
+          Geography, temperature regime, facility type,
+          industry constraints and operating environment
+          remain relevant context even when other characteristics match.
+        </div>
+
+        <div class="factor-icon">
+          ◉
+        </div>
+
+        <strong>
+          Operating context
+        </strong>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     METHODOLOGY — IMG5.PNG
+========================================================= -->
+
+<section
+  class="trust"
+  id="methodology"
+>
+
+  <div class="container trust-grid">
+
+
+    <div class="trust-photo">
+
+      <img
+        src="img5.png"
+        alt="Industrial evidence review and warehouse documentation"
+      />
+
+    </div>
+
+
+    <div class="trust-copy">
+
+      <div class="kicker">
+        Trust layer
+      </div>
+
+      <h2>
+        Every number should have a history.
+      </h2>
+
+      <p>
+        HUDSON distinguishes what a source actually reports
+        from what is subsequently calculated, estimated or simulated.
+      </p>
+
+      <p>
+        Click or hover over each evidence class to see the distinction.
+      </p>
+
+
+      <div class="evidence-types">
+
+
+        <article class="evidence-type interact">
+
+          <strong>
+            OBSERVED
+          </strong>
+
+          <span>
+            Explicitly stated by a source.
+          </span>
+
+          <div class="evidence-detail">
+            Example: a source explicitly states that a system
+            handles 450 pallets per hour. HUDSON records the value,
+            unit, scope, source and evidence quote.
+          </div>
+
+        </article>
+
+
+
+        <article class="evidence-type interact">
+
+          <strong>
+            DERIVED
+          </strong>
+
+          <span>
+            Calculated transparently from observed values.
+          </span>
+
+          <div class="evidence-detail">
+            Example: if headcount and daily orders are both
+            documented, HUDSON may calculate a labour requirement
+            per order. The calculation remains labelled DERIVED.
+          </div>
+
+        </article>
+
+
+
+        <article class="evidence-type interact">
+
+          <strong>
+            ESTIMATED
+          </strong>
+
+          <span>
+            Modelled from available evidence.
+          </span>
+
+          <div class="evidence-detail">
+            An estimate is not presented as a published fact.
+            Its assumptions and available supporting evidence
+            should remain visible.
+          </div>
+
+        </article>
+
+
+
+        <article class="evidence-type interact">
+
+          <strong>
+            SIMULATED
+          </strong>
+
+          <span>
+            Scenario-specific output.
+          </span>
+
+          <div class="evidence-detail">
+            Simulated values answer a scenario question.
+            They represent a modelled possibility rather than
+            an observation from an operating facility.
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     METRICS
+========================================================= -->
+
+<section
+  class="metrics"
+  id="metrics"
+>
+
+  <div class="container">
+
+    <div class="metrics-head">
+
+      <div class="kicker">
+        Quantitative layer
+      </div>
+
+      <h2>
+        Measure the operation first.
+      </h2>
+
+      <p class="lead">
+        HUDSON prioritises operational metrics that can be documented,
+        normalized and compared with sufficient context.
+      </p>
+
+    </div>
+
+
+    <div class="metric-grid">
+
+
+      <article class="metric interact">
+
+        <small>
+          Throughput
+        </small>
+
+        <strong>
+          Physical output
+        </strong>
+
+        <p>
+          Pallets/hour, orders/hour, picks/hour,
+          lines/hour, units/hour and parcels/hour.
+        </p>
+
+        <div class="metric-detail">
+          The scope matters. 500 pallets/hour for one AS/RS
+          subsystem is not automatically equivalent to
+          500 pallets/hour for an entire warehouse.
+        </div>
+
+      </article>
+
+
+
+      <article class="metric interact">
+
+        <small>
+          Productivity
+        </small>
+
+        <strong>
+          Labour performance
+        </strong>
+
+        <p>
+          Output/operator, orders/FTE, picks/FTE,
+          labour reduction and hours saved.
+        </p>
+
+        <div class="metric-detail">
+          Productivity becomes more useful when the database
+          also retains operating hours, shifts, process scope
+          and whether a change represents reduction, avoidance or redeployment.
+        </div>
+
+      </article>
+
+
+
+      <article class="metric interact">
+
+        <small>
+          Capacity
+        </small>
+
+        <strong>
+          Storage performance
+        </strong>
+
+        <p>
+          Pallet positions, storage density,
+          bin locations and capacity increases.
+        </p>
+
+        <div class="metric-detail">
+          Capacity data can later support derived ratios
+          such as positions per square metre or investment
+          per pallet position when the underlying values are verified.
+        </div>
+
+      </article>
+
+
+
+      <article class="metric interact">
+
+        <small>
+          Operations
+        </small>
+
+        <strong>
+          Process performance
+        </strong>
+
+        <p>
+          Cycle time, picking time, accuracy,
+          lead time, uptime and error rate.
+        </p>
+
+        <div class="metric-detail">
+          Operational performance is not limited to speed.
+          Quality and reliability measures can explain why
+          two systems with similar throughput produce different outcomes.
+        </div>
+
+      </article>
+
+
+
+      <article class="metric interact">
+
+        <small>
+          Economics
+        </small>
+
+        <strong>
+          Investment performance
+        </strong>
+
+        <p>
+          CAPEX, ROI, payback, annual savings
+          and operating cost.
+        </p>
+
+        <div class="metric-detail">
+          Economic values are especially valuable when they can
+          be connected to physical operating results, while preserving
+          currency, period and project scope.
+        </div>
+
+      </article>
+
+
+
+      <article class="metric interact">
+
+        <small>
+          Derived
+        </small>
+
+        <strong>
+          Comparable ratios
+        </strong>
+
+        <p>
+          Cost/order, cost/pick, cost/pallet,
+          labour/unit and CAPEX/capacity.
+        </p>
+
+        <div class="metric-detail">
+          These ratios are potentially one of HUDSON's strongest layers,
+          provided they remain explicitly marked as calculations
+          derived from verified observed inputs.
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FINAL
+========================================================= -->
+
+<section class="final">
+
+  <div class="container">
+
+    <div class="final-copy">
+
+      <div class="kicker">
+        HUDSON
+      </div>
+
+      <h2>
+        Better evidence.<br>
+        Better benchmarks.<br>
+        <span class="red">
+          Better decisions.
+        </span>
+      </h2>
+
+      <p>
+        HUDSON Global Optimization Database is building
+        a structured global evidence layer for warehouse,
+        logistics and industrial operations.
+      </p>
+
+
+      <div class="actions">
+
+        <a
+          href="#platform"
+          class="button button-primary"
+        >
+          Explore HUDSON →
+        </a>
+
+      </div>
+
+
+      <div class="disclaimer">
+        Coverage varies by geography, industry, technology and metric.
+        Benchmark outputs depend on the quantity, quality, scope and
+        comparability of available evidence. A collected source is not
+        automatically a validated benchmark.
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+  <div class="container">
+
+
+    <div class="footer-grid">
+
+
+      <div class="footer-brand">
+
+        <img src="logoh.png" alt="HUDSON" />
+
+        <p>
+          Structured operational evidence for warehouse,
+          logistics and industrial benchmarking.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Platform
+        </h4>
+
+        <a href="#platform">
+          Overview
+        </a>
+
+        <a href="#comparability">
+          Comparability
+        </a>
+
+        <a href="#metrics">
+          Metrics
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Evidence
+        </h4>
+
+        <a href="#evidence">
+          Evidence layer
+        </a>
+
+        <a href="#methodology">
+          Methodology
+        </a>
+
+        <a href="#methodology">
+          Evidence classes
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          HUDSON
+        </h4>
+
+        <a href="#">
+          About
+        </a>
+
+        <a href="#">
+          Contact
+        </a>
+
+        <a href="https://hudson-ltd.com/mentions-legales">
+          Legal
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 HUDSON. All rights reserved.
+      </span>
+
+      <span>
+        Evidence before prediction.
+      </span>
+
+    </div>
+
+
+  </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     INTERACTIONS
+     Hover on desktop + click-to-lock on all devices.
+========================================================= -->
+
+<script>
+
+  const interactiveElements =
+    document.querySelectorAll('.interact');
+
+
+  interactiveElements.forEach((element) => {
+
+    element.setAttribute('tabindex', '0');
+
+
+    element.addEventListener('click', (event) => {
+
+      const wasOpen =
+        element.classList.contains('is-open');
+
+
+      interactiveElements.forEach((other) => {
+
+        if (other !== element) {
+          other.classList.remove('is-open');
+        }
+
+      });
+
+
+      element.classList.toggle(
+        'is-open',
+        !wasOpen
+      );
+
+
+      event.stopPropagation();
+
+    });
+
+
+    element.addEventListener('keydown', (event) => {
+
+      if (
+        event.key === 'Enter' ||
+        event.key === ' '
+      ) {
+
+        event.preventDefault();
+
+        element.click();
+
+      }
+
+    });
+
+  });
+
+
+  document.addEventListener('click', () => {
+
+    interactiveElements.forEach((element) => {
+
+      element.classList.remove('is-open');
+
+    });
+
+  });
+
+
+  document.addEventListener('keydown', (event) => {
+
+    if (event.key === 'Escape') {
+
+      interactiveElements.forEach((element) => {
+
+        element.classList.remove('is-open');
+
+      });
+
+    }
+
+  });
+
+</script>
+
+
+</body>
+</html>
