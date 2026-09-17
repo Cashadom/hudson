@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Notre philosophie — Hudson Business Development</title>
+  <meta name="description" content="Cinq principes issus de la stratégie classique, appliqués à la prospection commerciale : fondations, fluidité, échange, lucidité, apprentissage.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://hudson-ltd.com/philosophie">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5PF6FCCW');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S2912LSCRX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S2912LSCRX');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:       #0a1f44;
+      --ink-mid:   #142f5c;
+      --page:      #faf9f6;
+      --page-alt:  #f2f0eb;
+      --white:     #ffffff;
+      --gold:      #c9a24a;
+      --gold-deep: #a8862f;
+      --gold-soft: rgba(201,162,74,0.10);
+      --gold-line: rgba(201,162,74,0.35);
+      --t-main:    #0a1f44;
+      --t-mid:     #3d5372;
+      --t-muted:   #7a8ea8;
+      --border:    rgba(10,31,68,0.10);
+      --border-md: rgba(10,31,68,0.16);
+    }
+
+    html { scroll-behavior: smooth; background: #0a1f44; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--page);
+      color: var(--t-main);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 60;
+      background: rgba(255,255,255,0.98);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 1px 0 rgba(10,31,68,0.02);
+    }
+    .nav-in {
+      max-width: 1140px; margin: 0 auto; padding: 0 48px;
+      height: 96px; display: flex; align-items: center; justify-content: space-between;
+    }
+    @media (max-width: 720px) { .nav-in { padding: 0 22px; height: 80px; } }
+    .logo { display: flex; align-items: center; text-decoration: none; }
+    .logo img { height: 76px; width: auto; display: block; }
+    @media (max-width: 720px) { .logo img { height: 60px; } }
+    .nav-links { display: flex; gap: 30px; list-style: none; align-items: center; }
+    .nav-links a { font-size: 12.5px; color: var(--t-mid); text-decoration: none; transition: color .18s; }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-cta {
+      background: var(--ink); color: var(--white) !important;
+      padding: 11px 22px; font-size: 12.5px !important; font-weight: 500 !important;
+      letter-spacing: 0.07em; transition: background .2s !important;
+    }
+    .nav-cta:hover { background: var(--gold-deep) !important; color: var(--white) !important; }
+    @media (max-width: 860px) { .nav-links { display: none; } }
+
+    /* CONTENEUR */
+    .conteneur {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 176px 32px 120px;
+    }
+    @media (max-width: 600px) {
+      .conteneur { padding: 140px 22px 80px; }
+    }
+
+    /* EN-TÊTE */
+    .entete {
+      text-align: center;
+      margin-bottom: 72px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sur-titre {
+      font-family: 'DM Mono', monospace;
+      font-size: 10.5px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      margin-bottom: 22px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .sur-titre::before,
+    .sur-titre::after {
+      content: '';
+      width: 22px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .entete h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(42px, 5vw, 68px);
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      margin-bottom: 22px;
+      font-weight: normal;
+    }
+
+    .entete p {
+      color: var(--t-mid);
+      font-size: 17px;
+      font-weight: 300;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    /* INTRO */
+    .intro {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 72px;
+      color: var(--t-mid);
+      font-weight: 300;
+    }
+    .intro p { margin-bottom: 20px; }
+    .intro strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    /* PRINCIPES */
+    .principe {
+      margin-bottom: 60px;
+      padding-left: 32px;
+      border-left: 3px solid var(--gold);
+    }
+    @media (max-width: 600px) { .principe { padding-left: 22px; } }
+
+    .principe-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      margin-bottom: 12px;
+    }
+
+    .principe h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      letter-spacing: 0.03em;
+      color: var(--ink);
+      margin-bottom: 10px;
+      font-weight: normal;
+      line-height: 1.1;
+    }
+
+    .principe .source {
+      font-family: 'Instrument Serif', serif;
+      font-size: 15px;
+      color: var(--t-muted);
+      font-style: italic;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .principe p {
+      margin-bottom: 16px;
+      color: var(--t-mid);
+      font-weight: 300;
+    }
+
+    .principe ul {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .principe ul li {
+      padding-left: 24px;
+      position: relative;
+      margin-bottom: 12px;
+      color: var(--t-mid);
+      font-size: 15.5px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .principe ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-family: 'DM Mono', monospace;
+    }
+
+    /* CITATION */
+    .citation {
+      background: var(--page-alt);
+      padding: 40px 44px;
+      margin: 80px 0;
+      font-family: 'Instrument Serif', serif;
+      font-size: 20px;
+      font-style: italic;
+      color: var(--ink);
+      border-left: 3px solid var(--gold);
+      line-height: 1.6;
+    }
+    @media (max-width: 600px) { .citation { padding: 28px 24px; font-size: 18px; } }
+
+    .citation footer {
+      font-family: 'DM Mono', monospace;
+      font-style: normal;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      margin-top: 18px;
+    }
+
+    .citation footer em {
+      font-style: italic;
+      text-transform: none;
+      letter-spacing: 0.05em;
+    }
+
+    /* CONCLUSION */
+    .conclusion {
+      margin-top: 80px;
+      padding-top: 44px;
+      border-top: 1px solid var(--border);
+    }
+
+    .conclusion h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      letter-spacing: 0.03em;
+      color: var(--ink);
+      margin-bottom: 22px;
+      font-weight: normal;
+      line-height: 1.1;
+    }
+
+    .conclusion p {
+      color: var(--t-mid);
+      font-size: 16.5px;
+      line-height: 1.8;
+      font-weight: 300;
+      margin-bottom: 16px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,0.4);
+      padding: 40px 0 32px;
+      border-top: 1px solid rgba(201,162,74,0.15);
+    }
+    .foot-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    @media (max-width: 600px) { .foot-inner { padding: 0 22px; } }
+
+    .foot-brand {
+      display: flex; flex-direction: column; gap: 3px;
+    }
+    .foot-brand-top {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 17px; letter-spacing: 0.14em;
+      color: rgba(255,255,255,0.9);
+    }
+    .foot-brand-top span { color: var(--gold); }
+    .foot-brand-sub {
+      font-family: 'DM Mono', monospace; font-size: 9px;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+    .foot-brand-sub strong { color: var(--gold); font-weight: 400; }
+
+    .foot-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .foot-links a {
+      font-family: 'DM Mono', monospace; font-size: 10px;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .foot-links a:hover { color: var(--gold); }
+
+    .foot-copy {
+      font-family: 'DM Mono', monospace; font-size: 10px;
+      color: rgba(255,255,255,0.3);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PF6FCCW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-in">
+    <a href="/" class="logo">
+      <img src="icon.png" alt="Hudson Business Development">
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/intelligence-hub">Intelligence Hub</a></li>
+      <li><a href="/plan">Plan du site</a></li>
+      <li><a href="/contact" class="nav-cta">Contact →</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="conteneur">
+
+  <!-- EN-TÊTE -->
+  <header class="entete">
+    <div class="sur-titre">Hudson Business Development</div>
+    <h1>Notre philosophie</h1>
+    <p>Cinq principes issus de la stratégie classique, appliqués à la prospection commerciale.</p>
+  </header>
+
+  <!-- INTRODUCTION -->
+  <div class="intro">
+    <p>Notre métier est simple à décrire et difficile à bien faire : <strong>ouvrir des portes</strong>, créer des opportunités, transformer une conversation en rendez-vous qualifié. Nous nous sommes appuyés sur un texte ancien, le <em>Traité des cinq roues</em> de Miyamoto Musashi, non par goût de l'exotisme, mais parce qu'il formule avec une précision rare ce que nous vivons chaque jour au téléphone : lire une situation, s'adapter, agir juste.</p>
+    <p>Nous en avons retenu cinq principes. Ils structurent notre travail, notre formation et notre manière de mesurer nos résultats.</p>
+  </div>
+
+  <!-- PRINCIPE 1 -->
+  <section class="principe">
+    <div class="principe-num">Principe I</div>
+    <h2>La Terre — des fondations solides</h2>
+    <div class="source">« Connaître sa voie, entraîner son esprit, ne rien faire d'inutile. »</div>
+    <p>Avant de prospecter, nous définissons. Chaque mission commence par une clarification : qui est le client idéal, quel est son problème, quel message peut légitimement l'intéresser. Nous refusons le volume pour le volume.</p>
+    <ul>
+      <li>Chaque commercial connaît précisément son rôle et ses objectifs.</li>
+      <li>Aucune liste n'est utilisée sans avoir été qualifiée en amont.</li>
+      <li>Nous éliminons systématiquement les actions sans effet mesurable.</li>
+    </ul>
+  </section>
+
+  <!-- PRINCIPE 2 -->
+  <section class="principe">
+    <div class="principe-num">Principe II</div>
+    <h2>L'Eau — la fluidité du discours</h2>
+    <div class="source">« Prenant l'eau comme point de référence, on rend l'esprit fluide. »</div>
+    <p>Un script rigide s'entend immédiatement. Nous formons nos commerciaux à comprendre la structure d'un échange, pas à réciter un texte. La méthode est un cadre, jamais une prison.</p>
+    <ul>
+      <li>Nos trames d'appel sont des repères, pas des scripts mot à mot.</li>
+      <li>Le rythme de l'échange s'ajuste à celui de l'interlocuteur.</li>
+      <li>Chaque commercial est capable de défendre la même promesse de valeur avec ses propres mots.</li>
+    </ul>
+  </section>
+
+  <!-- PRINCIPE 3 -->
+  <section class="principe">
+    <div class="principe-num">Principe III</div>
+    <h2>Le Feu — l'art de l'échange</h2>
+    <div class="source">« Connaître le rythme de son interlocuteur, appuyer là où cela compte. »</div>
+    <p>Un appel de prospection est une conversation à deux. Notre travail consiste à écouter avant de parler, à comprendre la contrainte réelle de notre interlocuteur, et à concentrer notre argumentation sur le point qui compte pour lui — pas sur celui qui nous arrange.</p>
+    <ul>
+      <li>Nous identifions le point de tension avant de proposer une solution.</li>
+      <li>Nous adaptons notre débit, notre ton et notre niveau de détail à la personne en face.</li>
+      <li>Nous ne cherchons pas à « gagner » l'appel, mais à obtenir un résultat utile.</li>
+    </ul>
+  </section>
+
+  <!-- PRINCIPE 4 -->
+  <section class="principe">
+    <div class="principe-num">Principe IV</div>
+    <h2>Le Vent — apprendre de ce qui existe</h2>
+    <div class="source">« Connaître les autres méthodes, c'est mieux connaître la sienne. »</div>
+    <p>Nous étudions les pratiques du marché, celles de nos concurrents comme les nôtres. Non pour copier, mais pour comprendre ce qui fonctionne, ce qui échoue, et pourquoi. Cette lucidité nourrit notre méthode.</p>
+    <ul>
+      <li>Nous analysons régulièrement les approches concurrentes.</li>
+      <li>Nous remettons en question nos propres trames dès qu'un indicateur baisse.</li>
+      <li>Un bon commercial avec une mauvaise cible échouera : nous corrigeons les deux.</li>
+    </ul>
+  </section>
+
+  <!-- PRINCIPE 5 -->
+  <section class="principe">
+    <div class="principe-num">Principe V</div>
+    <h2>Le Vide — la lucidité sans ego</h2>
+    <div class="source">« L'esprit vide est disponible à tout. »</div>
+    <p>Le Vide, chez Musashi, n'est pas l'absence : c'est l'absence de bruit. Après un refus, nous analysons froidement. Nous ne nous attachons ni à une méthode parce qu'elle est nôtre, ni à un prospect parce qu'il nous plaît. Nous regardons les faits.</p>
+    <ul>
+      <li>Un « non » est une donnée, jamais un jugement personnel.</li>
+      <li>Nous abandonnons sans nostalgie ce qui ne produit plus de résultats.</li>
+      <li>Nous privilégions la relation durable au gain immédiat.</li>
+    </ul>
+  </section>
+
+  <!-- CITATION -->
+  <blockquote class="citation">
+    « Lorsque les fondations cèdent, tout cède. »
+    <footer>— Miyamoto Musashi, <em>Traité des cinq roues</em></footer>
+  </blockquote>
+
+  <!-- CONCLUSION -->
+  <section class="conclusion">
+    <h2>Ce que cela change, concrètement</h2>
+    <p>Ces cinq principes ne sont pas un ornement. Ils déterminent la manière dont nous sélectionnons nos cibles, dont nous formons nos équipes et dont nous évaluons nos résultats. Ils nous rappellent qu'en prospection, comme ailleurs, la qualité d'une action vaut mieux que son volume.</p>
+    <p>Notre engagement est simple : ouvrir les bonnes portes, au bon moment, avec le bon message. Le reste suit.</p>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <div class="foot-brand-top">HUDSON<span>.</span></div>
+      <div class="foot-brand-sub">Business Development · <strong>Philosophie</strong></div>
+    </div>
+    <div class="foot-links">
+      <a href="/">Accueil</a>
+      <a href="/intelligence-hub">Intelligence Hub</a>
+      <a href="/plan">Plan du site</a>
+      <a href="/mentions-legales">Mentions légales</a>
+    </div>
+    <div class="foot-copy">© 2026 Hudson Ltd</div>
+  </div>
+</footer>
+
+</body>
+</html>
