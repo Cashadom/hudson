@@ -36,17 +36,19 @@
 
   <style>
     :root{
-      --navy:#071c33;
-      --navy-2:#0b2947;
-      --navy-3:#103653;
+      /* ===== HUDSON CHARTE ===== */
+      --navy:#0a1f44;
+      --navy-2:#142f5c;
+      --navy-3:#2a4a7c;
 
       --sea:#2f8da8;
       --sea-dark:#21748d;
       --sea-soft:#eaf6f9;
 
-      --red:#a62532;
-      --red-dark:#811d28;
-      --red-soft:#faeef0;
+      /* rouge → GOLD */
+      --gold:#c9a24a;
+      --gold-deep:#a8862f;
+      --gold-soft:rgba(201,162,74,.10);
 
       --ink:#14253a;
       --text:#425468;
@@ -115,7 +117,7 @@
     }
 
     .red{
-      color:var(--red);
+      color:var(--gold);
     }
 
     .sea{
@@ -153,7 +155,7 @@
       width:28px;
       height:2px;
 
-      background:var(--red);
+      background:var(--gold);
     }
 
     h1,
@@ -234,15 +236,16 @@
     }
 
     .button-primary{
-      color:#fff;
+      color:var(--navy);
 
-      background:var(--red);
-      border:1px solid var(--red);
+      background:var(--gold);
+      border:1px solid var(--gold);
     }
 
     .button-primary:hover{
-      background:var(--red-dark);
-      border-color:var(--red-dark);
+      background:var(--gold-deep);
+      border-color:var(--gold-deep);
+      color:#fff;
     }
 
     .button-outline{
@@ -253,7 +256,8 @@
     }
 
     .button-outline:hover{
-      border-color:var(--sea);
+      border-color:var(--gold);
+      color:var(--gold-deep);
     }
 
     .button-light{
@@ -267,12 +271,13 @@
     ========================================================= */
 
     .site-header{
-      height:76px;
+      height:96px;
 
       display:flex;
       align-items:center;
 
       background:#fff;
+      border-bottom:1px solid var(--line);
     }
 
     .nav{
@@ -290,8 +295,9 @@
       line-height:1;
     }
 
+    /* logo agrandi — icon.png */
     .brand img{
-      height:42px;
+      height:76px;
       width:auto;
     }
 
@@ -315,11 +321,17 @@
     .nav-links .nav-cta{
       padding:10px 16px;
 
-      color:#fff;
+      color:var(--navy);
 
-      background:var(--red);
+      background:var(--gold);
 
       border-radius:4px;
+      font-weight:650;
+    }
+
+    .nav-links .nav-cta:hover{
+      background:var(--gold-deep);
+      color:#fff;
     }
 
     /* =========================================================
@@ -447,7 +459,7 @@
       width:74px;
       height:4px;
 
-      background:var(--red);
+      background:var(--gold);
 
       border-radius:10px;
     }
@@ -830,8 +842,8 @@
       background:
         linear-gradient(
           90deg,
-          rgba(7,28,51,.96),
-          rgba(7,28,51,.72)
+          rgba(10,31,68,.96),
+          rgba(10,31,68,.72)
         ),
         url("img3.png") center/cover no-repeat;
     }
@@ -951,9 +963,9 @@
       display:grid;
       place-items:center;
 
-      color:var(--sea-dark);
+      color:var(--gold-deep);
 
-      border:1px solid var(--sea);
+      border:1px solid var(--gold);
 
       border-radius:50%;
 
@@ -1187,13 +1199,13 @@
     .evidence-type.is-open{
       background:rgba(255,255,255,.07);
 
-      border-color:rgba(111,184,203,.65);
+      border-color:rgba(201,162,74,.65);
     }
 
     .evidence-type strong{
       display:block;
 
-      color:var(--sea-light);
+      color:var(--gold);
 
       font-size:10px;
 
@@ -1273,7 +1285,7 @@
     .metric.is-open{
       transform:translateY(-3px);
 
-      border-color:#c9dfe7;
+      border-color:#e5d3a5;
 
       box-shadow:var(--shadow-soft);
     }
@@ -1281,7 +1293,7 @@
     .metric small{
       display:block;
 
-      color:var(--red);
+      color:var(--gold-deep);
 
       font-size:9px;
       font-weight:750;
@@ -1376,7 +1388,7 @@
 
       padding-left:16px;
 
-      border-left:3px solid var(--red);
+      border-left:3px solid var(--gold);
 
       color:#738497;
 
@@ -1405,7 +1417,7 @@
     }
 
     .footer-brand img{
-      height:34px;
+      height:64px;
       width:auto;
     }
 
@@ -1422,7 +1434,7 @@
     footer h4{
       margin:0 0 12px;
 
-      color:#fff;
+      color:var(--gold);
 
       font-size:10px;
 
@@ -1441,7 +1453,7 @@
     }
 
     footer a:hover{
-      color:#fff;
+      color:var(--gold);
     }
 
     .footer-bottom{
@@ -1456,6 +1468,19 @@
       color:#637d90;
 
       font-size:9px;
+    }
+
+    .footer-back{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+
+      color:var(--gold);
+      font-weight:600;
+    }
+
+    .footer-back:hover{
+      color:#fff;
     }
 
     /* =========================================================
@@ -1520,11 +1545,11 @@
       }
 
       .site-header{
-        height:68px;
+        height:80px;
       }
 
       .brand img{
-        height:34px;
+        height:60px;
       }
 
       .hero{
@@ -1621,7 +1646,7 @@
   <div class="container nav">
 
     <a href="#" class="brand">
-      <img src="logoh.png" alt="HUDSON" />
+      <img src="icon.png" alt="HUDSON" />
     </a>
 
 
@@ -3095,7 +3120,7 @@
 
       <div class="footer-brand">
 
-        <img src="logoh.png" alt="HUDSON" />
+        <img src="icon.png" alt="HUDSON" />
 
         <p>
           Structured operational evidence for warehouse,
@@ -3153,12 +3178,8 @@
           HUDSON
         </h4>
 
-        <a href="#">
-          About
-        </a>
-
-        <a href="#">
-          Contact
+        <a href="https://www.hudson-ltd.com" class="footer-back">
+          ← Back to main page · www.hudson-ltd.com
         </a>
 
         <a href="https://hudson-ltd.com/mentions-legales">
