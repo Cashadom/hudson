@@ -34,7 +34,7 @@
   <meta property="og:url" content="https://hudson-ltd.com/contact">
   
   <!-- POLICES -->
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
   
   <style>
     /* ===== STYLES HUDSON ===== */
@@ -112,42 +112,6 @@
     .nav-cta:hover { background: var(--gold-deep) !important; color: var(--white) !important; }
     @media (max-width: 860px) { .nav-links { display: none; } }
 
-    /* BACKLINKS BAR */
-    .backlinks-bar {
-      background: var(--page-alt);
-      border-bottom: 1px solid var(--border);
-      padding: 12px 0;
-      margin-top: 96px;
-    }
-    @media (max-width: 720px) { .backlinks-bar { margin-top: 80px; } }
-    .backlinks-container {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 42px;
-      justify-content: flex-start;
-    }
-    .backlink-item {
-      font-family: 'DM Mono', monospace;
-      font-size: 11.5px;
-      letter-spacing: 0.02em;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--t-muted);
-    }
-    .backlink-item a {
-      color: var(--ink);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.2s, color 0.2s;
-      font-weight: 500;
-    }
-    .backlink-item a:hover {
-      border-bottom-color: var(--gold);
-      color: var(--gold-deep);
-    }
-
     /* PAGE CONTACT - fond avec ecran.png */
     .contact-hero {
       padding: 80px 0 96px;
@@ -202,6 +166,21 @@
       margin-bottom: 32px;
       max-width: 520px;
     }
+
+    /* SIGNATURE MANUSCRITE */
+    .signature {
+      font-family: 'Dancing Script', cursive;
+      font-size: 28px;
+      color: var(--gold);
+      margin-bottom: 32px;
+      display: block;
+      letter-spacing: 0.02em;
+      opacity: 0.95;
+    }
+    @media (max-width: 600px) {
+      .signature { font-size: 24px; }
+    }
+
     .checklist {
       list-style: none;
       margin-top: 12px;
@@ -398,26 +377,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </nav>
 
-<!-- BACKLINKS BAR -->
-<div class="backlinks-bar">
-  <div class="wrap backlinks-container">
-    <div class="backlink-item">
-      <span>🌐</span>
-      <a href="https://www.hudson-ltd.com" target="_blank" rel="noopener">www.hudson-ltd.com</a>
-    </div>
-    <div class="backlink-item">
-      <span>📦</span>
-      <a href="https://hudson-ltd.com/#offres" target="_blank" rel="noopener">Offres → hudson-ltd.com/#offres</a>
-    </div>
-  </div>
-</div>
-
 <!-- SECTION CONTACT avec image ecran.png en fond -->
 <section class="contact-hero">
   <div class="wrap contact-grid">
     <div class="contact-left">
       <div class="tag" style="color: rgba(201,162,74,.85);">Contact direct</div>
       <h1>Prenez contact<br> avec <em>notre équipe</em></h1>
+      <span class="signature">Hablamos castellano</span>
       <p class="intro-text">Un projet de prospection B2B en France, Suisse, Belgique, Espagne ou Latam ? Échangeons sans engagement. Évaluation gratuite de votre cible commerciale</p>
       
       <div class="checklist">
