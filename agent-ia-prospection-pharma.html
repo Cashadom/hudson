@@ -20,43 +20,73 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-    :root{--ink:#0c1a2e;--page:#f6f5f2;--page-alt:#edecea;--white:#fff;--red:#bf1129;--t-mid:#3b5070;--t-muted:#788fa8;--border:rgba(12,26,46,.10);--border-md:rgba(12,26,46,.16);}
-    html{scroll-behavior:smooth;}
+    :root{
+      --ink:#0a1f44;
+      --ink-mid:#142f5c;
+      --page:#faf9f6;
+      --page-alt:#f2f0eb;
+      --white:#ffffff;
+      --gold:#c9a24a;
+      --gold-deep:#a8862f;
+      --gold-soft:rgba(201,162,74,.10);
+      --gold-line:rgba(201,162,74,.35);
+      --blue-accent:#38bdf8;
+      --t-mid:#3d5372;
+      --t-muted:#7a8ea8;
+      --t-faint:#b1bfcf;
+      --border:rgba(10,31,68,.10);
+      --border-md:rgba(10,31,68,.16);
+    }
+    html{scroll-behavior:smooth;background:#0a1f44;}
     body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-webkit-font-smoothing:antialiased;}
     .wrap{max-width:860px;margin:0 auto;padding:0 40px;}
     @media(max-width:600px){.wrap{padding:0 20px;}}
 
-    /* TOPBAR */
-    .topbar{background:var(--ink);height:54px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;position:sticky;top:0;z-index:50;}
-    @media(max-width:600px){.topbar{padding:0 20px;}}
-    .logo{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:.12em;color:var(--white);text-decoration:none;}
-    .logo span{color:var(--red);}
-    .back{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4);text-decoration:none;display:flex;align-items:center;gap:7px;transition:color .18s;}
-    .back:hover{color:var(--white);}
-    .back::before{content:'←';color:var(--red);}
+    /* HEADER BLANC — logo seul */
+    .topbar{
+      background:rgba(255,255,255,.98);
+      backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--border);
+      box-shadow:0 1px 0 rgba(10,31,68,.02);
+      height:96px;display:flex;align-items:center;justify-content:space-between;
+      padding:0 40px;position:sticky;top:0;z-index:50;
+    }
+    @media(max-width:600px){.topbar{padding:0 20px;height:80px;}}
+    .topbar-logo{display:flex;align-items:center;text-decoration:none;}
+    .topbar-logo img{height:76px;width:auto;display:block;}
+    @media(max-width:600px){.topbar-logo img{height:60px;}}
+    .back{
+      font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.16em;
+      text-transform:uppercase;color:var(--t-mid);text-decoration:none;
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 18px;border:1px solid var(--border-md);
+      transition:border-color .2s,color .2s;
+    }
+    .back:hover{border-color:var(--gold);color:var(--gold-deep);}
+    .back::before{content:'←';color:var(--gold);}
 
     /* BANNER PHOTO */
     .banner{width:100%;height:420px;background:var(--page-alt);overflow:hidden;position:relative;display:flex;align-items:flex-end;}
     .banner img{width:100%;height:100%;object-fit:cover;display:block;}
-    .banner-placeholder{width:100%;height:100%;background:linear-gradient(135deg,#0c1a2e 0%,#1a2f4a 60%,#0c1a2e 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;}
+    .banner-placeholder{width:100%;height:100%;background:linear-gradient(135deg,#0a1f44 0%,#142f5c 60%,#0a1f44 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;}
     .banner-placeholder-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.2);}
     .banner-placeholder-icon{font-size:48px;opacity:.15;}
-    .banner-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(12,26,46,.85) 0%,transparent 100%);padding:32px 40px;}
+    .banner-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(10,31,68,.85) 0%,transparent 100%);padding:32px 40px;}
     @media(max-width:600px){.banner{height:260px;}.banner-overlay{padding:20px;}}
-    .banner-tag{font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--red);margin-bottom:8px;}
+    .banner-tag{font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
     .banner-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,48px);color:var(--white);letter-spacing:.03em;line-height:1;}
-    .banner-title em{color:var(--red);font-style:normal;}
+    .banner-title em{color:var(--gold);font-style:normal;}
 
     /* HERO */
     .hero{background:var(--ink);padding:52px 40px 44px;position:relative;overflow:hidden;}
     .hero::after{content:'SANTÉ';position:absolute;right:-20px;bottom:-40px;font-family:'Bebas Neue',sans-serif;font-size:160px;color:rgba(255,255,255,.018);letter-spacing:.02em;line-height:1;pointer-events:none;}
     @media(max-width:600px){.hero{padding:36px 20px 32px;}}
-    .eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);display:flex;align-items:center;gap:9px;margin-bottom:16px;}
-    .eyebrow::before{content:'';width:20px;height:1px;background:var(--red);}
+    .eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:9px;margin-bottom:16px;}
+    .eyebrow::before{content:'';width:20px;height:1px;background:var(--gold);}
     h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(38px,5vw,64px);line-height:.93;letter-spacing:.02em;color:var(--white);margin-bottom:16px;}
-    h1 em{color:var(--red);font-style:normal;}
-    .hero-intro{font-size:15px;font-weight:300;color:rgba(255,255,255,.55);max-width:620px;line-height:1.8;}
-    .hero-intro strong{color:rgba(255,255,255,.85);font-weight:400;}
+    h1 em{color:var(--gold);font-style:normal;}
+    .hero-intro{font-size:15px;font-weight:300;color:rgba(255,255,255,.58);max-width:620px;line-height:1.8;}
+    .hero-intro strong{color:rgba(255,255,255,.9);font-weight:400;}
 
     /* CONTENT */
     .content{padding:60px 0 80px;}
@@ -67,14 +97,14 @@
     p strong{color:var(--ink);font-weight:500;}
 
     /* HIGHLIGHT */
-    .highlight{background:var(--ink);padding:28px 32px;border-left:3px solid var(--red);margin:32px 0;}
+    .highlight{background:var(--ink);padding:28px 32px;border-left:3px solid var(--gold);margin:32px 0;}
     .highlight p{color:rgba(255,255,255,.65);margin:0;font-size:14.5px;line-height:1.75;}
     .highlight strong{color:var(--white);}
 
     /* ICON LIST */
     .icon-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin:16px 0 24px;}
     .icon-list li{display:flex;align-items:flex-start;gap:12px;font-size:14.5px;color:var(--t-mid);line-height:1.55;}
-    .icon-list li::before{content:'→';color:var(--red);font-family:'DM Mono',monospace;font-size:11px;margin-top:3px;flex-shrink:0;}
+    .icon-list li::before{content:'→';color:var(--gold);font-family:'DM Mono',monospace;font-size:11px;margin-top:3px;flex-shrink:0;}
     .icon-list li strong{color:var(--ink);font-weight:500;}
 
     /* STATS */
@@ -82,23 +112,23 @@
     @media(max-width:500px){.stats{grid-template-columns:1fr;}}
     .stat{background:var(--white);border:1px solid var(--border);padding:22px 20px;}
     .stat-v{font-family:'Bebas Neue',sans-serif;font-size:38px;color:var(--ink);line-height:1;margin-bottom:4px;}
-    .stat-v em{color:var(--red);font-style:normal;}
+    .stat-v em{color:var(--gold-deep);font-style:normal;}
     .stat-l{font-size:12.5px;color:var(--t-muted);line-height:1.4;}
 
     /* MISSIONS CARDS */
     .missions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin:24px 0 36px;}
     @media(max-width:640px){.missions-grid{grid-template-columns:1fr;}}
     .mission-card{background:var(--ink);padding:28px 24px;display:flex;flex-direction:column;gap:10px;border:1px solid rgba(255,255,255,.06);}
-    .mission-num{font-family:'Bebas Neue',sans-serif;font-size:44px;color:var(--red);line-height:1;opacity:.7;}
+    .mission-num{font-family:'Bebas Neue',sans-serif;font-size:44px;color:var(--gold);line-height:1;opacity:.85;}
     .mission-title{font-family:'Bebas Neue',sans-serif;font-size:19px;color:var(--white);letter-spacing:.04em;line-height:1.1;}
     .mission-desc{font-size:13px;color:rgba(255,255,255,.4);line-height:1.6;font-weight:300;}
     .mission-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:4px;}
-    .mission-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--red);padding:3px 8px;border:1px solid rgba(191,17,41,.3);}
+    .mission-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);padding:3px 8px;border:1px solid rgba(201,162,74,.3);}
 
     /* DETAIL SECTIONS */
-    .detail-block{background:var(--white);border:1px solid var(--border);border-left:3px solid var(--red);padding:28px 28px;margin:16px 0;}
+    .detail-block{background:var(--white);border:1px solid var(--border);border-left:3px solid var(--gold);padding:28px 28px;margin:16px 0;}
     .detail-block-header{display:flex;align-items:center;gap:14px;margin-bottom:16px;}
-    .detail-block-num{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--red);line-height:1;min-width:36px;}
+    .detail-block-num{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--gold-deep);line-height:1;min-width:36px;}
     .detail-block-title{font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--ink);letter-spacing:.04em;}
     .detail-block p{font-size:14px;color:var(--t-mid);line-height:1.7;margin-bottom:12px;font-weight:300;}
     .detail-block p:last-child{margin-bottom:0;}
@@ -107,7 +137,7 @@
     .steps{display:flex;flex-direction:column;gap:0;margin:20px 0 28px;}
     .step{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid var(--border);}
     .step:last-child{border-bottom:none;}
-    .step-n{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--red);line-height:1;min-width:32px;}
+    .step-n{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--gold-deep);line-height:1;min-width:32px;}
     .step-body strong{display:block;font-size:14.5px;font-weight:500;color:var(--ink);margin-bottom:4px;}
     .step-body span{font-size:13.5px;color:var(--t-mid);line-height:1.55;}
 
@@ -123,10 +153,10 @@
     .compare{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin:28px 0;}
     @media(max-width:500px){.compare{grid-template-columns:1fr;}}
     .compare-col{padding:24px 22px;background:var(--white);border:1px solid var(--border);}
-    .compare-col.bad{border-top:3px solid var(--t-muted);}
-    .compare-col.good{border-top:3px solid var(--red);}
+    .compare-col.bad{border-top:3px solid var(--t-faint);}
+    .compare-col.good{border-top:3px solid var(--gold);}
     .compare-label{font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--t-muted);margin-bottom:14px;}
-    .compare-col.good .compare-label{color:var(--red);}
+    .compare-col.good .compare-label{color:var(--gold-deep);}
     .compare-items{list-style:none;display:flex;flex-direction:column;gap:8px;}
     .compare-items li{font-size:13.5px;color:var(--t-mid);line-height:1.4;}
 
@@ -142,25 +172,25 @@
     .internal-title{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--t-muted);margin-bottom:16px;}
     .internal-links{display:flex;flex-wrap:wrap;gap:8px;}
     .internal-links a{font-size:13px;color:var(--t-mid);text-decoration:none;padding:7px 14px;background:var(--white);border:1px solid var(--border);transition:border-color .15s,color .15s;}
-    .internal-links a:hover{border-color:var(--red);color:var(--ink);}
+    .internal-links a:hover{border-color:var(--gold);color:var(--ink);}
 
     /* CTA */
-    .cta-block{background:var(--red);padding:44px 40px;margin-top:56px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+    .cta-block{background:var(--ink);padding:44px 40px;margin-top:56px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;border-left:3px solid var(--gold);}
     @media(max-width:600px){.cta-block{flex-direction:column;padding:32px 20px;}}
     .cta-block h3{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:.04em;color:var(--white);margin-bottom:4px;}
     .cta-block p{font-size:13.5px;color:rgba(255,255,255,.7);margin:0;font-weight:300;}
-    .cta-btn{background:var(--white);color:var(--red);padding:14px 28px;font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;white-space:nowrap;flex-shrink:0;transition:background .2s;}
-    .cta-btn:hover{background:rgba(255,255,255,.9);}
+    .cta-btn{background:var(--gold);color:var(--ink);padding:14px 28px;font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;white-space:nowrap;flex-shrink:0;transition:background .2s;border:1px solid var(--gold);}
+    .cta-btn:hover{background:#d8b45e;}
 
     /* FOOTER */
-    footer{background:var(--ink);padding:18px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;border-top:1px solid rgba(255,255,255,.07);}
+    footer{background:var(--ink);padding:18px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;border-top:1px solid rgba(201,162,74,.15);}
     @media(max-width:600px){footer{padding:16px 20px;flex-direction:column;text-align:center;}}
-    .foot-brand{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:.1em;color:rgba(255,255,255,.4);}
-    .foot-brand span{color:var(--red);}
+    .foot-brand{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:.1em;color:rgba(255,255,255,.45);}
+    .foot-brand span{color:var(--gold);}
     .foot-meta{display:flex;gap:20px;align-items:center;}
-    .foot-link{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.26);text-decoration:none;}
-    .foot-link:hover{color:rgba(255,255,255,.7);}
-    .foot-copy{font-size:11px;color:rgba(255,255,255,.18);font-family:'DM Mono',monospace;}
+    .foot-link{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;}
+    .foot-link:hover{color:var(--gold);}
+    .foot-copy{font-size:11px;color:rgba(255,255,255,.28);font-family:'DM Mono',monospace;}
 
     /* ANIMATIONS */
     @keyframes up{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
@@ -172,8 +202,11 @@
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PF6FCCW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
+<!-- HEADER BLANC — logo seul -->
 <div class="topbar">
-  <a href="https://www.hudson-ltd.com/" class="logo">HUDSON<span>.</span></a>
+  <a href="https://www.hudson-ltd.com/" class="topbar-logo">
+    <img src="icon.png" alt="Hudson Business Development">
+  </a>
   <a href="/growth-engine" class="back">Growth Engine</a>
 </div>
 
@@ -196,7 +229,6 @@
 <!-- CONTENT -->
 <div class="content"><div class="wrap">
 
-  <!-- INTRO POLE -->
   <h2>LE PÔLE SANTÉ BEAUTÉ HUDSON</h2>
   <p>En associant une <strong>vision globale des enjeux du secteur</strong> et une action directe auprès des décideurs clés, le Pôle Santé Beauté permet à nos clients de se positionner au cœur des circuits décisionnels et de transformer ces opportunités en leviers de croissance durables.</p>
   <p>Nos équipes commerciales sédentaire et nos agents IA sectoriels interviennent conjointement : prospection à grande échelle, prise de rendez-vous qualifiés, présence en officines et accompagnement sell-out. Un dispositif complet, du premier contact à la rotation en linéaire.</p>
@@ -207,7 +239,6 @@
     <div class="stat"><div class="stat-v">3<em>×</em></div><div class="stat-l">plus de référencements vs approche directe</div></div>
   </div>
 
-  <!-- CIRCUITS -->
   <h2>NOS CIRCUITS D'INTERVENTION</h2>
   <p>Le Pôle Santé Beauté opère sur l'ensemble des circuits de distribution pharmaceutique et para-pharmaceutique :</p>
   <div class="circuits">
@@ -233,7 +264,6 @@
     </div>
   </div>
 
-  <!-- 3 MISSIONS PRINCIPALES -->
   <h2>LES 3 MISSIONS CLÉS DU PÔLE SANTÉ</h2>
   <div class="missions-grid">
     <div class="mission-card">
@@ -268,7 +298,6 @@
     </div>
   </div>
 
-  <!-- MISSION 1 DETAIL -->
   <h2>MISSION 1 — PRÉSENTATION DE GAMME & RÉFÉRENCEMENT DIRECT</h2>
   <p>Le référencement est la première bataille. Sans mise en stock, il n'y a ni vente ni prescription. Nos délégués Santé Beauté conduisent des <strong>visites officinales structurées</strong> pour présenter vos innovations, argumenter la valeur ajoutée produit et conclure le référencement sur place.</p>
 
@@ -289,7 +318,6 @@
     <li><strong>Produits vétérinaires :</strong> gammes conseil animaux de compagnie distribuées en officine</li>
   </ul>
 
-  <!-- MISSION 2 DETAIL -->
   <h2>MISSION 2 — PRISE DE RDV GROUPEMENTS & SERVICES ACHATS</h2>
   <p>Accéder aux <strong>centrales d'achat et services référencement des groupements</strong> est un levier de croissance massif — un accord groupement peut ouvrir 300 à 2 000 officines d'un coup. C'est aussi le plus difficile à décrocher sans les bons contacts et la bonne approche.</p>
 
@@ -320,7 +348,6 @@
     <p><strong>Méthode Hudson :</strong> l'accès aux groupements ne s'improvise pas. Nos équipes combinent approche téléphonique structurée, LinkedIn outreach ciblé et relances multicanal pour obtenir des créneaux auprès des directeurs achats et responsables référencement. Chaque RDV est préparé avec un dossier produit adapté aux critères de sélection du groupement.</p>
   </div>
 
-  <!-- MISSION 3 DETAIL -->
   <h2>MISSION 3 — SELL-OUT, MERCHANDISING & RENTABILITÉ LINÉAIRE</h2>
   <p>Être référencé ne suffit pas. Un produit qui ne tourne pas est déréférencé. Le vrai enjeu est la <strong>rotation en linéaire</strong> : former les équipes officinales à recommander, optimiser la visibilité en rayon, animer les ventes et démontrer la rentabilité au pharmacien.</p>
 
@@ -362,7 +389,6 @@
     </div>
   </div>
 
-  <!-- AGENT IA SECTION -->
   <h2>L'AGENT IA SANTÉ : PROSPECTION À GRANDE ÉCHELLE</h2>
   <p>En complément des actions terrain, notre <strong>agent IA spécialisé secteur santé</strong> démultiplie la capacité de prospection : identification des officines à potentiel, séquences de contact automatisées, qualification des leads et prise de rendez-vous — le tout en respectant le cadre réglementaire du secteur.</p>
 
@@ -383,7 +409,6 @@
     <div class="stat"><div class="stat-v">J<em>+3</em></div><div class="stat-l">premiers contacts actifs</div></div>
   </div>
 
-  <!-- FAQ -->
   <div class="faq">
     <div class="faq-title">QUESTIONS FRÉQUENTES</div>
     <div class="faq-item">
