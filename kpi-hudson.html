@@ -11,33 +11,41 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-5PF6FCCW');</script>
   <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S2912LSCRX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-S2912LSCRX');</script>
 
   <title>Toutes les ressources Hudson & rapport missions business developer B2B</title>
   <meta name="description" content="Plan complet des ressources Hudson sur la prospection B2B, le business developer externalisé, la téléprospection, et le rapport détaillé sur les missions et outils d'un business developer B2B en 2026.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://www.hudson-ltd.com/plan">
+  <link rel="icon" type="image/png" href="favicon.png">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
-    /* ---------- STYLES FUSIONNÉS (plan + rapport) ---------- */
+    /* ---------- CHARTE HUDSON ---------- */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --ink:       #0c1a2e;
-      --page:      #f6f5f2;
-      --page-alt:  #edecea;
+      --ink:       #0a1f44;
+      --ink-mid:   #142f5c;
+      --page:      #faf9f6;
+      --page-alt:  #f2f0eb;
       --white:     #ffffff;
-      --red:       #bf1129;
-      --t-main:    #0c1a2e;
-      --t-mid:     #3b5070;
-      --t-muted:   #788fa8;
-      --border:    rgba(12,26,46,0.10);
-      --border-md: rgba(12,26,46,0.16);
+      --gold:      #c9a24a;
+      --gold-deep: #a8862f;
+      --gold-soft: rgba(201,162,74,0.10);
+      --blue-accent:#38bdf8;
+      --t-main:    #0a1f44;
+      --t-mid:     #3d5372;
+      --t-muted:   #7a8ea8;
+      --border:    rgba(10,31,68,0.10);
+      --border-md: rgba(10,31,68,0.16);
     }
 
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; background: #0a1f44; }
     body {
       font-family: 'DM Sans', sans-serif;
       background: var(--page);
@@ -48,7 +56,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ----- TOPBAR (commune) ----- */
+    /* ----- TOPBAR ----- */
     .topbar {
       background: var(--ink);
       padding: 0 48px;
@@ -56,7 +64,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid rgba(255,255,255,0.07);
+      border-bottom: 1px solid rgba(201,162,74,0.15);
       position: sticky;
       top: 0;
       z-index: 50;
@@ -70,7 +78,7 @@
       color: var(--white);
       text-decoration: none;
     }
-    .topbar-logo span { color: var(--red); }
+    .topbar-logo span { color: var(--gold); }
 
     .back-home {
       font-family: 'DM Mono', monospace;
@@ -84,10 +92,10 @@
       gap: 8px;
       transition: color .18s;
     }
-    .back-home:hover { color: var(--white); }
-    .back-home::before { content: '←'; color: var(--red); }
+    .back-home:hover { color: var(--gold); }
+    .back-home::before { content: '←'; color: var(--gold); }
 
-    /* ----- HERO (première page) ----- */
+    /* ----- HERO ----- */
     .hero {
       background: var(--ink);
       padding: 72px 48px 60px;
@@ -103,27 +111,27 @@
       bottom: -50px;
       font-family: 'Bebas Neue', sans-serif;
       font-size: 200px;
-      color: rgba(255,255,255,0.018);
+      color: rgba(201,162,74,0.05);
       letter-spacing: 0.02em;
       line-height: 1;
       pointer-events: none;
       user-select: none;
     }
 
-    .hero-inner { max-width: 680px; }
+    .hero-inner { max-width: 680px; position: relative; z-index: 1; }
 
     .hero-eyebrow {
       font-family: 'DM Mono', monospace;
       font-size: 10px;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--red);
+      color: var(--gold);
       display: flex;
       align-items: center;
       gap: 10px;
       margin-bottom: 22px;
     }
-    .hero-eyebrow::before { content: ''; width: 22px; height: 1px; background: var(--red); }
+    .hero-eyebrow::before { content: ''; width: 22px; height: 1px; background: var(--gold); }
 
     .hero h1 {
       font-family: 'Bebas Neue', sans-serif;
@@ -133,17 +141,17 @@
       color: var(--white);
       margin-bottom: 20px;
     }
-    .hero h1 em { color: var(--red); font-style: normal; }
+    .hero h1 em { color: var(--gold); font-style: normal; }
 
     .hero-sub {
       font-size: 15px;
       font-weight: 300;
-      color: rgba(255,255,255,0.42);
+      color: rgba(255,255,255,0.45);
       max-width: 500px;
       line-height: 1.7;
     }
 
-    /* ----- MAIN (première page) ----- */
+    /* ----- MAIN ----- */
     main {
       flex: 1;
       max-width: 1140px;
@@ -215,14 +223,14 @@
       position: absolute;
       left: 0; top: 0; bottom: 0;
       width: 3px;
-      background: var(--red);
+      background: var(--gold);
       transform: scaleY(0);
       transition: transform .18s;
       transform-origin: bottom;
     }
     .link-item:hover {
-      border-color: var(--border-md);
-      background: #fafaf8;
+      border-color: var(--gold);
+      background: var(--gold-soft);
       transform: translateX(3px);
     }
     .link-item:hover::before { transform: scaleY(1); }
@@ -235,7 +243,7 @@
     }
 
     .link-arrow {
-      color: var(--red);
+      color: var(--gold);
       font-family: 'DM Mono', monospace;
       font-size: 11px;
       flex-shrink: 0;
@@ -253,6 +261,7 @@
       gap: 24px;
       flex-wrap: wrap;
       margin-top: 16px;
+      border-left: 3px solid var(--gold);
     }
     @media (max-width: 600px) { .cta-band { padding: 32px 20px; flex-direction: column; } }
 
@@ -265,13 +274,13 @@
     }
     .cta-band-text p {
       font-size: 13.5px;
-      color: rgba(255,255,255,0.4);
+      color: rgba(255,255,255,0.45);
       font-weight: 300;
     }
 
     .cta-btn {
-      background: var(--red);
-      color: var(--white);
+      background: var(--gold);
+      color: var(--ink);
       padding: 14px 28px;
       font-size: 12px;
       font-weight: 500;
@@ -281,18 +290,18 @@
       white-space: nowrap;
       transition: background .2s;
       flex-shrink: 0;
+      border: 1px solid var(--gold);
     }
-    .cta-btn:hover { background: #a10f23; }
+    .cta-btn:hover { background: #d8b45e; }
 
-    /* ----- STYLES DU RAPPORT ----- */
+    /* ----- RAPPORT ----- */
     .wrap { max-width: 860px; margin: 0 auto; padding: 0 40px; }
     @media(max-width:600px){ .wrap { padding: 0 20px; } }
 
-    /* héros du rapport (second) */
     .rapport-hero {
       background: var(--ink);
       padding: 64px 40px 52px;
-      margin-top: 0; /* s'assure qu'il n'y a pas d'espace indésirable */
+      margin-top: 0;
     }
     @media(max-width:600px){ .rapport-hero { padding: 44px 20px 38px; } }
 
@@ -301,13 +310,13 @@
       font-size: 10px;
       letter-spacing: .2em;
       text-transform: uppercase;
-      color: var(--red);
+      color: var(--gold);
       display: flex;
       align-items: center;
       gap: 9px;
       margin-bottom: 18px;
     }
-    .eyebrow::before { content: ''; width: 20px; height: 1px; background: var(--red); }
+    .eyebrow::before { content: ''; width: 20px; height: 1px; background: var(--gold); }
 
     .rapport-hero h1 {
       font-family: 'Bebas Neue', sans-serif;
@@ -317,7 +326,7 @@
       color: var(--white);
       margin-bottom: 18px;
     }
-    .rapport-hero h1 em { color: var(--red); font-style: normal; }
+    .rapport-hero h1 em { color: var(--gold); font-style: normal; }
 
     .hero-intro {
       font-size: 15px;
@@ -337,7 +346,7 @@
       font-size: 10px;
       letter-spacing: .14em;
       text-transform: uppercase;
-      color: rgba(255,255,255,.3);
+      color: rgba(255,255,255,.35);
       display: flex;
       align-items: center;
       gap: 7px;
@@ -346,7 +355,7 @@
       content: '';
       width: 4px;
       height: 4px;
-      background: var(--red);
+      background: var(--gold);
       border-radius: 50%;
     }
 
@@ -354,7 +363,7 @@
     .toc {
       background: var(--page-alt);
       border: 1px solid var(--border);
-      border-left: 3px solid var(--red);
+      border-left: 3px solid var(--gold);
       padding: 28px 32px;
       margin: 48px 0 40px;
     }
@@ -363,7 +372,7 @@
       font-size: 10px;
       letter-spacing: .18em;
       text-transform: uppercase;
-      color: var(--t-muted);
+      color: var(--gold-deep);
       margin-bottom: 16px;
     }
     .toc-list {
@@ -380,7 +389,7 @@
     .toc-num {
       font-family: 'DM Mono', monospace;
       font-size: 10px;
-      color: var(--red);
+      color: var(--gold-deep);
       min-width: 20px;
     }
     .toc-list a {
@@ -389,7 +398,7 @@
       text-decoration: none;
       transition: color .15s;
     }
-    .toc-list a:hover { color: var(--red); }
+    .toc-list a:hover { color: var(--gold-deep); }
 
     /* content */
     .content { padding: 48px 0 80px; }
@@ -402,7 +411,7 @@
       margin-bottom: 20px;
       line-height: 1;
       padding-bottom: 12px;
-      border-bottom: 2px solid var(--red);
+      border-bottom: 2px solid var(--gold);
     }
     h3 {
       font-family: 'DM Sans', sans-serif;
@@ -423,7 +432,7 @@
     .highlight {
       background: var(--ink);
       padding: 24px 28px;
-      border-left: 3px solid var(--red);
+      border-left: 3px solid var(--gold);
       margin: 24px 0;
     }
     .highlight p {
@@ -450,7 +459,7 @@
     }
     .icon-list li::before {
       content: '→';
-      color: var(--red);
+      color: var(--gold);
       font-family: 'DM Mono', monospace;
       font-size: 11px;
       margin-top: 3px;
@@ -467,6 +476,7 @@
     .tool-card {
       background: var(--white);
       border: 1px solid var(--border);
+      border-left: 2px solid var(--gold);
       padding: 18px 20px;
     }
     .tool-name {
@@ -480,7 +490,7 @@
     }
     .tool-cat {
       font-size: 10px;
-      color: var(--red);
+      color: var(--gold-deep);
       font-family: 'DM Mono', monospace;
       letter-spacing: .1em;
       text-transform: uppercase;
@@ -559,7 +569,7 @@
     }
     .kpi-table tr:last-child td { border-bottom: none; }
     .kpi-table td:first-child { color: var(--ink); font-weight: 500; }
-    .kpi-table td em { color: var(--red); font-style: normal; font-weight: 500; }
+    .kpi-table td em { color: var(--gold-deep); font-style: normal; font-weight: 500; }
 
     .phases {
       display: grid;
@@ -571,12 +581,13 @@
     .phase {
       background: var(--white);
       border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
       padding: 20px 16px;
     }
     .phase-n {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 32px;
-      color: var(--red);
+      color: var(--gold-deep);
       line-height: 1;
       margin-bottom: 6px;
     }
@@ -603,7 +614,7 @@
       font-size: 10px;
       letter-spacing: .18em;
       text-transform: uppercase;
-      color: var(--t-muted);
+      color: var(--gold-deep);
       margin-bottom: 16px;
     }
     .internal-links {
@@ -620,10 +631,10 @@
       border: 1px solid var(--border);
       transition: border-color .15s,color .15s;
     }
-    .internal-links a:hover { border-color: var(--red); color: var(--ink); }
+    .internal-links a:hover { border-color: var(--gold); color: var(--gold-deep); }
 
     .cta-block {
-      background: var(--red);
+      background: var(--ink);
       padding: 40px;
       margin-top: 56px;
       display: flex;
@@ -631,6 +642,7 @@
       justify-content: space-between;
       gap: 20px;
       flex-wrap: wrap;
+      border-left: 3px solid var(--gold);
     }
     @media(max-width:600px){ .cta-block { flex-direction: column; padding: 32px 20px; } }
     .cta-block h3 {
@@ -647,8 +659,8 @@
       font-weight: 300;
     }
     .cta-block .cta-btn {
-      background: var(--white);
-      color: var(--red);
+      background: var(--gold);
+      color: var(--ink);
       padding: 14px 28px;
       font-size: 12px;
       font-weight: 500;
@@ -658,28 +670,82 @@
       white-space: nowrap;
       flex-shrink: 0;
       transition: background .2s;
+      border: 1px solid var(--gold);
     }
-    .cta-block .cta-btn:hover { background: rgba(255,255,255,.9); }
+    .cta-block .cta-btn:hover { background: #d8b45e; }
+
+    /* NOUVEAU — Bloc "outils.html" */
+    .tools-link-block {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 40px 32px;
+    }
+    @media(max-width:600px){ .tools-link-block { padding: 0 20px 32px; } }
+    .tools-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 28px 32px;
+      background: var(--page-alt);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      text-decoration: none;
+      transition: border-color .2s, background .2s;
+      flex-wrap: wrap;
+    }
+    .tools-link:hover { border-color: var(--gold); background: var(--gold-soft); }
+    .tools-link-text { flex: 1; min-width: 240px; }
+    .tools-link-kicker {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      margin-bottom: 8px;
+    }
+    .tools-link-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: .04em;
+      color: var(--ink);
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+    .tools-link-desc {
+      font-size: 13.5px;
+      color: var(--t-mid);
+      line-height: 1.6;
+      font-weight: 300;
+    }
+    .tools-link-arrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 20px;
+      color: var(--gold);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .tools-link:hover .tools-link-arrow { transform: translateX(6px); }
 
     /* footer */
     footer {
       background: var(--ink);
-      padding: 18px 40px;
+      padding: 24px 40px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 8px;
-      border-top: 1px solid rgba(255,255,255,.07);
+      border-top: 1px solid rgba(201,162,74,.15);
     }
     @media(max-width:600px){ footer { padding: 16px 20px; flex-direction: column; text-align: center; } }
     .foot-brand {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 14px;
       letter-spacing: .1em;
-      color: rgba(255,255,255,.4);
+      color: rgba(255,255,255,.45);
     }
-    .foot-brand span { color: var(--red); }
+    .foot-brand span { color: var(--gold); }
     .foot-meta {
       display: flex;
       align-items: center;
@@ -690,14 +756,14 @@
       font-size: 11px;
       letter-spacing: .14em;
       text-transform: uppercase;
-      color: rgba(255,255,255,.28);
+      color: rgba(255,255,255,.35);
       text-decoration: none;
       transition: color .18s;
     }
-    .foot-link:hover { color: rgba(255,255,255,.7); }
+    .foot-link:hover { color: var(--gold); }
     .foot-copy {
       font-size: 11px;
-      color: rgba(255,255,255,.18);
+      color: rgba(255,255,255,.28);
       font-family: 'DM Mono', monospace;
     }
 
@@ -714,7 +780,6 @@
     .hero .hero-eyebrow { animation-delay: .05s; }
     .hero h1 { animation-delay: .15s; }
     .hero .hero-sub { animation-delay: .22s; }
-    .hero .hero-meta { animation-delay: .3s; }
   </style>
 </head>
 <body>
@@ -723,13 +788,13 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- TOPBAR (issue du plan) -->
+  <!-- TOPBAR -->
   <div class="topbar">
     <a href="https://www.hudson-ltd.com/" class="topbar-logo">HUDSON<span>.</span></a>
     <a href="https://www.hudson-ltd.com/" class="back-home">Accueil</a>
   </div>
 
-  <!-- HERO DU PLAN -->
+  <!-- HERO -->
   <div class="hero">
     <div class="hero-inner">
       <div class="hero-eyebrow">Ressources & Services</div>
@@ -738,9 +803,9 @@
     </div>
   </div>
 
-  <!-- MAIN DU PLAN (catégories de liens) -->
+  <!-- MAIN -->
   <main>
-    <!-- CAT 1 : BUSINESS DEVELOPER -->
+    <!-- CAT 1 -->
     <div class="cat-block">
       <div class="cat-header">
         <div class="cat-icon">💼</div>
@@ -760,7 +825,7 @@
       </div>
     </div>
 
-    <!-- CAT 2 : SDR & PROSPECTION -->
+    <!-- CAT 2 -->
     <div class="cat-block">
       <div class="cat-header">
         <div class="cat-icon">📞</div>
@@ -780,7 +845,7 @@
       </div>
     </div>
 
-    <!-- CAT 3 : TÉLÉPROSPECTION -->
+    <!-- CAT 3 -->
     <div class="cat-block">
       <div class="cat-header">
         <div class="cat-icon">🎯</div>
@@ -800,7 +865,7 @@
       </div>
     </div>
 
-    <!-- CAT 4 : RDV QUALIFIÉS -->
+    <!-- CAT 4 -->
     <div class="cat-block">
       <div class="cat-header">
         <div class="cat-icon">📅</div>
@@ -820,7 +885,7 @@
       </div>
     </div>
 
-    <!-- CAT 5 : RECRUTEMENT COMMERCIAL -->
+    <!-- CAT 5 -->
     <div class="cat-block">
       <div class="cat-header">
         <div class="cat-icon">🤝</div>
@@ -840,7 +905,7 @@
       </div>
     </div>
 
-    <!-- CTA BAND (première page) -->
+    <!-- CTA BAND -->
     <div class="cta-band">
       <div class="cta-band-text">
         <h3>PRÊT À LANCER VOTRE CAMPAGNE ?</h3>
@@ -850,7 +915,7 @@
     </div>
   </main>
 
-  <!-- HERO DU RAPPORT (seconde page) -->
+  <!-- HERO RAPPORT -->
   <div class="rapport-hero">
     <div class="wrap">
       <div class="eyebrow">Rapport Hudson 2026</div>
@@ -865,7 +930,7 @@
     </div>
   </div>
 
-  <!-- CONTENU DU RAPPORT (avec les 8 liens contextuels ajoutés) -->
+  <!-- CONTENU RAPPORT -->
   <div class="content">
     <div class="wrap">
 
@@ -887,7 +952,7 @@
       <!-- 01 -->
       <div class="section" id="role">
         <h2>01 — LE RÔLE DU BUSINESS DEVELOPER B2B EN 2026</h2>
-        <p>Le <strong>business developer B2B</strong> est le profil commercial chargé de créer de la croissance en développant de nouveaux marchés, en identifiant de nouvelles opportunités et en construisant les relations qui mènent à des contrats signés. En 2026, son rôle s'est considérablement spécialisé avec l'essor des outils IA et de la prospection multicanale. Pour une approche externalisée, consultez notre page <a href="/business-developer-externalise" style="color:var(--red);">business developer externalisé</a>.</p>
+        <p>Le <strong>business developer B2B</strong> est le profil commercial chargé de créer de la croissance en développant de nouveaux marchés, en identifiant de nouvelles opportunités et en construisant les relations qui mènent à des contrats signés. En 2026, son rôle s'est considérablement spécialisé avec l'essor des outils IA et de la prospection multicanale. Pour une approche externalisée, consultez notre page <a href="/business-developer-externalise" style="color:var(--gold-deep);">business developer externalisé</a>.</p>
         <p>Il se distingue du commercial classique par sa posture plus stratégique : là où le commercial gère un portefeuille existant, le business developer construit un pipeline à partir de zéro. Il est à la fois prospecteur, qualificateur et souvent closer — surtout dans les PME où les rôles ne sont pas encore spécialisés.</p>
         <div class="highlight"><p><strong>En 2026, trois évolutions majeures redéfinissent le métier :</strong> la personnalisation IA à l'échelle (Clay, ChatGPT), la prospection multicanale comme standard (téléphone + email + LinkedIn), et la spécialisation croissante des rôles (SDR pour la prospection, AE pour le closing). Hudson opère les deux profils en externalisation.</p></div>
       </div>
@@ -900,13 +965,13 @@
         <p>Avant de prospecter, le BD construit une liste ciblée selon l'ICP (Ideal Customer Profile) défini avec le client. Il enrichit chaque contact avec les données nécessaires : email professionnel vérifié, numéro direct, poste exact, informations contextuelles (actualité, levée de fonds, recrutements en cours).</p>
 
         <h3>2. Prospection sortante multicanale</h3>
-        <p>Le cœur du métier en 2026. Le BD prospecte sur trois canaux en parallèle : cold call pour la réactivité et la qualification immédiate, séquences email pour le nurturing et le volume, LinkedIn pour les cibles C-level et les décideurs difficiles à joindre par téléphone. Découvrez comment un <a href="/sdr-externalise" style="color:var(--red);">SDR externalisé</a> peut structurer cette mission.</p>
+        <p>Le cœur du métier en 2026. Le BD prospecte sur trois canaux en parallèle : cold call pour la réactivité et la qualification immédiate, séquences email pour le nurturing et le volume, LinkedIn pour les cibles C-level et les décideurs difficiles à joindre par téléphone. Découvrez comment un <a href="/sdr-externalise" style="color:var(--gold-deep);">SDR externalisé</a> peut structurer cette mission.</p>
 
         <h3>3. Qualification BANT des leads</h3>
         <p>Chaque prospect contacté est qualifié selon le framework BANT : Budget, Authority, Need, Timeline. L'objectif est de s'assurer que le prospect est décideur, dispose d'un budget, a un besoin réel et un délai de décision identifié avant de placer un RDV dans l'agenda du closer.</p>
 
         <h3>4. Prise et confirmation des RDV</h3>
-        <p>Une fois le prospect qualifié, le BD place le RDV dans l'agenda, envoie une confirmation email immédiate avec un résumé du contexte prospect, et programme un rappel 24h avant. Cette séquence de confirmation réduit le taux de no-show de 30 à 15% en moyenne. Pour aller plus loin, consultez notre page <a href="/prise-rendez-vous-b2b" style="color:var(--red);">prise de rendez-vous B2B</a>.</p>
+        <p>Une fois le prospect qualifié, le BD place le RDV dans l'agenda, envoie une confirmation email immédiate avec un résumé du contexte prospect, et programme un rappel 24h avant. Cette séquence de confirmation réduit le taux de no-show de 30 à 15% en moyenne. Pour aller plus loin, consultez notre page <a href="/prise-rendez-vous-b2b" style="color:var(--gold-deep);">prise de rendez-vous B2B</a>.</p>
 
         <h3>5. Suivi et relance du pipeline</h3>
         <p>Les prospects qui n'ont pas répondu ou qui ont dit "pas maintenant" ne sont pas perdus. Le BD maintient un pipeline de relance structuré avec des points de contact réguliers (J+30, J+60, J+90) pour être présent au moment où le besoin devient urgent.</p>
@@ -935,7 +1000,7 @@
 
         <h3>Sources primaires de prospects</h3>
         <ul class="icon-list">
-          <li><strong>LinkedIn Sales Navigator :</strong> la référence absolue pour le ciblage B2B. Filtres sur 30+ critères (secteur, taille, poste, ancienneté, localisation, technologie). Alertes changement de poste pour identifier les fenêtres d'opportunité de 90 jours. Voir : <a href="/prospection-linkedin-b2b" style="color:var(--red);">prospection LinkedIn B2B</a>.</li>
+          <li><strong>LinkedIn Sales Navigator :</strong> la référence absolue pour le ciblage B2B. Filtres sur 30+ critères (secteur, taille, poste, ancienneté, localisation, technologie). Alertes changement de poste pour identifier les fenêtres d'opportunité de 90 jours. Voir : <a href="/prospection-linkedin-b2b" style="color:var(--gold-deep);">prospection LinkedIn B2B</a>.</li>
           <li><strong>Apollo.io :</strong> base de 275M+ contacts enrichis avec emails vérifiés et signaux d'intention d'achat. Permet de construire des listes très ciblées en quelques minutes.</li>
           <li><strong>Societe.com / Infogreffe :</strong> données légales et financières des entreprises françaises. Utile pour cibler par CA, date de création, forme juridique ou secteur NAF/NACE.</li>
           <li><strong>Bases sectorielles :</strong> annuaires professionnels spécialisés par verticale — utiles pour les secteurs avec des communautés structurées (BTP, santé, hôtellerie, industrie).</li>
@@ -956,7 +1021,7 @@
       <!-- 05 -->
       <div class="section" id="outils">
         <h2>05 — LE STACK OUTILS COMPLET 2026</h2>
-        <p>Voici l'ensemble des outils utilisés par les business developers Hudson, organisés par catégorie fonctionnelle. Pour une vision complète des outils de téléprospection, visitez <a href="/teleprospection-b2b" style="color:var(--red);">téléprospection B2B</a>.</p>
+        <p>Voici l'ensemble des outils utilisés par les business developers Hudson, organisés par catégorie fonctionnelle. Pour une vision complète des outils de téléprospection, visitez <a href="/teleprospection-b2b" style="color:var(--gold-deep);">téléprospection B2B</a>.</p>
 
         <h3>Enrichissement & ciblage</h3>
         <div class="tool-grid">
@@ -1000,7 +1065,7 @@
       <!-- 06 -->
       <div class="section" id="kpis">
         <h2>06 — KPIS ET INDICATEURS DE PERFORMANCE</h2>
-        <p>Voici les KPIs suivis par Hudson pour chaque campagne de business development, avec les benchmarks 2026 par canal. Pour en savoir plus sur le recrutement commercial, consultez <a href="/recruter-commercial" style="color:var(--red);">recruter un commercial B2B</a>.</p>
+        <p>Voici les KPIs suivis par Hudson pour chaque campagne de business development, avec les benchmarks 2026 par canal. Pour en savoir plus sur le recrutement commercial, consultez <a href="/recruter-commercial" style="color:var(--gold-deep);">recruter un commercial B2B</a>.</p>
         <table class="kpi-table">
           <thead><tr><th>KPI</th><th>Définition</th><th>Benchmark 2026</th></tr></thead>
           <tbody>
@@ -1022,7 +1087,7 @@
       <!-- 07 -->
       <div class="section" id="cycle">
         <h2>07 — LES 4 PHASES DU CYCLE COMMERCIAL</h2>
-        <p>Le business developer Hudson intervient sur les 3 premières phases du cycle commercial. La 4e (closing) est assurée par le closer ou la direction commerciale du client. Une <a href="/agence-prospection-b2b" style="color:var(--red);">agence de prospection B2B</a> peut vous accompagner sur ces phases.</p>
+        <p>Le business developer Hudson intervient sur les 3 premières phases du cycle commercial. La 4e (closing) est assurée par le closer ou la direction commerciale du client. Une <a href="/agence-prospection-b2b" style="color:var(--gold-deep);">agence de prospection B2B</a> peut vous accompagner sur ces phases.</p>
         <div class="phases">
           <div class="phase"><div class="phase-n">1</div><div class="phase-title">Identification</div><div class="phase-desc">Construction de la liste, enrichissement, segmentation par signaux d'achat</div></div>
           <div class="phase"><div class="phase-n">2</div><div class="phase-title">Prospection</div><div class="phase-desc">Cold call, séquences email, outreach LinkedIn — multicanal coordonné</div></div>
@@ -1035,7 +1100,7 @@
       <!-- 08 -->
       <div class="section" id="externaliser">
         <h2>08 — EXTERNALISER VS RECRUTER : LA DÉCISION RATIONNELLE</h2>
-        <p>La question se pose pour toute PME B2B en croissance. Voici l'analyse coûts/bénéfices complète pour vous aider à décider. L'<a href="/externalisation-commerciale" style="color:var(--red);">externalisation commerciale</a> est une alternative de plus en plus prisée.</p>
+        <p>La question se pose pour toute PME B2B en croissance. Voici l'analyse coûts/bénéfices complète pour vous aider à décider. L'<a href="/externalisation-commerciale" style="color:var(--gold-deep);">externalisation commerciale</a> est une alternative de plus en plus prisée.</p>
         <table class="kpi-table">
           <thead><tr><th>Critère</th><th>Recrutement interne</th><th>Externalisation Hudson</th></tr></thead>
           <tbody>
@@ -1048,10 +1113,10 @@
             <tr><td>Engagement minimum</td><td>CDI — difficile à ajuster</td><td><em>Mois par mois</em></td></tr>
           </tbody>
         </table>
-        <p>Pour aller plus loin sur ce sujet, consultez notre page dédiée : <a href="/cout-business-developer" style="color:var(--red);">coût réel d'un business developer internalisé vs externalisé</a>.</p>
+        <p>Pour aller plus loin sur ce sujet, consultez notre page dédiée : <a href="/cout-business-developer" style="color:var(--gold-deep);">coût réel d'un business developer internalisé vs externalisé</a>.</p>
       </div>
 
-      <!-- Bloc "Pages liées" (déjà 8 liens internes) -->
+      <!-- Pages liées -->
       <div class="internal">
         <div class="internal-title">Pages liées</div>
         <div class="internal-links">
@@ -1069,7 +1134,7 @@
     </div><!-- .wrap -->
   </div><!-- .content -->
 
-  <!-- CTA BLOCK du rapport -->
+  <!-- CTA BLOCK -->
   <div class="wrap">
     <div class="cta-block">
       <div><h3>ACTIVEZ UN BD OPÉRATIONNEL EN 72H</h3><p>Tout le stack outils décrit dans ce rapport — inclus dans votre forfait Hudson.</p></div>
@@ -1077,7 +1142,19 @@
     </div>
   </div>
 
-  <!-- FOOTER (unifié) -->
+  <!-- NOUVEAU BLOC — Lien vers outils.html -->
+  <div class="tools-link-block">
+    <a href="/outils.html" class="tools-link">
+      <div class="tools-link-text">
+        <div class="tools-link-kicker">Stack complet</div>
+        <div class="tools-link-title">Découvrir les outils qui nous aident à accomplir nos missions</div>
+        <div class="tools-link-desc">Enrichissement, séquences multicanales, téléphonie, CRM, IA — explorez l'ensemble de la stack Hudson.</div>
+      </div>
+      <div class="tools-link-arrow">→</div>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
   <footer>
     <div class="foot-brand">HUDSON BUSINESS DEVELOPER<span>.</span> — AIX-EN-PROVENCE</div>
     <div class="foot-meta">
