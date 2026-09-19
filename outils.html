@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5PF6FCCW');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S2912LSCRX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-S2912LSCRX');</script>
+
+  <title>Les outils Hudson — Stack commerciale, prospection et intelligence | Hudson Ltd</title>
+  <meta name="description" content="Découvrez l'ensemble des outils qui nous aident à accomplir nos missions : LinkedIn, extraction de contacts, téléphonie VoIP multi-appels, prise de RDV, agenda, IA, emailing et stockage. Actions one shot ou missions longues.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://www.hudson-ltd.com/outils">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <meta property="og:title" content="Les outils Hudson — Stack commerciale et intelligence">
+  <meta property="og:description" content="LinkedIn, extraction, VoIP multi-appels, prise de RDV, agenda, IA, emailing et stockage : la stack Hudson organisée par logique métier.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.hudson-ltd.com/outils">
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:       #0a1f44;
+      --ink-mid:   #142f5c;
+      --page:      #faf9f6;
+      --page-alt:  #f2f0eb;
+      --white:     #ffffff;
+      --gold:      #c9a24a;
+      --gold-deep: #a8862f;
+      --gold-soft: rgba(201,162,74,0.10);
+      --blue-accent:#38bdf8;
+      --t-main:    #0a1f44;
+      --t-mid:     #3d5372;
+      --t-muted:   #7a8ea8;
+      --border:    rgba(10,31,68,0.10);
+      --border-md: rgba(10,31,68,0.16);
+    }
+
+    html { scroll-behavior: smooth; background: #0a1f44; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--page);
+      color: var(--t-main);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* HEADER */
+    .topbar {
+      background: rgba(255,255,255,.98);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 1px 0 rgba(10,31,68,.02);
+      position: sticky; top: 0; z-index: 50;
+      height: 96px; display: flex; align-items: center;
+      padding: 0 48px;
+    }
+    @media (max-width: 720px) { .topbar { padding: 0 22px; height: 80px; } }
+    .topbar-inner {
+      max-width: 1140px; margin: 0 auto; width: 100%;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo { display: flex; align-items: center; text-decoration: none; }
+    .logo img { height: 76px; width: auto; display: block; }
+    @media (max-width: 720px) { .logo img { height: 60px; } }
+    .nav-links { display: flex; gap: 30px; list-style: none; align-items: center; }
+    .nav-links a {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--t-mid); transition: color .18s;
+    }
+    .nav-links a:hover { color: var(--gold-deep); }
+    .nav-cta {
+      background: var(--ink); color: var(--white) !important;
+      padding: 11px 22px; transition: background .2s;
+    }
+    .nav-cta:hover { background: var(--gold-deep) !important; color: var(--white) !important; }
+    @media (max-width: 900px) { .nav-links { display: none; } }
+
+    /* HERO */
+    .hero {
+      background: var(--ink);
+      padding: 72px 48px 56px;
+      position: relative;
+      overflow: hidden;
+    }
+    @media (max-width: 720px) { .hero { padding: 48px 22px 40px; } }
+    .hero::after {
+      content: 'TOOLS';
+      position: absolute;
+      right: -40px; bottom: -60px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 220px;
+      color: rgba(201,162,74,.05);
+      line-height: 1;
+      pointer-events: none;
+      letter-spacing: .02em;
+    }
+    .hero-inner { max-width: 1140px; margin: 0 auto; position: relative; z-index: 1; }
+    .eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 10.5px; letter-spacing: .22em; text-transform: uppercase;
+      color: var(--gold);
+      display: inline-flex; align-items: center; gap: 10px;
+      margin-bottom: 20px;
+    }
+    .eyebrow::before { content: ''; width: 22px; height: 1px; background: var(--gold); }
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(42px, 5.5vw, 76px);
+      line-height: .98; letter-spacing: .02em;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .hero h1 em { color: var(--gold); font-style: normal; }
+    .hero p {
+      font-size: 17px; font-weight: 300; line-height: 1.75;
+      color: rgba(255,255,255,.65);
+      max-width: 720px;
+    }
+    .hero p strong { color: rgba(255,255,255,.95); font-weight: 400; }
+
+    /* MAIN */
+    main {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 72px 48px 96px;
+    }
+    @media (max-width: 720px) { main { padding: 48px 22px 72px; } }
+
+    .section { margin-bottom: 80px; }
+
+    .section-header {
+      padding-bottom: 18px;
+      margin-bottom: 32px;
+      border-bottom: 2px solid var(--ink);
+    }
+    .section-kicker {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--gold-deep);
+      display: inline-flex; align-items: center; gap: 9px;
+      margin-bottom: 12px;
+    }
+    .section-kicker::before { content: ''; width: 18px; height: 1px; background: var(--gold); }
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(26px, 3vw, 40px);
+      letter-spacing: .03em;
+      color: var(--ink);
+      line-height: 1.05;
+    }
+    .section-intro {
+      font-size: 15px;
+      color: var(--t-mid);
+      line-height: 1.7;
+      font-weight: 300;
+      max-width: 780px;
+      margin-top: 10px;
+    }
+
+    /* GRILLE OUTILS */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3px;
+    }
+    @media (max-width: 720px) { .tools-grid { grid-template-columns: 1fr; } }
+
+    .tool-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      padding: 28px 30px;
+      transition: border-color .2s, transform .18s;
+    }
+    .tool-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+
+    .tool-role {
+      font-family: 'DM Mono', monospace;
+      font-size: 9.5px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      margin-bottom: 12px;
+    }
+    .tool-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: .04em;
+      color: var(--ink);
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+    .tool-desc {
+      font-size: 14px;
+      color: var(--t-mid);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+    .tool-desc strong { color: var(--ink); font-weight: 500; }
+
+    .tool-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 14px;
+      font-family: 'DM Mono', monospace;
+      font-size: 10.5px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      transition: color .2s;
+    }
+    .tool-link:hover { color: var(--gold); }
+    .tool-link::after { content: '→'; }
+
+    /* INTRO MISSION */
+    .mission {
+      background: var(--page-alt);
+      border-left: 3px solid var(--gold);
+      padding: 32px 36px;
+      margin-bottom: 64px;
+    }
+    .mission p {
+      font-size: 16px;
+      color: var(--t-mid);
+      line-height: 1.8;
+      font-weight: 300;
+      margin-bottom: 14px;
+    }
+    .mission p:last-child { margin-bottom: 0; }
+    .mission p strong { color: var(--ink); font-weight: 500; }
+
+    /* LIENS INTERNES */
+    .links {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+      margin-top: 32px;
+    }
+    @media (max-width: 720px) { .links { grid-template-columns: 1fr; } }
+    .link-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      padding: 28px 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: background .2s, border-color .2s;
+    }
+    .link-card:hover {
+      background: rgba(201,162,74,.08);
+      border-color: rgba(201,162,74,.40);
+    }
+    .link-card-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 9px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .link-card-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      letter-spacing: .04em;
+      color: var(--white);
+      line-height: 1.15;
+    }
+    .link-card-desc {
+      font-size: 12.5px;
+      color: rgba(255,255,255,.5);
+      line-height: 1.55;
+      font-weight: 300;
+    }
+    .link-card-arrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--gold);
+      margin-top: auto;
+      padding-top: 10px;
+      letter-spacing: .1em;
+      transition: transform .2s;
+    }
+    .link-card:hover .link-card-arrow { transform: translateX(4px); }
+
+    /* SECTION FOND SOMBRE */
+    .section-dark {
+      background: var(--ink);
+      padding: 64px 48px;
+      margin: 0 -48px 80px;
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid rgba(201,162,74,.15);
+      border-bottom: 1px solid rgba(201,162,74,.15);
+    }
+    @media (max-width: 720px) { .section-dark { padding: 48px 22px; margin-left: -22px; margin-right: -22px; } }
+    .section-dark::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -120px;
+      width: 420px; height: 420px;
+      background: radial-gradient(circle, rgba(201,162,74,.10) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .section-dark-inner { max-width: 1140px; margin: 0 auto; position: relative; z-index: 1; }
+    .section-dark .section-header { border-bottom-color: rgba(201,162,74,.35); }
+    .section-dark .section-title { color: var(--white); }
+    .section-dark .section-intro { color: rgba(255,255,255,.55); }
+
+    /* FOOTER */
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,.4);
+      padding: 40px 0 32px;
+      border-top: 1px solid rgba(201,162,74,.15);
+    }
+    .foot-inner {
+      max-width: 1140px; margin: 0 auto; padding: 0 48px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    @media (max-width: 720px) { .foot-inner { padding: 0 22px; } }
+    .foot-brand { display: flex; flex-direction: column; gap: 3px; }
+    .foot-brand-top {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 17px; letter-spacing: .14em;
+      color: rgba(255,255,255,.9);
+    }
+    .foot-brand-top span { color: var(--gold); }
+    .foot-brand-sub {
+      font-family: 'DM Mono', monospace; font-size: 9px;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: rgba(255,255,255,.35);
+    }
+    .foot-brand-sub strong { color: var(--gold); font-weight: 400; }
+    .foot-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .foot-links a {
+      font-family: 'DM Mono', monospace; font-size: 10px;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: rgba(255,255,255,.4);
+      transition: color .2s;
+    }
+    .foot-links a:hover { color: var(--gold); }
+    .foot-copy {
+      font-family: 'DM Mono', monospace; font-size: 10px;
+      color: rgba(255,255,255,.3);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PF6FCCW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- HEADER -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <a href="/" class="logo">
+      <img src="icon.png" alt="Hudson Business Development">
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/plan">Plan</a></li>
+      <li><a href="/intelligence-hub">Intelligence Hub</a></li>
+      <li><a href="/#contact" class="nav-cta">Contact →</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Stack & Outils Hudson</div>
+    <h1>Les outils qui nous aident<br>à <em>accomplir nos missions</em></h1>
+    <p>Nous mobilisons une <strong>stack complète</strong> d'outils commerciaux et d'intelligence — LinkedIn, extraction de contacts, téléphonie VoIP, prise de rendez-vous, IA, emailing et stockage — pour couvrir aussi bien des <strong>actions one shot</strong> (invitation à un salon, campagne ciblée) que des <strong>travaux longs</strong> d'analyse marché et de mise en relation avec de grands dirigeants.</p>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main>
+
+  <!-- INTRO MISSION -->
+  <div class="mission">
+    <p>Chaque mission Hudson s'appuie sur un socle d'outils sélectionnés pour leur fiabilité, leur rapidité de déploiement et leur complémentarité. Cette stack nous permet d'opérer indifféremment sur des <strong>actions ponctuelles et ciblées</strong> — inviter 40 décideurs à un salon, préparer une prise de contact avec un directeur général — comme sur des <strong>missions longues et structurées</strong> : analyse de marché, cartographie de décideurs, mise en relation avec de grands dirigeants, construction progressive d'un pipeline.</p>
+    <p>Le choix des outils reste toujours au service de la mission : nous ne déployons pas une stack pour la stack, mais un ensemble cohérent capable de tenir une promesse commerciale — trouver, qualifier, mettre en relation.</p>
+  </div>
+
+  <!-- SECTION 1 — SOURCING & IDENTIFICATION -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-kicker">Étape 01</div>
+      <h2 class="section-title">Sourcing & identification des décideurs</h2>
+      <p class="section-intro">Trouver les bonnes entreprises, les bons interlocuteurs, les bons signaux. C'est le point de départ de toute mission Hudson.</p>
+    </div>
+
+    <div class="tools-grid">
+
+      <div class="tool-card">
+        <div class="tool-role">Réseau professionnel</div>
+        <div class="tool-name">LinkedIn & Sales Navigator</div>
+        <div class="tool-desc">Notre socle de sourcing principal. Nous y construisons des listes ultra-ciblées par secteur, taille d'entreprise, fonction, séniorité et signaux de changement. <strong>Sales Navigator</strong> permet le suivi des comptes et l'alerte sur les mouvements de poste — un signal d'achat décisif.</div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-role">Extraction de contacts</div>
+        <div class="tool-name">Extraction d'emails & téléphones</div>
+        <div class="tool-desc">Outils d'extraction type Casper pour récupérer emails professionnels et numéros directs à partir de profils LinkedIn. Chaque contact est vérifié avant d'entrer dans une campagne — <strong>taux de précision supérieur à 90%</strong> et bounce rate maintenu en dessous de 3%.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 2 — CONTACT & PROSPECTION -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-kicker">Étape 02</div>
+      <h2 class="section-title">Contact & prospection multicanale</h2>
+      <p class="section-intro">Une fois les bons interlocuteurs identifiés, nous activons plusieurs canaux en parallèle pour maximiser la probabilité d'échange réel.</p>
+    </div>
+
+    <div class="tools-grid">
+
+      <div class="tool-card">
+        <div class="tool-role">Téléphonie</div>
+        <div class="tool-name">VoIP & appels multi-lignes</div>
+        <div class="tool-desc">Notre téléphonie VoIP lance <strong>plusieurs appels en parallèle</strong> : dès qu'une ligne décroche, le commercial est connecté, les autres sont coupées. Cela augmente considérablement le taux de joignabilité sur les cibles difficiles à atteindre, sans ajouter de charge mentale à l'opérateur.</div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-role">Emailing</div>
+        <div class="tool-name">Brevo</div>
+        <div class="tool-desc">Plateforme d'emailing transactionnelle et marketing. Nous l'utilisons pour les séquences de prospection sortante, les relances automatisées et les confirmations de rendez-vous. <strong>Délivrabilité optimisée</strong> et suivi statistique fin des ouvertures et réponses.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3 — CONVERSION & RDV (fond sombre) -->
+  <section class="section-dark">
+    <div class="section-dark-inner">
+      <div class="section-header">
+        <div class="section-kicker">Étape 03</div>
+        <h2 class="section-title">Prise de rendez-vous & coordination</h2>
+        <p class="section-intro">Transformer une conversation en rendez-vous qualifié, puis coordonner proprement la suite — sans friction pour le prospect ni pour le client.</p>
+      </div>
+
+      <div class="tools-grid">
+
+        <div class="tool-card">
+          <div class="tool-role">Prise de rendez-vous</div>
+          <div class="tool-name">Campaign Hub</div>
+          <div class="tool-desc">Notre plateforme dédiée à la prise de rendez-vous commerciaux. Le prospect choisit directement un créneau, les confirmations sont envoyées automatiquement et les informations sont synchronisées. Accessible sur <a href="https://campaign.hudson-ltd.com/" target="_blank" rel="noopener" style="color:var(--gold-deep); text-decoration:underline;">campaign.hudson-ltd.com</a>.</div>
+          <a href="https://campaign.hudson-ltd.com/" target="_blank" rel="noopener" class="tool-link">Ouvrir Campaign Hub</a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-role">Agenda & synthèse</div>
+          <div class="tool-name">Agenda de synthèse Cirilo</div>
+          <div class="tool-desc">Notre agenda de synthèse centralise les rendez-vous confirmés, structure les briefs prospects et prépare les échanges. Chaque rendez-vous arrive avec son contexte, ses enjeux et les signaux détectés en amont. Accessible sur <a href="https://www.cirilo.fr" target="_blank" rel="noopener" style="color:var(--gold-deep); text-decoration:underline;">www.cirilo.fr</a>.</div>
+          <a href="https://www.cirilo.fr" target="_blank" rel="noopener" class="tool-link">Ouvrir l'agenda</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 — INTELLIGENCE & IA -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-kicker">Étape 04</div>
+      <h2 class="section-title">Intelligence artificielle & rédaction</h2>
+      <p class="section-intro">L'IA n'est pas un gadget dans notre stack : elle accélère la préparation, enrichit le contexte et personnalise les messages à l'échelle.</p>
+    </div>
+
+    <div class="tools-grid">
+
+      <div class="tool-card">
+        <div class="tool-role">IA conversationnelle</div>
+        <div class="tool-name">Claude</div>
+        <div class="tool-desc">Utilisé pour la rédaction de messages personnalisés, la structuration de briefs prospects et l'analyse de comptes. Sa capacité à tenir un contexte long le rend particulièrement adapté aux missions d'analyse marché et de préparation de rendez-vous stratégiques.</div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-role">IA conversationnelle</div>
+        <div class="tool-name">DeepSeek</div>
+        <div class="tool-desc">Complémentaire à Claude, DeepSeek est mobilisé sur les tâches d'analyse de données, de recherche d'informations publiques et de synthèse. Utile notamment pour préparer des briefs complexes sur des grands comptes ou des secteurs peu documentés.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 5 — STOCKAGE & COLLABORATION -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-kicker">Étape 05</div>
+      <h2 class="section-title">Stockage, partage & collaboration</h2>
+      <p class="section-intro">Les livrables, analyses et rapports doivent circuler proprement entre Hudson, le client et les équipes terrain.</p>
+    </div>
+
+    <div class="tools-grid">
+
+      <div class="tool-card">
+        <div class="tool-role">Stockage & partage</div>
+        <div class="tool-name">Google Drive</div>
+        <div class="tool-desc">Espace de stockage partagé pour les livrables, rapports d'activité, cartographies de comptes et analyses marché. Chaque mission dispose d'un espace dédié, accessible en temps réel par les interlocuteurs concernés.</div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-role">Documentation</div>
+        <div class="tool-name">Mémoire commerciale Hudson</div>
+        <div class="tool-desc">Au-delà des outils, nous maintenons une <strong>mémoire commerciale structurée</strong> : signaux détectés, objections rencontrées, interlocuteurs rencontrés, projets reportés. C'est cette mémoire qui rend les relances pertinentes et les pipelines durables.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 6 — LIENS SEO INTERNES -->
+  <section class="section-dark">
+    <div class="section-dark-inner">
+      <div class="section-header">
+        <div class="section-kicker">Pour aller plus loin</div>
+        <h2 class="section-title">Compléter votre lecture</h2>
+        <p class="section-intro">Trois ressources Hudson qui prolongent directement cette page outils.</p>
+      </div>
+
+      <div class="links">
+
+        <a href="/automatisation-prospection" class="link-card">
+          <span class="link-card-tag">Automatisation</span>
+          <span class="link-card-title">Automatiser sa prospection</span>
+          <span class="link-card-desc">Comment structurer une campagne outbound répétable avec les bons outils et les bons process.</span>
+          <span class="link-card-arrow">Voir la page →</span>
+        </a>
+
+        <a href="/prospection-linkedin-b2b" class="link-card">
+          <span class="link-card-tag">LinkedIn B2B</span>
+          <span class="link-card-title">Prospection LinkedIn B2B</span>
+          <span class="link-card-desc">Notre méthode complète sur le canal LinkedIn : ciblage, séquences, conversion.</span>
+          <span class="link-card-arrow">Voir la page →</span>
+        </a>
+
+        <a href="/machine-commerciale-b2b" class="link-card">
+          <span class="link-card-tag">Système commercial</span>
+          <span class="link-card-title">Construire une machine commerciale B2B</span>
+          <span class="link-card-desc">L'architecture complète d'un dispositif commercial qui produit des rendez-vous en continu.</span>
+          <span class="link-card-arrow">Voir la page →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <div class="foot-brand-top">HUDSON<span>.</span></div>
+      <div class="foot-brand-sub">Business Development · <strong>Outils</strong></div>
+    </div>
+    <div class="foot-links">
+      <a href="/">Accueil</a>
+      <a href="/plan">Plan</a>
+      <a href="/intelligence-hub">Intelligence Hub</a>
+      <a href="/mentions-legales">Mentions légales</a>
+    </div>
+    <div class="foot-copy">© 2026 Hudson Ltd — Aix-en-Provence</div>
+  </div>
+</footer>
+
+</body>
+</html>
