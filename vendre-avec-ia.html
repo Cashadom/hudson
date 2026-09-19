@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5PF6FCCW');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S2912LSCRX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-S2912LSCRX');</script>
+
+  <title>Vendre avec l'IA — 7 pratiques concrètes pour la prospection B2B | Hudson</title>
+  <meta name="description" content="En B2B, le besoin est souvent déjà arbitré avant le premier contact. Découvrez 7 pratiques concrètes pour vendre avec l'IA : préparation, personnalisation, objections, propositions, scoring, suivi et progression.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://hudson-ltd.com/vendre-avec-ia">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <meta property="og:title" content="Vendre avec l'IA — 7 pratiques concrètes | Hudson">
+  <meta property="og:description" content="7 pratiques concrètes pour vendre avec l'IA en B2B : préparation, personnalisation, objections, propositions, scoring, suivi et progression.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://hudson-ltd.com/vendre-avec-ia">
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:       #0a1f44;
+      --ink-mid:   #142f5c;
+      --page:      #faf9f6;
+      --page-alt:  #f2f0eb;
+      --white:     #ffffff;
+      --gold:      #c9a24a;
+      --gold-deep: #a8862f;
+      --gold-soft: rgba(201,162,74,0.10);
+      --gold-line: rgba(201,162,74,0.35);
+      --blue-accent:#38bdf8;
+      --t-main:    #0a1f44;
+      --t-mid:     #3d5372;
+      --t-muted:   #7a8ea8;
+      --border:    rgba(10,31,68,0.10);
+      --border-md: rgba(10,31,68,0.16);
+    }
+
+    html { scroll-behavior: smooth; background: #0a1f44; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--page);
+      color: var(--t-mid);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* HEADER */
+    nav {
+      background: rgba(255,255,255,.98);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 1px 0 rgba(10,31,68,.02);
+      position: sticky; top: 0; z-index: 50;
+      height: 96px; display: flex; align-items: center;
+      padding: 0 48px;
+    }
+    @media (max-width: 720px) { nav { padding: 0 22px; height: 80px; } }
+    .nav-inner {
+      max-width: 1140px; margin: 0 auto; width: 100%;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo { display: flex; align-items: center; }
+    .logo img { height: 76px; width: auto; display: block; }
+    @media (max-width: 720px) { .logo img { height: 60px; } }
+    .nav-links { display: flex; gap: 30px; list-style: none; align-items: center; }
+    .nav-links a {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--t-mid); transition: color .18s;
+    }
+    .nav-links a:hover { color: var(--gold-deep); }
+    .nav-cta {
+      background: var(--ink); color: var(--white) !important;
+      padding: 11px 22px; transition: background .2s;
+    }
+    .nav-cta:hover { background: var(--gold-deep) !important; color: var(--white) !important; }
+    @media (max-width: 900px) { .nav-links { display: none; } }
+
+    /* HERO */
+    .hero {
+      background: var(--ink);
+      padding: 80px 48px 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    @media (max-width: 720px) { .hero { padding: 56px 22px 48px; } }
+    .hero::after {
+      content: 'IA';
+      position: absolute;
+      right: -40px; bottom: -60px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 260px;
+      color: rgba(201,162,74,.05);
+      line-height: 1;
+      pointer-events: none;
+      letter-spacing: .02em;
+    }
+    .hero-inner { max-width: 1140px; margin: 0 auto; position: relative; z-index: 1; }
+    .eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 10.5px; letter-spacing: .22em; text-transform: uppercase;
+      color: var(--gold);
+      display: inline-flex; align-items: center; gap: 10px;
+      margin-bottom: 22px;
+    }
+    .eyebrow::before { content: ''; width: 22px; height: 1px; background: var(--gold); }
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(44px, 5.5vw, 82px);
+      line-height: .98; letter-spacing: .02em;
+      color: var(--white);
+      margin-bottom: 22px;
+      max-width: 900px;
+    }
+    .hero h1 em { color: var(--gold); font-style: normal; }
+    .hero p {
+      font-size: 17px; font-weight: 300; line-height: 1.75;
+      color: rgba(255,255,255,.62);
+      max-width: 720px;
+    }
+    .hero p strong { color: rgba(255,255,255,.95); font-weight: 400; }
+
+    /* CONTENU */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 80px 48px 96px;
+    }
+    @media (max-width: 720px) { main { padding: 48px 22px 72px; } }
+
+    h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(30px, 3.6vw, 48px);
+      letter-spacing: .025em;
+      line-height: 1.05;
+      color: var(--ink);
+      margin: 64px 0 20px;
+    }
+    h2:first-of-type { margin-top: 0; }
+
+    h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: .04em;
+      color: var(--ink);
+      margin: 32px 0 12px;
+      line-height: 1.15;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--t-mid);
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+    p strong { color: var(--ink); font-weight: 500; }
+    p a.inline {
+      color: var(--gold-deep);
+      text-decoration: underline;
+      text-decoration-color: var(--gold);
+      text-underline-offset: 3px;
+    }
+    p a.inline:hover { color: var(--gold); }
+
+    /* INTRO */
+    .intro {
+      font-family: 'Instrument Serif', serif;
+      font-size: 22px;
+      line-height: 1.55;
+      color: var(--ink);
+      font-style: italic;
+      padding-left: 28px;
+      border-left: 3px solid var(--gold);
+      margin-bottom: 40px;
+    }
+
+    /* STAT CARDS */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) { .stats { grid-template-columns: 1fr; } }
+
+    .stat {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--gold);
+      padding: 26px 22px;
+    }
+    .stat-value {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 42px;
+      color: var(--gold-deep);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat-label {
+      font-size: 13.5px;
+      color: var(--t-mid);
+      line-height: 1.55;
+      font-weight: 300;
+    }
+
+    /* LISTES */
+    .list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin: 20px 0 28px;
+    }
+    .list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 15.5px;
+      color: var(--t-mid);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+    .list li::before {
+      content: '→';
+      color: var(--gold);
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+    .list li strong { color: var(--ink); font-weight: 500; }
+
+    /* PULL QUOTE */
+    .quote {
+      background: var(--page-alt);
+      border-left: 3px solid var(--gold);
+      padding: 28px 34px;
+      margin: 40px 0;
+      font-family: 'Instrument Serif', serif;
+      font-size: 20px;
+      font-style: italic;
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    /* HIGHLIGHT */
+    .highlight {
+      background: var(--ink);
+      padding: 32px 36px;
+      border-left: 3px solid var(--gold);
+      margin: 40px 0;
+    }
+    .highlight p {
+      color: rgba(255,255,255,.7);
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+    .highlight p strong { color: var(--white); }
+    .highlight p + p { margin-top: 14px; }
+
+    /* PRATIQUES (cards) */
+    .practice {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      padding: 32px 36px;
+      margin: 28px 0;
+      transition: border-color .2s, transform .18s;
+    }
+    .practice:hover { border-color: var(--gold); transform: translateY(-2px); }
+
+    .practice-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 10.5px;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      margin-bottom: 14px;
+    }
+    .practice h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 26px;
+      letter-spacing: .03em;
+      color: var(--ink);
+      margin: 0 0 14px;
+      line-height: 1.1;
+    }
+    .practice p {
+      font-size: 15px;
+      line-height: 1.75;
+      margin-bottom: 14px;
+      font-weight: 300;
+    }
+    .practice p:last-child { margin-bottom: 0; }
+    .practice p strong { color: var(--ink); font-weight: 500; }
+
+    /* LIENS INTERNES */
+    .links {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+      margin: 48px 0;
+    }
+    @media (max-width: 720px) { .links { grid-template-columns: 1fr; } }
+
+    .link-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      padding: 28px 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: background .2s, border-color .2s;
+    }
+    .link-card:hover {
+      background: rgba(201,162,74,.08);
+      border-color: rgba(201,162,74,.40);
+    }
+    .link-card-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 9px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .link-card-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      letter-spacing: .04em;
+      color: var(--white);
+      line-height: 1.15;
+    }
+    .link-card-desc {
+      font-size: 12.5px;
+      color: rgba(255,255,255,.55);
+      line-height: 1.55;
+      font-weight: 300;
+    }
+    .link-card-arrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--gold);
+      margin-top: auto;
+      padding-top: 10px;
+      letter-spacing: .1em;
+      transition: transform .2s;
+    }
+    .link-card:hover .link-card-arrow { transform: translateX(4px); }
+
+    .links-wrapper {
+      background: var(--ink);
+      padding: 56px 48px;
+      margin: 56px -48px;
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid rgba(201,162,74,.15);
+      border-bottom: 1px solid rgba(201,162,74,.15);
+    }
+    @media (max-width: 720px) { .links-wrapper { padding: 48px 22px; margin-left: -22px; margin-right: -22px; } }
+    .links-inner { max-width: 900px; margin: 0 auto; position: relative; z-index: 1; }
+    .links-header {
+      font-family: 'DM Mono', monospace;
+      font-size: 10.5px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .links-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(28px, 3vw, 40px);
+      letter-spacing: .03em;
+      color: var(--white);
+      margin-bottom: 32px;
+      line-height: 1.1;
+    }
+
+    /* CONCLUSION */
+    .conclusion {
+      background: var(--page-alt);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      padding: 36px 40px;
+      margin-top: 56px;
+    }
+    .conclusion h2 {
+      font-size: 30px;
+      margin: 0 0 18px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,.4);
+      padding: 40px 48px 32px;
+      border-top: 1px solid rgba(201,162,74,.15);
+    }
+    @media (max-width: 720px) { footer { padding: 32px 22px 24px; } }
+    .foot-inner {
+      max-width: 1140px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .foot-brand { display: flex; flex-direction: column; gap: 3px; }
+    .foot-brand-top {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 17px; letter-spacing: .14em;
+      color: rgba(255,255,255,.9);
+    }
+    .foot-brand-top span { color: var(--gold); }
+    .foot-brand-sub {
+      font-family: 'DM Mono', monospace; font-size: 9px;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: rgba(255,255,255,.35);
+    }
+    .foot-brand-sub strong { color: var(--gold); font-weight: 400; }
+    .foot-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .foot-links a {
+      font-family: 'DM Mono', monospace; font-size: 10px;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: rgba(255,255,255,.4);
+      transition: color .2s;
+    }
+    .foot-links a:hover { color: var(--gold); }
+    .foot-copy {
+      font-family: 'DM Mono', monospace; font-size: 10px;
+      color: rgba(255,255,255,.3);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PF6FCCW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- HEADER -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <img src="icon.png" alt="Hudson Business Development">
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/intelligence-hub">Intelligence Hub</a></li>
+      <li><a href="/plan">Plan</a></li>
+      <li><a href="/#contact" class="nav-cta">Contact →</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Vente &amp; Intelligence Artificielle</div>
+    <h1>Vendre avec l'IA :<br><em>7 pratiques concrètes</em><br>pour la prospection B2B</h1>
+    <p>En B2B, le besoin est rarement à créer. Il est <strong>déjà identifié, formulé, souvent arbitré</strong> avant même le premier rendez-vous. Ce qui a changé avec l'IA n'est pas la vente — c'est la préparation, la personnalisation et la capacité à rendre la décision évidente.</p>
+  </div>
+</section>
+
+<!-- CONTENU -->
+<main>
+
+  <div class="intro">
+    « Le seul moyen de reprendre l'avantage, c'est de faire ce que l'IA du client ne sait pas faire seule : contextualiser, affiner, décider, surprendre. »
+  </div>
+
+  <h2>Ce qui a changé dans la vente B2B</h2>
+  <p>Un acheteur B2B moderne se présente à votre premier rendez-vous <strong>déjà renseigné</strong>. Il a interrogé des IA génératives, comparé des options, lu des dizaines d'avis, analysé les prix, identifié les points faibles. Dans la grande majorité des cas, il a déjà un fournisseur préféré en tête avant même de vous parler.</p>
+  <p>Conséquence directe : le vendeur ne contrôle plus l'entretien. Le pitch classique — « créer le besoin » — perd son sens sur 90% des ventes B2B à forte valeur. Ce que le client attend désormais, c'est que vous <strong>contextualisiez</strong> ce qu'il sait déjà, <strong>affiniez</strong> sa compréhension, <strong>décidiez</strong> avec lui — pas que vous lui répétiez ce que son IA lui a déjà dit.</p>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-value">81%</div>
+      <div class="stat-label">des acheteurs B2B ont un fournisseur préféré avant le premier contact commercial</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">94%</div>
+      <div class="stat-label">des acheteurs B2B utilisent l'IA générative dans leur processus d'achat</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">50%</div>
+      <div class="stat-label">du temps commercial passé sur des tâches administratives et de préparation</div>
+    </div>
+  </div>
+
+  <h2>Les trois fausses excuses</h2>
+
+  <h3>« Je n'ai pas le temps d'apprendre l'IA »</h3>
+  <p>Un commercial passe la moitié de son temps sur des tâches administratives : comptes-rendus, relances, préparation de propositions. L'IA divise ce temps par deux ou trois. Vous n'avez pas le temps d'apprendre l'IA — vous avez surtout <strong>le temps de ne pas l'apprendre</strong>.</p>
+
+  <h3>« L'IA va déshumaniser la relation client »</h3>
+  <p>Personne ne vous demande d'envoyer un robot à votre place. L'IA ne remplace pas la relation : elle <strong>supprime les tâches qui n'ont jamais eu besoin d'être humaines</strong>. Rédiger un mail de relance, préparer une réponse à une objection, synthétiser un rapport annuel — c'est de la préparation, pas de la relation. En libérant ce temps, l'IA vous en redonne pour l'essentiel : parler au client.</p>
+
+  <h3>« J'ai 20 ans d'expérience, je n'ai pas besoin d'IA »</h3>
+  <p>Votre expérience reste un avantage — à condition d'être <strong>correctement équipé</strong>. Aujourd'hui, dans la vente comme ailleurs, c'est souvent le mieux outillé qui gagne, pas le plus expérimenté. Votre expérience vous permet de viser juste. L'IA vous donne la portée.</p>
+
+  <div class="quote">
+    « L'IA ne remplace pas l'écoute, l'empathie, l'instinct de closing. Elle les amplifie — chez ceux qui sont déjà bons. »
+  </div>
+
+  <h2>Les 7 pratiques concrètes</h2>
+
+  <!-- 1 -->
+  <div class="practice">
+    <div class="practice-num">· Pratique 01</div>
+    <h3>Préparer chaque rendez-vous comme un sniper</h3>
+    <p>Avant, 20 à 30 minutes de recherche superficielle : page LinkedIn, site de la boîte, quelques lignes dans Google. Aujourd'hui, en quelques minutes, vous obtenez une <strong>synthèse du rapport annuel</strong>, les <strong>déclarations récentes du dirigeant</strong> dans la presse, les <strong>avis clients</strong>, les <strong>recrutements en cours</strong> — et surtout l'identification des <strong>trois enjeux business</strong> où votre solution apporte de la valeur.</p>
+    <p>Un rapport annuel lu correctement révèle des signaux que personne ne dit à voix haute : hausse des charges de personnel sans croissance d'effectif (problème de productivité), explosion des prestations externes (manque de ressources internes), apparition soudaine du mot « transformation » dans le rapport du président. <strong>Ces informations transforment un appel à froid en appel à chaud.</strong></p>
+  </div>
+
+  <!-- 2 -->
+  <div class="practice">
+    <div class="practice-num">· Pratique 02</div>
+    <h3>Personnaliser chaque approche de prospection</h3>
+    <p>Le copier-coller de masse — 500 mails identiques avec seul le prénom qui change — est identifié instantanément par les prospects. Pire : il <strong>abîme votre image</strong>. Une majorité d'acheteurs B2B évitent activement les fournisseurs qui envoient des messages non pertinents.</p>
+    <p>L'IA permet l'inverse : à partir du profil LinkedIn, du contexte entreprise et de votre proposition de valeur, elle rédige une <strong>accroche personnalisée</strong> qui parle des enjeux du prospect, pas de votre produit. Vous ne vendez plus un pitch — vous apportez une raison pertinente d'appeler au bon moment.</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="practice">
+    <div class="practice-num">· Pratique 03</div>
+    <h3>S'entraîner aux objections avec un sparring partner IA</h3>
+    <p>Utilisez l'IA comme <strong>partenaire d'entraînement</strong> : demandez-lui de jouer le rôle du prospect et de balancer les pires objections (« c'est trop cher », « on va réfléchir », « votre concurrent propose pareil à -30% »). Vous vous entraînez, l'IA vous donne un feedback immédiat et suggère des reformulations.</p>
+    <p>Encore plus fort : vous pouvez créer un <strong>jumeau conversationnel</strong> de votre interlocuteur réel. Vous lui donnez ses interviews publiques, ses posts LinkedIn, sa biographie, le rapport annuel de sa boîte. Vous négociez avec lui <em>avant</em> de le rencontrer. Vous testez trois approches différentes — celle qui fonctionne le mieux devient votre script réel.</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="practice">
+    <div class="practice-num">· Pratique 04</div>
+    <h3>Construire des propositions commerciales en un temps record</h3>
+    <p>Le document que vous mettiez une journée entière à rédiger — et que le client lisait en diagonale — se génère désormais en <strong>10 minutes à partir de vos notes de découverte</strong>. L'IA structure, personnalise selon les enjeux identifiés, place les bons arguments au bon endroit.</p>
+    <p>Astuce décisive : produisez <strong>trois versions du même document</strong> selon l'interlocuteur. Une version « rentabilité des capitaux » pour le DAF, une version « gain de parts de marché » pour le DG, une version « déploiement terrain » pour le COO. Le même produit, trois histoires différentes, adressées à la bonne personne.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="practice">
+    <div class="practice-num">· Pratique 05</div>
+    <h3>Qualifier intelligemment avec le scoring IA</h3>
+    <p>Fini le temps où le commercial appelait tout le monde en espérant tomber sur la bonne personne. Un CRM alimenté par l'IA attribue un <strong>score à chaque lead</strong> : historique des échanges, comportement en ligne, signaux faibles. Le scoring IA vous dit <strong>quel lead mérite votre temps</strong> — et <strong>dans quel ordre</strong> les traiter.</p>
+    <p>La logique change complètement : moins d'appels, plus de signatures. Le vendeur ne décroche plus le téléphone que lorsque la probabilité de conversion dépasse un certain seuil. Chaque action devient chirurgicale.</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="practice">
+    <div class="practice-num">· Pratique 06</div>
+    <h3>Automatiser le suivi pour ne rien laisser filer</h3>
+    <p>Le suivi est le <strong>tueur silencieux</strong> de la vente. Ce qui fait perdre la plupart des affaires n'est ni le produit ni le prix — c'est le fait de ne pas avoir relancé au bon moment. Le client se sent négligé et signe avec celui qui a rappelé.</p>
+    <p>Un outil de transcription IA branché sur vos visios et appels produit un <strong>compte-rendu en 2 minutes</strong> : qui a dit quoi, les décisions, les objections non levées, les actions à mener, et un mail de suivi prêt à envoyer. Certains outils analysent même le <strong>ton de votre interlocuteur</strong> — hésitations, moments de confiance. Vous savez non seulement ce qu'il a dit, mais comment il l'a dit.</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="practice">
+    <div class="practice-num">· Pratique 07</div>
+    <h3>Progresser à chaque rendez-vous perdu</h3>
+    <p>Après chaque affaire perdue, donnez à l'IA le transcript de l'entretien, précisez le contexte et votre proposition, et demandez : <strong>qu'est-ce que j'ai raté ? Où ai-je perdu l'entretien ? Quel signal faible ai-je ignoré ? Quelle question aurais-je dû poser ?</strong></p>
+    <p>L'IA devient alors un coach froid, lucide, implacable. Elle ne vous flatte pas, ne vous ménage pas, mais ne vous blesse pas non plus. La même vérité dite par votre manager passe pour une critique ; dite par une machine, elle devient un diagnostic. Et c'est toute la différence : ce que vous refusez d'entendre d'un humain, vous êtes prêt à l'exploiter quand ça vient d'une IA. <strong>Chaque vente perdue prépare la réussite du rendez-vous suivant.</strong></p>
+  </div>
+
+  <div class="highlight">
+    <p><strong>Ce que l'IA ne remplace pas :</strong> l'écoute active, la capacité à lire une pièce, décoder un regard, sentir un non-dit, adapter un discours en temps réel. Elle ne remplace ni l'empathie, ni la confiance que vous inspirez, ni le courage de décrocher le téléphone quand personne n'ose prospecter, ni l'instinct de closing.</p>
+    <p><strong>Ce que l'IA fait :</strong> elle <em>amplifie</em>. Les bonnes pratiques, les commerciaux professionnels, la vitesse d'exécution. Elle met aussi en lumière les faiblesses chez ceux qui refusent de progresser. Elle ne fera pas disparaître le bon vendeur — elle rendra simplement le médiocre plus visible.</p>
+  </div>
+
+  <!-- 3 LIENS SITEMAP -->
+  <div class="links-wrapper">
+    <div class="links-inner">
+      <div class="links-header">Pour aller plus loin</div>
+      <h2 class="links-title">Trois ressources Hudson sur le sujet</h2>
+
+      <div class="links">
+
+        <a href="/prospection-ia" class="link-card">
+          <span class="link-card-tag">Prospection IA</span>
+          <span class="link-card-title">Prospection avec l'IA</span>
+          <span class="link-card-desc">Comment structurer une prospection B2B moderne en intégrant les agents IA dans chaque étape.</span>
+          <span class="link-card-arrow">Voir la page →</span>
+        </a>
+
+        <a href="/automatisation-prospection" class="link-card">
+          <span class="link-card-tag">Automatisation</span>
+          <span class="link-card-title">Automatiser sa prospection</span>
+          <span class="link-card-desc">Les outils et méthodes pour rendre une campagne outbound répétable et mesurable.</span>
+          <span class="link-card-arrow">Voir la page →</span>
+        </a>
+
+        <a href="/agent-preparation-objections" class="link-card">
+          <span class="link-card-tag">Agent IA</span>
+          <span class="link-card-title">Agent préparation objections</span>
+          <span class="link-card-desc">L'agent Hudson qui prépare 10 objections et 3 niveaux de réponse avant chaque rendez-vous.</span>
+          <span class="link-card-arrow">Voir la page →</span>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- CONCLUSION -->
+  <div class="conclusion">
+    <h2>En résumé</h2>
+    <p>L'IA ne fera jamais de vous un bon vendeur si vous n'en êtes pas déjà un. Elle ne remplace pas les fondamentaux : écoute, empathie, instinct, courage. Ce qu'elle fait, c'est rendre un bon commercial <strong>redoutable</strong> — et un commercial médiocre <strong>visible</strong>.</p>
+    <p>Si votre cycle de vente dure plus de deux semaines, si votre client ne peut pas comparer votre offre sur un tableur, ces sept pratiques ne sont plus des options. Elles sont le socle de votre prochaine année commerciale.</p>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <div class="foot-brand-top">HUDSON<span>.</span></div>
+      <div class="foot-brand-sub">Business Development · <strong>Vendre avec l'IA</strong></div>
+    </div>
+    <div class="foot-links">
+      <a href="/">Accueil</a>
+      <a href="/intelligence-hub">Intelligence Hub</a>
+      <a href="/plan">Plan</a>
+      <a href="/mentions-legales">Mentions légales</a>
+    </div>
+    <div class="foot-copy">© 2026 Hudson Ltd — Aix-en-Provence</div>
+  </div>
+</footer>
+
+</body>
+</html>
