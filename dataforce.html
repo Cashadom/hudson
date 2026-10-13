@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5PF6FCCW');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S2912LSCRX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S2912LSCRX');
+  </script>
+  <script>window.dataLayer=window.dataLayer||[];dataLayer.push({'page_type':'division','page_topic':'dataforce','page_pole':'technologies'});</script>
+
+  <!-- META SEO -->
+  <title>Dataforce · Hudson Technologies Hub | Data, benchmarks, jumeaux numériques</title>
+  <meta name="description" content="Hudson Technologies Hub, division Data & IT de Hudson Business Development : data engineering, analytics et benchmarks, jumeaux numériques et systèmes intelligents pour les industriels, exploitants d'infrastructures et directions informatiques.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://hudson-ltd.com/dataforce">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- META SOCIALES -->
+  <meta property="og:title" content="Dataforce · Hudson Technologies Hub">
+  <meta property="og:description" content="Donner une nouvelle dimension à vos données : data engineering, benchmarks, jumeaux numériques et systèmes intelligents.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hudson-ltd.com/dataforce">
+  <meta property="og:image" content="https://hudson-ltd.com/og-cover.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- POLICES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0b2143; --navy-2: #13305a;
+      --gold: #c5a05a; --gold-deep: #9a7640;
+      --white: #ffffff; --paper: #faf8f3; --sky: #e4edf6; --sky-2: #c9daec;
+      --cobalt: #2a55d0; --ice: #8ec5ff;
+      --t-main: #0b2143; --t-mid: #43597a; --t-soft: #6f819c;
+      --line: rgba(11,33,68,.12); --line-gold: rgba(197,160,90,.55); --line-dark: rgba(255,255,255,.12);
+      --f-display: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+      --f-body: 'Instrument Sans', 'Helvetica Neue', Arial, sans-serif;
+      --f-serif: 'Instrument Serif', Georgia, serif;
+      --f-mono: 'IBM Plex Mono', ui-monospace, monospace;
+      --hatch: repeating-linear-gradient(45deg, rgba(197,160,90,.85) 0 1px, transparent 1px 8px);
+      --hatch-navy: repeating-linear-gradient(45deg, rgba(11,33,68,.35) 0 1px, transparent 1px 8px);
+    }
+
+    html { scroll-behavior: smooth; background: var(--navy); }
+    body { font-family: var(--f-body); background: var(--white); color: var(--t-main); overflow-x: hidden; -webkit-font-smoothing: antialiased; letter-spacing: -.005em; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
+    }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+    .skip { position: absolute; left: -999px; top: 8px; background: var(--navy); color: var(--white); padding: 10px 16px; z-index: 100; }
+    .skip:focus { left: 8px; }
+
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 48px; position: relative; }
+    @media (max-width: 720px) { .wrap { padding: 0 22px; } }
+
+    /* TYPO */
+    .tag { display: inline-flex; align-items: center; gap: 10px; font-family: var(--f-mono); font-size: 10.5px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 20px; }
+    .tag::before { content: ''; width: 7px; height: 7px; background: var(--gold); flex-shrink: 0; }
+    .on-navy .tag { color: var(--gold); }
+    h1, h2, h3 { font-family: var(--f-display); font-weight: 700; letter-spacing: -.035em; color: var(--navy); }
+    h2 { font-size: clamp(28px, 3.1vw, 46px); line-height: 1.07; }
+    .on-navy h2, .on-navy h3 { color: var(--white); }
+    .serif { font-family: var(--f-serif); font-style: italic; font-weight: 400; letter-spacing: -.01em; color: var(--gold-deep); }
+    .on-navy .serif { color: var(--gold); }
+    p { font-size: 16.5px; line-height: 1.75; color: var(--t-mid); }
+    .on-navy p { color: rgba(255,255,255,.7); }
+    .lead { font-size: 19px; line-height: 1.6; color: var(--navy); }
+    .on-navy .lead { color: var(--white); }
+    .mono { font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; }
+
+    /* SIGNATURES */
+    .dot-mark { display: inline-block; position: relative; width: 10px; height: 10px; margin-left: 13px; border-radius: 50%; background: var(--gold); vertical-align: .14em; }
+    .dot-mark::after { content: ''; position: absolute; inset: -6px; border: 1px solid rgba(197,160,90,.45); border-radius: 50%; }
+    .hatch { position: absolute; width: 72px; height: 72px; background: var(--hatch); opacity: .55; pointer-events: none; }
+    .hatch.navy { background: var(--hatch-navy); opacity: .5; }
+    .ring { position: absolute; border-radius: 50%; border: 1px solid var(--line-gold); pointer-events: none; }
+    @media (max-width: 900px) { .hatch, .ring { display: none; } }
+
+    section { position: relative; overflow: hidden; padding: 112px 0; }
+    @media (max-width: 720px) { section { padding: 76px 0; } }
+    .bg-white { background: var(--white); }
+    .bg-sky { background: var(--sky); }
+    .bg-paper { background: var(--paper); }
+    .bg-navy { background: var(--navy); }
+    .gold-top { border-top: 1px solid var(--gold); }
+    .sec-hd { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 64px; align-items: end; margin-bottom: 64px; }
+    .sec-hd p { justify-self: end; max-width: 460px; }
+    @media (max-width: 860px) { .sec-hd { grid-template-columns: 1fr; gap: 18px; margin-bottom: 44px; } .sec-hd p { justify-self: start; } }
+
+    /* NAVIGATION */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 60; background: rgba(255,255,255,.96); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+    .topbar { background: var(--navy); }
+    .topbar-in { max-width: 1200px; margin: 0 auto; padding: 0 48px; height: 36px; display: flex; align-items: center; justify-content: space-between; gap: 24px; font-family: var(--f-mono); font-size: 10px; letter-spacing: .15em; text-transform: uppercase; color: rgba(255,255,255,.5); }
+    .topbar-in b { color: var(--gold); font-weight: 500; }
+    .topbar-poles { display: flex; gap: 22px; align-items: center; }
+    .topbar-poles a { color: rgba(255,255,255,.66); text-decoration: none; transition: color .15s; }
+    .topbar-poles a:hover, .topbar-poles a[aria-current] { color: var(--gold); }
+    .topbar-poles .sep { width: 1px; height: 12px; background: rgba(197,160,90,.4); }
+    .topbar-poles .yr { color: var(--gold); margin-left: 5px; }
+    .topbar-poles .tel { color: var(--white); }
+    @media (max-width: 900px) { .topbar-left { display: none; } .topbar-in { justify-content: center; } }
+    @media (max-width: 720px) { .topbar-in { padding: 0 22px; } .topbar-poles .pole, .topbar-poles .sep { display: none; } }
+    .nav-in { max-width: 1200px; margin: 0 auto; padding: 0 48px; height: 84px; display: flex; align-items: center; justify-content: space-between; }
+    @media (max-width: 720px) { .nav-in { padding: 0 22px; height: 72px; } }
+    .logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .logo img { height: 60px; width: auto; display: block; }
+    .logo-txt { display: flex; flex-direction: column; line-height: 1; padding-left: 14px; border-left: 1px solid var(--line-gold); }
+    .logo-word { font-family: var(--f-display); font-weight: 800; font-size: 28px; letter-spacing: -.05em; color: var(--navy); }
+    .logo-word span { color: var(--gold); }
+    .logo-sub { font-family: var(--f-mono); font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-deep); margin-top: 5px; }
+    @media (max-width: 720px) { .logo img { height: 42px; } .logo-word { font-size: 24px; } }
+    .nav-links { display: flex; gap: 34px; list-style: none; align-items: center; }
+    .nav-links a { font-size: 13.5px; font-weight: 500; color: var(--t-mid); text-decoration: none; position: relative; padding: 6px 0; transition: color .18s; }
+    .nav-links a::after { content: ''; position: absolute; left: 0; bottom: 0; width: 0; height: 1px; background: var(--gold); transition: width .25s; }
+    .nav-links a:hover, .nav-links a[aria-current] { color: var(--navy); }
+    .nav-links a:hover::after, .nav-links a[aria-current]::after { width: 100%; }
+    @media (max-width: 860px) { .nav-links { display: none; } }
+
+    /* 01 HERO */
+    .hero { background: var(--white); padding: 196px 0 104px; }
+    .hero .gridlines { position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(90deg, transparent 0, transparent calc(100%/12 - 1px), rgba(11,33,68,.045) calc(100%/12 - 1px), rgba(11,33,68,.045) calc(100%/12)); }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 56px; align-items: center; position: relative; z-index: 1; }
+    @media (max-width: 960px) { .hero { padding: 160px 0 76px; } .hero-grid { grid-template-columns: 1fr; } }
+    .hero h1 { font-size: clamp(36px, 4.6vw, 64px); line-height: 1.03; letter-spacing: -.045em; margin-bottom: 28px; }
+    .hero .lead { padding-top: 24px; border-top: 1px solid var(--navy); margin-bottom: 20px; max-width: 560px; }
+    .hero p + p { margin-top: 14px; }
+    .hero-txt p { max-width: 560px; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 36px; }
+    .btn { display: inline-flex; align-items: center; gap: 14px; text-decoration: none; padding: 17px 28px; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; transition: background .2s, color .2s, transform .15s; }
+    .btn::after { content: ''; width: 18px; height: 1px; background: currentColor; transition: width .2s; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn:hover::after { width: 28px; }
+    .btn-navy { background: var(--navy); color: var(--white); }
+    .btn-navy::after { background: var(--gold); }
+    .btn-line { border: 1px solid var(--navy); color: var(--navy); }
+    .btn-line:hover { background: var(--navy); color: var(--white); }
+    .btn-gold { background: var(--gold); color: var(--navy); }
+    .btn-gold:hover { background: #d3b06b; }
+    .hero-svg { width: 100%; height: auto; display: block; }
+    .svg-lab { font-family: var(--f-mono); font-size: 9.5px; letter-spacing: .14em; fill: var(--gold-deep); }
+    .twin-svg .svg-lab { fill: rgba(255,255,255,.62); }
+    .twin-svg .svg-lab.gold { fill: var(--gold); }
+    .twin-svg .svg-lab.dim { fill: rgba(255,255,255,.35); }
+    .flow { animation: flow 2.6s linear infinite; }
+    @keyframes flow { to { stroke-dashoffset: -28; } }
+    @keyframes up { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+    .hero-txt > * { animation: up .6s ease both; }
+    .hero-txt > *:nth-child(2) { animation-delay: .08s; }
+    .hero-txt > *:nth-child(3) { animation-delay: .16s; }
+    .hero-txt > *:nth-child(4) { animation-delay: .24s; }
+
+    /* RUBAN */
+    .ribbon { background: var(--navy); border-top: 1px solid var(--gold); padding: 15px 0; overflow: hidden; white-space: nowrap; }
+    .ribbon-track { display: inline-flex; gap: 56px; animation: tick 38s linear infinite; }
+    .ribbon span { font-family: var(--f-mono); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.72); display: inline-flex; align-items: center; gap: 22px; }
+    .ribbon span::after { content: ''; width: 6px; height: 6px; background: var(--gold); transform: rotate(45deg); }
+    @keyframes tick { to { transform: translateX(-50%); } }
+
+    /* 02 EXPERTISES */
+    .cols4 { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(11,33,68,.22); }
+    .col { position: relative; padding: 34px 26px 6px 0; }
+    .col + .col { padding-left: 26px; border-left: 1px solid rgba(11,33,68,.12); }
+    .col::before { content: ''; position: absolute; top: -1px; left: 0; width: 42px; height: 2px; background: var(--gold); }
+    .col + .col::before { left: 26px; }
+    .col .idx { font-family: var(--f-display); font-weight: 700; font-size: 52px; letter-spacing: -.06em; line-height: 1; color: transparent; -webkit-text-stroke: 1px var(--navy); opacity: .55; margin-bottom: 24px; }
+    .col h3 { font-size: 20px; letter-spacing: -.025em; margin-bottom: 8px; }
+    .col .verb { font-family: var(--f-serif); font-style: italic; font-size: 19px; color: var(--gold-deep); margin-bottom: 14px; }
+    .col p { font-size: 15px; line-height: 1.65; }
+    @media (max-width: 960px) {
+      .cols4 { grid-template-columns: 1fr 1fr; }
+      .col, .col + .col { padding: 30px 18px 30px 0; border-left: 0; }
+      .col:nth-child(even) { padding-left: 18px; border-left: 1px solid rgba(11,33,68,.12); }
+      .col:nth-child(even)::before { left: 18px; }
+      .col:nth-child(n+3) { border-top: 1px solid rgba(11,33,68,.12); }
+    }
+    @media (max-width: 600px) {
+      .cols4 { grid-template-columns: 1fr; }
+      .col:nth-child(even) { padding-left: 0; border-left: 0; }
+      .col:nth-child(even)::before { left: 0; }
+      .col + .col { border-top: 1px solid rgba(11,33,68,.12); }
+    }
+
+    /* 03 JUMEAUX NUMÉRIQUES */
+    .twin .grid-bg { position: absolute; inset: 0; pointer-events: none; opacity: .7; background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 64px 64px; -webkit-mask-image: radial-gradient(ellipse at 75% 50%, black 10%, transparent 70%); mask-image: radial-gradient(ellipse at 75% 50%, black 10%, transparent 70%); }
+    .split { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 72px; align-items: center; position: relative; z-index: 1; }
+    @media (max-width: 960px) { .split { grid-template-columns: 1fr; gap: 48px; } }
+    .twin h2 { margin-bottom: 26px; }
+    .twin p + p { margin-top: 16px; }
+    .uses { list-style: none; margin-top: 34px; border-top: 1px solid var(--line-dark); display: grid; grid-template-columns: 1fr 1fr; }
+    .uses li { display: flex; align-items: center; gap: 12px; padding: 13px 0; border-bottom: 1px solid var(--line-dark); font-size: 14.5px; color: rgba(255,255,255,.85); }
+    .uses li:nth-child(odd) { padding-right: 16px; }
+    .uses li:nth-child(even) { padding-left: 16px; border-left: 1px solid var(--line-dark); }
+    .uses li::before { content: ''; width: 5px; height: 5px; background: var(--gold); flex-shrink: 0; }
+    @media (max-width: 560px) { .uses { grid-template-columns: 1fr; } .uses li:nth-child(even) { padding-left: 0; border-left: 0; } }
+    .twin-figure { position: relative; isolation: isolate; border: 1px solid rgba(197,160,90,.28); padding: 26px 22px 18px; background: rgba(255,255,255,.02); }
+    .twin-figure .hatch { right: -36px; top: -36px; z-index: -1; }
+    .twin-figure figcaption { display: flex; justify-content: space-between; gap: 12px; font-family: var(--f-mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); padding-bottom: 14px; margin-bottom: 14px; border-bottom: 1px solid rgba(197,160,90,.28); }
+    .twin-figure figcaption span + span { color: rgba(255,255,255,.4); }
+    .twin-svg { width: 100%; height: auto; display: block; }
+
+    /* 04 DATA INTELLIGENCE */
+    .di-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--navy); }
+    .di { display: grid; grid-template-columns: minmax(0, 1fr) 200px; gap: 28px; align-items: center; padding: 34px 34px 34px 0; border-bottom: 1px solid var(--line); }
+    .di:nth-child(even) { padding-left: 34px; padding-right: 0; border-left: 1px solid var(--line); }
+    .di .mono { color: var(--gold-deep); margin-bottom: 10px; display: block; }
+    .di h3 { font-size: 21px; letter-spacing: -.03em; margin-bottom: 8px; }
+    .di p { font-size: 15px; line-height: 1.6; }
+    .mini { width: 100%; height: auto; display: block; }
+    @media (max-width: 960px) { .di-grid { grid-template-columns: 1fr; } .di, .di:nth-child(even) { padding: 30px 0; border-left: 0; } }
+    @media (max-width: 520px) { .di { grid-template-columns: 1fr; } .di .mini { max-width: 240px; } }
+    .principle { margin-top: 72px; display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 28px; align-items: start; }
+    .principle .bar { height: 2px; background: var(--gold); margin-top: 22px; }
+    .principle blockquote { font-family: var(--f-display); font-weight: 600; font-size: clamp(22px, 2.4vw, 32px); line-height: 1.3; letter-spacing: -.03em; color: var(--navy); }
+    .principle blockquote em { font-family: var(--f-serif); font-weight: 400; color: var(--gold-deep); }
+    @media (max-width: 640px) { .principle { grid-template-columns: 1fr; gap: 10px; } .principle .bar { width: 64px; margin: 0; } }
+
+    /* 05 SYSTÈMES INTELLIGENTS */
+    .flowchart { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr; align-items: stretch; margin: 8px 0 64px; }
+    .fc-node { background: var(--white); border: 1px solid var(--line); padding: 26px 22px; position: relative; }
+    .fc-node.core { background: var(--navy); border-color: var(--navy); }
+    .fc-node.core::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gold); }
+    .fc-node .mono { color: var(--gold-deep); display: block; margin-bottom: 14px; }
+    .fc-node.core .mono { color: var(--gold); }
+    .fc-node h3 { font-size: 21px; letter-spacing: -.03em; margin-bottom: 8px; }
+    .fc-node.core h3 { color: var(--white); }
+    .fc-node p { font-size: 14px; line-height: 1.55; }
+    .fc-node.core p { color: rgba(255,255,255,.7); }
+    .fc-arrow { display: flex; align-items: center; justify-content: center; width: 48px; color: var(--gold-deep); font-family: var(--f-mono); font-size: 18px; position: relative; }
+    .fc-arrow::before { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: var(--line-gold); }
+    .fc-arrow span { position: relative; background: var(--sky); padding: 0 4px; }
+    @media (max-width: 960px) {
+      .flowchart { grid-template-columns: 1fr; }
+      .fc-arrow { width: auto; height: 40px; }
+      .fc-arrow::before { left: 50%; right: auto; top: 0; bottom: 0; width: 1px; height: auto; }
+      .fc-arrow span { transform: rotate(90deg); }
+    }
+    .principles { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(11,33,68,.22); }
+    .principles li { list-style: none; padding: 20px 18px 20px 0; border-bottom: 1px solid rgba(11,33,68,.12); display: grid; grid-template-columns: 30px 1fr; gap: 8px; font-size: 15px; color: var(--navy); font-weight: 500; }
+    .principles li:not(:nth-child(4n+1)) { padding-left: 18px; border-left: 1px solid rgba(11,33,68,.12); }
+    .principles li i { font-style: normal; font-family: var(--f-mono); font-size: 10px; color: var(--gold-deep); padding-top: 4px; }
+    @media (max-width: 960px) { .principles { grid-template-columns: 1fr 1fr; } .principles li:not(:nth-child(4n+1)) { padding-left: 0; border-left: 0; } .principles li:nth-child(even) { padding-left: 18px; border-left: 1px solid rgba(11,33,68,.12); } }
+    @media (max-width: 520px) { .principles { grid-template-columns: 1fr; } .principles li:nth-child(even) { padding-left: 0; border-left: 0; } }
+    .note { margin-top: 28px; font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--t-soft); }
+
+    /* 06 UNIVERS MÉTIERS */
+    .uni-grid { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--navy); }
+    .uni { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 22px; padding: 38px 38px 38px 0; border-bottom: 1px solid var(--line); position: relative; }
+    .uni:nth-child(even) { padding-left: 38px; padding-right: 0; border-left: 1px solid var(--line); }
+    .uni .idx { font-family: var(--f-display); font-weight: 700; font-size: 44px; letter-spacing: -.06em; line-height: 1; color: transparent; -webkit-text-stroke: 1px var(--gold-deep); }
+    .uni h3 { font-size: 22px; letter-spacing: -.03em; margin-bottom: 8px; }
+    .uni .scope { font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--gold-deep); line-height: 1.7; margin-bottom: 14px; }
+    .uni p { font-size: 15px; line-height: 1.65; }
+    @media (max-width: 860px) { .uni-grid { grid-template-columns: 1fr; } .uni, .uni:nth-child(even) { padding: 30px 0; border-left: 0; grid-template-columns: 56px 1fr; } .uni .idx { font-size: 34px; } }
+
+    /* 07 FONCTIONS */
+    .roles { border-top: 1px solid rgba(255,255,255,.22); }
+    .role { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1fr) minmax(0, 1fr); gap: 36px; padding: 28px 0; border-bottom: 1px solid var(--line-dark); position: relative; }
+    .role::before { content: ''; position: absolute; top: -1px; left: 0; width: 0; height: 2px; background: var(--gold); transition: width .3s; }
+    .role:hover::before { width: 80px; }
+    .role h3 { font-size: 19px; letter-spacing: -.025em; line-height: 1.3; }
+    .role .lbl { display: block; font-family: var(--f-mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+    .role p { font-size: 15px; line-height: 1.6; }
+    .role-head { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1fr) minmax(0, 1fr); gap: 36px; padding-bottom: 16px; }
+    .role-head span { font-family: var(--f-mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.4); }
+    .role .lbl { display: none; }
+    @media (max-width: 860px) { .role-head { display: none; } .role { grid-template-columns: 1fr; gap: 12px; } .role .lbl { display: block; } }
+
+    /* 08 MÉTHODOLOGIE */
+    .method { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); padding-top: 64px; }
+    .method::before { content: ''; position: absolute; top: 36px; left: 0; right: 0; height: 1px; background: var(--navy); }
+    .m-step { position: relative; padding-right: 28px; }
+    .m-step::before { content: ''; position: absolute; top: -34px; left: 0; width: 9px; height: 9px; background: var(--gold); }
+    .m-step .big { font-family: var(--f-display); font-weight: 700; font-size: clamp(64px, 7vw, 104px); letter-spacing: -.07em; line-height: .9; color: transparent; -webkit-text-stroke: 1px var(--navy); opacity: .5; margin-bottom: 18px; }
+    .m-step h3 { font-size: 22px; letter-spacing: -.03em; margin-bottom: 10px; }
+    .m-step p { font-size: 15px; line-height: 1.65; }
+    @media (max-width: 860px) {
+      .method { grid-template-columns: 1fr 1fr; gap: 48px 0; padding-top: 0; }
+      .method::before { display: none; }
+      .m-step { border-top: 1px solid var(--navy); padding-top: 28px; }
+      .m-step::before { top: -5px; }
+    }
+    @media (max-width: 520px) { .method { grid-template-columns: 1fr; } }
+    .bespoke { margin-top: 64px; display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 28px; padding-top: 28px; border-top: 1px solid var(--line); }
+    .bespoke .mono { color: var(--gold-deep); padding-top: 4px; }
+    .bespoke p { color: var(--navy); font-size: 17px; max-width: 720px; }
+    @media (max-width: 640px) { .bespoke { grid-template-columns: 1fr; gap: 10px; } }
+
+    /* 09 VALEUR */
+    .values { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(11,33,68,.22); }
+    .value { padding: 34px 30px 34px 0; border-bottom: 1px solid rgba(11,33,68,.12); position: relative; }
+    .value:not(:nth-child(3n+1)) { padding-left: 30px; border-left: 1px solid rgba(11,33,68,.12); }
+    .value .mono { color: var(--gold-deep); display: block; margin-bottom: 16px; }
+    .value h3 { font-size: 21px; letter-spacing: -.03em; margin-bottom: 8px; }
+    .value p { font-size: 15px; line-height: 1.6; }
+    @media (max-width: 860px) {
+      .values { grid-template-columns: 1fr 1fr; }
+      .value:not(:nth-child(3n+1)) { padding-left: 0; border-left: 0; }
+      .value:nth-child(even) { padding-left: 24px; border-left: 1px solid rgba(11,33,68,.12); }
+    }
+    @media (max-width: 520px) { .values { grid-template-columns: 1fr; } .value:nth-child(even) { padding-left: 0; border-left: 0; } }
+
+    /* 10 CONTACT */
+    .contact h2 { font-size: clamp(30px, 3.6vw, 54px); max-width: 860px; margin-bottom: 30px; }
+    .contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 48px; align-items: end; padding-top: 32px; border-top: 1px solid rgba(255,255,255,.2); }
+    .contact-grid p + p { margin-top: 12px; }
+    .contact .lead { font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+    @media (max-width: 760px) { .contact-grid { grid-template-columns: 1fr; gap: 28px; } }
+    .contact .ring.r1 { width: 520px; height: 520px; right: -180px; top: -220px; border-color: rgba(197,160,90,.35); }
+    .contact .ring.r2 { width: 300px; height: 300px; right: -60px; top: -110px; border-color: rgba(255,255,255,.08); }
+
+    /* 11 FOOTER */
+    footer { background: var(--navy); color: rgba(255,255,255,.55); position: relative; overflow: hidden; padding: 72px 0 0; border-top: 1px solid var(--line-dark); }
+    footer .ring.r1 { width: 560px; height: 560px; right: -200px; top: -260px; border-color: rgba(197,160,90,.28); }
+    .foot-sign { font-family: var(--f-display); font-weight: 800; letter-spacing: -.07em; line-height: .8; font-size: clamp(80px, 17vw, 236px); color: var(--white); margin-left: -.04em; }
+    .foot-sign span { color: var(--gold); }
+    .foot-main { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; border-top: 1px solid rgba(255,255,255,.14); margin-top: 52px; }
+    .foot-col { padding: 38px 28px 46px 0; position: relative; }
+    .foot-col + .foot-col { padding-left: 28px; border-left: 1px solid var(--line-dark); }
+    .foot-col::before { content: ''; position: absolute; top: -1px; left: 0; width: 34px; height: 2px; background: var(--gold); }
+    .foot-col + .foot-col::before { left: 28px; }
+    @media (max-width: 860px) {
+      .foot-main { grid-template-columns: 1fr 1fr; }
+      .foot-col, .foot-col + .foot-col { padding: 30px 18px 30px 0; border-left: 0; }
+      .foot-col::before, .foot-col + .foot-col::before { left: 0; }
+      .foot-col:nth-child(even) { padding-left: 18px; border-left: 1px solid var(--line-dark); }
+      .foot-col:nth-child(even)::before { left: 18px; }
+      .foot-col:nth-child(n+3) { border-top: 1px solid var(--line-dark); }
+    }
+    @media (max-width: 520px) { .foot-main { grid-template-columns: 1fr; } .foot-col:nth-child(even) { padding-left: 0; border-left: 0; } .foot-col:nth-child(even)::before { left: 0; } .foot-col + .foot-col { border-top: 1px solid var(--line-dark); } }
+    .foot-about { font-size: 14px; line-height: 1.65; max-width: 290px; }
+    .foot-about strong { color: var(--white); font-weight: 600; }
+    .foot-title { font-family: var(--f-mono); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .foot-text { font-size: 14px; line-height: 2; color: rgba(255,255,255,.62); }
+    .foot-text a { text-decoration: none; color: rgba(255,255,255,.62); transition: color .15s; }
+    .foot-text a:hover { color: var(--white); }
+    .foot-text a[aria-current] { color: var(--gold); }
+    .foot-text .yr { font-family: var(--f-mono); font-size: 10px; color: var(--gold); margin-left: 6px; }
+    .foot-text a.f-gold { color: var(--gold); }
+    .foot-text a.f-accent { font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; color: var(--ice); }
+    .foot-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 18px; padding: 26px 0 30px; border-top: 1px solid rgba(255,255,255,.14); font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.4); }
+    .foot-bottom a { color: rgba(255,255,255,.55); text-decoration: none; transition: color .15s; }
+    .foot-bottom a:hover { color: var(--gold); }
+  </style>
+</head>
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PF6FCCW"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <a href="#contenu" class="skip">Aller au contenu</a>
+
+  <!-- NAVIGATION -->
+  <nav aria-label="Navigation principale">
+    <div class="topbar">
+      <div class="topbar-in">
+        <span class="topbar-left"><b>Hudson</b> Business Development</span>
+        <span class="topbar-poles">
+          <a href="/agent-ia-prospection-pharma" class="pole">Healthcare</a>
+          <span class="sep"></span>
+          <a href="/dataforce" class="pole" aria-current="page">Technologies</a>
+          <span class="sep"></span>
+          <a href="/#airports" class="pole">Airports Solutions<span class="yr">2027</span></a>
+          <span class="sep"></span>
+          <a href="tel:+33695368383" class="tel">06 95 36 83 83</a>
+        </span>
+      </div>
+    </div>
+    <div class="nav-in">
+      <a href="/" class="logo" aria-label="Retour à l'accueil Hudson">
+        <img src="icon.png" alt="Hudson Business Development">
+        <span class="logo-txt">
+          <span class="logo-word">hudson<span>.</span></span>
+          <span class="logo-sub">Business Development</span>
+        </span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/agent-ia-prospection-pharma">Healthcare</a></li>
+        <li><a href="/dataforce" aria-current="page">Technologies</a></li>
+        <li><a href="/#airports">Airports</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="contenu">
+
+  <!-- 01 HERO -->
+  <section class="hero">
+    <span class="gridlines" aria-hidden="true"></span>
+    <div class="wrap hero-grid">
+      <div class="hero-txt">
+        <span class="tag">Hudson Technologies Hub · Dataforce</span>
+        <h1>Donner une nouvelle <span class="serif">dimension</span> à vos données<span class="dot-mark" aria-hidden="true"></span></h1>
+        <div>
+          <p class="lead">Vos infrastructures produisent des données. Vos équipes prennent des décisions. Nous développons les solutions qui relient les deux.</p>
+          <p>Hudson Technologies accompagne les entreprises dans la structuration, l'analyse, la visualisation et l'exploitation de leurs données opérationnelles.</p>
+          <p>De l'intelligence économique aux jumeaux numériques, nous concevons des environnements technologiques adaptés aux réalités de chaque métier.</p>
+        </div>
+        <div class="hero-actions">
+          <a href="#expertises" class="btn btn-navy">Nos expertises</a>
+          <a href="#contact" class="btn btn-line">Nous contacter</a>
+        </div>
+      </div>
+      <div><svg class="hero-svg" viewBox="0 0 560 560" role="img" aria-label="Composition abstraite représentant une architecture de données" xmlns="http://www.w3.org/2000/svg">
+<g fill="rgba(11,33,68,.16)"><circle cx="20" cy="20" r="1" /><circle cx="20" cy="60" r="1" /><circle cx="20" cy="100" r="1" /><circle cx="20" cy="140" r="1" /><circle cx="20" cy="180" r="1" /><circle cx="20" cy="220" r="1" /><circle cx="20" cy="260" r="1" /><circle cx="20" cy="300" r="1" /><circle cx="20" cy="340" r="1" /><circle cx="20" cy="380" r="1" /><circle cx="20" cy="420" r="1" /><circle cx="20" cy="460" r="1" /><circle cx="20" cy="500" r="1" /><circle cx="20" cy="540" r="1" /><circle cx="60" cy="20" r="1" /><circle cx="60" cy="60" r="1" /><circle cx="60" cy="100" r="1" /><circle cx="60" cy="140" r="1" /><circle cx="60" cy="180" r="1" /><circle cx="60" cy="220" r="1" /><circle cx="60" cy="260" r="1" /><circle cx="60" cy="300" r="1" /><circle cx="60" cy="340" r="1" /><circle cx="60" cy="380" r="1" /><circle cx="60" cy="420" r="1" /><circle cx="60" cy="460" r="1" /><circle cx="60" cy="500" r="1" /><circle cx="60" cy="540" r="1" /><circle cx="100" cy="20" r="1" /><circle cx="100" cy="60" r="1" /><circle cx="100" cy="100" r="1" /><circle cx="100" cy="140" r="1" /><circle cx="100" cy="180" r="1" /><circle cx="100" cy="220" r="1" /><circle cx="100" cy="260" r="1" /><circle cx="100" cy="300" r="1" /><circle cx="100" cy="340" r="1" /><circle cx="100" cy="380" r="1" /><circle cx="100" cy="420" r="1" /><circle cx="100" cy="460" r="1" /><circle cx="100" cy="500" r="1" /><circle cx="100" cy="540" r="1" /><circle cx="140" cy="20" r="1" /><circle cx="140" cy="60" r="1" /><circle cx="140" cy="100" r="1" /><circle cx="140" cy="140" r="1" /><circle cx="140" cy="180" r="1" /><circle cx="140" cy="220" r="1" /><circle cx="140" cy="260" r="1" /><circle cx="140" cy="300" r="1" /><circle cx="140" cy="340" r="1" /><circle cx="140" cy="380" r="1" /><circle cx="140" cy="420" r="1" /><circle cx="140" cy="460" r="1" /><circle cx="140" cy="500" r="1" /><circle cx="140" cy="540" r="1" /><circle cx="180" cy="20" r="1" /><circle cx="180" cy="60" r="1" /><circle cx="180" cy="100" r="1" /><circle cx="180" cy="140" r="1" /><circle cx="180" cy="180" r="1" /><circle cx="180" cy="220" r="1" /><circle cx="180" cy="260" r="1" /><circle cx="180" cy="300" r="1" /><circle cx="180" cy="340" r="1" /><circle cx="180" cy="380" r="1" /><circle cx="180" cy="420" r="1" /><circle cx="180" cy="460" r="1" /><circle cx="180" cy="500" r="1" /><circle cx="180" cy="540" r="1" /><circle cx="220" cy="20" r="1" /><circle cx="220" cy="60" r="1" /><circle cx="220" cy="100" r="1" /><circle cx="220" cy="140" r="1" /><circle cx="220" cy="180" r="1" /><circle cx="220" cy="220" r="1" /><circle cx="220" cy="260" r="1" /><circle cx="220" cy="300" r="1" /><circle cx="220" cy="340" r="1" /><circle cx="220" cy="380" r="1" /><circle cx="220" cy="420" r="1" /><circle cx="220" cy="460" r="1" /><circle cx="220" cy="500" r="1" /><circle cx="220" cy="540" r="1" /><circle cx="260" cy="20" r="1" /><circle cx="260" cy="60" r="1" /><circle cx="260" cy="100" r="1" /><circle cx="260" cy="140" r="1" /><circle cx="260" cy="180" r="1" /><circle cx="260" cy="220" r="1" /><circle cx="260" cy="260" r="1" /><circle cx="260" cy="300" r="1" /><circle cx="260" cy="340" r="1" /><circle cx="260" cy="380" r="1" /><circle cx="260" cy="420" r="1" /><circle cx="260" cy="460" r="1" /><circle cx="260" cy="500" r="1" /><circle cx="260" cy="540" r="1" /><circle cx="300" cy="20" r="1" /><circle cx="300" cy="60" r="1" /><circle cx="300" cy="100" r="1" /><circle cx="300" cy="140" r="1" /><circle cx="300" cy="180" r="1" /><circle cx="300" cy="220" r="1" /><circle cx="300" cy="260" r="1" /><circle cx="300" cy="300" r="1" /><circle cx="300" cy="340" r="1" /><circle cx="300" cy="380" r="1" /><circle cx="300" cy="420" r="1" /><circle cx="300" cy="460" r="1" /><circle cx="300" cy="500" r="1" /><circle cx="300" cy="540" r="1" /><circle cx="340" cy="20" r="1" /><circle cx="340" cy="60" r="1" /><circle cx="340" cy="100" r="1" /><circle cx="340" cy="140" r="1" /><circle cx="340" cy="180" r="1" /><circle cx="340" cy="220" r="1" /><circle cx="340" cy="260" r="1" /><circle cx="340" cy="300" r="1" /><circle cx="340" cy="340" r="1" /><circle cx="340" cy="380" r="1" /><circle cx="340" cy="420" r="1" /><circle cx="340" cy="460" r="1" /><circle cx="340" cy="500" r="1" /><circle cx="340" cy="540" r="1" /><circle cx="380" cy="20" r="1" /><circle cx="380" cy="60" r="1" /><circle cx="380" cy="100" r="1" /><circle cx="380" cy="140" r="1" /><circle cx="380" cy="180" r="1" /><circle cx="380" cy="220" r="1" /><circle cx="380" cy="260" r="1" /><circle cx="380" cy="300" r="1" /><circle cx="380" cy="340" r="1" /><circle cx="380" cy="380" r="1" /><circle cx="380" cy="420" r="1" /><circle cx="380" cy="460" r="1" /><circle cx="380" cy="500" r="1" /><circle cx="380" cy="540" r="1" /><circle cx="420" cy="20" r="1" /><circle cx="420" cy="60" r="1" /><circle cx="420" cy="100" r="1" /><circle cx="420" cy="140" r="1" /><circle cx="420" cy="180" r="1" /><circle cx="420" cy="220" r="1" /><circle cx="420" cy="260" r="1" /><circle cx="420" cy="300" r="1" /><circle cx="420" cy="340" r="1" /><circle cx="420" cy="380" r="1" /><circle cx="420" cy="420" r="1" /><circle cx="420" cy="460" r="1" /><circle cx="420" cy="500" r="1" /><circle cx="420" cy="540" r="1" /><circle cx="460" cy="20" r="1" /><circle cx="460" cy="60" r="1" /><circle cx="460" cy="100" r="1" /><circle cx="460" cy="140" r="1" /><circle cx="460" cy="180" r="1" /><circle cx="460" cy="220" r="1" /><circle cx="460" cy="260" r="1" /><circle cx="460" cy="300" r="1" /><circle cx="460" cy="340" r="1" /><circle cx="460" cy="380" r="1" /><circle cx="460" cy="420" r="1" /><circle cx="460" cy="460" r="1" /><circle cx="460" cy="500" r="1" /><circle cx="460" cy="540" r="1" /><circle cx="500" cy="20" r="1" /><circle cx="500" cy="60" r="1" /><circle cx="500" cy="100" r="1" /><circle cx="500" cy="140" r="1" /><circle cx="500" cy="180" r="1" /><circle cx="500" cy="220" r="1" /><circle cx="500" cy="260" r="1" /><circle cx="500" cy="300" r="1" /><circle cx="500" cy="340" r="1" /><circle cx="500" cy="380" r="1" /><circle cx="500" cy="420" r="1" /><circle cx="500" cy="460" r="1" /><circle cx="500" cy="500" r="1" /><circle cx="500" cy="540" r="1" /><circle cx="540" cy="20" r="1" /><circle cx="540" cy="60" r="1" /><circle cx="540" cy="100" r="1" /><circle cx="540" cy="140" r="1" /><circle cx="540" cy="180" r="1" /><circle cx="540" cy="220" r="1" /><circle cx="540" cy="260" r="1" /><circle cx="540" cy="300" r="1" /><circle cx="540" cy="340" r="1" /><circle cx="540" cy="380" r="1" /><circle cx="540" cy="420" r="1" /><circle cx="540" cy="460" r="1" /><circle cx="540" cy="500" r="1" /><circle cx="540" cy="540" r="1" /></g>
+<circle cx="300" cy="280" r="200" fill="none" stroke="rgba(197,160,90,.45)" stroke-width="1"/>
+<circle cx="300" cy="280" r="128" fill="none" stroke="rgba(11,33,68,.12)" stroke-width="1"/>
+<line x1="300" y1="40" x2="300" y2="520" stroke="rgba(11,33,68,.08)"/>
+<line x1="60" y1="280" x2="540" y2="280" stroke="rgba(11,33,68,.08)"/>
+<line x1="100" y1="140" x2="260" y2="200" stroke="rgba(11,33,68,.30)" stroke-width="1"/>
+<line x1="80" y1="300" x2="260" y2="200" stroke="rgba(11,33,68,.30)" stroke-width="1"/>
+<line x1="80" y1="300" x2="240" y2="360" stroke="rgba(11,33,68,.30)" stroke-width="1"/>
+<line x1="140" y1="440" x2="240" y2="360" stroke="rgba(11,33,68,.30)" stroke-width="1"/>
+<line x1="260" y1="200" x2="300" y2="280" stroke="rgba(11,33,68,.30)" stroke-width="1"/>
+<line x1="240" y1="360" x2="300" y2="280" stroke="rgba(11,33,68,.30)" stroke-width="1"/>
+<line x1="300" y1="280" x2="400" y2="170" stroke="rgba(11,33,68,.30)" stroke-width="1"/>
+<line x1="300" y1="280" x2="420" y2="390" stroke="rgba(11,33,68,.30)" stroke-width="1"/>
+<line x1="400" y1="170" x2="500" y2="110" stroke="rgba(11,33,68,.30)" stroke-width="1"/>
+<line x1="400" y1="170" x2="510" y2="280" stroke="rgba(11,33,68,.30)" stroke-width="1"/>
+<line x1="420" y1="390" x2="510" y2="280" stroke="rgba(11,33,68,.30)" stroke-width="1"/>
+<line x1="420" y1="390" x2="480" y2="470" stroke="rgba(11,33,68,.30)" stroke-width="1"/>
+<line x1="260" y1="200" x2="400" y2="170" stroke="rgba(11,33,68,.30)" stroke-width="1"/>
+<line x1="240" y1="360" x2="420" y2="390" stroke="rgba(11,33,68,.30)" stroke-width="1"/>
+<line class="flow" x1="80" y1="300" x2="260" y2="200" stroke="#c5a05a" stroke-width="1.4" stroke-dasharray="4 10"/>
+<line class="flow" x1="260" y1="200" x2="300" y2="280" stroke="#c5a05a" stroke-width="1.4" stroke-dasharray="4 10"/>
+<line class="flow" x1="300" y1="280" x2="420" y2="390" stroke="#c5a05a" stroke-width="1.4" stroke-dasharray="4 10"/>
+<line class="flow" x1="420" y1="390" x2="480" y2="470" stroke="#c5a05a" stroke-width="1.4" stroke-dasharray="4 10"/>
+<line class="flow" x1="100" y1="140" x2="260" y2="200" stroke="#c5a05a" stroke-width="1.4" stroke-dasharray="4 10"/>
+<line class="flow" x1="300" y1="280" x2="400" y2="170" stroke="#c5a05a" stroke-width="1.4" stroke-dasharray="4 10"/>
+<line class="flow" x1="400" y1="170" x2="510" y2="280" stroke="#c5a05a" stroke-width="1.4" stroke-dasharray="4 10"/>
+<rect x="94" y="134" width="12" height="12" fill="#fff" stroke="#0b2143" stroke-width="1.2"/>
+<rect x="74" y="294" width="12" height="12" fill="#fff" stroke="#0b2143" stroke-width="1.2"/>
+<rect x="134" y="434" width="12" height="12" fill="#fff" stroke="#0b2143" stroke-width="1.2"/>
+<circle cx="260" cy="200" r="6" fill="#fff" stroke="#0b2143" stroke-width="1.2"/>
+<circle cx="240" cy="360" r="6" fill="#fff" stroke="#0b2143" stroke-width="1.2"/>
+<rect x="278" y="258" width="44" height="44" fill="#0b2143"/>
+<rect x="268" y="248" width="64" height="64" fill="none" stroke="#c5a05a" stroke-width="1"/>
+<circle cx="300" cy="280" r="5" fill="#c5a05a"/>
+<circle cx="400" cy="170" r="6" fill="#fff" stroke="#0b2143" stroke-width="1.2"/>
+<circle cx="420" cy="390" r="6" fill="#fff" stroke="#0b2143" stroke-width="1.2"/>
+<circle cx="500" cy="110" r="7" fill="#c5a05a"/><circle cx="500" cy="110" r="13" fill="none" stroke="rgba(197,160,90,.55)"/>
+<circle cx="510" cy="280" r="7" fill="#c5a05a"/><circle cx="510" cy="280" r="13" fill="none" stroke="rgba(197,160,90,.55)"/>
+<circle cx="480" cy="470" r="7" fill="#c5a05a"/><circle cx="480" cy="470" r="13" fill="none" stroke="rgba(197,160,90,.55)"/>
+<defs><pattern id="hh" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="rgba(197,160,90,.8)" stroke-width="1"/></pattern></defs>
+<rect x="372" y="300" width="70" height="70" fill="url(#hh)" opacity=".7"/>
+<text x="60" y="118" text-anchor="start" class="svg-lab">SOURCES</text>
+<text x="300" y="226" text-anchor="middle" class="svg-lab">TRAITEMENT</text>
+<text x="540" y="80" text-anchor="end" class="svg-lab">DÉCISION</text>
+<text x="60" y="505" text-anchor="start" class="svg-lab">CAPTEURS · API · BASES</text>
+</svg></div>
+    </div>
+  </section>
+
+  <div class="ribbon" aria-hidden="true">
+    <div class="ribbon-track">
+      <span>Data engineering</span><span>Analytics &amp; benchmark</span><span>Jumeaux numériques</span><span>Systèmes intelligents</span><span>Intelligence économique</span>
+      <span>Data engineering</span><span>Analytics &amp; benchmark</span><span>Jumeaux numériques</span><span>Systèmes intelligents</span><span>Intelligence économique</span>
+    </div>
+  </div>
+
+  <!-- 02 EXPERTISES -->
+  <section class="bg-sky" id="expertises">
+    <span class="hatch navy" aria-hidden="true" style="right:48px;top:72px;"></span>
+    <div class="wrap">
+      <div class="sec-hd">
+        <div>
+          <span class="tag">Quatre expertises</span>
+          <h2>La donnée prend de la valeur lorsqu'elle devient <span class="serif">exploitable</span><span class="dot-mark" aria-hidden="true"></span></h2>
+        </div>
+        <p>Quatre univers complémentaires, de la collecte des informations jusqu'aux systèmes qui les mettent en mouvement.</p>
+      </div>
+      <div class="cols4">
+        <article class="col">
+          <div class="idx">01</div>
+          <h3>Data Engineering</h3>
+          <div class="verb">Collecter, structurer et connecter.</div>
+          <p>Centralisation des sources, normalisation des informations, interconnexion des systèmes et création de référentiels de données fiables.</p>
+        </article>
+        <article class="col">
+          <div class="idx">02</div>
+          <h3>Analytics &amp; Benchmark</h3>
+          <div class="verb">Mesurer, comparer et comprendre.</div>
+          <p>Indicateurs de performance, analyses comparatives, identification des écarts et production de rapports permettant d'éclairer les décisions.</p>
+        </article>
+        <article class="col">
+          <div class="idx">03</div>
+          <h3>Digital Twins</h3>
+          <div class="verb">Représenter, superviser et simuler.</div>
+          <p>Modélisation interactive d'équipements, d'infrastructures et de processus pour visualiser leur fonctionnement et explorer différents scénarios opérationnels.</p>
+        </article>
+        <article class="col">
+          <div class="idx">04</div>
+          <h3>Intelligent Systems</h3>
+          <div class="verb">Automatiser, orienter et optimiser.</div>
+          <p>Systèmes capables d'organiser les flux d'information, sélectionner les ressources adaptées et suivre la qualité, les performances et les coûts.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 JUMEAUX NUMÉRIQUES -->
+  <section class="bg-navy on-navy twin gold-top" id="jumeaux-numeriques">
+    <span class="grid-bg" aria-hidden="true"></span>
+    <div class="wrap split">
+      <div>
+        <span class="tag">Jumeaux numériques</span>
+        <h2>Voir le fonctionnement d'un système. <span class="serif">Pas seulement ses indicateurs.</span><span class="dot-mark" aria-hidden="true"></span></h2>
+        <p>Un jumeau numérique est une représentation interactive d'un équipement, d'une installation ou d'un processus. Chaque élément y est relié à son état, à ses connexions et à ses métadonnées.</p>
+        <p>Vues en 2D ou isométriques, états des équipements, dépendances, supervision en continu et simulations : le jumeau numérique rend lisible ce que les tableaux de chiffres laissent dans l'ombre, et permet de tester un scénario avant de l'engager sur le terrain.</p>
+        <ul class="uses">
+          <li>Visualisation des installations et équipements</li>
+          <li>Supervision des états opérationnels</li>
+          <li>Analyse des dépendances</li>
+          <li>Suivi de maintenance</li>
+          <li>Comparaison de configurations</li>
+          <li>Simulation de scénarios</li>
+        </ul>
+      </div>
+      <figure class="twin-figure">
+        <span class="hatch" aria-hidden="true"></span>
+        <figcaption><span>Infrastructure connectée</span><span>Illustration conceptuelle</span></figcaption>
+        <svg class="twin-svg" viewBox="0 0 600 470" role="img" aria-label="Illustration conceptuelle d’un jumeau numérique : équipements connectés, états et métadonnées" xmlns="http://www.w3.org/2000/svg">
+<line x1="300.0" y1="110.0" x2="29.8" y2="266.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="300.0" y1="110.0" x2="570.2" y2="266.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="322.5" y1="123.0" x2="52.3" y2="279.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="277.5" y1="123.0" x2="547.7" y2="279.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="345.0" y1="136.0" x2="74.8" y2="292.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="255.0" y1="136.0" x2="525.2" y2="292.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="367.5" y1="149.0" x2="97.4" y2="305.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="232.5" y1="149.0" x2="502.6" y2="305.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="390.1" y1="162.0" x2="119.9" y2="318.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="209.9" y1="162.0" x2="480.1" y2="318.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="412.6" y1="175.0" x2="142.4" y2="331.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="187.4" y1="175.0" x2="457.6" y2="331.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="435.1" y1="188.0" x2="164.9" y2="344.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="164.9" y1="188.0" x2="435.1" y2="344.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="457.6" y1="201.0" x2="187.4" y2="357.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="142.4" y1="201.0" x2="412.6" y2="357.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="480.1" y1="214.0" x2="209.9" y2="370.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="119.9" y1="214.0" x2="390.1" y2="370.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="502.6" y1="227.0" x2="232.5" y2="383.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="97.4" y1="227.0" x2="367.5" y2="383.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="525.2" y1="240.0" x2="255.0" y2="396.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="74.8" y1="240.0" x2="345.0" y2="396.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="547.7" y1="253.0" x2="277.5" y2="409.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="52.3" y1="253.0" x2="322.5" y2="409.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="570.2" y1="266.0" x2="300.0" y2="422.0" stroke="rgba(255,255,255,.07)"/>
+<line x1="29.8" y1="266.0" x2="300.0" y2="422.0" stroke="rgba(255,255,255,.07)"/>
+<polygon points="300.0,110.0 570.2,266.0 300.0,422.0 29.8,266.0" fill="none" stroke="rgba(197,160,90,.45)"/>
+<polygon points="232.5,175.0 277.5,201.0 277.5,123.0 232.5,97.0" fill="rgba(255,255,255,.06)" stroke="rgba(142,197,255,.55)" stroke-width="1"/><polygon points="345.0,162.0 277.5,201.0 277.5,123.0 345.0,84.0" fill="rgba(255,255,255,.025)" stroke="rgba(142,197,255,.55)" stroke-width="1"/><polygon points="300.0,58.0 345.0,84.0 277.5,123.0 232.5,97.0" fill="rgba(255,255,255,.11)" stroke="rgba(142,197,255,.55)" stroke-width="1"/>
+<polygon points="142.4,227.0 187.4,253.0 187.4,201.0 142.4,175.0" fill="rgba(255,255,255,.06)" stroke="rgba(142,197,255,.55)" stroke-width="1"/><polygon points="232.5,227.0 187.4,253.0 187.4,201.0 232.5,175.0" fill="rgba(255,255,255,.025)" stroke="rgba(142,197,255,.55)" stroke-width="1"/><polygon points="187.4,149.0 232.5,175.0 187.4,201.0 142.4,175.0" fill="rgba(255,255,255,.11)" stroke="rgba(142,197,255,.55)" stroke-width="1"/>
+<polygon points="345.0,214.0 412.6,253.0 412.6,216.6 345.0,177.6" fill="rgba(255,255,255,.06)" stroke="rgba(197,160,90,.85)" stroke-width="1"/><polygon points="457.6,227.0 412.6,253.0 412.6,216.6 457.6,190.6" fill="rgba(255,255,255,.025)" stroke="rgba(197,160,90,.85)" stroke-width="1"/><polygon points="390.1,151.6 457.6,190.6 412.6,216.6 345.0,177.6" fill="rgba(255,255,255,.11)" stroke="rgba(197,160,90,.85)" stroke-width="1"/>
+<polygon points="255.0,266.0 300.0,292.0 300.0,188.0 255.0,162.0" fill="rgba(255,255,255,.06)" stroke="rgba(142,197,255,.55)" stroke-width="1"/><polygon points="345.0,266.0 300.0,292.0 300.0,188.0 345.0,162.0" fill="rgba(255,255,255,.025)" stroke="rgba(142,197,255,.55)" stroke-width="1"/><polygon points="300.0,136.0 345.0,162.0 300.0,188.0 255.0,162.0" fill="rgba(255,255,255,.11)" stroke="rgba(142,197,255,.55)" stroke-width="1"/>
+<polygon points="412.6,279.0 457.6,305.0 457.6,247.8 412.6,221.8" fill="rgba(255,255,255,.06)" stroke="rgba(142,197,255,.55)" stroke-width="1"/><polygon points="502.6,279.0 457.6,305.0 457.6,247.8 502.6,221.8" fill="rgba(255,255,255,.025)" stroke="rgba(142,197,255,.55)" stroke-width="1"/><polygon points="457.6,195.8 502.6,221.8 457.6,247.8 412.6,221.8" fill="rgba(255,255,255,.11)" stroke="rgba(142,197,255,.55)" stroke-width="1"/>
+<polygon points="277.5,357.0 322.5,383.0 322.5,341.4 277.5,315.4" fill="rgba(255,255,255,.06)" stroke="rgba(142,197,255,.55)" stroke-width="1"/><polygon points="390.1,344.0 322.5,383.0 322.5,341.4 390.1,302.4" fill="rgba(255,255,255,.025)" stroke="rgba(142,197,255,.55)" stroke-width="1"/><polygon points="345.0,276.4 390.1,302.4 322.5,341.4 277.5,315.4" fill="rgba(255,255,255,.11)" stroke="rgba(142,197,255,.55)" stroke-width="1"/>
+<line class="flow" x1="288.7" y1="90.5" x2="401.3" y2="184.1" stroke="#c5a05a" stroke-width="1.2" stroke-dasharray="3 7"/>
+<line class="flow" x1="401.3" y1="184.1" x2="457.6" y2="221.8" stroke="#c5a05a" stroke-width="1.2" stroke-dasharray="3 7"/>
+<line class="flow" x1="288.7" y1="90.5" x2="300.0" y2="162.0" stroke="#c5a05a" stroke-width="1.2" stroke-dasharray="3 7"/>
+<line class="flow" x1="300.0" y1="162.0" x2="333.8" y2="308.9" stroke="#c5a05a" stroke-width="1.2" stroke-dasharray="3 7"/>
+<line class="flow" x1="187.4" y1="175.0" x2="300.0" y2="162.0" stroke="#c5a05a" stroke-width="1.2" stroke-dasharray="3 7"/>
+<line class="flow" x1="457.6" y1="221.8" x2="333.8" y2="308.9" stroke="#c5a05a" stroke-width="1.2" stroke-dasharray="3 7"/>
+<circle cx="288.7" cy="76.5" r="4.5" fill="#8ec5ff"/>
+<circle cx="187.4" cy="161.0" r="4.5" fill="#8ec5ff"/>
+<circle cx="401.3" cy="170.1" r="4.5" fill="#c5a05a"/><circle cx="401.3" cy="170.1" r="10" fill="none" stroke="rgba(197,160,90,.6)"/>
+<circle cx="300.0" cy="148.0" r="4.5" fill="#8ec5ff"/>
+<circle cx="457.6" cy="207.8" r="4.5" fill="#fff"/><circle cx="457.6" cy="207.8" r="10" fill="none" stroke="#fff" stroke-dasharray="2 3"/>
+<circle cx="333.8" cy="294.9" r="4.5" fill="#8ec5ff"/>
+<line x1="401.3" y1="170.1" x2="470" y2="114.1" stroke="rgba(197,160,90,.7)"/>
+<rect x="470" y="66.1" width="122" height="96" fill="#0b2143" stroke="rgba(197,160,90,.6)"/>
+<text x="482" y="86.1" class="svg-lab gold">MÉTADONNÉES</text>
+<text x="482" y="106.1" class="svg-lab">ÉQUIPEMENT</text>
+<rect x="482" y="111.1" width="70" height="2" fill="rgba(142,197,255,.5)"/>
+<text x="482" y="126.1" class="svg-lab">ÉTAT</text>
+<rect x="482" y="131.1" width="46" height="2" fill="rgba(142,197,255,.5)"/>
+<text x="482" y="146.1" class="svg-lab">LIENS</text>
+<rect x="482" y="151.1" width="58" height="2" fill="rgba(142,197,255,.5)"/>
+<circle cx="20" cy="448" r="4.5" fill="#8ec5ff"/><text x="32" y="452" class="svg-lab">OPÉRATIONNEL</text>
+<circle cx="150" cy="448" r="4.5" fill="#c5a05a"/><text x="162" y="452" class="svg-lab">MAINTENANCE</text>
+<circle cx="276" cy="448" r="4.5" fill="#fff"/><text x="288" y="452" class="svg-lab">ALERTE</text>
+<text x="594" y="452" text-anchor="end" class="svg-lab dim">VUE ISOMÉTRIQUE · ILLUSTRATION</text>
+</svg>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 04 DATA INTELLIGENCE -->
+  <section class="bg-paper" id="data-intelligence">
+    <span class="ring" aria-hidden="true" style="width:440px;height:440px;right:-180px;top:-160px;"></span>
+    <div class="wrap">
+      <div class="sec-hd">
+        <div>
+          <span class="tag">Data intelligence</span>
+          <h2>Comparer les données. Comprendre les écarts. <span class="serif">Orienter les décisions.</span><span class="dot-mark" aria-hidden="true"></span></h2>
+        </div>
+        <p>Une analyse n'a de valeur que si les données sont fiables, traçables et rattachées à des référentiels partagés. C'est la condition pour comparer, expliquer et décider.</p>
+      </div>
+      <div class="di-grid">
+        <article class="di">
+          <div>
+            <span class="mono">A · Exploitation</span>
+            <h3>Analyse opérationnelle</h3>
+            <p>Lecture des données d'exploitation pour identifier les tendances, les écarts et les points de friction.</p>
+          </div>
+          <svg viewBox="0 0 240 110" class="mini" aria-hidden="true"><line x1="0" y1="100" x2="240" y2="100" stroke="rgba(11,33,68,.3)"/><polyline points="6,78 31,74 56,70 81,68 106,62 131,60 156,58 181,52 206,50 231,46" fill="none" stroke="rgba(11,33,68,.35)" stroke-width="1.4" stroke-dasharray="4 4"/><polyline points="6,70 31,62 56,66 81,50 106,54 131,40 156,44 181,30 206,34 231,22" fill="none" stroke="#0b2143" stroke-width="1.6"/><circle cx="231" cy="22" r="4" fill="#c5a05a"/></svg>
+        </article>
+        <article class="di">
+          <div>
+            <span class="mono">B · Comparaison</span>
+            <h3>Benchmark métier</h3>
+            <p>Comparaison de sites, d'équipements ou de pratiques sur des indicateurs définis en commun.</p>
+          </div>
+          <svg viewBox="0 0 240 110" class="mini" aria-hidden="true"><line x1="0" y1="18" x2="240" y2="18" stroke="rgba(11,33,68,.12)"/><line x1="40" y1="18" x2="160" y2="18" stroke="#0b2143" stroke-width="1.4"/><circle cx="40" cy="18" r="4" fill="#0b2143"/><circle cx="120" cy="18" r="4" fill="#0b2143"/><circle cx="160" cy="18" r="4" fill="#c5a05a"/><line x1="0" y1="42" x2="240" y2="42" stroke="rgba(11,33,68,.12)"/><line x1="52" y1="42" x2="174" y2="42" stroke="#0b2143" stroke-width="1.4"/><circle cx="52" cy="42" r="4" fill="#0b2143"/><circle cx="112" cy="42" r="4" fill="#0b2143"/><circle cx="174" cy="42" r="4" fill="#c5a05a"/><line x1="0" y1="66" x2="240" y2="66" stroke="rgba(11,33,68,.12)"/><line x1="64" y1="66" x2="188" y2="66" stroke="#0b2143" stroke-width="1.4"/><circle cx="64" cy="66" r="4" fill="#0b2143"/><circle cx="104" cy="66" r="4" fill="#0b2143"/><circle cx="188" cy="66" r="4" fill="#c5a05a"/><line x1="0" y1="90" x2="240" y2="90" stroke="rgba(11,33,68,.12)"/><line x1="76" y1="90" x2="202" y2="90" stroke="#0b2143" stroke-width="1.4"/><circle cx="76" cy="90" r="4" fill="#0b2143"/><circle cx="96" cy="90" r="4" fill="#0b2143"/><circle cx="202" cy="90" r="4" fill="#c5a05a"/></svg>
+        </article>
+        <article class="di">
+          <div>
+            <span class="mono">C · Marchés</span>
+            <h3>Intelligence économique</h3>
+            <p>Veille structurée sur les marchés, les acteurs et les signaux utiles à la décision.</p>
+          </div>
+          <svg viewBox="0 0 240 110" class="mini" aria-hidden="true"><rect x="2" y="4" width="20" height="20" fill="rgba(11,33,68,0.38)"/><rect x="26" y="4" width="20" height="20" fill="rgba(11,33,68,0.24)"/><rect x="50" y="4" width="20" height="20" fill="rgba(11,33,68,0.64)"/><rect x="74" y="4" width="20" height="20" fill="rgba(11,33,68,0.18)"/><rect x="98" y="4" width="20" height="20" fill="rgba(11,33,68,0.55)"/><rect x="122" y="4" width="20" height="20" fill="rgba(11,33,68,0.41)"/><rect x="146" y="4" width="20" height="20" fill="rgba(11,33,68,0.17)"/><rect x="170" y="4" width="20" height="20" fill="rgba(11,33,68,0.53)"/><rect x="194" y="4" width="20" height="20" fill="rgba(11,33,68,0.15)"/><rect x="218" y="4" width="20" height="20" fill="rgba(11,33,68,0.47)"/><rect x="2" y="30" width="20" height="20" fill="rgba(11,33,68,0.18)"/><rect x="26" y="30" width="20" height="20" fill="rgba(11,33,68,0.19)"/><rect x="50" y="30" width="20" height="20" fill="rgba(11,33,68,0.46)"/><rect x="74" y="30" width="20" height="20" fill="rgba(11,33,68,0.78)"/><rect x="98" y="30" width="20" height="20" fill="rgba(11,33,68,0.22)"/><rect x="122" y="30" width="20" height="20" fill="rgba(11,33,68,0.30)"/><rect x="146" y="30" width="20" height="20" fill="rgba(11,33,68,0.62)"/><rect x="170" y="30" width="20" height="20" fill="rgba(11,33,68,0.88)"/><rect x="194" y="30" width="20" height="20" fill="rgba(11,33,68,0.58)"/><rect x="218" y="30" width="20" height="20" fill="rgba(11,33,68,0.44)"/><rect x="2" y="56" width="20" height="20" fill="rgba(11,33,68,0.90)"/><rect x="26" y="56" width="20" height="20" fill="rgba(11,33,68,0.16)"/><rect x="50" y="56" width="20" height="20" fill="rgba(11,33,68,0.81)"/><rect x="74" y="56" width="20" height="20" fill="rgba(11,33,68,0.35)"/><rect x="98" y="56" width="20" height="20" fill="rgba(11,33,68,0.24)"/><rect x="122" y="56" width="20" height="20" fill="rgba(11,33,68,0.21)"/><rect x="146" y="56" width="20" height="20" fill="#c5a05a"/><rect x="170" y="56" width="20" height="20" fill="rgba(11,33,68,0.77)"/><rect x="194" y="56" width="20" height="20" fill="rgba(11,33,68,0.26)"/><rect x="218" y="56" width="20" height="20" fill="rgba(11,33,68,0.59)"/><rect x="2" y="82" width="20" height="20" fill="rgba(11,33,68,0.63)"/><rect x="26" y="82" width="20" height="20" fill="rgba(11,33,68,0.42)"/><rect x="50" y="82" width="20" height="20" fill="rgba(11,33,68,0.56)"/><rect x="74" y="82" width="20" height="20" fill="rgba(11,33,68,0.17)"/><rect x="98" y="82" width="20" height="20" fill="rgba(11,33,68,0.17)"/><rect x="122" y="82" width="20" height="20" fill="rgba(11,33,68,0.28)"/><rect x="146" y="82" width="20" height="20" fill="rgba(11,33,68,0.66)"/><rect x="170" y="82" width="20" height="20" fill="rgba(11,33,68,0.46)"/><rect x="194" y="82" width="20" height="20" fill="rgba(11,33,68,0.37)"/><rect x="218" y="82" width="20" height="20" fill="rgba(11,33,68,0.59)"/></svg>
+        </article>
+        <article class="di">
+          <div>
+            <span class="mono">D · Restitution</span>
+            <h3>Reporting intelligent</h3>
+            <p>Rapports reliés à leurs sources, mis à jour et lisibles à chaque niveau de décision.</p>
+          </div>
+          <svg viewBox="0 0 240 110" class="mini" aria-hidden="true"><line x1="0" y1="100" x2="240" y2="100" stroke="rgba(11,33,68,.3)"/><rect x="6" y="62" width="14" height="38" fill="#0b2143"/><rect x="32" y="48" width="14" height="52" fill="#0b2143"/><rect x="58" y="56" width="14" height="44" fill="#0b2143"/><rect x="84" y="34" width="14" height="66" fill="#0b2143"/><rect x="110" y="42" width="14" height="58" fill="#0b2143"/><rect x="136" y="26" width="14" height="74" fill="#0b2143"/><rect x="162" y="38" width="14" height="62" fill="#0b2143"/><rect x="188" y="20" width="14" height="80" fill="#c5a05a"/><rect x="214" y="30" width="14" height="70" fill="#0b2143"/><line x1="0" y1="40" x2="240" y2="40" stroke="#c5a05a" stroke-dasharray="3 4"/></svg>
+        </article>
+      </div>
+      <div class="principle">
+        <span class="bar" aria-hidden="true"></span>
+        <blockquote>Pas d'indicateur sans définition. Pas de comparaison sans contexte. <em>Pas de conclusion sans données suffisamment fiables.</em></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 SYSTÈMES INTELLIGENTS -->
+  <section class="bg-sky gold-top" id="systemes-intelligents">
+    <span class="hatch navy" aria-hidden="true" style="right:48px;top:72px;"></span>
+    <div class="wrap">
+      <div class="sec-hd">
+        <div>
+          <span class="tag">Systèmes intelligents</span>
+          <h2>Le bon traitement. La bonne ressource. <span class="serif">Au bon moment.</span><span class="dot-mark" aria-hidden="true"></span></h2>
+        </div>
+        <p>Les systèmes intelligents organisent les flux d'information entre vos outils, orientent chaque traitement vers la ressource la plus adaptée et mesurent ce qu'ils produisent.</p>
+      </div>
+      <div class="flowchart" role="list" aria-label="Schéma de fonctionnement">
+        <div class="fc-node" role="listitem"><span class="mono">01 · Entrée</span><h3>Sources</h3><p>Applications, bases de données, capteurs et fichiers reliés via API.</p></div>
+        <div class="fc-arrow" aria-hidden="true"><span>→</span></div>
+        <div class="fc-node" role="listitem"><span class="mono">02 · Lecture</span><h3>Analyse</h3><p>Contrôle de qualité, normalisation et qualification des informations.</p></div>
+        <div class="fc-arrow" aria-hidden="true"><span>→</span></div>
+        <div class="fc-node core" role="listitem"><span class="mono">03 · Pilotage</span><h3>Orchestration</h3><p>Choix des traitements et des ressources selon la qualité, le délai et le coût.</p></div>
+        <div class="fc-arrow" aria-hidden="true"><span>→</span></div>
+        <div class="fc-node" role="listitem"><span class="mono">04 · Sortie</span><h3>Résultats</h3><p>Vues, rapports, alertes et historiques exploitables par les équipes.</p></div>
+      </div>
+      <ul class="principles">
+        <li><i>01</i>Connexion de systèmes via API</li>
+        <li><i>02</i>Automatisation de processus</li>
+        <li><i>03</i>Organisation des flux</li>
+        <li><i>04</i>Sélection dynamique des ressources</li>
+        <li><i>05</i>Suivi des temps de réponse</li>
+        <li><i>06</i>Mesure de la qualité des traitements</li>
+        <li><i>07</i>Maîtrise des coûts</li>
+        <li><i>08</i>Historisation des opérations</li>
+      </ul>
+      <p class="note">Chaque dispositif est conçu au cas par cas, selon vos systèmes existants et vos contraintes.</p>
+    </div>
+  </section>
+
+  <!-- 06 UNIVERS MÉTIERS -->
+  <section class="bg-white gold-top" id="univers">
+    <div class="wrap">
+      <div class="sec-hd">
+        <div>
+          <span class="tag">Univers métiers</span>
+          <h2>Des technologies adaptées à la <span class="serif">réalité du terrain</span><span class="dot-mark" aria-hidden="true"></span></h2>
+        </div>
+        <p>Six environnements où la donnée opérationnelle, les équipements et leurs dépendances gagnent à être rendus visibles et comparables.</p>
+      </div>
+      <div class="uni-grid">
+        <article class="uni">
+          <div class="idx">01</div>
+          <div>
+            <h3>Énergie &amp; Utilities</h3>
+            <div class="scope">Réseaux électriques · solaire · éolien · sous-stations · distribution</div>
+            <p>Représentation des actifs de production et de distribution, de leurs états et de leurs dépendances. Une vision consolidée pour prioriser la maintenance et comparer les performances entre sites.</p>
+          </div>
+        </article>
+        <article class="uni">
+          <div class="idx">02</div>
+          <div>
+            <h3>Data Centers &amp; IT</h3>
+            <div class="scope">Serveurs · racks · réseaux · énergie · refroidissement · dépendances</div>
+            <p>Visualisation des salles, des équipements et des chaînes d'alimentation et de refroidissement. Les impacts d'une intervention ou d'une panne deviennent lisibles avant d'agir.</p>
+          </div>
+        </article>
+        <article class="uni">
+          <div class="idx">03</div>
+          <div>
+            <h3>Industrie &amp; Production</h3>
+            <div class="scope">Machines · robots · capteurs · convoyeurs · lignes de production</div>
+            <p>Supervision des lignes, des machines et des capteurs dans une même interface. Les arrêts, les écarts de cadence et les besoins de maintenance sont identifiés plus tôt.</p>
+          </div>
+        </article>
+        <article class="uni">
+          <div class="idx">04</div>
+          <div>
+            <h3>Télécommunications</h3>
+            <div class="scope">Topologies réseau · équipements connectés · infrastructures · interventions</div>
+            <p>Topologies et équipements représentés avec leurs relations et leurs états. Les équipes préparent leurs interventions techniques avec une vue claire des dépendances.</p>
+          </div>
+        </article>
+        <article class="uni">
+          <div class="idx">05</div>
+          <div>
+            <h3>Logistique &amp; Supply Chain</h3>
+            <div class="scope">Entrepôts · plateformes · flux · équipements · performance</div>
+            <p>Lecture des flux, des équipements et des zones d'un site ou d'un réseau de sites. Les indicateurs opérationnels deviennent comparables et reliés à leur contexte physique.</p>
+          </div>
+        </article>
+        <article class="uni">
+          <div class="idx">06</div>
+          <div>
+            <h3>Infrastructures &amp; Services techniques</h3>
+            <div class="scope">Bâtiments complexes · réseaux techniques · multi-sites · maintenance</div>
+            <p>Centralisation des réseaux techniques, des équipements et de leur historique de maintenance. Une base commune pour piloter plusieurs sites et documenter les décisions.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 FONCTIONS MÉTIERS -->
+  <section class="bg-navy on-navy gold-top" id="fonctions">
+    <span class="ring" aria-hidden="true" style="width:420px;height:420px;right:-140px;top:-150px;"></span>
+    <span class="hatch" aria-hidden="true" style="right:48px;top:112px;"></span>
+    <div class="wrap">
+      <div class="sec-hd">
+        <div>
+          <span class="tag">Fonctions métiers</span>
+          <h2>Pensé pour celles et ceux qui <span class="serif">pilotent les opérations</span><span class="dot-mark" aria-hidden="true"></span></h2>
+        </div>
+      </div>
+      <div class="role-head" aria-hidden="true"><span>Fonction</span><span>Besoin opérationnel</span><span>Contribution Hudson Technologies</span></div>
+      <div class="roles">
+        <article class="role">
+          <h3>Direction générale et direction des opérations</h3>
+          <p><span class="lbl">Besoin</span>Disposer d'une vision consolidée et fiable de l'activité, au-delà des remontées partielles.</p>
+          <p><span class="lbl">Contribution</span>Des tableaux de pilotage reliés aux données de terrain et comparables d'un site à l'autre.</p>
+        </article>
+        <article class="role">
+          <h3>Direction des systèmes d'information</h3>
+          <p><span class="lbl">Besoin</span>Connecter des systèmes hétérogènes sans multiplier les outils ni fragiliser l'existant.</p>
+          <p><span class="lbl">Contribution</span>Des intégrations par API, des référentiels de données communs et des architectures modulaires.</p>
+        </article>
+        <article class="role">
+          <h3>Direction industrielle et responsables de production</h3>
+          <p><span class="lbl">Besoin</span>Comprendre les écarts de performance des lignes et des équipements.</p>
+          <p><span class="lbl">Contribution</span>Des indicateurs de production contextualisés et une représentation visuelle des installations.</p>
+        </article>
+        <article class="role">
+          <h3>Responsables maintenance et équipes techniques</h3>
+          <p><span class="lbl">Besoin</span>Anticiper les interventions et mesurer leurs impacts sur le reste de l'installation.</p>
+          <p><span class="lbl">Contribution</span>Des jumeaux numériques présentant les états, les dépendances et l'historique des équipements.</p>
+        </article>
+        <article class="role">
+          <h3>Responsables data et performance</h3>
+          <p><span class="lbl">Besoin</span>Fiabiliser les données et harmoniser la définition des indicateurs.</p>
+          <p><span class="lbl">Contribution</span>Des règles de traitement documentées, une traçabilité des sources et des benchmarks comparables.</p>
+        </article>
+        <article class="role">
+          <h3>Chefs de projet et bureaux d'études</h3>
+          <p><span class="lbl">Besoin</span>Comparer plusieurs configurations avant d'arrêter un choix technique.</p>
+          <p><span class="lbl">Contribution</span>Des modèles numériques et des simulations de scénarios pour éclairer les arbitrages.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 MÉTHODOLOGIE -->
+  <section class="bg-paper" id="methodologie">
+    <div class="wrap">
+      <div class="sec-hd">
+        <div>
+          <span class="tag">Méthodologie</span>
+          <h2>Partir du métier. <span class="serif">Construire autour de la donnée.</span><span class="dot-mark" aria-hidden="true"></span></h2>
+        </div>
+      </div>
+      <div class="method">
+        <article class="m-step"><div class="big">01</div><h3>Comprendre</h3><p>Identifier les processus, les outils existants, les données et les décisions à améliorer.</p></article>
+        <article class="m-step"><div class="big">02</div><h3>Structurer</h3><p>Définir les sources, les indicateurs, les règles de traitement et les intégrations.</p></article>
+        <article class="m-step"><div class="big">03</div><h3>Développer</h3><p>Concevoir les interfaces, les modèles numériques et les systèmes adaptés aux métiers.</p></article>
+        <article class="m-step"><div class="big">04</div><h3>Déployer</h3><p>Intégrer les solutions, accompagner les utilisateurs et organiser les évolutions.</p></article>
+      </div>
+      <div class="bespoke">
+        <span class="mono">Sur mesure</span>
+        <p>Les solutions Hudson Technologies sont développées sur mesure, à partir de vos données, de vos outils et de vos processus existants. Chaque projet commence par un cadrage commun du périmètre et des priorités.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 VALEUR AJOUTÉE -->
+  <section class="bg-sky gold-top" id="valeur">
+    <span class="ring" aria-hidden="true" style="width:520px;height:520px;left:-300px;bottom:-300px;border-color:rgba(11,33,68,.12);"></span>
+    <div class="wrap">
+      <div class="sec-hd">
+        <div>
+          <span class="tag">Valeur ajoutée</span>
+          <h2>Moins de complexité. <span class="serif">Plus de visibilité.</span><span class="dot-mark" aria-hidden="true"></span></h2>
+        </div>
+      </div>
+      <div class="values">
+        <article class="value"><span class="mono">01</span><h3>Information centralisée</h3><p>Les données utiles sont réunies dans un environnement unique et documenté.</p></article>
+        <article class="value"><span class="mono">02</span><h3>Opérations plus lisibles</h3><p>Les états, les flux et les dépendances deviennent visibles pour chaque équipe.</p></article>
+        <article class="value"><span class="mono">03</span><h3>Analyses comparables</h3><p>Des indicateurs définis de la même manière, d'un site ou d'une période à l'autre.</p></article>
+        <article class="value"><span class="mono">04</span><h3>Réduction des traitements manuels</h3><p>Les tâches répétitives de collecte et de consolidation sont automatisées.</p></article>
+        <article class="value"><span class="mono">05</span><h3>Décisions mieux documentées</h3><p>Chaque arbitrage peut s'appuyer sur des données traçables et datées.</p></article>
+        <article class="value"><span class="mono">06</span><h3>Technologies modulaires et évolutives</h3><p>Les solutions s'intègrent à l'existant et évoluent avec vos besoins.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 CONTACT -->
+  <section class="bg-navy on-navy contact gold-top" id="contact">
+    <span class="ring r1" aria-hidden="true"></span>
+    <span class="ring r2" aria-hidden="true"></span>
+    <div class="wrap">
+      <span class="tag">Contact</span>
+      <h2>Vos données ont une structure. <span class="serif">Donnons-leur une perspective.</span><span class="dot-mark" aria-hidden="true"></span></h2>
+      <div class="contact-grid">
+        <div>
+          <p class="lead">Analyse de données, benchmarks, jumeaux numériques et systèmes intelligents.</p>
+          <p>Hudson Technologies développe des solutions permettant aux organisations de comprendre leurs infrastructures, de visualiser leurs opérations et d'améliorer leur capacité de décision.</p>
+        </div>
+        <a class="btn btn-gold" href="mailto:cyril.ragonet@gmail.com?subject=Hudson%20Technologies%20-%20Demande%20d%27information">Contacter Hudson Technologies</a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- 11 FOOTER -->
+  <footer>
+    <span class="ring r1" aria-hidden="true"></span>
+    <div class="wrap">
+      <div class="foot-sign" aria-hidden="true">hudson<span>.</span></div>
+      <div class="foot-main">
+        <div class="foot-col">
+          <div class="foot-title">Hudson Business Development</div>
+          <div class="foot-about"><strong>Hudson Technologies Hub</strong> est la division Data &amp; IT de Hudson, aux côtés de Hudson Healthcare et de Hudson Airports Solutions.</div>
+        </div>
+        <div class="foot-col">
+          <div class="foot-title">Divisions</div>
+          <div class="foot-text"><a href="/agent-ia-prospection-pharma">Hudson Healthcare</a></div>
+          <div class="foot-text"><a href="/dataforce" aria-current="page">Hudson Technologies Hub</a></div>
+          <div class="foot-text"><a href="/#airports">Hudson Airports Solutions</a><span class="yr">2027</span></div>
+        </div>
+        <div class="foot-col">
+          <div class="foot-title">Ressources</div>
+          <div class="foot-text"><a href="/">Accueil Hudson</a></div>
+          <div class="foot-text"><a href="https://hudson-ltd.com/philosophie">Philosophie Hudson</a></div>
+          <div class="foot-text"><a href="/intelligence-hub" class="f-accent">→ INTELLIGENCE HUB</a></div>
+        </div>
+        <div class="foot-col">
+          <div class="foot-title">Coordonnées</div>
+          <div class="foot-text">Aix en Provence</div>
+          <div class="foot-text"><a href="mailto:cyril.ragonet@gmail.com">cyril.ragonet@gmail.com</a></div>
+          <div class="foot-text"><a href="tel:+33695368383">06 95 36 83 83</a></div>
+          <div class="foot-text"><a href="https://www.linkedin.com/in/cyril-r-74102a102/" class="f-gold">LinkedIn</a></div>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© 2026 Hudson Ltd · Tous droits réservés</span>
+        <span>
+          <a href="/mentions-legales">Mentions légales</a> ·
+          <a href="/plan">Plan du site</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Dataforce · Hudson Technologies Hub",
+    "url": "https://hudson-ltd.com/dataforce",
+    "description": "Hudson Technologies Hub, division Data & IT de Hudson Business Development : data engineering, analytics et benchmarks, jumeaux numériques et systèmes intelligents.",
+    "inLanguage": "fr-FR",
+    "isPartOf": { "@type": "WebSite", "name": "Hudson Business Development", "url": "https://hudson-ltd.com/" },
+    "about": {
+      "@type": "Organization",
+      "name": "Hudson Technologies Hub",
+      "parentOrganization": { "@type": "Organization", "name": "Hudson Business Development", "url": "https://hudson-ltd.com/" },
+      "knowsAbout": ["Data engineering", "Data analytics", "Benchmark", "Intelligence économique", "Jumeaux numériques", "Systèmes intelligents"]
+    }
+  }
+  </script>
+</body>
+</html>
