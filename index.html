@@ -12,24 +12,24 @@
   })(window,document,'script','dataLayer','GTM-5PF6FCCW');</script>
   <!-- End Google Tag Manager -->
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-S2912LSCRX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-S2912LSCRX');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S2912LSCRX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S2912LSCRX');
+  </script>
 
   <!-- META PRINCIPALES SEO -->
-  <title>Business Developers externalisés | SDR, closers, téléprospection B2B | Hudson</title>
-  <meta name="description" content="Hudson vous aide à recruter un business developer externalisé, lancer une campagne de téléprospection B2B et générer des rendez-vous qualifiés sans recruter en interne. SDR, closers, account execs à la demande.">
+  <title>Hudson Business Development | Healthcare, Technologies, Airports Solutions</title>
+  <meta name="description" content="Hudson met en place des solutions pour développer les marques, de la data à la prise de rendez-vous : détection de signaux faibles et forts, constitution d'un pipeline qualifié sur mesure. Trois pôles : Hudson Healthcare, Hudson Technologies, Hudson Airports Solutions.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://hudson-ltd.com/">
-    <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="favicon.png">
 
   <!-- META SOCIALES -->
-  <meta property="og:title" content="Business Developers externalisés | SDR, closers & téléprospection B2B | Hudson">
-  <meta property="og:description" content="Lancez une campagne de prospection B2B avec des business developers externalisés : SDR, closers, RDV qualifiés.">
+  <meta property="og:title" content="Hudson Business Development | Healthcare, Technologies, Airports Solutions">
+  <meta property="og:description" content="Développer les marques, de la data à la prise de rendez-vous.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hudson-ltd.com/">
   <meta property="og:image" content="https://hudson-ltd.com/og-cover.jpg">
@@ -90,7 +90,7 @@
     }
     h2.on-dark { color: var(--white); }
 
-    /* NAVIGATION — header blanc, logo agrandi */
+    /* NAVIGATION : header blanc, logo agrandi */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 60;
       background: rgba(255,255,255,0.98);
@@ -104,29 +104,56 @@
     }
     @media (max-width: 720px) { .nav-in { padding: 0 22px; height: 80px; } }
 
-    /* Logo : image seule, agrandie */
-    .logo { display: flex; align-items: center; text-decoration: none; }
-    .logo img { height: 76px; width: auto; display: block; }
-    @media (max-width: 720px) { .logo img { height: 60px; } }
+    /* Bandeau supérieur */
+    .topbar { background: var(--ink); border-bottom: 1px solid rgba(201,162,74,0.25); }
+    .topbar-in {
+      max-width: 1140px; margin: 0 auto; padding: 0 48px; height: 36px;
+      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+      font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+    .topbar-in b { color: var(--gold); font-weight: 400; }
+    .topbar-poles { display: flex; gap: 22px; align-items: center; }
+    .topbar-poles a { color: rgba(255,255,255,0.62); text-decoration: none; transition: color .15s; }
+    .topbar-poles a:hover { color: var(--gold); }
+    .topbar-poles .sep { width: 1px; height: 12px; background: rgba(201,162,74,0.35); }
+    .topbar-poles .yr { color: var(--gold); margin-left: 4px; }
+    @media (max-width: 900px) { .topbar-left { display: none; } .topbar-in { justify-content: center; } }
+    @media (max-width: 720px) { .topbar-in { padding: 0 22px; } .topbar-poles .tel, .topbar-poles .sep.last { display: none; } }
+    @media (max-width: 560px) { .topbar { display: none; } }
+
+    .logo { display: flex; align-items: center; gap: 16px; text-decoration: none; }
+    .logo img { height: 64px; width: auto; display: block; }
+    .logo-txt { display: flex; flex-direction: column; line-height: 1; padding-left: 16px; border-left: 1px solid var(--gold-line); }
+    .logo-word { font-family: 'Bebas Neue', sans-serif; font-size: 34px; letter-spacing: 0.08em; color: var(--ink); }
+    .logo-word span { color: var(--gold); }
+    .logo-sub { font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-deep); margin-top: 4px; }
+    @media (max-width: 720px) { .logo img { height: 48px; } .logo-word { font-size: 28px; } .logo-txt { padding-left: 12px; } }
 
     .nav-links { display: flex; gap: 30px; list-style: none; align-items: center; }
-    .nav-links a { font-size: 12.5px; color: var(--t-mid); text-decoration: none; transition: color .18s; }
+    .nav-links a {
+      font-size: 12.5px; color: var(--t-mid); text-decoration: none; transition: color .18s;
+      letter-spacing: 0.04em; position: relative; padding: 6px 0;
+    }
+    .nav-links a:not(.nav-cta)::after {
+      content: ''; position: absolute; left: 0; bottom: 0; width: 0; height: 1px;
+      background: var(--gold); transition: width .2s;
+    }
+    .nav-links a:not(.nav-cta):hover::after { width: 100%; }
     .nav-links a:hover { color: var(--ink); }
     .nav-cta {
       background: var(--ink); color: var(--white) !important;
-      padding: 11px 22px; font-size: 12.5px !important; font-weight: 500 !important;
+      padding: 11px 22px !important; font-size: 12.5px !important; font-weight: 500 !important;
       letter-spacing: 0.07em; transition: background .2s !important;
     }
     .nav-cta:hover { background: var(--gold-deep) !important; color: var(--white) !important; }
     @media (max-width: 860px) { .nav-links { display: none; } }
 
-    /* HERO — fond solide bleu nuit pour éviter toute bande visible */
+    /* HERO */
     .hero {
-      padding: 176px 0 92px;
-      position: relative;
-      overflow: hidden;
-      background: #0a1f44;
-      min-height: 640px;
+      padding: 212px 0 92px;
+      position: relative; overflow: hidden;
+      background: #0a1f44; min-height: 640px;
     }
     .hero-video-bg {
       position: absolute; top: 0; left: 0;
@@ -172,7 +199,7 @@
 
     .hero-sub {
       font-size: 17px; font-weight: 300; line-height: 1.7;
-      color: rgba(255,255,255,0.58); max-width: 480px; margin-bottom: 42px;
+      color: rgba(255,255,255,0.58); max-width: 500px; margin-bottom: 42px;
       animation: up .6s ease both .34s;
     }
     .hero-sub strong { color: rgba(255,255,255,0.9); font-weight: 400; }
@@ -197,7 +224,6 @@
       align-items: center; gap: 10px;
     }
     .btn-s:hover { border-color: var(--gold); color: var(--white); }
-    .btn-s img { height: 28px; vertical-align: middle; }
 
     .h-panel {
       background: rgba(255,255,255,0.045);
@@ -214,16 +240,18 @@
       margin-bottom: 22px; padding-bottom: 14px;
       border-bottom: 1px solid rgba(201,162,74,0.22);
     }
-    .h-panel-list { display: flex; flex-direction: column; gap: 12px; }
+    .h-panel-list { display: flex; flex-direction: column; gap: 14px; }
     .h-panel-item {
-      display: flex; align-items: center; gap: 14px;
-      font-size: 13.5px; color: rgba(255,255,255,0.65); line-height: 1.4;
+      display: flex; align-items: flex-start; gap: 14px;
+      font-size: 13.5px; color: rgba(255,255,255,0.65); line-height: 1.45;
+      text-decoration: none; transition: color .2s;
     }
+    .h-panel-item:hover { color: rgba(255,255,255,0.9); }
     .h-panel-item::before {
-      content: '—'; color: var(--gold);
-      font-family: 'DM Mono', monospace; font-size: 11px; flex-shrink: 0;
+      content: attr(data-n); color: var(--gold);
+      font-family: 'DM Mono', monospace; font-size: 11px; flex-shrink: 0; padding-top: 2px;
     }
-    .h-panel-item strong { color: rgba(255,255,255,0.92); font-weight: 400; }
+    .h-panel-item strong { color: rgba(255,255,255,0.92); font-weight: 400; display: block; }
 
     @keyframes up { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
 
@@ -241,92 +269,11 @@
     .t-item::after { content: '·'; color: var(--gold); }
     @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-    /* PROBLEM */
-    .problem { padding: 96px 0; background: var(--page); border-bottom: 1px solid var(--border); }
-    .prob-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-    @media (max-width: 720px) { .prob-grid { grid-template-columns: 1fr; gap: 48px; } }
-
-    .prob-lead {
-      font-family: 'Instrument Serif', serif; font-size: 20px;
-      line-height: 1.6; color: var(--t-mid); margin-bottom: 30px;
-    }
-    .callout {
-      background: var(--ink); padding: 30px 34px; border-left: 3px solid var(--gold);
-    }
-    .callout-text {
-      font-size: 15px; color: rgba(255,255,255,0.72); line-height: 1.6;
-    }
-    .callout-text strong { color: var(--white); font-weight: 400; }
-
-    .prob-list { list-style: none; }
-    .prob-item {
-      display: flex; align-items: flex-start; gap: 16px;
-      padding: 20px 0; border-bottom: 1px solid var(--border);
-    }
-    .prob-item:last-child { border-bottom: none; }
-    .prob-n { font-family: 'DM Mono', monospace; font-size: 10.5px; color: var(--gold); letter-spacing: 0.1em; min-width: 26px; padding-top: 3px; }
-    .prob-t strong { display: block; font-size: 15px; font-weight: 500; color: var(--ink); margin-bottom: 3px; }
-    .prob-t span { font-size: 13.5px; color: var(--t-mid); line-height: 1.55; }
-
-    /* OFFERS */
-    .offers { padding: 96px 0; background: var(--ink); }
-    .offers-hd { margin-bottom: 56px; }
-    .offers-hd p { font-size: 16px; color: rgba(255,255,255,0.45); font-weight: 300; max-width: 480px; margin-top: 10px; }
-
-    .offers-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
-    @media (max-width: 720px) { .offers-grid { grid-template-columns: 1fr; } }
-
-    .o-card {
-      background: rgba(255,255,255,0.032); border: 1px solid rgba(255,255,255,0.07);
-      padding: 34px 30px; position: relative;
-      transition: background .2s, border-color .2s;
-    }
-    .o-card:hover { background: rgba(255,255,255,0.055); border-color: rgba(201,162,74,0.35); }
-    .o-card.feat { background: rgba(201,162,74,0.08); border-color: rgba(201,162,74,0.40); }
-    .o-card.feat:hover { background: rgba(201,162,74,0.13); }
-    .o-badge {
-      position: absolute; top: -1px; right: 18px;
-      background: var(--gold); color: var(--ink);
-      font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em;
-      padding: 4px 11px; text-transform: uppercase; font-weight: 500;
-    }
-    .o-idx { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.15em; color: rgba(255,255,255,0.28); margin-bottom: 12px; }
-    .o-title { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 0.04em; color: var(--white); margin-bottom: 5px; }
-    .o-tag { font-size: 13px; color: rgba(255,255,255,0.42); margin-bottom: 22px; line-height: 1.5; }
-    .o-price { font-family: 'Bebas Neue', sans-serif; font-size: 42px; color: var(--white); line-height: 1; }
-    .o-price em { font-size: 20px; font-style: normal; color: rgba(255,255,255,0.42); }
-    .o-pnote { font-size: 11.5px; color: rgba(255,255,255,0.3); margin: 3px 0 22px; }
-    .o-feats { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-    .o-feats li { font-size: 13px; color: rgba(255,255,255,0.55); display: flex; align-items: flex-start; gap: 9px; line-height: 1.45; }
-    .o-feats li::before { content: '→'; color: var(--gold); font-family: 'DM Mono', monospace; flex-shrink: 0; font-size: 10px; margin-top: 2px; }
-
-    /* MANIFESTO */
-    .manifesto {
-      padding: 72px 0 80px;
-      background: var(--page-alt);
-      border-bottom: 1px solid var(--border);
-      text-align: center;
-    }
-    .manifesto blockquote {
-      font-family: 'Instrument Serif', serif;
-      font-size: clamp(36px, 5vw, 64px);
-      line-height: 1.1;
-      color: var(--ink);
-      max-width: 820px;
-      margin: 0 auto 20px;
-      font-style: italic;
-    }
-    .manifesto blockquote em { color: var(--gold-deep); font-style: normal; }
-    .manifesto p {
-      font-size: 16px; color: var(--t-mid); font-weight: 300;
-      max-width: 500px; margin: 0 auto; line-height: 1.6;
-    }
-
-    /* PROCESS */
-    .process { padding: 96px 0; background: var(--page-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    /* ACTIVITÉ (style process) */
+    .process { padding: 96px 0; background: var(--page-alt); border-bottom: 1px solid var(--border); }
     .proc-hd { text-align: center; margin-bottom: 68px; }
     .proc-hd h2 { margin-top: 8px; margin-bottom: 12px; }
-    .proc-hd p { font-size: 15.5px; color: var(--t-mid); font-weight: 300; max-width: 460px; margin: 0 auto; line-height: 1.6; }
+    .proc-hd p { font-size: 15.5px; color: var(--t-mid); font-weight: 300; max-width: 520px; margin: 0 auto; line-height: 1.6; }
 
     .proc-steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; position: relative; }
     @media (max-width: 720px) { .proc-steps { grid-template-columns: 1fr 1fr; gap: 24px; } }
@@ -339,32 +286,42 @@
     @media (max-width: 720px) { .step:not(:last-child)::after { display: none; } }
 
     .step-n { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: var(--gold-deep); margin-bottom: 12px; }
-    .step-title { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 0.04em; color: var(--ink); margin-bottom: 6px; }
-    .step-d { font-size: 13px; color: var(--t-mid); line-height: 1.55; }
+    .step-title { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 0.04em; color: var(--ink); }
 
-    /* METHODE */
-    .method { padding: 96px 0; background: var(--ink); }
-    .method .tag.light { margin-bottom: 8px; }
-    .method h2.on-dark { margin-bottom: 48px; }
+    /* PÔLES (style offers) */
+    .offers { padding: 96px 0; background: var(--ink); }
+    .offers-hd { margin-bottom: 56px; }
+    .offers-hd p { font-size: 16px; color: rgba(255,255,255,0.45); font-weight: 300; max-width: 480px; margin-top: 10px; }
 
-    .method-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
-    @media (max-width: 720px) { .method-grid { grid-template-columns: 1fr; } }
+    .offers-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+    @media (max-width: 720px) { .offers-grid { grid-template-columns: 1fr; } }
 
-    .mc {
-      background: rgba(255,255,255,0.038);
-      border: 1px solid rgba(255,255,255,0.07);
-      padding: 34px 30px;
-      transition: border-color .2s;
+    .o-card {
+      background: rgba(255,255,255,0.032); border: 1px solid rgba(255,255,255,0.07);
+      padding: 34px 30px; position: relative; display: flex; flex-direction: column;
+      transition: background .2s, border-color .2s;
     }
-    .mc:hover { border-color: rgba(201,162,74,0.30); }
-    .mc-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
-    .mc-title { font-family: 'Bebas Neue', sans-serif; font-size: 24px; letter-spacing: 0.04em; color: var(--white); margin-bottom: 6px; }
-    .mc-desc { font-size: 13px; color: rgba(255,255,255,0.52); line-height: 1.5; margin-bottom: 12px; }
-    .mc-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
-    .mc-list li { font-size: 13px; color: rgba(255,255,255,0.48); display: flex; align-items: center; gap: 8px; }
-    .mc-list li::before { content: '—'; color: var(--gold); font-family: 'DM Mono', monospace; }
+    .o-card:hover { background: rgba(255,255,255,0.055); border-color: rgba(201,162,74,0.35); }
+    .o-badge {
+      position: absolute; top: -1px; right: 18px;
+      background: var(--gold); color: var(--ink);
+      font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em;
+      padding: 4px 11px; text-transform: uppercase; font-weight: 500;
+    }
+    .o-idx { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.15em; color: rgba(255,255,255,0.28); margin-bottom: 12px; }
+    .o-title { font-family: 'Bebas Neue', sans-serif; font-size: 30px; letter-spacing: 0.04em; color: var(--white); margin-bottom: 5px; }
+    .o-tag { font-size: 13px; color: rgba(255,255,255,0.42); margin-bottom: 22px; line-height: 1.5; }
+    .o-feats { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
+    .o-feats li { font-size: 13px; color: rgba(255,255,255,0.55); display: flex; align-items: flex-start; gap: 9px; line-height: 1.45; }
+    .o-feats li::before { content: '→'; color: var(--gold); font-family: 'DM Mono', monospace; flex-shrink: 0; font-size: 10px; margin-top: 2px; }
+    .o-link {
+      margin-top: auto; font-family: 'DM Mono', monospace; font-size: 10.5px;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold);
+      text-decoration: none; transition: color .2s;
+    }
+    .o-link:hover { color: var(--white); }
 
-    /* DIVISION HEALTHCARE */
+    /* HUDSON HEALTHCARE */
     .healthcare { padding: 80px 0 96px; background: var(--page); border-bottom: 1px solid var(--border); }
     .healthcare-grid { display: grid; grid-template-columns: 42% 1fr; gap: 56px; align-items: center; }
     @media (max-width: 720px) { .healthcare-grid { grid-template-columns: 1fr; gap: 32px; } }
@@ -375,162 +332,114 @@
       font-size: 15.5px; color: var(--t-mid); line-height: 1.7;
       margin-bottom: 18px; font-weight: 300;
     }
-    .hc-pillars { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 24px; }
-    .hc-pillars span { font-size: 12px; color: var(--t-mid); font-weight: 400; letter-spacing: 0.02em; }
-    .hc-pillars span::before { content: '— '; color: var(--gold); }
     .hc-univers {
       display: flex; flex-wrap: wrap; gap: 6px 12px;
-      margin-bottom: 20px; padding: 16px 18px;
-      background: var(--gold-soft);
-      border-radius: 8px;
+      margin-bottom: 24px; padding: 16px 18px;
+      background: var(--gold-soft); border-radius: 8px;
       border-left: 3px solid var(--gold);
     }
     .hc-univers span { font-size: 12px; color: var(--t-main); font-weight: 500; }
     .hc-univers span::before { content: '▪ '; color: var(--gold-deep); }
     .hc-btn {
-      display: inline-block;
-      background: var(--ink); color: var(--white);
+      display: inline-block; background: var(--ink); color: var(--white);
       padding: 14px 30px; font-size: 12.5px; font-weight: 500;
       letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none;
       transition: background .2s;
     }
     .hc-btn:hover { background: var(--gold-deep); }
 
-    /* NOUVELLE SECTION : INTERNATIONAL SALES */
+    /* PÔLES SOMBRES (Technologies / Airports) : style de l'ancienne section International */
     .intl {
       padding: 100px 0;
       background: linear-gradient(160deg, #0a1f44 0%, #0f2a56 55%, #0a1f44 100%);
-      position: relative;
-      overflow: hidden;
+      position: relative; overflow: hidden;
       border-bottom: 1px solid rgba(201,162,74,0.15);
     }
     .intl::before {
-      content: '';
-      position: absolute; top: -120px; right: -120px;
+      content: ''; position: absolute; top: -120px; right: -120px;
       width: 420px; height: 420px;
       background: radial-gradient(circle, rgba(201,162,74,0.14) 0%, transparent 70%);
       pointer-events: none;
     }
+    .intl.reverse::before { right: auto; left: -120px; }
+
+    /* Pôle 3 : airport.png en fond */
+    .intl.airport-bg {
+      background:
+        linear-gradient(160deg, rgba(10,31,68,0.92) 0%, rgba(15,42,86,0.82) 55%, rgba(10,31,68,0.92) 100%),
+        url('airport.png') center / cover no-repeat,
+        #0a1f44;
+    }
+    .intl.airport-bg .intl-visual { background: rgba(10,31,68,0.55); }
     .intl-grid {
       display: grid; grid-template-columns: 1.05fr 0.95fr;
       gap: 72px; align-items: center; position: relative; z-index: 1;
     }
-    @media (max-width: 900px) { .intl-grid { grid-template-columns: 1fr; gap: 48px; } }
+    .intl.reverse .intl-grid { grid-template-columns: 0.95fr 1.05fr; }
+    .intl.reverse .intl-visual { order: -1; }
+    @media (max-width: 900px) {
+      .intl-grid, .intl.reverse .intl-grid { grid-template-columns: 1fr; gap: 48px; }
+      .intl.reverse .intl-visual { order: 0; }
+    }
 
     .intl-content .tag { margin-bottom: 14px; }
-    .intl-content h2 {
-      font-size: clamp(38px, 4.4vw, 64px);
-      margin-bottom: 20px;
-    }
+    .intl-content h2 { font-size: clamp(38px, 4.4vw, 64px); margin-bottom: 20px; }
     .intl-desc {
       font-size: 16px; font-weight: 300; line-height: 1.75;
-      color: rgba(255,255,255,0.62);
-      max-width: 520px; margin-bottom: 28px;
+      color: rgba(255,255,255,0.62); max-width: 520px; margin-bottom: 28px;
     }
     .intl-desc strong { color: rgba(255,255,255,0.92); font-weight: 400; }
+    .intl-desc a { color: var(--blue-accent); text-decoration: none; }
 
-    .intl-markets {
-      display: flex; flex-wrap: wrap; gap: 8px;
-      margin-bottom: 28px;
-    }
-    .intl-markets span {
+    .intl-markets { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 34px; }
+    .intl-markets span, .intl-markets a {
       font-family: 'DM Mono', monospace;
       font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--gold);
-      border: 1px solid rgba(201,162,74,0.35);
-      padding: 7px 13px;
+      color: var(--gold); border: 1px solid rgba(201,162,74,0.35);
+      padding: 7px 13px; text-decoration: none;
       transition: background .2s, color .2s, border-color .2s;
     }
-    .intl-markets span:hover {
-      background: var(--gold); color: var(--ink); border-color: var(--gold);
-    }
-
-    .intl-feats {
-      list-style: none;
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 12px 24px;
-      margin-bottom: 34px;
-    }
-    @media (max-width: 560px) { .intl-feats { grid-template-columns: 1fr; } }
-    .intl-feats li {
-      font-size: 13.5px; color: rgba(255,255,255,0.72);
-      display: flex; align-items: flex-start; gap: 10px; line-height: 1.45;
-    }
-    .intl-feats li::before {
-      content: '◆'; color: var(--gold); font-size: 8px; margin-top: 5px; flex-shrink: 0;
-    }
+    .intl-markets span:hover, .intl-markets a:hover { background: var(--gold); color: var(--ink); border-color: var(--gold); }
 
     .btn-gold {
       display: inline-flex; align-items: center; gap: 10px;
       background: var(--gold); color: var(--ink);
       padding: 15px 30px; font-size: 13px; font-weight: 500;
       letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none;
-      transition: background .2s, transform .15s;
-      border: 1px solid var(--gold);
+      transition: background .2s, transform .15s; border: 1px solid var(--gold);
     }
     .btn-gold:hover { background: #d8b45e; transform: translateY(-1px); }
 
     .intl-visual {
       background: rgba(255,255,255,0.035);
       border: 1px solid rgba(201,162,74,0.20);
-      padding: 36px 34px;
-      position: relative;
+      padding: 36px 34px; position: relative;
     }
     .intl-visual::before {
-      content: '';
-      position: absolute; top: 0; left: 0;
+      content: ''; position: absolute; top: 0; left: 0;
       width: 3px; height: 100%;
       background: linear-gradient(180deg, var(--gold), transparent);
     }
     .intl-visual-label {
       font-family: 'DM Mono', monospace; font-size: 9.5px;
-      letter-spacing: 0.20em; text-transform: uppercase;
-      color: var(--gold);
+      letter-spacing: 0.20em; text-transform: uppercase; color: var(--gold);
       padding-bottom: 16px; margin-bottom: 22px;
       border-bottom: 1px solid rgba(201,162,74,0.20);
     }
-    .intl-visual-list { display: flex; flex-direction: column; gap: 0; }
+    .intl-visual-list { display: flex; flex-direction: column; }
     .intl-row {
-      display: flex; justify-content: space-between; align-items: baseline;
-      padding: 14px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+      padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.06);
     }
     .intl-row:last-child { border-bottom: none; }
-    .intl-row-name {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 19px; letter-spacing: 0.06em;
-      color: var(--white);
-    }
+    .intl-row-name { font-family: 'Bebas Neue', sans-serif; font-size: 19px; letter-spacing: 0.06em; color: var(--white); }
     .intl-row-tag {
-      font-family: 'DM Mono', monospace;
-      font-size: 10px; letter-spacing: 0.10em;
-      color: rgba(255,255,255,0.38);
-      text-transform: uppercase;
+      font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.10em;
+      color: rgba(255,255,255,0.38); text-transform: uppercase; text-align: right;
     }
-    .intl-visual-foot {
-      margin-top: 24px; padding-top: 20px;
-      border-top: 1px solid rgba(201,162,74,0.20);
-      font-size: 12.5px; color: rgba(255,255,255,0.45);
-      line-height: 1.6;
-    }
-    .intl-visual-foot strong { color: var(--gold); font-weight: 400; }
-
-    /* TARGETS */
-    .targets { padding: 96px 0; background: var(--page-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .targ-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-    @media (max-width: 720px) { .targ-grid { grid-template-columns: 1fr; } }
-
-    .targ-list { display: flex; flex-direction: column; gap: 18px; margin-top: 20px; }
-    .targ-item { font-size: 16px; color: var(--t-mid); display: flex; align-items: flex-start; gap: 12px; line-height: 1.4; }
-    .targ-item strong { color: var(--ink); font-weight: 500; min-width: 110px; }
-    .targ-item span { color: var(--t-muted); }
-    .targ-item a { color: var(--gold-deep); text-decoration: underline; text-decoration-color: var(--gold); }
 
     /* CTA */
-    .cta {
-      padding: 96px 0; background: var(--page); text-align: center;
-      border-top: 1px solid var(--border);
-    }
+    .cta { padding: 96px 0; background: var(--page); text-align: center; border-top: 1px solid var(--border); }
     .cta h2 { margin-bottom: 12px; }
     .cta-sub { font-size: 17px; color: var(--t-mid); margin-bottom: 32px; font-weight: 300; }
 
@@ -568,17 +477,33 @@
 
   <!-- NAVIGATION -->
   <nav>
+    <div class="topbar">
+      <div class="topbar-in">
+        <span class="topbar-left"><b>Hudson</b> Business Development</span>
+        <span class="topbar-poles">
+          <a href="#healthcare">Healthcare</a>
+          <span class="sep"></span>
+          <a href="#technologies">Technologies</a>
+          <span class="sep"></span>
+          <a href="#airports">Airports Solutions<span class="yr">2027</span></a>
+          <span class="sep last"></span>
+          <a href="tel:+33695368383" class="tel">06 95 36 83 83</a>
+        </span>
+      </div>
+    </div>
     <div class="nav-in">
       <a href="/" class="logo">
         <img src="icon.png" alt="Hudson Business Development">
+        <span class="logo-txt">
+          <span class="logo-word">hudson<span>.</span></span>
+          <span class="logo-sub">Business Development</span>
+        </span>
       </a>
       <ul class="nav-links">
-        <li><a href="#solutions">Solutions</a></li>
-        <li><a href="#offres">Offres</a></li>
-        <li><a href="#international">International</a></li>
-        <li><a href="#process">Process</a></li>
-        <li><a href="#method">Méthode</a></li>
-        <li><a href="/contact" class="nav-cta">Démarrer →</a></li>
+        <li><a href="#activite">Activité</a></li>
+        <li><a href="#healthcare">Healthcare</a></li>
+        <li><a href="#technologies">Technologies</a></li>
+        <li><a href="#airports">Airports</a></li>
       </ul>
     </div>
   </nav>
@@ -592,23 +517,19 @@
     <div class="hero-content">
       <div class="hero-grid">
         <div>
-          <div class="h-eye"><b>Business developers externalisés</b> · France & Europe</div>
-          <h1>Le développement d'affaires à 360°<br><em>— de la data</em><br>aux détections de projets</h1>
-          <p class="hero-sub">Lancez une <strong>campagne B2B externalisée</strong> en 5 jours : nous recrutons, formons et gérons l'équipe commerciale.</p>
+          <div class="h-eye"><b>Hudson Business Development</b></div>
+          <h1>Développer les marques<br><em>de la data</em><br>à la prise de rendez-vous</h1>
+          <p class="hero-sub">Hudson met en place des solutions pour développer les marques : <strong>détection de signaux faibles et forts</strong>, constitution d'un <strong>pipeline qualifié sur mesure</strong>.</p>
           <div class="hero-btns">
-            <a href="https://hudson-ltd.com/comparateur" class="btn-p">Calculez le ROI d'une campagne</a>
-            <a href="https://campaign.hudson-ltd.com/" class="btn-s" target="_blank" rel="noopener noreferrer">
-              <img src="immo.png" alt="icone immobilier"> Synthèse de rendez-vous commercial
-            </a>
+            <a href="#activite" class="btn-p">Notre activité</a>
           </div>
         </div>
         <div class="h-panel">
-          <div class="h-panel-label">Ce que nous prenons en charge</div>
+          <div class="h-panel-label">Les 3 pôles Hudson</div>
           <div class="h-panel-list">
-            <div class="h-panel-item"><strong>Prospection</strong> — ciblage, approches multicanal</div>
-            <div class="h-panel-item"><strong>Qualification</strong> — identification des décideurs</div>
-            <div class="h-panel-item"><strong>Prise de rendez-vous</strong> — mise en relation qualifiée</div>
-            <div class="h-panel-item"><strong>Suivi commercial</strong> — relances et closing</div>
+            <a href="#healthcare" class="h-panel-item" data-n="01"><span><strong>Hudson Healthcare</strong>Produits pharmaceutiques & représentation de laboratoires</span></a>
+            <a href="#technologies" class="h-panel-item" data-n="02"><span><strong>Hudson Technologies</strong>Data & IT · agentique · jumeaux numériques</span></a>
+            <a href="#airports" class="h-panel-item" data-n="03"><span><strong>Hudson Airports Solutions</strong>Benchmark, veille, Hudson Naprooms · 2027</span></a>
           </div>
         </div>
       </div>
@@ -618,255 +539,168 @@
   <!-- TICKER -->
   <div class="ticker">
     <div class="t-track">
-      <span class="t-item">Healthcare</span><span class="t-item">SaaS</span>
-      <span class="t-item">Conseil</span><span class="t-item">Industrie</span><span class="t-item">Services B2B</span>
-      <span class="t-item">Healthcare</span><span class="t-item">SaaS</span>
-      <span class="t-item">Conseil</span><span class="t-item">Industrie</span><span class="t-item">Services B2B</span>
+      <span class="t-item">Data</span><span class="t-item">Signaux faibles</span><span class="t-item">Signaux forts</span>
+      <span class="t-item">Pipeline qualifié</span><span class="t-item">Prise de rendez-vous</span>
+      <span class="t-item">Data</span><span class="t-item">Signaux faibles</span><span class="t-item">Signaux forts</span>
+      <span class="t-item">Pipeline qualifié</span><span class="t-item">Prise de rendez-vous</span>
     </div>
   </div>
 
-  <!-- PROBLEM -->
-  <section class="problem" id="solutions">
-    <div class="wrap">
-      <span class="tag">Le problème</span>
-      <div class="prob-grid">
-        <div>
-          <p class="prob-lead">« Recruter, former et manager une équipe commerciale demande du temps avant même le premier rendez-vous généré. »</p>
-          <div class="callout">
-            <div class="callout-text"><strong>Un process long, coûteux et incertain.</strong> Chaque recrutement est un pari, chaque départ une perte de compétence et de temps.</div>
-          </div>
-        </div>
-        <ul class="prob-list">
-          <li class="prob-item"><span class="prob-n">01</span><div class="prob-t"><strong>Time‑to‑market trop long</strong><span>Vous perdez des opportunités pendant que vous recrutez.</span></div></li>
-          <li class="prob-item"><span class="prob-n">02</span><div class="prob-t"><a href='/comparateur' style='text-decoration: none; color: inherit;'><strong>Coût fixe et risques</strong></a><span>Salaire + charges + turnover pèsent sur votre structure.</span></div></li>
-          <li class="prob-item"><span class="prob-n">03</span><div class="prob-t"><strong>Difficulté à scaler</strong><span>Pas de flexibilité : vous ne pouvez pas doubler l'équipe du jour au lendemain.</span></div></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- OFFERS -->
-  <section class="offers" id="offres">
-    <div class="wrap offers-hd">
-      <span class="tag light">Nos solutions</span>
-      <h2 class="on-dark">Business developers <br>externalisés à la demande</h2>
-      <p>Vous choisissez le profil, la durée, et le volume d'activité.</p>
-    </div>
-    <div class="offers-grid">
-      <div class="o-card">
-        <div class="o-idx">· SDR</div>
-        <div class="o-title">Sales Development</div>
-        <div class="o-tag">Prospection entrante & sortante</div>
-        <div class="o-price">1 490 €<em>/mois</em></div>
-        <div class="o-pnote">engagement 3 mois</div>
-        <ul class="o-feats">
-          <li>Ouverture de comptes stratégiques</li>
-          <li>RDV qualifiés pour vos closers</li>
-          <li>Stack complète (Apollo, Lusha, Salesloft)</li>
-        </ul>
-      </div>
-      <div class="o-card feat">
-        <div class="o-badge">le + choisi</div>
-        <div class="o-idx">· CLOSER</div>
-        <div class="o-title">Account Executive</div>
-        <div class="o-tag">Négociation & signature</div>
-        <div class="o-price">2 490 €<em>/mois</em></div>
-        <div class="o-pnote">commission sur succès</div>
-        <ul class="o-feats">
-          <li>Demos avancées et gestion du cycle complet</li>
-          <li>Négociation et closing</li>
-          <li>Upsell / cross‑sell sur existing accounts</li>
-        </ul>
-      </div>
-      <div class="o-card">
-        <div class="o-idx">· CAMPAIGN</div>
-        <div class="o-title">Téléprospection B2B</div>
-        <div class="o-tag">Campagne clé en main</div>
-        <div class="o-price">4 990 €<em>/campagne</em></div>
-        <div class="o-pnote">forfait 3 mois</div>
-        <ul class="o-feats">
-          <li>Stratégie d'approche personnalisée</li>
-          <li>Calling, emailing, LinkedIn</li>
-          <li>Reporting hebdo et optimisation</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- MANIFESTO -->
-  <section class="manifesto">
-    <div class="wrap">
-      <blockquote>« Votre équipe commerciale, <em>sans construire</em> une équipe commerciale. »</blockquote>
-      <p>Hudson vous apporte la performance d'une force de vente dédiée, sans les contraintes de recrutement, de management ni de turnover.</p>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section class="process" id="process">
+  <!-- ACTIVITÉ -->
+  <section class="process" id="activite">
     <div class="wrap">
       <div class="proc-hd">
-        <span class="tag">Notre process</span>
-        <h2>Du brief aux premiers RDV</h2>
-        <p>Une <a href='/kpi-hudson' style='color: inherit; text-decoration: underline; text-decoration-color: var(--gold);'>méthodologie rodée</a> pour lancer votre campagne en 5 jours ouvrés.</p>
+        <span class="tag">L'activité Hudson</span>
+        <h2>De la data à la prise de rendez-vous</h2>
+        <p>Hudson met en place des solutions pour développer les marques.</p>
       </div>
       <div class="proc-steps">
         <div class="step">
           <div class="step-n">01</div>
-          <div class="step-title">Brief & personas</div>
-          <div class="step-d">On analyse votre ICP, votre offre et vos objections.</div>
+          <div class="step-title">Data</div>
         </div>
         <div class="step">
           <div class="step-n">02</div>
-          <div class="step-title">Sourcing des profils</div>
-          <div class="step-d">On sélectionne les SDR / closers adaptés à votre vertical.</div>
+          <div class="step-title">Signaux faibles & forts</div>
         </div>
         <div class="step">
           <div class="step-n">03</div>
-          <div class="step-title">Formation & outils</div>
-          <div class="step-d">Les experts Hudson montent en compétence sur votre produit.</div>
+          <div class="step-title">Pipeline qualifié sur mesure</div>
         </div>
         <div class="step">
           <div class="step-n">04</div>
-          <div class="step-title">Lancement & pilotage</div>
-          <div class="step-d">Campagne active, reporting quotidien, optimisation continue.</div>
+          <div class="step-title">Prise de rendez-vous</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- METHODE -->
-  <section class="method" id="method">
-    <div class="wrap">
-      <span class="tag light">Méthode Hudson</span>
-      <h2 class="on-dark">Ce que nous pilotons pour vous</h2>
+  <!-- LES 3 PÔLES -->
+  <section class="offers" id="poles">
+    <div class="wrap offers-hd">
+      <span class="tag light">Les pôles Hudson</span>
+      <h2 class="on-dark">Trois grands pôles</h2>
     </div>
-    <div class="method-grid">
-      <div class="mc">
-        <div class="mc-label">· Périmètre 1</div>
-        <div class="mc-title">Prospection</div>
-        <div class="mc-desc">Ciblage et approches multicanal</div>
-        <ul class="mc-list">
-          <li>Identification des décideurs</li>
-          <li>Appels, emailing, LinkedIn</li>
-        </ul>
-      </div>
-      <div class="mc">
-        <div class="mc-label">· Périmètre 2</div>
-        <div class="mc-title">Qualification</div>
-        <div class="mc-desc">Filtrage et priorisation</div>
-        <ul class="mc-list">
-          <li>Analyse des besoins</li>
-          <li>Mise en relation qualifiée</li>
-        </ul>
-      </div>
-      <div class="mc">
-        <div class="mc-label">· Périmètre 3</div>
-        <div class="mc-title">Suivi & closing</div>
-        <div class="mc-desc">Relances et négociation</div>
-        <ul class="mc-list">
-          <li>Gestion des objections</li>
-          <li>Reporting et optimisation</li>
-        </ul>
+    <div class="wrap">
+      <div class="offers-grid">
+        <div class="o-card">
+          <div class="o-idx">· PÔLE 01</div>
+          <div class="o-title">Hudson Healthcare</div>
+          <div class="o-tag">Développement des produits pharmaceutiques et représentation des laboratoires sur le marché français</div>
+          <ul class="o-feats">
+            <li>Médecins</li>
+            <li>Centres hospitaliers</li>
+            <li>Pharmacies</li>
+          </ul>
+          <a href="#healthcare" class="o-link">Voir le pôle →</a>
+        </div>
+        <div class="o-card">
+          <div class="o-idx">· PÔLE 02</div>
+          <div class="o-title">Hudson Technologies</div>
+          <div class="o-tag">Univers Data & IT</div>
+          <ul class="o-feats">
+            <li>Agentique</li>
+            <li>Jumeaux numériques</li>
+            <li>Nodes aopx.fr</li>
+          </ul>
+          <a href="#technologies" class="o-link">Voir le pôle →</a>
+        </div>
+        <div class="o-card">
+          <div class="o-badge">2027</div>
+          <div class="o-idx">· PÔLE 03</div>
+          <div class="o-title">Hudson Airports Solutions</div>
+          <div class="o-tag">Benchmark, veille et développement des Hudson Naprooms</div>
+          <ul class="o-feats">
+            <li>Benchmark</li>
+            <li>Veille</li>
+            <li>Hudson Naprooms</li>
+          </ul>
+          <a href="#airports" class="o-link">Voir le pôle →</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- DIVISION HEALTHCARE -->
-  <section class="healthcare">
+  <!-- PÔLE 01 : HUDSON HEALTHCARE -->
+  <section class="healthcare" id="healthcare">
     <div class="wrap">
       <div class="healthcare-grid">
-        <img src="pharma.png" alt="Hudson Division Healthcare" class="healthcare-image">
+        <img src="pharma.png" alt="Hudson Healthcare" class="healthcare-image">
         <div class="healthcare-content">
-          <span class="tag">Division Healthcare</span>
-          <h2>Développement commercial auprès du réseau officinal</h2>
-          <p class="hc-desc">Hudson accompagne les laboratoires, marques de santé et acteurs de l'OTC dans leur développement auprès des pharmacies françaises.</p>
+          <span class="tag">Pôle 01 · Hudson Healthcare</span>
+          <h2>Développement des produits pharmaceutiques</h2>
+          <p class="hc-desc">Hudson Healthcare assure le développement des produits pharmaceutiques et représente les laboratoires sur le marché français.</p>
 
           <div class="hc-univers">
-            <span>Cosmétique & dermocosmétique</span>
-            <span>Compléments alimentaires</span>
-            <span>Nutricosmétique</span>
-            <span>Génériques</span>
-            <span>Formation</span>
-            <span>Services aux officines</span>
-            <span>Merchandising</span>
-            <span>Optimisation du linéaire</span>
+            <span>Médecins</span>
+            <span>Centres hospitaliers</span>
+            <span>Pharmacies</span>
           </div>
 
-          <div class="hc-pillars">
-            <span>Ouverture de comptes</span>
-            <span>Présentation de gammes</span>
-            <span>Réassort</span>
-            <span>Lancements produits</span>
-            <span>Prise de rendez-vous</span>
-            <span>Suivi commercial</span>
-          </div>
-          <p class="hc-desc" style="font-size:14px;color:var(--t-muted);margin-bottom:24px;">Nos équipes peuvent intervenir à distance et en marque blanche pour renforcer ponctuellement ou durablement votre couverture commerciale auprès des officines.</p>
-          <a href="https://hudson-ltd.com/agent-ia-prospection-pharma" class="hc-btn">Découvrir la division Healthcare →</a>
+          <a href="https://hudson-ltd.com/agent-ia-prospection-pharma" class="hc-btn">Découvrir Hudson Healthcare →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- NOUVELLE DIVISION : INTERNATIONAL SALES -->
-  <section class="intl" id="international">
+  <!-- PÔLE 02 : HUDSON TECHNOLOGIES -->
+  <section class="intl" id="technologies">
     <div class="wrap">
       <div class="intl-grid">
         <div class="intl-content">
-          <span class="tag light">Division International Sales</span>
-          <h2 class="on-dark">Développement commercial en Amérique&nbsp;latine</h2>
+          <span class="tag light">Pôle 02 · Hudson Technologies</span>
+          <h2 class="on-dark">Univers Data &amp; IT</h2>
           <p class="intl-desc">
-            <strong>Hudson International Sales</strong> accompagne les entreprises françaises et européennes dans l'ouverture et la croissance de leurs marchés en Amérique latine : lead generation, market entry et représentation commerciale locale.
+            <strong>Hudson Technologies</strong> regroupe l'agentique, les jumeaux numériques et les nodes <a href="https://aopx.fr" target="_blank" rel="noopener noreferrer">aopx.fr</a>.
           </p>
 
           <div class="intl-markets">
-            <span>Mexico</span>
-            <span>Colombia</span>
-            <span>Peru</span>
-            <span>Chile</span>
-            <span>Dominican Republic</span>
-            <span>Central America</span>
+            <span>Data & IT</span>
+            <span>Agentique</span>
+            <span>Jumeaux numériques</span>
+            <a href="https://aopx.fr" target="_blank" rel="noopener noreferrer">aopx.fr</a>
           </div>
-
-          <ul class="intl-feats">
-            <li>Lead generation & qualification</li>
-            <li>Market entry support</li>
-            <li>Sales representation locale</li>
-            <li>LatAm business development</li>
-          </ul>
-
-          <a href="https://www.hudson-ltd.com/latam" class="btn-gold" target="_blank" rel="noopener noreferrer">Discutons de votre expansion →</a>
         </div>
 
         <div class="intl-visual">
-          <div class="intl-visual-label">Hudson International Sales — Marchés actifs</div>
+          <div class="intl-visual-label">Hudson Technologies</div>
           <div class="intl-visual-list">
-            <div class="intl-row"><span class="intl-row-name">Mexico</span><span class="intl-row-tag">Market entry</span></div>
-            <div class="intl-row"><span class="intl-row-name">Colombia</span><span class="intl-row-tag">BD & sales rep</span></div>
-            <div class="intl-row"><span class="intl-row-name">Peru</span><span class="intl-row-tag">Lead gen</span></div>
-            <div class="intl-row"><span class="intl-row-name">Chile</span><span class="intl-row-tag">Market entry</span></div>
-            <div class="intl-row"><span class="intl-row-name">Dominican Rep.</span><span class="intl-row-tag">Sales rep</span></div>
-            <div class="intl-row"><span class="intl-row-name">Central America</span><span class="intl-row-tag">BD support</span></div>
-          </div>
-          <div class="intl-visual-foot">
-            Positionnement : <strong>France • Espagne • LatAm</strong>. Intervention en marque blanche possible, sur mandat de représentation ou campagne dédiée.
+            <div class="intl-row"><span class="intl-row-name">Data & IT</span><span class="intl-row-tag">Univers</span></div>
+            <div class="intl-row"><span class="intl-row-name">Agentique</span><span class="intl-row-tag">Agents IA</span></div>
+            <div class="intl-row"><span class="intl-row-name">Jumeaux numériques</span><span class="intl-row-tag">Digital twin</span></div>
+            <div class="intl-row"><span class="intl-row-name">Nodes aopx.fr</span><span class="intl-row-tag">AOPX</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TARGETS -->
-  <section class="targets">
-    <div class="wrap targ-grid">
-      <div>
-        <span class="tag">Pour qui ?</span>
-        <h2>Une prospection téléphonique qui qualifie, étudie le marché, et fait remonter les tendances, signaux faibles et signaux forts</h2>
-      </div>
-      <div class="targ-list">
-        <div class="targ-item"><strong>Healthcare & laboratoires</strong> <span>Pharmacies, OTC, dermocosmétique, dispositifs médicaux</span></div>
-        <div class="targ-item"><strong>SaaS / Tech</strong> <span>Éditeurs de logiciels, plateformes</span></div>
-        <div class="targ-item"><strong>Conseil & services</strong> <span><a href="https://hudson-ltd.com/global" target="_blank">Voir la Global Optimization Database →</a> — Cabinet, agences</span></div>
-        <div class="targ-item"><strong>Industrie & Ingénierie</strong> <span>Fabricants et entreprises à cycles commerciaux structurés</span></div>
+  <!-- PÔLE 03 : HUDSON AIRPORTS SOLUTIONS -->
+  <section class="intl reverse airport-bg" id="airports">
+    <div class="wrap">
+      <div class="intl-grid">
+        <div class="intl-content">
+          <span class="tag light">Pôle 03 · Hudson Airports Solutions · 2027</span>
+          <h2 class="on-dark">Hudson Airports Solutions</h2>
+          <p class="intl-desc">
+            Benchmark, veille et développement des <strong>Hudson Naprooms</strong>.
+          </p>
+
+          <div class="intl-markets">
+            <span>Benchmark</span>
+            <span>Veille</span>
+            <span>Hudson Naprooms</span>
+          </div>
+        </div>
+
+        <div class="intl-visual">
+          <div class="intl-visual-label">Hudson Airports Solutions · 2027</div>
+          <div class="intl-visual-list">
+            <div class="intl-row"><span class="intl-row-name">Benchmark</span><span class="intl-row-tag">Aéroports</span></div>
+            <div class="intl-row"><span class="intl-row-name">Veille</span><span class="intl-row-tag">Aéroports</span></div>
+            <div class="intl-row"><span class="intl-row-name">Hudson Naprooms</span><span class="intl-row-tag">Développement</span></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -874,7 +708,7 @@
   <!-- CTA CONTACT -->
   <section class="cta" id="contact">
     <div class="wrap">
-      <span class="tag">Prêt à lancer votre campagne ?</span>
+      <span class="tag">Contact</span>
       <h2>Discutons de vos objectifs</h2>
       <p class="cta-sub">Réponse sous 24h ou appel immédiat.</p>
       <div class="powr-form-builder" id="97af3054_1773179127"></div>
@@ -901,6 +735,11 @@
               GROWTH ENGINE <span style="font-size:12px;">→</span>
             </a>
           </div>
+          <div class="foot-text">
+            <a href="https://aopx.fr" target="_blank" rel="noopener noreferrer" style="color:#38bdf8;text-decoration:none;font-family:'Bebas Neue',sans-serif;letter-spacing:.08em;display:inline-flex;align-items:center;gap:6px;">
+              AOPX.FR <span style="font-size:12px;">→</span>
+            </a>
+          </div>
         </div>
         <div class="foot-col">
           <div class="foot-title">Ressources</div>
@@ -908,6 +747,7 @@
           <div class="foot-text">Études de cas</div>
           <div class="foot-text"><a href="https://hudson-ltd.com/philosophie" style="color:inherit;text-decoration:none;">Philosophie Hudson</a></div>
           <div class="foot-text">FAQ</div>
+          <div class="foot-text"><a href="https://campaign.hudson-ltd.com/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;">Fiche Rendez-vous</a></div>
         </div>
         <div class="foot-col">
           <div class="foot-title">Coordonnées</div>
@@ -919,7 +759,7 @@
         </div>
       </div>
       <div class="foot-bottom">
-        <span>© 2026 Hudson Ltd — Tous droits réservés</span>
+        <span>© 2026 Hudson Ltd · Tous droits réservés</span>
         <span>
           <a href='/mentions-legales'>Mentions légales</a> ·
           <a href='/plan'>Plan du site</a>
@@ -933,14 +773,19 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Hudson",
+    "name": "Hudson Business Development",
     "url": "https://hudson-ltd.com/",
     "logo": "https://hudson-ltd.com/logo.png",
-    "description": "Externalisation commerciale : SDR, closers, téléprospection B2B.",
+    "description": "Hudson met en place des solutions pour développer les marques, de la data à la prise de rendez-vous : détection de signaux faibles et forts, constitution d'un pipeline qualifié sur mesure.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Aix en Provence, France"
-    }
+    },
+    "department": [
+      { "@type": "Organization", "name": "Hudson Healthcare", "description": "Développement des produits pharmaceutiques et représentation des laboratoires sur le marché français, auprès des médecins, centres hospitaliers et pharmacies." },
+      { "@type": "Organization", "name": "Hudson Technologies", "description": "Univers Data & IT, agentique, jumeaux numériques, nodes aopx.fr." },
+      { "@type": "Organization", "name": "Hudson Airports Solutions", "description": "Benchmark, veille et développement des Hudson Naprooms." }
+    ]
   }
   </script>
 </body>
