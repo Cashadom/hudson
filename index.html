@@ -122,22 +122,6 @@
       backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--line);
     }
-    .topbar { background: var(--navy); }
-    .topbar-in {
-      max-width: 1200px; margin: 0 auto; padding: 0 48px; height: 36px;
-      display: flex; align-items: center; justify-content: space-between; gap: 24px;
-      font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-    }
-    .topbar-in b { color: var(--gold); font-weight: 500; }
-    .topbar-poles { display: flex; gap: 22px; align-items: center; }
-    .topbar-poles a { color: rgba(255,255,255,0.66); text-decoration: none; transition: color .15s; }
-    .topbar-poles a:hover { color: var(--gold); }
-    .topbar-poles .sep { width: 1px; height: 12px; background: rgba(197,160,90,0.4); }
-    .topbar-poles .yr { color: var(--gold); margin-left: 5px; }
-    .topbar-poles .tel { color: var(--white); }
-    @media (max-width: 900px) { .topbar-left { display: none; } .topbar-in { justify-content: center; } }
-    @media (max-width: 720px) { .topbar-in { padding: 0 22px; } .topbar-poles .pole, .topbar-poles .sep { display: none; } }
 
     .nav-in {
       max-width: 1200px; margin: 0 auto; padding: 0 48px;
@@ -165,7 +149,16 @@
     }
     .nav-links a:hover { color: var(--navy); }
     .nav-links a:hover::after { width: 100%; }
-    @media (max-width: 860px) { .nav-links { display: none; } }
+    /* Navigation maintenue accessible sur mobile, sans menu masqué */
+    @media (max-width: 860px) {
+      .nav-in { flex-wrap: wrap; height: auto; padding-top: 12px; padding-bottom: 0; }
+      .nav-links { width: 100%; justify-content: space-between; gap: 14px; padding: 14px 0 13px; border-top: 1px solid var(--line); margin-top: 12px; }
+      .nav-links a { font-size: 12px; white-space: nowrap; }
+    }
+    @media (max-width: 420px) {
+      .nav-links { gap: 7px; }
+      .nav-links a { font-size: 11px; }
+    }
 
     /* HERO : blanc, vidéo en arrière-plan très atténuée */
     .hero {
@@ -550,7 +543,6 @@
       .hc-visual .frame { inset: 13px -10px -13px 10px; }
     }
     @media (max-width: 420px) {
-      .topbar-in { font-size: 9px; }
       .logo { gap: 10px; }
       .logo-txt { padding-left: 11px; }
       .logo-word { font-size: 22px; }
@@ -603,6 +595,13 @@
     @media (prefers-reduced-motion: reduce) {
       .tech .panel-border-run::before { animation: none; }
     }
+
+    /* Finition du header Hudson, sans modifier les liens */
+    nav { border-bottom: 1px solid rgba(11,33,68,.11); }
+    .nav-links a:focus-visible, .logo:focus-visible { outline: 2px solid var(--gold); outline-offset: 5px; }
+    @media (min-width: 861px) { .nav-in { height: 88px; } }
+    @media (max-width: 860px) { .hero { padding-top: 190px; } }
+    @media (max-width: 720px) { .hero { padding-top: 182px; } }
   </style>
 </head>
 <body>
@@ -614,20 +613,6 @@
 
   <!-- NAVIGATION -->
   <nav>
-    <div class="topbar">
-      <div class="topbar-in">
-        <span class="topbar-left"><b>Hudson</b> Business Development</span>
-        <span class="topbar-poles">
-          <a href="#healthcare" class="pole">Healthcare</a>
-          <span class="sep"></span>
-          <a href="#technologies" class="pole">Technologies</a>
-          <span class="sep"></span>
-          <a href="#airports" class="pole">Airports Solutions<span class="yr">2027</span></a>
-          <span class="sep"></span>
-          <a href="tel:+33695368383" class="tel">06 95 36 83 83</a>
-        </span>
-      </div>
-    </div>
     <div class="nav-in">
       <a href="/" class="logo">
         <img src="icon.png" alt="Hudson Business Development" width="52" height="52">
