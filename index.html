@@ -676,6 +676,727 @@
     </div>
   </section>
 
+  <!-- HUDSON SEQUENCE -->
+  <div class="hud-seq-wrap">
+    <div class="hud-seq-stage" id="hudSeqStage">
+  
+      <!-- ÉTAPE 1 : LOADING -->
+      <div class="hud-loader" id="hudLoader">
+        <div class="hud-loader-names">
+          <span class="hud-name" id="hudName">John Doe</span>
+        </div>
+        <div class="hud-loader-pct" id="hudPct">0%</div>
+        <div class="hud-loader-bar"><div class="hud-loader-fill" id="hudFill"></div></div>
+      </div>
+  
+      <!-- ÉTAPE 2 : GRAPHES -->
+      <div class="hud-graphs" id="hudGraphs">
+        <div class="hud-graph" data-idx="1">
+          <div class="hud-graph-inner">
+            <span class="hud-bar" style="--h:38%; --i:0"></span>
+            <span class="hud-bar" style="--h:72%; --i:1"></span>
+            <span class="hud-bar" style="--h:52%; --i:2"></span>
+            <span class="hud-bar" style="--h:88%; --i:3"></span>
+            <span class="hud-bar" style="--h:44%; --i:4"></span>
+            <span class="hud-bar" style="--h:66%; --i:5"></span>
+            <span class="hud-bar" style="--h:30%; --i:6"></span>
+            <span class="hud-bar" style="--h:80%; --i:7"></span>
+            <span class="hud-bar" style="--h:58%; --i:8"></span>
+            <span class="hud-bar" style="--h:74%; --i:9"></span>
+            <span class="hud-bar" style="--h:40%; --i:10"></span>
+            <span class="hud-bar" style="--h:62%; --i:11"></span>
+          </div>
+          <div class="hud-graph-label">Pipeline</div>
+        </div>
+        <div class="hud-graph" data-idx="2">
+          <div class="hud-graph-inner">
+            <span class="hud-bar" style="--h:55%; --i:0"></span>
+            <span class="hud-bar" style="--h:32%; --i:1"></span>
+            <span class="hud-bar" style="--h:78%; --i:2"></span>
+            <span class="hud-bar" style="--h:48%; --i:3"></span>
+            <span class="hud-bar" style="--h:90%; --i:4"></span>
+            <span class="hud-bar" style="--h:36%; --i:5"></span>
+            <span class="hud-bar" style="--h:64%; --i:6"></span>
+            <span class="hud-bar" style="--h:42%; --i:7"></span>
+            <span class="hud-bar" style="--h:84%; --i:8"></span>
+            <span class="hud-bar" style="--h:50%; --i:9"></span>
+            <span class="hud-bar" style="--h:68%; --i:10"></span>
+            <span class="hud-bar" style="--h:28%; --i:11"></span>
+          </div>
+          <div class="hud-graph-label">Signaux</div>
+        </div>
+        <div class="hud-graph" data-idx="3">
+          <div class="hud-graph-inner">
+            <span class="hud-bar" style="--h:44%; --i:0"></span>
+            <span class="hud-bar" style="--h:60%; --i:1"></span>
+            <span class="hud-bar" style="--h:34%; --i:2"></span>
+            <span class="hud-bar" style="--h:92%; --i:3"></span>
+            <span class="hud-bar" style="--h:52%; --i:4"></span>
+            <span class="hud-bar" style="--h:70%; --i:5"></span>
+            <span class="hud-bar" style="--h:38%; --i:6"></span>
+            <span class="hud-bar" style="--h:76%; --i:7"></span>
+            <span class="hud-bar" style="--h:48%; --i:8"></span>
+            <span class="hud-bar" style="--h:86%; --i:9"></span>
+            <span class="hud-bar" style="--h:56%; --i:10"></span>
+            <span class="hud-bar" style="--h:66%; --i:11"></span>
+          </div>
+          <div class="hud-graph-label">Conversion</div>
+        </div>
+      </div>
+  
+      <!-- ÉTAPE 3 : SIMULATION CONTACT -->
+      <div class="hud-sim" id="hudSim">
+        <div class="hud-sim-card hud-sim-email">
+          <div class="hud-sim-head">
+            <span class="hud-sim-dot"></span>
+            <span class="hud-sim-title">EMAIL · FIRST CONTACT</span>
+            <span class="hud-sim-status" id="emailStatus">composing</span>
+          </div>
+          <div class="hud-sim-body">
+            <div class="hud-sim-line"><span class="lbl">to</span><span class="val">mike.johnson@acme.io</span></div>
+            <div class="hud-sim-cursor-line">
+              <span class="val" id="emailBody"></span><span class="hud-cursor"></span>
+            </div>
+          </div>
+          <div class="hud-sim-progress"><span class="hud-sim-progress-fill" id="emailProgress"></span></div>
+        </div>
+  
+        <div class="hud-sim-card hud-sim-phone">
+          <div class="hud-sim-head">
+            <span class="hud-sim-dot"></span>
+            <span class="hud-sim-title">CALL · LIVE</span>
+            <span class="hud-sim-status" id="phoneStatus">dialing</span>
+          </div>
+          <div class="hud-sim-phone-body">
+            <div class="hud-wave">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="hud-sim-phone-time" id="phoneTime">00:00</div>
+          </div>
+          <div class="hud-sim-progress"><span class="hud-sim-progress-fill" id="phoneProgress"></span></div>
+        </div>
+      </div>
+  
+      <!-- ÉTAPE 4 : DÉCISION -->
+      <div class="hud-decide" id="hudDecide">
+        <div class="hud-choice" id="choiceValid">
+          <span class="hud-check">
+            <svg viewBox="0 0 12 10" width="12" height="10" aria-hidden="true">
+              <path d="M1 5 L4.5 8.5 L11 1" fill="none" stroke="#0b2143" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="hud-choice-label">Valider le rendez-vous</span>
+        </div>
+        <div class="hud-choice" id="choiceArchive">
+          <span class="hud-check">
+            <svg viewBox="0 0 12 10" width="12" height="10" aria-hidden="true">
+              <path d="M1 5 L4.5 8.5 L11 1" fill="none" stroke="#0b2143" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="hud-choice-label">Archiver le lead</span>
+        </div>
+      </div>
+  
+      <!-- ÉTAPE 5 : AGENDA -->
+      <div class="hud-agenda" id="hudAgenda">
+        <div class="hud-agenda-side">
+          <span class="hud-agenda-side-title"><span class="hud-agenda-side-dot"></span>AGENDA</span>
+          <span class="hud-agenda-side-week">SEPT · S38</span>
+        </div>
+        <div class="hud-agenda-main">
+          <span class="hud-agenda-title">SEMAINE · 15 → 19 SEPT</span>
+          <div class="hud-agenda-grid">
+            <div class="hud-dow">LUN<span class="hud-num">15</span></div>
+            <div class="hud-dow">MAR<span class="hud-num">16</span></div>
+            <div class="hud-dow">MER<span class="hud-num">17</span></div>
+            <div class="hud-dow hud-dow-target" id="dayTarget">JEU<span class="hud-num">18</span></div>
+            <div class="hud-dow">VEN<span class="hud-num">19</span></div>
+          </div>
+          <span class="hud-agenda-status" id="agendaStatus">booking…</span>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  
+  <style>
+  .hud-seq-wrap{
+    background: #fff;
+    padding: 32px 0 40px;
+    border-bottom: 1px solid rgba(197,160,90,.55);
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  }
+  .hud-seq-stage{
+    position: relative;
+    height: 56px;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 22px;
+  }
+  .hud-seq-stage > *{
+    position: absolute;
+    inset: 0;
+    margin: 0 22px;
+  }
+  
+  /* ---------- ÉTAPE 1 : LOADING ---------- */
+  .hud-loader{
+    display:flex; align-items:center; gap:20px;
+    background:#0b2143; border:1px solid rgba(197,160,90,.55);
+    padding:14px 22px;
+    transition:opacity .4s ease, transform .4s ease;
+    opacity:0; pointer-events:none;
+  }
+  .hud-loader.is-on{ opacity:1; pointer-events:auto; }
+  .hud-loader.is-out{ opacity:0; transform:scale(.96); pointer-events:none; }
+  .hud-loader-names{ flex:0 0 170px; position:relative; height:20px; overflow:hidden; }
+  .hud-name{
+    display:inline-block; font-size:11px; letter-spacing:.18em; text-transform:uppercase;
+    color:#c5a05a; opacity:0; animation:hudNameCycle .5s linear infinite; white-space:nowrap;
+  }
+  @keyframes hudNameCycle{
+    0%   { opacity:0; transform:translateY(6px); }
+    15%  { opacity:1; transform:translateY(0); }
+    70%  { opacity:1; transform:translateY(0); }
+    100% { opacity:0; transform:translateY(-6px); }
+  }
+  .hud-loader-pct{ flex:0 0 52px; text-align:right; font-size:12px; letter-spacing:.12em; color:#fff; }
+  .hud-loader-bar{ flex:1; height:2px; background:rgba(197,160,90,.2); overflow:hidden; position:relative; }
+  .hud-loader-fill{
+    position:absolute; inset:0;
+    background:linear-gradient(90deg, #9a7640, #c5a05a, #e8c68a, #c5a05a);
+    background-size:200% 100%; transform-origin:left; transform:scaleX(0);
+    animation:hudFillShine 2s linear infinite;
+  }
+  @keyframes hudFillShine{ from{background-position:0% 0;} to{background-position:-200% 0;} }
+  
+  /* ---------- ÉTAPE 2 : GRAPHES (sans boîtes, barres vivantes) ---------- */
+  .hud-graphs{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:24px;
+    height:56px; opacity:0; pointer-events:none;
+    transition:opacity .35s ease;
+    align-items:end;
+  }
+  .hud-graphs.is-on{ opacity:1; pointer-events:auto; }
+  
+  .hud-graph{
+    /* plus de boîte bleue : juste un conteneur invisible */
+    display:flex; flex-direction:column; gap:4px;
+    height:56px;
+    transform:scale(.7); opacity:0;
+    transition:transform .45s cubic-bezier(.2,.9,.3,1.2), opacity .35s ease;
+    background:transparent;
+    border:0;
+    padding:0;
+  }
+  .hud-graphs.is-on .hud-graph{ transform:scale(1); opacity:1; }
+  .hud-graphs.is-on .hud-graph[data-idx="1"]{ transition-delay:0s; }
+  .hud-graphs.is-on .hud-graph[data-idx="2"]{ transition-delay:.1s; }
+  .hud-graphs.is-on .hud-graph[data-idx="3"]{ transition-delay:.2s; }
+  
+  .hud-graph-inner{
+    display:flex; align-items:flex-end; justify-content:space-between;
+    gap:3px; flex:1; height:100%;
+  }
+  .hud-bar{
+    flex:0 0 3px; width:3px; height:var(--h);
+    background:linear-gradient(180deg, #f0d089, #c5a05a 55%, #8a6832);
+    border-radius:2px 2px 0 0;
+    box-shadow: 0 0 5px rgba(197,160,90,.7),
+                0 0 10px rgba(197,160,90,.35);
+    transform-origin:bottom;
+    transform:scaleY(0);
+    transition:transform .4s cubic-bezier(.2,.9,.3,1.2);
+    animation:hudBarBreathe 1.6s ease-in-out infinite;
+    animation-delay:calc(var(--i, 0) * .09s);
+    animation-play-state:paused;
+  }
+  .hud-graphs.is-on .hud-bar{
+    transform:scaleY(1);
+    animation-play-state:running;
+  }
+  
+  /* Léger va-et-vient, comme un vrai graphique qui respire */
+  @keyframes hudBarBreathe{
+    0%,100% { transform:scaleY(1); }
+    50%     { transform:scaleY(1.35); }
+  }
+  
+  .hud-graph .hud-bar:nth-child(1) { transition-delay:.06s; }
+  .hud-graph .hud-bar:nth-child(2) { transition-delay:.10s; }
+  .hud-graph .hud-bar:nth-child(3) { transition-delay:.14s; }
+  .hud-graph .hud-bar:nth-child(4) { transition-delay:.18s; }
+  .hud-graph .hud-bar:nth-child(5) { transition-delay:.22s; }
+  .hud-graph .hud-bar:nth-child(6) { transition-delay:.26s; }
+  .hud-graph .hud-bar:nth-child(7) { transition-delay:.30s; }
+  .hud-graph .hud-bar:nth-child(8) { transition-delay:.34s; }
+  .hud-graph .hud-bar:nth-child(9) { transition-delay:.38s; }
+  .hud-graph .hud-bar:nth-child(10){ transition-delay:.42s; }
+  .hud-graph .hud-bar:nth-child(11){ transition-delay:.46s; }
+  .hud-graph .hud-bar:nth-child(12){ transition-delay:.50s; }
+  
+  .hud-graph-label{
+    font-size:9px; letter-spacing:.16em; text-transform:uppercase;
+    color:#9a7640; white-space:nowrap; text-align:center;
+  }
+  .hud-bar.is-gone{
+    transform:scaleY(0) translateY(-4px) !important;
+    opacity:0;
+    transition:transform .25s ease, opacity .25s ease !important;
+    animation:none !important;
+  }
+  
+  /* ---------- ÉTAPE 3 : SIMULATION CONTACT ---------- */
+  .hud-sim{
+    display:grid; grid-template-columns:1.15fr .85fr;
+    gap:14px; height:56px; opacity:0; pointer-events:none;
+    transform:translateY(10px);
+    transition:opacity .4s ease, transform .4s ease;
+  }
+  .hud-sim.is-on{ opacity:1; pointer-events:auto; transform:translateY(0); }
+  
+  .hud-sim-card{
+    background:#0b2143; border:1px solid rgba(197,160,90,.45);
+    padding:6px 12px; position:relative; overflow:hidden;
+    display:flex; flex-direction:column; justify-content:center;
+    transform:scale(.85); opacity:0;
+    transition:transform .4s cubic-bezier(.2,.9,.3,1.2), opacity .35s ease;
+    height:56px;
+  }
+  .hud-sim.is-on .hud-sim-email{ transform:scale(1); opacity:1; }
+  .hud-sim.is-on .hud-sim-phone{ transform:scale(1); opacity:1; transition-delay:.1s; }
+  
+  .hud-sim-head{
+    display:flex; align-items:center; gap:8px;
+    font-size:9px; letter-spacing:.16em; text-transform:uppercase;
+    color:#c5a05a;
+  }
+  .hud-sim-dot{
+    width:5px; height:5px; background:#c5a05a; border-radius:50%;
+    box-shadow:0 0 6px rgba(197,160,90,.9);
+    animation:hudDotPulse 1.2s ease-in-out infinite;
+  }
+  @keyframes hudDotPulse{
+    0%,100%{ opacity:.4; transform:scale(.8); }
+    50%    { opacity:1; transform:scale(1.2); }
+  }
+  .hud-sim-title{ flex:1; }
+  .hud-sim-status{ color:rgba(255,255,255,.5); }
+  .hud-sim-status.live{ color:#8ec5ff; }
+  .hud-sim-status.done{ color:#9de29d; }
+  
+  .hud-sim-body{ display:flex; flex-direction:column; gap:1px; margin-top:4px; }
+  .hud-sim-line{
+    display:flex; gap:8px; align-items:baseline;
+    font-size:10px; letter-spacing:.04em; color:rgba(255,255,255,.7);
+  }
+  .hud-sim-line .lbl{ flex:0 0 24px; color:rgba(197,160,90,.7); font-size:9px; letter-spacing:.14em; text-transform:uppercase; }
+  .hud-sim-line .val{ color:rgba(255,255,255,.85); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .hud-sim-cursor-line{ font-size:10px; color:rgba(255,255,255,.75); min-height:12px; }
+  .hud-cursor{
+    display:inline-block; width:5px; height:10px; background:#c5a05a;
+    vertical-align:-1px; margin-left:2px;
+    animation:hudCursorBlink .5s steps(1,end) infinite;
+  }
+  @keyframes hudCursorBlink{ 0%,50%{opacity:1;} 51%,100%{opacity:0;} }
+  
+  .hud-sim-progress{
+    position:absolute; bottom:0; left:0; right:0; height:2px;
+    background:rgba(197,160,90,.15); overflow:hidden;
+  }
+  .hud-sim-progress-fill{
+    display:block; height:100%; width:0%;
+    background:linear-gradient(90deg, #9a7640, #c5a05a, #e8c68a);
+    transition:width .2s linear;
+  }
+  
+  .hud-sim-phone-body{ display:flex; align-items:center; gap:12px; }
+  .hud-wave{ display:flex; align-items:center; gap:2px; height:20px; }
+  .hud-wave span{
+    display:block; width:2px; background:linear-gradient(180deg,#f0d089,#c5a05a);
+    border-radius:2px; height:20%;
+    box-shadow:0 0 5px rgba(197,160,90,.55);
+    animation:hudWavePulse .9s ease-in-out infinite;
+  }
+  .hud-wave span:nth-child(1){ animation-delay:0s; }
+  .hud-wave span:nth-child(2){ animation-delay:.07s; }
+  .hud-wave span:nth-child(3){ animation-delay:.14s; }
+  .hud-wave span:nth-child(4){ animation-delay:.21s; }
+  .hud-wave span:nth-child(5){ animation-delay:.28s; }
+  .hud-wave span:nth-child(6){ animation-delay:.35s; }
+  .hud-wave span:nth-child(7){ animation-delay:.42s; }
+  .hud-wave span:nth-child(8){ animation-delay:.49s; }
+  .hud-wave span:nth-child(9){ animation-delay:.56s; }
+  .hud-wave span:nth-child(10){animation-delay:.63s; }
+  @keyframes hudWavePulse{
+    0%,100%{ height:20%; opacity:.4; }
+    50%    { height:100%; opacity:1; }
+  }
+  .hud-sim-phone-time{ font-size:11px; letter-spacing:.16em; color:#c5a05a; }
+  
+  /* ---------- ÉTAPE 4 : DÉCISION ---------- */
+  .hud-decide{
+    display:flex; align-items:center; justify-content:center; gap:14px;
+    height:56px; opacity:0; pointer-events:none;
+    transform:translateY(10px);
+    transition:opacity .4s ease, transform .4s ease;
+  }
+  .hud-decide.is-on{ opacity:1; pointer-events:auto; transform:translateY(0); }
+  
+  .hud-choice{
+    display:flex; align-items:center; gap:10px;
+    padding:14px 22px;
+    background:#0b2143; border:1px solid rgba(197,160,90,.45);
+    transition:border-color .3s, background .3s, transform .3s;
+    min-width:220px; justify-content:center;
+  }
+  .hud-check{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:16px; height:16px; flex:0 0 16px;
+    border:1px solid #c5a05a; background:transparent;
+    transition:background .25s, border-color .25s;
+  }
+  .hud-check svg{ opacity:0; transform:scale(.5); transition:opacity .25s, transform .25s; }
+  .hud-choice-label{
+    font-size:10.5px; letter-spacing:.16em; text-transform:uppercase;
+    color:rgba(255,255,255,.75);
+    transition:color .25s;
+  }
+  .hud-choice.is-checked{
+    border-color:#c5a05a; background:rgba(197,160,90,.1);
+    transform:translateY(-1px);
+  }
+  .hud-choice.is-checked .hud-check{
+    background:#c5a05a; border-color:#c5a05a;
+    box-shadow:0 0 10px rgba(197,160,90,.7);
+  }
+  .hud-choice.is-checked .hud-check svg{ opacity:1; transform:scale(1); }
+  .hud-choice.is-checked .hud-choice-label{ color:#c5a05a; }
+  .hud-choice.is-faded{ opacity:.25; }
+  
+  /* ---------- ÉTAPE 5 : AGENDA ---------- */
+  .hud-agenda{
+    display:grid; grid-template-columns:110px 1fr;
+    background:#0b2143; border:1px solid rgba(197,160,90,.45);
+    height:56px; overflow:hidden;
+    opacity:0; pointer-events:none;
+    transform:scale(.92) translateY(6px);
+    transition:opacity .4s ease, transform .4s cubic-bezier(.2,.9,.3,1.2);
+  }
+  .hud-agenda.is-on{ opacity:1; pointer-events:auto; transform:scale(1) translateY(0); }
+  
+  .hud-agenda-side{
+    display:flex; flex-direction:column; justify-content:center; gap:2px;
+    padding:6px 12px;
+    background:rgba(197,160,90,.08);
+    border-right:1px solid rgba(197,160,90,.35);
+  }
+  .hud-agenda-side-title{
+    font-size:9px; letter-spacing:.18em; text-transform:uppercase;
+    color:#c5a05a; display:flex; align-items:center; gap:6px;
+  }
+  .hud-agenda-side-dot{
+    width:5px; height:5px; background:#c5a05a; border-radius:50%;
+    box-shadow:0 0 6px rgba(197,160,90,.9);
+    animation:hudDotPulse 1.2s ease-in-out infinite;
+  }
+  .hud-agenda-side-week{
+    font-size:8px; letter-spacing:.14em; text-transform:uppercase;
+    color:rgba(255,255,255,.5);
+  }
+  
+  .hud-agenda-main{
+    display:flex; align-items:center; gap:14px;
+    padding:6px 14px;
+  }
+  .hud-agenda-title{
+    font-size:8.5px; letter-spacing:.16em; text-transform:uppercase;
+    color:rgba(255,255,255,.6); white-space:nowrap;
+  }
+  .hud-agenda-status{
+    font-size:8.5px; letter-spacing:.14em; text-transform:uppercase;
+    color:rgba(255,255,255,.5); white-space:nowrap;
+    margin-left:auto;
+  }
+  .hud-agenda-status.done{ color:#9de29d; }
+  
+  .hud-agenda-grid{
+    display:grid; grid-template-columns:repeat(5, 1fr);
+    gap:4px; flex:1;
+  }
+  .hud-dow{
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    padding:2px 4px; gap:0;
+    font-size:7.5px; letter-spacing:.12em; text-transform:uppercase;
+    color:rgba(255,255,255,.5);
+    background:rgba(255,255,255,.02);
+    border:1px solid rgba(255,255,255,.06);
+    transition:background .3s, border-color .3s, color .3s,
+               box-shadow .3s, transform .3s;
+    position:relative;
+    height:100%;
+  }
+  .hud-dow .hud-num{
+    font-family:'Archivo', sans-serif;
+    font-weight: 600; font-size:13px; line-height:1.1;
+    color:rgba(255,255,255,.85);
+    transition:color .3s;
+  }
+  .hud-dow-target{ border-color:rgba(197,160,90,.45); }
+  .hud-dow-target .hud-num{ color:#c5a05a; }
+  
+  .hud-dow.is-booked{
+    background:#c5a05a;
+    border-color:#f0d089;
+    color:#0b2143;
+    box-shadow:
+      0 0 10px rgba(197,160,90,.85),
+      0 0 20px rgba(197,160,90,.4);
+    transform:scale(1.06);
+  }
+  .hud-dow.is-booked .hud-num{ color:#0b2143; }
+  
+  @media (max-width:560px){
+    .hud-agenda{ grid-template-columns:1fr; grid-template-rows:auto 1fr; }
+    .hud-agenda-side{
+      flex-direction:row; align-items:center; gap:10px;
+      border-right:0; border-bottom:1px solid rgba(197,160,90,.35);
+    }
+    .hud-sim{ grid-template-columns:1fr; }
+  }
+  
+  /* HUDSON SEQUENCE : responsive / reduced motion, styles isolated */
+  @media (max-width: 640px) {
+    .hud-seq-wrap { padding: 20px 0 24px; }
+    .hud-seq-stage { height: 108px; padding: 0 14px; }
+    .hud-seq-stage > * { margin: 0 14px; }
+    .hud-loader { gap: 9px; padding: 12px; flex-wrap: wrap; align-content: center; }
+    .hud-loader-names { flex: 1 1 55%; min-width: 0; }
+    .hud-loader-pct { flex: 0 0 42px; }
+    .hud-loader-bar { flex: 1 0 100%; }
+    .hud-graphs { height: 108px; gap: 9px; align-items: center; }
+    .hud-graph { height: 70px; min-width: 0; }
+    .hud-graph-inner { gap: 2px; justify-content: center; }
+    .hud-bar { flex: 1 1 2px; min-width: 1px; max-width: 3px; }
+    .hud-graph-label { font-size: 8px; letter-spacing: .05em; }
+    .hud-sim { grid-template-columns: 1fr; grid-template-rows: 50px 50px; gap: 8px; height: 108px; }
+    .hud-sim-card { height: 50px; padding: 5px 10px; }
+    .hud-sim-head { font-size: 8px; gap: 5px; }
+    .hud-sim-body { margin-top: 2px; }
+    .hud-decide { height: 108px; flex-direction: column; gap: 8px; }
+    .hud-choice { min-width: 0; width: min(100%, 300px); padding: 10px; }
+    .hud-choice-label { font-size: 9px; }
+    .hud-agenda { grid-template-columns: 1fr; grid-template-rows: 28px 1fr; height: 108px; }
+    .hud-agenda-side { flex-direction: row; align-items: center; justify-content: space-between; gap: 6px; padding: 4px 10px; border-right: 0; border-bottom: 1px solid rgba(197,160,90,.35); }
+    .hud-agenda-main { min-width: 0; gap: 7px; padding: 7px 8px; flex-wrap: wrap; align-content: center; }
+    .hud-agenda-title { width: 100%; font-size: 7.5px; }
+    .hud-agenda-grid { min-width: 0; flex: 1 1 160px; }
+    .hud-agenda-status { font-size: 7px; }
+    .hud-dow { min-width: 0; padding: 1px 2px; }
+    .hud-dow .hud-num { font-size: 11px; }
+  }
+  @media (max-width: 360px) {
+    .hud-agenda-status { width: 100%; text-align: center; }
+    .hud-agenda-main { gap: 3px; padding: 4px 7px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hud-seq-wrap .hud-loader, .hud-seq-wrap .hud-graphs,
+    .hud-seq-wrap .hud-sim, .hud-seq-wrap .hud-decide { display: none !important; }
+    .hud-seq-wrap .hud-agenda { opacity: 1 !important; transform: none !important; }
+    .hud-seq-wrap .hud-agenda-status { display: none; }
+  }
+  </style>
+  
+  <script>
+  (function(){
+    const names  = ['John Doe','Mike Johnson','Elisa Yang','Nils Gazordeh',
+                    'Tim Start','Alicia Argento','Dwayne Seong','Gina Hackman',
+                    'Paul Dubois','Kim Söderström','Mila Zergrovic'];
+    const nameEl = document.getElementById('hudName');
+    const pctEl  = document.getElementById('hudPct');
+    const fillEl = document.getElementById('hudFill');
+    const loader = document.getElementById('hudLoader');
+    const graphs = document.getElementById('hudGraphs');
+    const sim    = document.getElementById('hudSim');
+    const decide = document.getElementById('hudDecide');
+    const agenda = document.getElementById('hudAgenda');
+    const cValid = document.getElementById('choiceValid');
+    const cArch  = document.getElementById('choiceArchive');
+    const dayTgt = document.getElementById('dayTarget');
+    const agSt   = document.getElementById('agendaStatus');
+  
+    function resetAll(){
+      loader.className = 'hud-loader';
+      graphs.className = 'hud-graphs';
+      sim.className    = 'hud-sim';
+      decide.className = 'hud-decide';
+      agenda.className = 'hud-agenda';
+  
+      document.querySelectorAll('.hud-bar').forEach(b => b.classList.remove('is-gone'));
+  
+      document.getElementById('emailBody').textContent = '';
+      document.getElementById('emailProgress').style.width = '0%';
+      const es = document.getElementById('emailStatus');
+      es.textContent = 'composing';
+      es.classList.remove('done');
+  
+      const ps = document.getElementById('phoneStatus');
+      ps.textContent = 'dialing';
+      ps.classList.remove('live','done');
+      document.getElementById('phoneTime').textContent = '00:00';
+      document.getElementById('phoneProgress').style.width = '0%';
+  
+      cValid.classList.remove('is-checked','is-faded');
+      cArch.classList.remove('is-checked','is-faded');
+  
+      dayTgt.classList.remove('is-booked');
+      agSt.textContent = 'booking…';
+      agSt.classList.remove('done');
+  
+      pctEl.textContent = '0%';
+      fillEl.style.transform = 'scaleX(0)';
+    }
+  
+    function runCycle(){
+      loader.classList.add('is-on');
+  
+      let nameIdx = 0;
+      const nameTimer = setInterval(() => {
+        nameIdx = (nameIdx + 1) % names.length;
+        nameEl.textContent = names[nameIdx];
+        nameEl.style.animation = 'none';
+        void nameEl.offsetWidth;
+        nameEl.style.animation = '';
+      }, 400);
+  
+      const dur = 4000;
+      const start = performance.now();
+  
+      function tick(now){
+        const t = Math.min((now - start) / dur, 1);
+        pctEl.textContent = Math.floor(t * 100) + '%';
+        fillEl.style.transform = 'scaleX(' + t + ')';
+        if (t < 1) return requestAnimationFrame(tick);
+  
+        clearInterval(nameTimer);
+        pctEl.textContent = '100%';
+  
+        setTimeout(() => {
+          loader.classList.add('is-out');
+  
+          setTimeout(() => {
+            graphs.classList.add('is-on');
+  
+            setTimeout(() => {
+              const bars = graphs.querySelectorAll('.hud-bar');
+              bars.forEach((bar, i) => {
+                setTimeout(() => bar.classList.add('is-gone'), i * 18);
+              });
+  
+              setTimeout(() => {
+                graphs.classList.remove('is-on');
+  
+                setTimeout(() => {
+                  sim.classList.add('is-on');
+                  runContactSim();
+                }, 300);
+              }, bars.length * 18 + 250);
+  
+            }, 1600);
+          }, 200);
+        }, 120);
+      }
+      requestAnimationFrame(tick);
+    }
+  
+    function runContactSim(){
+      const emailBody = document.getElementById('emailBody');
+      const emailProgress = document.getElementById('emailProgress');
+      const emailStatus = document.getElementById('emailStatus');
+      const phoneProgress = document.getElementById('phoneProgress');
+      const phoneStatus = document.getElementById('phoneStatus');
+      const phoneTime = document.getElementById('phoneTime');
+  
+      const message = 'Bonjour Mike, signal détecté…';
+      let i = 0;
+  
+      const typing = setInterval(() => {
+        emailBody.textContent = message.slice(0, ++i);
+        emailProgress.style.width = Math.min(i / message.length * 100, 100) + '%';
+        if (i >= message.length){
+          clearInterval(typing);
+          emailStatus.textContent = 'sent';
+          emailStatus.classList.add('done');
+        }
+      }, 35);
+  
+      setTimeout(() => {
+        phoneStatus.textContent = 'live';
+        phoneStatus.classList.add('live');
+  
+        let sec = 0;
+        const callTimer = setInterval(() => {
+          sec++;
+          const m = String(Math.floor(sec/60)).padStart(2,'0');
+          const s = String(sec%60).padStart(2,'0');
+          phoneTime.textContent = m + ':' + s;
+        }, 600);
+  
+        let p = 0;
+        const phoneTimer = setInterval(() => {
+          p += 4;
+          phoneProgress.style.width = Math.min(p, 100) + '%';
+          if (p >= 100){
+            clearInterval(phoneTimer);
+            clearInterval(callTimer);
+            phoneStatus.textContent = 'connected';
+            phoneStatus.classList.add('done');
+          }
+        }, 90);
+      }, 500);
+  
+      setTimeout(() => {
+        sim.classList.remove('is-on');
+  
+        setTimeout(() => {
+          decide.classList.add('is-on');
+  
+          setTimeout(() => {
+            cArch.classList.add('is-faded');
+            cValid.classList.add('is-checked');
+  
+            setTimeout(() => {
+              decide.classList.remove('is-on');
+  
+              setTimeout(() => {
+                agenda.classList.add('is-on');
+  
+                setTimeout(() => {
+                  dayTgt.classList.add('is-booked');
+                  agSt.textContent = 'RDV CONFIRMÉ';
+                  agSt.classList.add('done');
+  
+                  setTimeout(() => {
+                    agenda.classList.remove('is-on');
+  
+                    setTimeout(() => {
+                      resetAll();
+                      runCycle();
+                    }, 300);
+                  }, 1800);
+                }, 500);
+              }, 300);
+            }, 1100);
+          }, 600);
+        }, 300);
+      }, 3000);
+    }
+  
+    runCycle();
+  })();
+  </script>
+
   <!-- TICKER -->
   <div class="ticker">
     <div class="t-track">
