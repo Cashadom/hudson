@@ -574,23 +574,34 @@
     @media (max-width: 860px) {
       .pole-icon { width: 68px; height: 68px; margin-bottom: 18px; }
     }
-    /* Une unique micro-animation orbitale sur le cercle du hero */
-    .hero .ring.r2::after {
+    /* HUDSON TECHNOLOGIES : carré centré exactement SUR la bordure */
+    .tech .panel { position: relative; }
+    .tech .panel-border-run {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      pointer-events: none;
+    }
+    .tech .panel-border-run::before {
       content: '';
       position: absolute;
-      top: 50%; left: 50%;
-      width: 6px; height: 6px;
-      margin: -3px 0 0 -3px;
+      width: 7px;
+      height: 7px;
       background: var(--gold);
-      transform: rotate(0deg) translateX(150px);
-      animation: hudson-orbit 34s linear infinite;
-      opacity: .78;
+      box-shadow: 0 0 7px rgba(197,160,90,.35);
+      /* Moitié du carré de part et d'autre du trait */
+      top: -4px;
+      left: -4px;
+      animation: hudson-tech-border 12s linear infinite;
     }
-    @keyframes hudson-orbit {
-      to { transform: rotate(360deg) translateX(150px); }
+    @keyframes hudson-tech-border {
+      0%, 100% { top: -4px; left: -4px; }
+      25% { top: -4px; left: calc(100% - 3px); }
+      50% { top: calc(100% - 3px); left: calc(100% - 3px); }
+      75% { top: calc(100% - 3px); left: -4px; }
     }
     @media (prefers-reduced-motion: reduce) {
-      .hero .ring.r2::after { animation: none; }
+      .tech .panel-border-run::before { animation: none; }
     }
   </style>
 </head>
@@ -803,6 +814,7 @@
         <div class="panel-wrap">
           <span class="hatch bl" aria-hidden="true"></span>
           <div class="panel">
+            <span class="panel-border-run" aria-hidden="true"></span>
             <div class="panel-label"><span>Hudson Technologies</span></div>
             <div class="panel-row"><i>01</i><span class="panel-name">Data &amp; IT</span><span class="panel-tag">Univers</span></div>
             <div class="panel-row"><i>02</i><span class="panel-name">Agentique</span><span class="panel-tag">Agents IA</span></div>
