@@ -244,6 +244,151 @@
     .t-item::after { content: ''; width: 6px; height: 6px; background: var(--gold); transform: rotate(45deg); }
     @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
+    /* RECOGNITION BLOCK */
+    .recognition {
+      position: relative; overflow: hidden;
+      background: radial-gradient(circle at 80% 14%, rgba(255,255,255,0.10), transparent 22%),
+                  radial-gradient(circle at 18% 78%, rgba(255,255,255,0.06), transparent 16%),
+                  linear-gradient(145deg, #08182f 0%, #0b2143 58%, #0f2b56 100%);
+      border-top: 1px solid rgba(197,160,90,0.22);
+      border-bottom: 1px solid rgba(197,160,90,0.16);
+      padding: 86px 0 90px;
+    }
+    .recognition::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+      background-size: 98px 98px;
+      opacity: .14;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,.85), rgba(0,0,0,.36));
+      -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,.85), rgba(0,0,0,.36));
+    }
+    .recognition::after {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(circle at 14% 18%, rgba(255,255,255,.86) 0 1px, transparent 2px),
+        radial-gradient(circle at 31% 41%, rgba(255,255,255,.48) 0 1px, transparent 2px),
+        radial-gradient(circle at 55% 22%, rgba(255,255,255,.74) 0 1px, transparent 2px),
+        radial-gradient(circle at 73% 38%, rgba(255,255,255,.58) 0 1px, transparent 2px),
+        radial-gradient(circle at 85% 16%, rgba(255,255,255,.82) 0 1px, transparent 2px),
+        radial-gradient(circle at 62% 71%, rgba(255,255,255,.48) 0 1px, transparent 2px),
+        radial-gradient(circle at 23% 68%, rgba(255,255,255,.62) 0 1px, transparent 2px),
+        radial-gradient(circle at 90% 80%, rgba(255,255,255,.46) 0 1px, transparent 2px);
+      opacity: .42;
+    }
+    .rec-card {
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(320px, .9fr);
+      gap: 38px; align-items: center;
+      padding: 42px 42px 40px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border: 1px solid rgba(197,160,90,0.22);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.28);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+    .rec-card::before {
+      content: ''; position: absolute; inset: 14px; border: 1px solid rgba(255,255,255,0.08); pointer-events: none;
+    }
+    .rec-card::after {
+      content: ''; position: absolute; top: 16px; right: 16px; width: 56px; height: 56px; pointer-events: none;
+      background: repeating-linear-gradient(135deg, transparent 0 7px, rgba(197,160,90,.78) 7px 8px, transparent 8px 14px);
+      opacity: .9;
+    }
+    .rec-copy { position: relative; z-index: 1; }
+    .rec-kicker {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: rgba(197,160,90,0.96); margin-bottom: 18px;
+    }
+    .rec-kicker::before { content:''; width: 22px; height: 1px; background: var(--gold); }
+    .rec-title {
+      font-family: var(--f-display); font-weight: 700; letter-spacing: -0.06em;
+      color: var(--white); font-size: clamp(32px, 4.1vw, 64px); line-height: .98; max-width: 700px; margin-bottom: 18px;
+    }
+    .rec-title .serif { color: var(--gold); }
+    .rec-lead { color: rgba(255,255,255,0.72); font-size: 16px; line-height: 1.65; max-width: 510px; margin-bottom: 18px; }
+    .rec-badges { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+    .rec-pill {
+      display: inline-flex; align-items: center; gap: 8px; padding: 12px 16px;
+      border: 1px solid rgba(197,160,90,0.26); background: rgba(255,255,255,0.04);
+      color: rgba(255,255,255,0.88); font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+    }
+    .rec-pill img { width: 18px; height: 18px; object-fit: contain; }
+    .rec-visual {
+      position: relative; z-index: 1; min-height: 340px; display: grid; place-items: center;
+      border-left: 1px solid rgba(255,255,255,0.10); padding-left: 34px;
+    }
+    .rec-orb {
+      position: absolute; width: 420px; height: 420px; border-radius: 50%;
+      border: 1px solid rgba(197,160,90,0.18); right: -130px; top: 50%; transform: translateY(-50%);
+    }
+    .rec-orb::after {
+      content: ''; position: absolute; inset: 46px; border-radius: 50%; border: 1px solid rgba(197,160,90,0.10);
+    }
+    .rec-window {
+      position: relative; width: min(100%, 420px); aspect-ratio: 1 / 1.05;
+      border: 1px solid rgba(197,160,90,0.24); background:
+        radial-gradient(circle at 50% 20%, rgba(255,255,255,.07), transparent 28%),
+        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      overflow: hidden; box-shadow: 0 16px 34px rgba(0,0,0,0.26);
+    }
+    .rec-window::before {
+      content: ''; position: absolute; left: 0; right: 0; top: 0; height: 44px;
+      background: rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .rec-window::after {
+      content: ''; position: absolute; top: 15px; left: 16px; width: 44px; height: 12px;
+      background: radial-gradient(circle, rgba(255,255,255,.62) 0 2px, transparent 3px) 0 0 / 14px 12px repeat-x;
+      opacity: .68;
+    }
+    .rec-grid {
+      position: absolute; inset: 44px 0 0 0; background-image:
+        linear-gradient(rgba(255,255,255,0.09) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.09) 1px, transparent 1px);
+      background-size: 68px 68px; opacity: .35;
+    }
+    .rec-medal {
+      position: absolute; width: 112px; height: auto; right: 18px; top: 66px; filter: drop-shadow(0 10px 22px rgba(0,0,0,0.22));
+    }
+    .rec-photo {
+      position: absolute; width: 62%; max-width: 250px; height: auto; left: 18px; bottom: 18px;
+      border: 1px solid rgba(255,255,255,0.16); box-shadow: 0 14px 28px rgba(0,0,0,0.24);
+      background: rgba(255,255,255,0.04);
+    }
+    .rec-caption {
+      position: absolute; left: 22px; top: 74px; right: 130px;
+      font-family: var(--f-display); font-weight: 700; letter-spacing: -0.05em; line-height: .98;
+      color: var(--white); font-size: clamp(22px, 2.6vw, 38px);
+    }
+    .rec-caption .serif { color: var(--gold); }
+    .rec-mini {
+      position: absolute; right: 22px; bottom: 22px; width: 132px; padding: 12px 12px 11px;
+      border: 1px solid rgba(197,160,90,0.24); background: rgba(8,24,47,0.72); color: rgba(255,255,255,0.84);
+      font-family: var(--f-mono); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; line-height: 1.5;
+    }
+    .rec-mini strong { display: block; color: var(--gold); font-size: 22px; line-height: 1; letter-spacing: -0.04em; margin-bottom: 6px; font-family: var(--f-display); font-weight: 700; }
+    @media (max-width: 980px) {
+      .rec-card { grid-template-columns: 1fr; padding: 34px 26px 30px; gap: 26px; }
+      .rec-visual { border-left: 0; padding-left: 0; min-height: auto; }
+      .rec-window { width: min(100%, 470px); margin: 0 auto; }
+      .rec-orb { display: none; }
+    }
+    @media (max-width: 640px) {
+      .recognition { padding: 70px 0 74px; }
+      .rec-title { font-size: clamp(30px, 10vw, 46px); }
+      .rec-lead { font-size: 15px; }
+      .rec-card::before { inset: 10px; }
+      .rec-window { aspect-ratio: .95 / 1.14; }
+      .rec-caption { left: 18px; right: 100px; top: 62px; font-size: clamp(19px, 7vw, 30px); }
+      .rec-medal { width: 84px; right: 14px; top: 62px; }
+      .rec-photo { width: 66%; left: 14px; bottom: 14px; }
+      .rec-mini { right: 14px; bottom: 14px; width: 112px; font-size: 8px; }
+      .rec-mini strong { font-size: 18px; }
+    }
+
+
     /* ACTIVITÉ : bleu ciel */
     .process { background: var(--sky); padding: 112px 0 120px; position: relative; overflow: hidden; }
     .process .arc {
@@ -661,6 +806,40 @@
     </div>
   </section>
 
+  <!-- ACTIVITÉ -->
+  <section class="process" id="activite">
+    <span class="arc" aria-hidden="true"></span>
+    <span class="arc a2" aria-hidden="true"></span>
+    <span class="hatch navy" aria-hidden="true"></span>
+    <div class="wrap">
+      <div class="proc-hd">
+        <div>
+          <span class="tag">L'activité Hudson</span>
+          <h2>Veille, ciblage, <span class="serif">conversion</span><span class="dot-mark" aria-hidden="true"></span></h2>
+        </div>
+        <p>Hudson met en place des solutions pour développer les marques.</p>
+      </div>
+      <div class="proc-steps">
+        <div class="step">
+          <div class="step-n">01</div>
+          <div class="step-title">Data</div>
+        </div>
+        <div class="step">
+          <div class="step-n">02</div>
+          <div class="step-title">Signaux faibles &amp; forts</div>
+        </div>
+        <div class="step">
+          <div class="step-n">03</div>
+          <div class="step-title">Pipeline qualifié sur mesure</div>
+        </div>
+        <div class="step">
+          <div class="step-n">04</div>
+          <div class="step-title">Prise de rendez-vous</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- HUDSON SEQUENCE -->
   <div class="hud-seq-wrap">
     <div class="hud-seq-stage" id="hudSeqStage">
@@ -672,6 +851,63 @@
         </div>
         <div class="hud-loader-pct" id="hudPct">0%</div>
         <div class="hud-loader-bar"><div class="hud-loader-fill" id="hudFill"></div></div>
+      </div>
+  
+      <!-- ÉTAPE 1.5 : GRILLE CRM -->
+      <div class="hud-crm" id="hudCrm">
+        <div class="hud-crm-head">
+          <span class="hud-crm-dot"></span>
+          <span class="hud-crm-title">CRM · LEADS ENTRANTS</span>
+          <span class="hud-crm-status" id="crmStatus">sync…</span>
+        </div>
+        <div class="hud-crm-grid">
+          <span class="hud-crm-cell">John Doe</span>
+          <span class="hud-crm-cell">Mike Johnson</span>
+          <span class="hud-crm-cell">Elisa Yang</span>
+          <span class="hud-crm-cell">Nils Gazordeh</span>
+          <span class="hud-crm-cell">Tim Start</span>
+          <span class="hud-crm-cell">Alicia Argento</span>
+          <span class="hud-crm-cell">Dwayne Seong</span>
+          <span class="hud-crm-cell">Gina Hackman</span>
+          <span class="hud-crm-cell">Paul Dubois</span>
+          <span class="hud-crm-cell">Kim Söderström</span>
+          <span class="hud-crm-cell">Mila Zergrovic</span>
+        </div>
+      </div>
+  
+      <!-- ÉTAPE 1.7 : BENCHMARK / CLASSIFICATION -->
+      <div class="hud-bench" id="hudBench">
+        <div class="hud-bench-head">
+          <span class="hud-bench-dot"></span>
+          <span class="hud-bench-title">BENCHMARK · CLASSIFICATION</span>
+          <span class="hud-bench-count">
+            <span id="benchCount">0</span> LEADS INJECTÉS
+          </span>
+          <span class="hud-bench-status" id="benchStatus">analysing…</span>
+        </div>
+  
+        <div class="hud-bench-grid">
+          <div class="hud-bench-row">
+            <span class="hud-bench-lbl a">Priorité A</span>
+            <span class="hud-bench-bar"><span class="hud-bench-fill a" id="benchA"></span></span>
+            <span class="hud-bench-val" id="benchValA">0%</span>
+          </div>
+          <div class="hud-bench-row">
+            <span class="hud-bench-lbl b">Priorité B</span>
+            <span class="hud-bench-bar"><span class="hud-bench-fill b" id="benchB"></span></span>
+            <span class="hud-bench-val" id="benchValB">0%</span>
+          </div>
+          <div class="hud-bench-row">
+            <span class="hud-bench-lbl c">Priorité C</span>
+            <span class="hud-bench-bar"><span class="hud-bench-fill c" id="benchC"></span></span>
+            <span class="hud-bench-val" id="benchValC">0%</span>
+          </div>
+          <div class="hud-bench-row">
+            <span class="hud-bench-lbl off">Hors cible</span>
+            <span class="hud-bench-bar"><span class="hud-bench-fill off" id="benchOff"></span></span>
+            <span class="hud-bench-val" id="benchValOff">0%</span>
+          </div>
+        </div>
       </div>
   
       <!-- ÉTAPE 2 : GRAPHES -->
@@ -856,7 +1092,125 @@
   }
   @keyframes hudFillShine{ from{background-position:0% 0;} to{background-position:-200% 0;} }
   
-  /* ---------- ÉTAPE 2 : GRAPHES (sans boîtes, barres vivantes) ---------- */
+  /* ---------- ÉTAPE 1.5 : GRILLE CRM ---------- */
+  .hud-crm{
+    background:#0b2143; border:1px solid rgba(197,160,90,.55);
+    padding:6px 12px;
+    display:flex; flex-direction:column; gap:4px;
+    height:56px; overflow:hidden;
+    opacity:0; pointer-events:none;
+    transform:scale(.9) translateY(6px);
+    transition:opacity .35s ease, transform .4s cubic-bezier(.2,.9,.3,1.2);
+  }
+  .hud-crm.is-on{ opacity:1; pointer-events:auto; transform:scale(1) translateY(0); }
+  .hud-crm-head{
+    display:flex; align-items:center; gap:8px;
+    font-size:9px; letter-spacing:.16em; text-transform:uppercase;
+    color:#c5a05a;
+  }
+  .hud-crm-dot, .hud-bench-dot{
+    width:5px; height:5px; background:#c5a05a; border-radius:50%;
+    box-shadow:0 0 6px rgba(197,160,90,.9);
+    animation:hudDotPulse 1.2s ease-in-out infinite;
+  }
+  @keyframes hudDotPulse{
+    0%,100%{ opacity:.4; transform:scale(.8); }
+    50%    { opacity:1; transform:scale(1.2); }
+  }
+  .hud-crm-title{ flex:1; }
+  .hud-crm-status{ color:rgba(255,255,255,.5); }
+  .hud-crm-status.done{ color:#9de29d; }
+  
+  .hud-crm-grid{
+    display:grid; grid-template-columns:repeat(6, 1fr); gap:4px; flex:1;
+  }
+  .hud-crm-cell{
+    display:flex; align-items:center; justify-content:center;
+    font-size:8.5px; letter-spacing:.06em; text-transform:uppercase;
+    color:rgba(255,255,255,.85); white-space:nowrap;
+    background:rgba(197,160,90,.06);
+    border:1px solid rgba(197,160,90,.25);
+    padding:2px 4px; overflow:hidden; text-overflow:ellipsis;
+    opacity:0; transform:translateY(6px) scale(.9);
+    animation:none;
+  }
+  .hud-crm.is-on .hud-crm-cell{ animation:hudCellIn .35s ease both; }
+  .hud-crm-cell:nth-child(1){ animation-delay:.05s; }
+  .hud-crm-cell:nth-child(2){ animation-delay:.10s; }
+  .hud-crm-cell:nth-child(3){ animation-delay:.15s; }
+  .hud-crm-cell:nth-child(4){ animation-delay:.20s; }
+  .hud-crm-cell:nth-child(5){ animation-delay:.25s; }
+  .hud-crm-cell:nth-child(6){ animation-delay:.30s; }
+  .hud-crm-cell:nth-child(7){ animation-delay:.35s; }
+  .hud-crm-cell:nth-child(8){ animation-delay:.40s; }
+  .hud-crm-cell:nth-child(9){ animation-delay:.45s; }
+  .hud-crm-cell:nth-child(10){ animation-delay:.50s; }
+  .hud-crm-cell:nth-child(11){ animation-delay:.55s; }
+  @keyframes hudCellIn{
+    to{ opacity:1; transform:translateY(0) scale(1); }
+  }
+  
+  /* ---------- ÉTAPE 1.7 : BENCHMARK ---------- */
+  .hud-bench{
+    background:#0b2143; border:1px solid rgba(197,160,90,.55);
+    padding:6px 12px;
+    display:flex; flex-direction:column; gap:4px;
+    height:56px; overflow:hidden;
+    opacity:0; pointer-events:none;
+    transform:scale(.9) translateY(6px);
+    transition:opacity .35s ease, transform .4s cubic-bezier(.2,.9,.3,1.2);
+  }
+  .hud-bench.is-on{ opacity:1; pointer-events:auto; transform:scale(1) translateY(0); }
+  .hud-bench-head{
+    display:flex; align-items:center; gap:10px;
+    font-size:9px; letter-spacing:.16em; text-transform:uppercase;
+    color:#c5a05a;
+  }
+  .hud-bench-title{ flex:0 0 auto; }
+  .hud-bench-count{
+    flex:1; color:rgba(255,255,255,.7);
+    font-size:9px; letter-spacing:.14em;
+  }
+  .hud-bench-count #benchCount{ color:#fff; font-weight:500; }
+  .hud-bench-status{ color:rgba(255,255,255,.5); }
+  .hud-bench-status.done{ color:#9de29d; }
+  
+  .hud-bench-grid{
+    display:grid; grid-template-columns:repeat(2, 1fr);
+    gap:2px 14px; flex:1; align-content:center;
+  }
+  .hud-bench-row{
+    display:grid; grid-template-columns:64px 1fr 34px;
+    gap:6px; align-items:center;
+    font-size:8.5px; letter-spacing:.1em; text-transform:uppercase;
+  }
+  .hud-bench-lbl{ color:rgba(255,255,255,.75); }
+  .hud-bench-lbl.a{ color:#f0d089; }
+  .hud-bench-lbl.b{ color:#c5a05a; }
+  .hud-bench-lbl.c{ color:rgba(197,160,90,.6); }
+  .hud-bench-lbl.off{ color:rgba(255,255,255,.35); text-decoration:line-through; }
+  
+  .hud-bench-bar{
+    display:block; height:4px; background:rgba(255,255,255,.06);
+    overflow:hidden; position:relative;
+  }
+  .hud-bench-fill{
+    display:block; height:100%; width:0;
+    transition:width .5s cubic-bezier(.2,.9,.3,1.1);
+    box-shadow:0 0 6px rgba(197,160,90,.5);
+  }
+  .hud-bench-fill.a  { background:linear-gradient(90deg, #f0d089, #c5a05a); }
+  .hud-bench-fill.b  { background:linear-gradient(90deg, #c5a05a, #9a7640); }
+  .hud-bench-fill.c  { background:linear-gradient(90deg, #9a7640, #6b5128); }
+  .hud-bench-fill.off{ background:rgba(255,255,255,.18); box-shadow:none; }
+  
+  .hud-bench-val{
+    text-align:right; color:rgba(255,255,255,.9);
+    font-size:9px;
+  }
+  .hud-bench-val.off{ color:rgba(255,255,255,.4); }
+  
+  /* ---------- ÉTAPE 2 : GRAPHES ---------- */
   .hud-graphs{
     display:grid; grid-template-columns:repeat(3, 1fr); gap:24px;
     height:56px; opacity:0; pointer-events:none;
@@ -866,14 +1220,11 @@
   .hud-graphs.is-on{ opacity:1; pointer-events:auto; }
   
   .hud-graph{
-    /* plus de boîte bleue : juste un conteneur invisible */
     display:flex; flex-direction:column; gap:4px;
     height:56px;
     transform:scale(.7); opacity:0;
     transition:transform .45s cubic-bezier(.2,.9,.3,1.2), opacity .35s ease;
-    background:transparent;
-    border:0;
-    padding:0;
+    background:transparent; border:0; padding:0;
   }
   .hud-graphs.is-on .hud-graph{ transform:scale(1); opacity:1; }
   .hud-graphs.is-on .hud-graph[data-idx="1"]{ transition-delay:0s; }
@@ -901,13 +1252,10 @@
     transform:scaleY(1);
     animation-play-state:running;
   }
-  
-  /* Léger va-et-vient, comme un vrai graphique qui respire */
   @keyframes hudBarBreathe{
     0%,100% { transform:scaleY(1); }
     50%     { transform:scaleY(1.35); }
   }
-  
   .hud-graph .hud-bar:nth-child(1) { transition-delay:.06s; }
   .hud-graph .hud-bar:nth-child(2) { transition-delay:.10s; }
   .hud-graph .hud-bar:nth-child(3) { transition-delay:.14s; }
@@ -940,7 +1288,6 @@
     transition:opacity .4s ease, transform .4s ease;
   }
   .hud-sim.is-on{ opacity:1; pointer-events:auto; transform:translateY(0); }
-  
   .hud-sim-card{
     background:#0b2143; border:1px solid rgba(197,160,90,.45);
     padding:6px 12px; position:relative; overflow:hidden;
@@ -951,7 +1298,6 @@
   }
   .hud-sim.is-on .hud-sim-email{ transform:scale(1); opacity:1; }
   .hud-sim.is-on .hud-sim-phone{ transform:scale(1); opacity:1; transition-delay:.1s; }
-  
   .hud-sim-head{
     display:flex; align-items:center; gap:8px;
     font-size:9px; letter-spacing:.16em; text-transform:uppercase;
@@ -962,15 +1308,10 @@
     box-shadow:0 0 6px rgba(197,160,90,.9);
     animation:hudDotPulse 1.2s ease-in-out infinite;
   }
-  @keyframes hudDotPulse{
-    0%,100%{ opacity:.4; transform:scale(.8); }
-    50%    { opacity:1; transform:scale(1.2); }
-  }
   .hud-sim-title{ flex:1; }
   .hud-sim-status{ color:rgba(255,255,255,.5); }
   .hud-sim-status.live{ color:#8ec5ff; }
   .hud-sim-status.done{ color:#9de29d; }
-  
   .hud-sim-body{ display:flex; flex-direction:column; gap:1px; margin-top:4px; }
   .hud-sim-line{
     display:flex; gap:8px; align-items:baseline;
@@ -985,17 +1326,15 @@
     animation:hudCursorBlink .5s steps(1,end) infinite;
   }
   @keyframes hudCursorBlink{ 0%,50%{opacity:1;} 51%,100%{opacity:0;} }
-  
   .hud-sim-progress{
     position:absolute; bottom:0; left:0; right:0; height:2px;
     background:rgba(197,160,90,.15); overflow:hidden;
   }
   .hud-sim-progress-fill{
-    display:block; height:100%; width:0%;
+    display:block; height:100%; width:0;
     background:linear-gradient(90deg, #9a7640, #c5a05a, #e8c68a);
     transition:width .2s linear;
   }
-  
   .hud-sim-phone-body{ display:flex; align-items:center; gap:12px; }
   .hud-wave{ display:flex; align-items:center; gap:2px; height:20px; }
   .hud-wave span{
@@ -1028,7 +1367,6 @@
     transition:opacity .4s ease, transform .4s ease;
   }
   .hud-decide.is-on{ opacity:1; pointer-events:auto; transform:translateY(0); }
-  
   .hud-choice{
     display:flex; align-items:center; gap:10px;
     padding:14px 22px;
@@ -1070,7 +1408,6 @@
     transition:opacity .4s ease, transform .4s cubic-bezier(.2,.9,.3,1.2);
   }
   .hud-agenda.is-on{ opacity:1; pointer-events:auto; transform:scale(1) translateY(0); }
-  
   .hud-agenda-side{
     display:flex; flex-direction:column; justify-content:center; gap:2px;
     padding:6px 12px;
@@ -1090,11 +1427,7 @@
     font-size:8px; letter-spacing:.14em; text-transform:uppercase;
     color:rgba(255,255,255,.5);
   }
-  
-  .hud-agenda-main{
-    display:flex; align-items:center; gap:14px;
-    padding:6px 14px;
-  }
+  .hud-agenda-main{ display:flex; align-items:center; gap:14px; padding:6px 14px; }
   .hud-agenda-title{
     font-size:8.5px; letter-spacing:.16em; text-transform:uppercase;
     color:rgba(255,255,255,.6); white-space:nowrap;
@@ -1105,7 +1438,6 @@
     margin-left:auto;
   }
   .hud-agenda-status.done{ color:#9de29d; }
-  
   .hud-agenda-grid{
     display:grid; grid-template-columns:repeat(5, 1fr);
     gap:4px; flex:1;
@@ -1130,7 +1462,6 @@
   }
   .hud-dow-target{ border-color:rgba(197,160,90,.45); }
   .hud-dow-target .hud-num{ color:#c5a05a; }
-  
   .hud-dow.is-booked{
     background:#c5a05a;
     border-color:#f0d089;
@@ -1149,47 +1480,63 @@
       border-right:0; border-bottom:1px solid rgba(197,160,90,.35);
     }
     .hud-sim{ grid-template-columns:1fr; }
+    .hud-crm-grid{ grid-template-columns:repeat(4, 1fr); }
+    .hud-bench-grid{ grid-template-columns:1fr; }
   }
   
-  /* HUDSON SEQUENCE : responsive / reduced motion, styles isolated */
+  /* HUDSON SEQUENCE : dimensions propres au composant, aucun impact ailleurs */
+  .hud-seq-wrap .hud-crm-cell { min-width:0; }
+  .hud-seq-wrap .hud-crm-head, .hud-seq-wrap .hud-bench-head { min-width:0; }
   @media (max-width: 640px) {
-    .hud-seq-wrap { padding: 20px 0 24px; }
-    .hud-seq-stage { height: 108px; padding: 0 14px; }
-    .hud-seq-stage > * { margin: 0 14px; }
-    .hud-loader { gap: 9px; padding: 12px; flex-wrap: wrap; align-content: center; }
-    .hud-loader-names { flex: 1 1 55%; min-width: 0; }
-    .hud-loader-pct { flex: 0 0 42px; }
-    .hud-loader-bar { flex: 1 0 100%; }
-    .hud-graphs { height: 108px; gap: 9px; align-items: center; }
-    .hud-graph { height: 70px; min-width: 0; }
-    .hud-graph-inner { gap: 2px; justify-content: center; }
-    .hud-bar { flex: 1 1 2px; min-width: 1px; max-width: 3px; }
-    .hud-graph-label { font-size: 8px; letter-spacing: .05em; }
-    .hud-sim { grid-template-columns: 1fr; grid-template-rows: 50px 50px; gap: 8px; height: 108px; }
-    .hud-sim-card { height: 50px; padding: 5px 10px; }
-    .hud-sim-head { font-size: 8px; gap: 5px; }
-    .hud-sim-body { margin-top: 2px; }
-    .hud-decide { height: 108px; flex-direction: column; gap: 8px; }
-    .hud-choice { min-width: 0; width: min(100%, 300px); padding: 10px; }
-    .hud-choice-label { font-size: 9px; }
-    .hud-agenda { grid-template-columns: 1fr; grid-template-rows: 28px 1fr; height: 108px; }
-    .hud-agenda-side { flex-direction: row; align-items: center; justify-content: space-between; gap: 6px; padding: 4px 10px; border-right: 0; border-bottom: 1px solid rgba(197,160,90,.35); }
-    .hud-agenda-main { min-width: 0; gap: 7px; padding: 7px 8px; flex-wrap: wrap; align-content: center; }
-    .hud-agenda-title { width: 100%; font-size: 7.5px; }
-    .hud-agenda-grid { min-width: 0; flex: 1 1 160px; }
-    .hud-agenda-status { font-size: 7px; }
-    .hud-dow { min-width: 0; padding: 1px 2px; }
-    .hud-dow .hud-num { font-size: 11px; }
+    .hud-seq-wrap { padding:22px 0 27px; }
+    .hud-seq-stage { height:116px; padding:0 12px; }
+    .hud-seq-stage > * { margin:0 12px; }
+    .hud-loader { gap:8px; padding:12px; flex-wrap:wrap; align-content:center; }
+    .hud-loader-names { flex:1 1 55%; min-width:0; }
+    .hud-loader-pct { flex:0 0 42px; }
+    .hud-loader-bar { flex:1 0 100%; }
+    .hud-crm, .hud-bench { height:116px; padding:10px; gap:9px; }
+    .hud-crm-head, .hud-bench-head { font-size:8px; gap:6px; letter-spacing:.08em; }
+    .hud-crm-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:4px; }
+    .hud-crm-cell { font-size:7px; letter-spacing:0; padding:3px 2px; }
+    .hud-bench-grid { grid-template-columns:1fr 1fr; gap:9px 10px; }
+    .hud-bench-row { grid-template-columns:62px minmax(0,1fr) 27px; gap:4px; font-size:7px; letter-spacing:0; }
+    .hud-bench-title { white-space:nowrap; }
+    .hud-bench-count, .hud-bench-status { font-size:7px; letter-spacing:0; }
+    .hud-graphs { height:116px; gap:8px; align-items:center; }
+    .hud-graph { height:70px; min-width:0; }
+    .hud-graph-inner { gap:2px; justify-content:center; }
+    .hud-bar { flex:1 1 2px; min-width:1px; max-width:3px; }
+    .hud-graph-label { font-size:8px; letter-spacing:.05em; }
+    .hud-sim { grid-template-columns:1fr; grid-template-rows:54px 54px; gap:8px; height:116px; }
+    .hud-sim-card { height:54px; padding:6px 10px; }
+    .hud-sim-head { font-size:8px; gap:5px; }
+    .hud-sim-body { margin-top:2px; }
+    .hud-decide { height:116px; flex-direction:column; gap:8px; }
+    .hud-choice { min-width:0; width:min(100%,300px); padding:11px; }
+    .hud-choice-label { font-size:9px; }
+    .hud-agenda { grid-template-columns:1fr; grid-template-rows:28px 1fr; height:116px; }
+    .hud-agenda-side { flex-direction:row; align-items:center; justify-content:space-between; gap:6px; padding:4px 10px; border-right:0; border-bottom:1px solid rgba(197,160,90,.35); }
+    .hud-agenda-main { min-width:0; gap:6px; padding:7px 8px; flex-wrap:wrap; align-content:center; }
+    .hud-agenda-title { width:100%; font-size:7.5px; }
+    .hud-agenda-grid { min-width:0; flex:1 1 150px; }
+    .hud-agenda-status { font-size:7px; }
+    .hud-dow { min-width:0; padding:1px 2px; }
+    .hud-dow .hud-num { font-size:11px; }
   }
-  @media (max-width: 360px) {
-    .hud-agenda-status { width: 100%; text-align: center; }
-    .hud-agenda-main { gap: 3px; padding: 4px 7px; }
+  @media (max-width: 380px) {
+    .hud-bench-grid { grid-template-columns:1fr; gap:4px; }
+    .hud-bench { gap:4px; }
+    .hud-bench-row { grid-template-columns:66px minmax(0,1fr) 30px; }
+    .hud-bench-count { font-size:6.5px; }
+    .hud-agenda-status { width:100%; text-align:center; }
+    .hud-agenda-main { gap:3px; padding:4px 7px; }
   }
   @media (prefers-reduced-motion: reduce) {
-    .hud-seq-wrap .hud-loader, .hud-seq-wrap .hud-graphs,
-    .hud-seq-wrap .hud-sim, .hud-seq-wrap .hud-decide { display: none !important; }
-    .hud-seq-wrap .hud-agenda { opacity: 1 !important; transform: none !important; }
-    .hud-seq-wrap .hud-agenda-status { display: none; }
+    .hud-seq-wrap .hud-loader,.hud-seq-wrap .hud-crm,.hud-seq-wrap .hud-bench,
+    .hud-seq-wrap .hud-graphs,.hud-seq-wrap .hud-sim,.hud-seq-wrap .hud-decide { display:none !important; }
+    .hud-seq-wrap .hud-agenda { opacity:1 !important; transform:none !important; }
+    .hud-seq-wrap .hud-agenda-status { display:none; }
   }
   </style>
   
@@ -1202,6 +1549,19 @@
     const pctEl  = document.getElementById('hudPct');
     const fillEl = document.getElementById('hudFill');
     const loader = document.getElementById('hudLoader');
+    const crm    = document.getElementById('hudCrm');
+    const crmSt  = document.getElementById('crmStatus');
+    const bench  = document.getElementById('hudBench');
+    const benchSt= document.getElementById('benchStatus');
+    const benchCt= document.getElementById('benchCount');
+    const bA     = document.getElementById('benchA');
+    const bB     = document.getElementById('benchB');
+    const bC     = document.getElementById('benchC');
+    const bOff   = document.getElementById('benchOff');
+    const vA     = document.getElementById('benchValA');
+    const vB     = document.getElementById('benchValB');
+    const vC     = document.getElementById('benchValC');
+    const vOff   = document.getElementById('benchValOff');
     const graphs = document.getElementById('hudGraphs');
     const sim    = document.getElementById('hudSim');
     const decide = document.getElementById('hudDecide');
@@ -1213,12 +1573,25 @@
   
     function resetAll(){
       loader.className = 'hud-loader';
+      crm.className    = 'hud-crm';
+      bench.className  = 'hud-bench';
       graphs.className = 'hud-graphs';
       sim.className    = 'hud-sim';
       decide.className = 'hud-decide';
       agenda.className = 'hud-agenda';
   
       document.querySelectorAll('.hud-bar').forEach(b => b.classList.remove('is-gone'));
+  
+      crmSt.textContent = 'sync…';
+      crmSt.classList.remove('done');
+  
+      benchSt.textContent = 'analysing…';
+      benchSt.classList.remove('done');
+      benchCt.textContent = '0';
+      bA.style.width = '0%'; bB.style.width = '0%';
+      bC.style.width = '0%'; bOff.style.width = '0%';
+      vA.textContent = '0%'; vB.textContent = '0%';
+      vC.textContent = '0%'; vOff.textContent = '0%';
   
       document.getElementById('emailBody').textContent = '';
       document.getElementById('emailProgress').style.width = '0%';
@@ -1271,30 +1644,105 @@
           loader.classList.add('is-out');
   
           setTimeout(() => {
-            graphs.classList.add('is-on');
+            /* --- CRM --- */
+            crm.classList.add('is-on');
   
             setTimeout(() => {
-              const bars = graphs.querySelectorAll('.hud-bar');
-              bars.forEach((bar, i) => {
-                setTimeout(() => bar.classList.add('is-gone'), i * 18);
-              });
+              crmSt.textContent = 'synced';
+              crmSt.classList.add('done');
   
               setTimeout(() => {
-                graphs.classList.remove('is-on');
+                crm.classList.remove('is-on');
   
                 setTimeout(() => {
-                  sim.classList.add('is-on');
-                  runContactSim();
-                }, 300);
-              }, bars.length * 18 + 250);
+                  /* --- BENCHMARK --- */
+                  bench.classList.add('is-on');
+                  runBenchmark();
   
-            }, 1600);
+                  setTimeout(() => {
+                    bench.classList.remove('is-on');
+  
+                    setTimeout(() => {
+                      /* --- GRAPHES --- */
+                      graphs.classList.add('is-on');
+  
+                      setTimeout(() => {
+                        const bars = graphs.querySelectorAll('.hud-bar');
+                        bars.forEach((bar, i) => {
+                          setTimeout(() => bar.classList.add('is-gone'), i * 18);
+                        });
+  
+                        setTimeout(() => {
+                          graphs.classList.remove('is-on');
+  
+                          setTimeout(() => {
+                            sim.classList.add('is-on');
+                            runContactSim();
+                          }, 300);
+                        }, bars.length * 18 + 250);
+  
+                      }, 1600);
+                    }, 250);
+                  }, 2100);
+                }, 250);
+              }, 700);
+            }, 900);
           }, 200);
         }, 120);
       }
       requestAnimationFrame(tick);
     }
   
+    /* ---------- BENCHMARK ---------- */
+    function runBenchmark(){
+      /* 1) Compteur de leads injectés 0 → 1247 */
+      const target = 1247;
+      const dur = 1200;
+      const start = performance.now();
+      function tickCount(now){
+        const t = Math.min((now - start) / dur, 1);
+        /* easing doux */
+        const eased = 1 - Math.pow(1 - t, 2);
+        benchCt.textContent = Math.floor(eased * target).toLocaleString('fr-FR');
+        if (t < 1) return requestAnimationFrame(tickCount);
+        benchCt.textContent = target.toLocaleString('fr-FR');
+      }
+      requestAnimationFrame(tickCount);
+  
+      /* 2) Remplissage en cascade des 4 répartitions */
+      const values = [
+        { el: bA,  val: vA,  pct: 23, delay: 200  }, /* Priorité A */
+        { el: bB,  val: vB,  pct: 36, delay: 500  }, /* Priorité B */
+        { el: bC,  val: vC,  pct: 26, delay: 800  }, /* Priorité C */
+        { el: bOff,val: vOff,pct: 15, delay: 1100 }  /* Hors cible */
+      ];
+  
+      values.forEach(v => {
+        setTimeout(() => {
+          v.el.style.width = v.pct + '%';
+  
+          /* Compteur du % qui monte */
+          let p = 0;
+          const t0 = performance.now();
+          function t(now){
+            const k = Math.min((now - t0) / 500, 1);
+            p = Math.floor(k * v.pct);
+            v.val.textContent = p + '%';
+            if (k < 1) return requestAnimationFrame(t);
+            v.val.textContent = v.pct + '%';
+          }
+          requestAnimationFrame(t);
+        }, v.delay);
+      });
+  
+      /* 3) Statut final */
+      setTimeout(() => {
+        benchSt.textContent = 'classifié';
+        benchSt.classList.add('done');
+      }, 1600);
+    }
+  
+    /* ---------- CONTACT SIM ---------- */
     function runContactSim(){
       const emailBody = document.getElementById('emailBody');
       const emailProgress = document.getElementById('emailProgress');
@@ -1378,53 +1826,9 @@
       }, 3000);
     }
   
-    runCycle();
+    if (!window.matchMedia || !window.matchMedia("(prefers-reduced-motion: reduce)").matches) runCycle();
   })();
   </script>
-
-  <!-- TICKER -->
-  <div class="ticker">
-    <div class="t-track">
-      <span class="t-item">Data</span><span class="t-item">Signaux faibles</span><span class="t-item">Signaux forts</span>
-      <span class="t-item">Pipeline qualifié</span><span class="t-item">Prise de rendez-vous</span>
-      <span class="t-item">Data</span><span class="t-item">Signaux faibles</span><span class="t-item">Signaux forts</span>
-      <span class="t-item">Pipeline qualifié</span><span class="t-item">Prise de rendez-vous</span>
-    </div>
-  </div>
-
-  <!-- ACTIVITÉ -->
-  <section class="process" id="activite">
-    <span class="arc" aria-hidden="true"></span>
-    <span class="arc a2" aria-hidden="true"></span>
-    <span class="hatch navy" aria-hidden="true"></span>
-    <div class="wrap">
-      <div class="proc-hd">
-        <div>
-          <span class="tag">L'activité Hudson</span>
-          <h2>Veille, ciblage, <span class="serif">conversion</span><span class="dot-mark" aria-hidden="true"></span></h2>
-        </div>
-        <p>Hudson met en place des solutions pour développer les marques.</p>
-      </div>
-      <div class="proc-steps">
-        <div class="step">
-          <div class="step-n">01</div>
-          <div class="step-title">Data</div>
-        </div>
-        <div class="step">
-          <div class="step-n">02</div>
-          <div class="step-title">Signaux faibles &amp; forts</div>
-        </div>
-        <div class="step">
-          <div class="step-n">03</div>
-          <div class="step-title">Pipeline qualifié sur mesure</div>
-        </div>
-        <div class="step">
-          <div class="step-n">04</div>
-          <div class="step-title">Prise de rendez-vous</div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- LES 3 PÔLES -->
   <section class="offers on-navy" id="poles">
@@ -1559,6 +1963,44 @@
       </div>
     </div>
   </section>
+
+
+  <!-- RECOGNITION -->
+  <section class="recognition" aria-label="Reconnaissance Hudson">
+    <div class="wrap">
+      <div class="rec-card">
+        <div class="rec-copy">
+          <span class="rec-kicker">Distinction & reconnaissance</span>
+          <h2 class="rec-title">Hudson dans le <span class="serif">top 10</span><br>des agences de téléprospection<br>en France<span class="dot-mark" aria-hidden="true"></span></h2>
+          <p class="rec-lead">Une présence remarquée dans le paysage français de la téléprospection B2B. Un signal simple pour illustrer la crédibilité commerciale de Hudson, dans un univers exigeant et concurrentiel.</p>
+          <div class="rec-badges">
+            <span class="rec-pill"><img src="gold.png" alt="">Top 10 France</span>
+            <span class="rec-pill">Voir le classement</span>
+          </div>
+        </div>
+        <div class="rec-visual">
+          <span class="rec-orb" aria-hidden="true"></span>
+          <div class="rec-window" aria-hidden="true">
+            <div class="rec-grid"></div>
+            <div class="rec-caption">We build<br><span class="serif">commercial</span><br>traction.</div>
+            <img src="gold.png" alt="" class="rec-medal">
+            <img src="telepro.png" alt="Hudson teleprospection" class="rec-photo">
+            <div class="rec-mini"><strong>Top 10</strong>Agence de téléprospection<br>France · 2026</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker">
+    <div class="t-track">
+      <span class="t-item">Lancer une marque</span><span class="t-item">Conquérir un marché</span><span class="t-item">Fidéliser sa clientèle</span>
+      <span class="t-item">Inviter à un événement</span><span class="t-item">Développer son réseau commercial</span>
+      <span class="t-item">Lancer une marque</span><span class="t-item">Conquérir un marché</span><span class="t-item">Fidéliser sa clientèle</span>
+      <span class="t-item">Inviter à un événement</span><span class="t-item">Développer son réseau commercial</span>
+    </div>
+  </div>
 
   <!-- CTA CONTACT -->
   <section class="cta" id="contact">
