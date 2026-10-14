@@ -1,0 +1,33 @@
+<!-- ============================================== -->
+<!-- HUDSON INTERNATIONAL                           -->
+<!-- ============================================== -->
+
+<url><loc>https://hudson-ltd.com/international</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.80</priority></url>
+<url><loc>https://hudson-ltd.com/force-de-vente-externalisee</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/force-de-vente-suppletive</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/force-de-vente-externalisee-industrie</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/force-de-vente-externalisee-laboratoires</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/agent-commercial-ou-force-de-vente</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/force-de-vente-externalisee-suisse</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/business-developer-externalise-geneve</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/business-developer-externalise-lausanne</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/entreprises-suisses-marche-francais</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/outsourced-sales-switzerland</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/externer-vertrieb-schweiz</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/force-de-vente-externalisee-belgique</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/business-developer-externalise-bruxelles</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/force-de-vente-externalisee-wallonie</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/entreprises-belges-marche-francais</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/outsourced-sales-belgium</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/force-de-vente-externalisee-luxembourg</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/force-de-vente-externalisee-monaco</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/entreprises-quebecoises-marche-francais</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/outsourced-sales-europe-francophone</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/outsourced-sales-force-france</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/market-entry-france</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/sales-agent-france</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/business-development-agency-france</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/french-sales-team-without-hiring</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/pharma-sales-representation-france</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/selling-to-french-pharmacies</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://hudson-ltd.com/expand-b2b-company-to-france</loc><lastmod>2026-10-14T10:00:00+00:00</lastmod><priority>0.64</priority></url>
