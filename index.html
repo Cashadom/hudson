@@ -146,8 +146,9 @@
     @media (max-width: 720px) { .nav-in { padding: 0 22px; height: 72px; } }
 
     .logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
-    .logo img { height: 60px; width: auto; display: block; }
+    .logo img { height: 52px; width: auto; max-width: 140px; display: block; object-fit: contain; }
     .logo-txt { display: flex; flex-direction: column; line-height: 1; padding-left: 14px; border-left: 1px solid var(--line-gold); }
+    .logo img.is-missing + .logo-txt, .logo-txt:first-child { padding-left: 0; border-left: 0; }
     .logo-word { font-family: var(--f-display); font-weight: 800; font-size: 28px; letter-spacing: -0.05em; color: var(--navy); }
     .logo-word span { color: var(--gold); }
     .logo-sub { font-family: var(--f-mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-deep); margin-top: 5px; }
@@ -475,6 +476,122 @@
     }
     .foot-bottom a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color .15s; }
     .foot-bottom a:hover { color: var(--gold); }
+
+
+    /* HUDSON | Édition graphique ciblée : base Claudio préservée */
+    :root { --sky: #e8f0f8; --paper: #fbf9f4; }
+    /* Logo d'origine visible, y compris lorsque la page est consultée localement */
+    .logo img { flex: 0 0 auto; width: auto; height: 52px; max-width: none; object-fit: contain; }
+    .logo-txt { flex-shrink: 0; }
+
+    /* Accent architectural plutôt qu'accumulation de cercles */
+    .hero .ring.r2, footer .ring.r2, .offers .ring.r1 { display: none; }
+    .hero .ring.r1 { width: 420px; height: 420px; right: -170px; top: 150px; opacity: .44; }
+    .hero::after {
+      content: ''; position: absolute; z-index: 1; pointer-events: none;
+      width: 180px; height: 180px; left: max(0px, calc((100vw - 1200px) / 2)); bottom: -94px;
+      transform: rotate(-32deg); border-top: 1px solid rgba(197,160,90,.32);
+      border-left: 1px solid rgba(11,33,68,.12);
+    }
+    .h-panel { border-top-color: var(--gold); }
+    .h-panel-item:hover { padding-left: 4px; }
+
+    /* Plus de respiration et de lignes, moins de surfaces décoratives */
+    .process { border-bottom: 1px solid var(--line-gold); }
+    .process .arc.a2 { border-color: rgba(197,160,90,.30); }
+    .offers { border-bottom: 1px solid var(--gold); }
+    .offers-grid { border-top-color: rgba(197,160,90,.4); }
+    .o-card::before { width: 28px; opacity: .62; }
+    .o-card:hover::before { width: 82px; opacity: 1; }
+    .hc-visual .frame { inset: 18px -18px -18px 18px; }
+    .tech .grid-bg { opacity: .40; }
+    .tech, .airports { border-top: 1px solid var(--gold); }
+    .airports .ring.r1 { opacity: .48; }
+    .panel { box-shadow: none; }
+    .airports .panel { box-shadow: 0 16px 46px rgba(11,33,68,.065); }
+    .panel-row { min-width: 0; }
+    .panel-name { min-width: 0; }
+
+    /* Bas de page plus éditorial, sans ajouter de contenu marketing */
+    footer { border-top: 2px solid var(--gold); }
+    footer .ring.r1 { opacity: .55; }
+    .foot-sign { margin-top: 25px; font-size: clamp(82px, 15vw, 208px); }
+    .foot-main { border-top-color: rgba(197,160,90,.38); }
+    .foot-col { min-width: 0; }
+    .foot-col:first-child::after {
+      content: ''; display: block; margin-top: 28px; width: 82px; height: 24px;
+      background: var(--hatch); opacity: .45;
+    }
+    .foot-text a { overflow-wrap: anywhere; }
+    .foot-bottom { border-top-color: rgba(197,160,90,.25); }
+
+    /* Finition responsive, notamment iPad et mobile */
+    @media (max-width: 1050px) {
+      .hero-grid, .split, .healthcare-grid { gap: 46px; }
+      .foot-sign { font-size: clamp(76px, 15vw, 180px); }
+    }
+    @media (max-width: 900px) {
+      .hero .ring, footer .ring, .airports .ring { display: none; }
+      .hero::after { display: none; }
+      .foot-sign { font-size: clamp(70px, 17vw, 150px); }
+    }
+    @media (max-width: 720px) {
+      .logo img { height: 42px; }
+      .hero h1 { font-size: clamp(38px, 9vw, 54px); line-height: 1.08; }
+      .hero { padding-bottom: 76px; }
+      .process, .offers, .healthcare, .tech, .airports, .cta { padding-top: 78px; padding-bottom: 82px; }
+      .proc-hd { margin-bottom: 46px; }
+      .step-n { font-size: 45px; }
+      .foot-sign { font-size: clamp(56px, 16vw, 108px); }
+      .foot-main { margin-top: 38px; }
+      .panel-row { grid-template-columns: 26px minmax(0, 1fr) auto; gap: 9px; }
+      .panel-name { font-size: 15px; }
+      .panel-tag { font-size: 9px; }
+      .hc-visual .frame { inset: 13px -10px -13px 10px; }
+    }
+    @media (max-width: 420px) {
+      .topbar-in { font-size: 9px; }
+      .logo { gap: 10px; }
+      .logo-txt { padding-left: 11px; }
+      .logo-word { font-size: 22px; }
+      .logo-sub { font-size: 8px; }
+      .foot-sign { font-size: 16vw; }
+      .panel { padding: 25px 20px 18px; }
+      .panel-row { grid-template-columns: 21px minmax(0,1fr); }
+      .panel-tag { grid-column: 2; text-align: left; margin-top: -3px; }
+    }
+
+    /* Icons métiers Hudson : option A, au-dessus de chaque index */
+    .pole-icon {
+      display: block;
+      width: 76px;
+      height: 76px;
+      object-fit: contain;
+      object-position: left center;
+      margin: 2px 0 22px;
+      flex-shrink: 0;
+    }
+    @media (max-width: 860px) {
+      .pole-icon { width: 68px; height: 68px; margin-bottom: 18px; }
+    }
+    /* Une unique micro-animation orbitale sur le cercle du hero */
+    .hero .ring.r2::after {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 6px; height: 6px;
+      margin: -3px 0 0 -3px;
+      background: var(--gold);
+      transform: rotate(0deg) translateX(150px);
+      animation: hudson-orbit 34s linear infinite;
+      opacity: .78;
+    }
+    @keyframes hudson-orbit {
+      to { transform: rotate(360deg) translateX(150px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero .ring.r2::after { animation: none; }
+    }
   </style>
 </head>
 <body>
@@ -502,7 +619,7 @@
     </div>
     <div class="nav-in">
       <a href="/" class="logo">
-        <img src="icon.png" alt="Hudson Business Development">
+        <img src="icon.png" alt="Hudson Business Development" width="52" height="52">
         <span class="logo-txt">
           <span class="logo-word">hudson<span>.</span></span>
           <span class="logo-sub">Business Development</span>
@@ -603,6 +720,7 @@
       </div>
       <div class="offers-grid">
         <div class="o-card">
+          <img class="pole-icon" src="health.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
           <div class="o-idx">Pôle 01</div>
           <div class="o-title">Hudson Healthcare</div>
           <div class="o-tag">Développement des produits pharmaceutiques et représentation des laboratoires sur le marché français</div>
@@ -614,6 +732,7 @@
           <a href="#healthcare" class="o-link">Voir le pôle →</a>
         </div>
         <div class="o-card">
+          <img class="pole-icon" src="tech.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
           <div class="o-idx">Pôle 02</div>
           <div class="o-title">Hudson Technologies</div>
           <div class="o-tag">Univers Data &amp; IT</div>
@@ -626,6 +745,7 @@
         </div>
         <div class="o-card">
           <div class="o-badge">2027</div>
+          <img class="pole-icon" src="plane.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
           <div class="o-idx">Pôle 03</div>
           <div class="o-title">Hudson Airports Solutions</div>
           <div class="o-tag">Benchmark, veille et développement des Hudson Naprooms</div>
