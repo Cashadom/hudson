@@ -22,7 +22,7 @@
 
   <!-- META PRINCIPALES SEO -->
   <title>Hudson Business Development | Healthcare, Technologies, Airports Solutions</title>
-  <meta name="description" content="Hudson met en place des solutions pour développer les marques, de la data à la prise de rendez-vous : détection de signaux faibles et forts, constitution d'un pipeline qualifié sur mesure. Trois pôles : Hudson Healthcare, Hudson Technologies, Hudson Airports Solutions.">
+  <meta name="description" content="Hudson met en place des solutions de téléprospection pour développer les marques, de la data à la prise de rendez-vous : détection de signaux faibles et forts, constitution d'un pipeline qualifié sur mesure.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://hudson-ltd.com/">
   <link rel="icon" type="image/png" href="favicon.png">
@@ -747,6 +747,30 @@
     @media (min-width: 861px) { .nav-in { height: 88px; } }
     @media (max-width: 860px) { .hero { padding-top: 190px; } }
     @media (max-width: 720px) { .hero { padding-top: 182px; } }
+
+    /* Retouches ciblées : téléprospection, classement, titre Airports */
+    .hero-teleprospection {
+      font-family: var(--f-serif);
+      font-style: italic;
+      font-weight: 700;
+      color: var(--gold-deep);
+    }
+    .rec-ranking-label {
+      display: inline-block;
+      font-family: var(--f-mono);
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 5px;
+    }
+    .airports .split h2 { font-size: clamp(29px, 3vw, 43px); letter-spacing: -.045em; }
+    .airports-title-ending { display: inline-block; white-space: nowrap; }
+    .airports-title-ending .dot-mark { margin-left: 9px; }
+    @media (max-width: 720px) {
+      .airports .split h2 { font-size: clamp(29px, 7vw, 41px); }
+    }
   </style>
 </head>
 <body>
@@ -788,7 +812,7 @@
         <div>
           <div class="h-eye"><b>Healthcare</b> · Technologies · Airports Solutions</div>
           <h1>Développer les marques, <span class="serif">de la data</span> à la prise de rendez-vous<span class="dot-mark" aria-hidden="true"></span></h1>
-          <p class="hero-sub">Hudson met en place des solutions pour développer les marques : <strong>détection de signaux faibles et forts</strong>, constitution d'un <strong>pipeline qualifié sur mesure</strong>.</p>
+          <p class="hero-sub">Hudson met en place des solutions de <span class="hero-teleprospection">téléprospection</span> pour développer les marques : <strong>détection de signaux faibles et forts</strong>, constitution d'un <strong>pipeline qualifié sur mesure</strong>.</p>
           <div class="hero-btns">
             <a href="#activite" class="btn-p">Notre activité</a>
           </div>
@@ -1943,7 +1967,7 @@
       <div class="split">
         <div>
           <span class="tag">Pôle 03 · Hudson Airports Solutions · 2027</span>
-          <h2>Hudson Airports <span class="serif">Solutions</span><span class="dot-mark" aria-hidden="true"></span></h2>
+          <h2>Hudson Airports <span class="airports-title-ending"><span class="serif">Solutions</span><span class="dot-mark" aria-hidden="true"></span></span></h2>
           <p class="split-desc">Benchmark, veille et développement des <strong>Hudson Naprooms</strong>.</p>
           <div class="chips">
             <span>Benchmark</span>
@@ -1974,8 +1998,7 @@
           <h2 class="rec-title">Hudson dans le <span class="serif">top 10</span><br>des agences de téléprospection<br>en France<span class="dot-mark" aria-hidden="true"></span></h2>
           <p class="rec-lead">Une présence remarquée dans le paysage français de la téléprospection B2B. Un signal simple pour illustrer la crédibilité commerciale de Hudson, dans un univers exigeant et concurrentiel.</p>
           <div class="rec-badges">
-            <span class="rec-pill"><img src="gold.png" alt="">Top 10 France</span>
-            <span class="rec-pill">Voir le classement</span>
+            <span class="rec-ranking-label">Voir le classement</span>
           </div>
         </div>
         <div class="rec-visual">
@@ -1985,7 +2008,6 @@
             <div class="rec-caption">We build<br><span class="serif">commercial</span><br>traction.</div>
             <img src="gold.png" alt="" class="rec-medal">
             <img src="telepro.png" alt="Hudson teleprospection" class="rec-photo">
-            <div class="rec-mini"><strong>Top 10</strong>Agence de téléprospection<br>France · 2026</div>
           </div>
         </div>
       </div>
