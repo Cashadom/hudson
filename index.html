@@ -771,6 +771,128 @@
     @media (max-width: 720px) {
       .airports .split h2 { font-size: clamp(29px, 7vw, 41px); }
     }
+
+    /* HUDSON : une seule skyline derrière le header et le hero, sans visuels dans les lignes 01/02/03.
+       Déposer city.png à côté de index.html. Même taille et origine pour éviter une rupture visuelle. */
+    nav {
+      background-image:
+        linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.92)),
+        url('city.png');
+      background-size: 100% 100%, 100% auto;
+      background-position: center top, center top;
+      background-repeat: no-repeat;
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+    }
+    .hero {
+      background-image:
+        linear-gradient(180deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.88) 35%, rgba(255,255,255,.78) 65%, rgba(255,255,255,.62) 100%),
+        url('city.png');
+      background-size: 100% 100%, 100% auto;
+      background-position: center top, center top;
+      background-repeat: no-repeat;
+    }
+    .hero .hero-video-bg { display: none; }
+    .hero .hero-overlay { background: transparent; }
+    @media (max-width: 720px) {
+      nav, .hero { background-size: 100% 100%, auto 100%; background-position: center top, center top; }
+      .hero { background-image: linear-gradient(180deg,rgba(255,255,255,.94),rgba(255,255,255,.80)),url('city.png'); }
+    }
+    .tech .panel-row .aopx-node-link {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(197,160,90,.55);
+      transition: color .2s, border-color .2s;
+    }
+    .tech .panel-row .aopx-node-link:hover,
+    .tech .panel-row .aopx-node-link:focus-visible { color: var(--gold); border-color: var(--gold); }
+
+    /* HUDSON TECHNOLOGIES : finition éditoriale premium, sans image */
+    .tech {
+      isolation: isolate;
+      background:
+        radial-gradient(ellipse 64% 88% at 86% 42%, rgba(35,78,133,.24), transparent 72%),
+        linear-gradient(135deg, #081a35 0%, #0b2143 48%, #102b50 100%);
+      padding-top: 132px;
+      padding-bottom: 136px;
+    }
+    .tech::before {
+      content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(197,160,90,.055) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(197,160,90,.045) 1px, transparent 1px);
+      background-size: 116px 116px;
+      mask-image: linear-gradient(90deg, transparent, #000 20%, #000 82%, transparent);
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 20%, #000 82%, transparent);
+    }
+    .tech::after {
+      content: ''; position: absolute; width: 620px; height: 620px;
+      border: 1px solid rgba(197,160,90,.12); border-radius: 50%;
+      left: -330px; top: -300px; pointer-events: none; z-index: 0;
+    }
+    .tech .grid-bg { opacity: .25; }
+    .tech .split { gap: clamp(42px, 5vw, 86px); align-items: center; }
+    .tech .split > div:first-child { min-width: 0; }
+    .tech .split h2 {
+      font-size: clamp(38px, 4vw, 58px);
+      letter-spacing: -.048em;
+      line-height: 1.04;
+    }
+    .tech .split-desc {
+      max-width: 530px; margin-top: 30px; margin-bottom: 32px;
+      color: rgba(236,242,251,.78); font-size: 17px; line-height: 1.75;
+    }
+    /* Les cibles commerciales se lisent comme une signature, pas comme des boutons logiciels. */
+    .tech .chips { gap: 0; row-gap: 11px; align-items: center; }
+    .tech .chips::before {
+      content: ''; display: inline-block; width: 30px; height: 1px;
+      background: var(--gold); margin-right: 14px; flex: 0 0 30px;
+    }
+    .tech .chips span {
+      border: 0; padding: 0; background: none; color: #d8b474;
+      font-family: var(--f-mono); font-size: 10.5px;
+      letter-spacing: .09em; white-space: nowrap;
+    }
+    .tech .chips span + span::before {
+      content: '/'; display: inline-block; margin: 0 11px;
+      color: rgba(197,160,90,.55);
+    }
+    .tech .chips span:hover { background: transparent; color: #f0d089; }
+    .tech .panel-wrap { filter: drop-shadow(0 26px 38px rgba(0,0,0,.16)); }
+    .tech .panel {
+      padding: 42px 40px 28px;
+      border: 1px solid rgba(197,160,90,.62);
+      background:
+        linear-gradient(155deg, rgba(255,255,255,.065), rgba(255,255,255,.018) 42%, rgba(3,15,35,.17)),
+        #112747;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.015), 0 20px 55px rgba(0,0,0,.10);
+    }
+    .tech .panel-label {
+      padding-bottom: 23px; margin-bottom: 9px;
+      border-bottom: 1px solid rgba(197,160,90,.4);
+      font-size: 10px; letter-spacing: .21em;
+    }
+    .tech .panel-row { grid-template-columns: 28px minmax(0, 1fr) auto; gap: 20px; padding: 22px 0; }
+    .tech .panel-row + .panel-row { border-top: 1px solid rgba(215,228,248,.15); }
+    .tech .panel-row i { color: #d7b16a; font-size: 11px; }
+    .tech .panel-name { font-size: 18px; letter-spacing: -.028em; }
+    .tech .panel-tag { color: rgba(218,230,248,.52); font-size: 9px; }
+    .tech .panel-row .aopx-node-link { border-bottom-color: rgba(197,160,90,.75); }
+    .tech .panel-border-run::before { box-shadow: 0 0 7px rgba(197,160,90,.45), 0 0 15px rgba(197,160,90,.12); }
+    @media (max-width: 900px) {
+      .tech { padding-top: 90px; padding-bottom: 96px; }
+      .tech .split { gap: 52px; }
+    }
+    @media (max-width: 560px) {
+      .tech { padding-top: 76px; padding-bottom: 82px; }
+      .tech .split h2 { font-size: clamp(35px, 9vw, 47px); }
+      .tech .split-desc { font-size: 15px; }
+      .tech .panel { padding: 28px 22px 18px; }
+      .tech .panel-row { grid-template-columns: 22px minmax(0,1fr); gap: 9px; padding: 18px 0; }
+      .tech .panel-tag { grid-column: 2; text-align: left; }
+      .tech .chips span { font-size: 9px; }
+      .tech .chips span + span::before { margin: 0 8px; }
+    }
   </style>
 </head>
 <body>
@@ -1937,12 +2059,12 @@
         <div>
           <span class="tag">Pôle 02 · Hudson Technologies</span>
           <h2>Univers Data <span class="serif">&amp; IT</span><span class="dot-mark" aria-hidden="true"></span></h2>
-          <p class="split-desc"><strong>Hudson Technologies</strong> regroupe l'agentique, les jumeaux numériques et les nodes <a href="https://aopx.fr" target="_blank" rel="noopener noreferrer">aopx.fr</a>.</p>
+          <p class="split-desc">Des prestations ciblées auprès des directions de TPE et de grands groupes, pour des cycles de vente plus longs.</p>
           <div class="chips">
-            <span>Data &amp; IT</span>
-            <span>Agentique</span>
-            <span>Jumeaux numériques</span>
-            <a href="https://aopx.fr" target="_blank" rel="noopener noreferrer">aopx.fr</a>
+            <span>Supply Chain</span>
+            <span>Production</span>
+            <span>Informatique</span>
+            <span>Achats</span>
           </div>
         </div>
         <div class="panel-wrap">
@@ -1953,7 +2075,7 @@
             <div class="panel-row"><i>01</i><span class="panel-name">Data &amp; IT</span><span class="panel-tag">Univers</span></div>
             <div class="panel-row"><i>02</i><span class="panel-name">Agentique</span><span class="panel-tag">Agents IA</span></div>
             <div class="panel-row"><i>03</i><span class="panel-name">Jumeaux numériques</span><span class="panel-tag">Digital twin</span></div>
-            <div class="panel-row"><i>04</i><span class="panel-name">Nodes aopx.fr</span><span class="panel-tag">AOPX</span></div>
+            <div class="panel-row"><i>04</i><span class="panel-name"><a class="aopx-node-link" href="https://www.aopx.fr/" target="_blank" rel="noopener noreferrer">Nodes AOPX</a></span><span class="panel-tag">www.aopx.fr</span></div>
           </div>
         </div>
       </div>
@@ -1995,7 +2117,7 @@
       <div class="rec-card">
         <div class="rec-copy">
           <span class="rec-kicker">Distinction & reconnaissance</span>
-          <h2 class="rec-title">Hudson dans le<br><span class="serif" style="white-space:nowrap;">top 10</span><br>des agences de téléprospection<br>en France<span class="dot-mark" aria-hidden="true"></span></h2>
+          <h2 class="rec-title">Hudson dans le <span class="serif">top 10</span><br>des agences de téléprospection<br>en France<span class="dot-mark" aria-hidden="true"></span></h2>
           <p class="rec-lead">Une présence remarquée dans le paysage français de la téléprospection B2B. Un signal simple pour illustrer la crédibilité commerciale de Hudson, dans un univers exigeant et concurrentiel.</p>
           <div class="rec-badges">
             <span class="rec-ranking-label">Voir le classement</span>
