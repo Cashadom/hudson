@@ -118,9 +118,10 @@
     /* NAVIGATION */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 60;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--line);
+      background: rgba(255,255,255,0.68);
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(11,33,68,0.08);
+      box-shadow: 0 10px 26px rgba(11,33,68,0.08);
     }
 
     .nav-in {
@@ -151,8 +152,8 @@
     .nav-links a:hover::after { width: 100%; }
     /* Navigation maintenue accessible sur mobile, sans menu masqué */
     @media (max-width: 860px) {
-      .nav-in { flex-wrap: wrap; height: auto; padding-top: 12px; padding-bottom: 0; }
-      .nav-links { width: 100%; justify-content: space-between; gap: 14px; padding: 14px 0 13px; border-top: 1px solid var(--line); margin-top: 12px; }
+      .nav-in { flex-wrap: wrap; height: auto; padding-top: 14px; padding-bottom: 8px; }
+      .nav-links { width: 100%; justify-content: space-between; gap: 14px; padding: 14px 0 8px; border-top: 1px solid rgba(11,33,68,0.08); margin-top: 12px; }
       .nav-links a { font-size: 12px; white-space: nowrap; }
     }
     @media (max-width: 420px) {
@@ -745,8 +746,8 @@
     nav { border-bottom: 1px solid rgba(11,33,68,.11); }
     .nav-links a:focus-visible, .logo:focus-visible { outline: 2px solid var(--gold); outline-offset: 5px; }
     @media (min-width: 861px) { .nav-in { height: 88px; } }
-    @media (max-width: 860px) { .hero { padding-top: 190px; } }
-    @media (max-width: 720px) { .hero { padding-top: 182px; } }
+    @media (max-width: 860px) { .hero { padding-top: 208px; } }
+    @media (max-width: 720px) { .hero { padding-top: 224px; } }
 
     /* Retouches ciblées : téléprospection, classement, titre Airports */
     .hero-teleprospection {
@@ -772,31 +773,26 @@
       .airports .split h2 { font-size: clamp(29px, 7vw, 41px); }
     }
 
-    /* HUDSON : une seule skyline derrière le header et le hero, sans visuels dans les lignes 01/02/03.
-       Déposer city.png à côté de index.html. Même taille et origine pour éviter une rupture visuelle. */
-    nav {
-      background-image:
-        linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.92)),
-        url('city.png');
-      background-size: 100% 100%, 100% auto;
-      background-position: center top, center top;
-      background-repeat: no-repeat;
-      -webkit-backdrop-filter: none;
-      backdrop-filter: none;
-    }
+    /* HUDSON : une seule skyline portée par le hero, visible aussi derrière le menu fixe.
+       Déposer city.png à côté de index.html. */
     .hero {
       background-image:
-        linear-gradient(180deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.88) 35%, rgba(255,255,255,.78) 65%, rgba(255,255,255,.62) 100%),
+        linear-gradient(180deg, rgba(255,255,255,.78) 0%, rgba(255,255,255,.82) 22%, rgba(255,255,255,.80) 48%, rgba(255,255,255,.68) 74%, rgba(255,255,255,.58) 100%),
         url('city.png');
-      background-size: 100% 100%, 100% auto;
+      background-size: 100% 100%, cover;
       background-position: center top, center top;
       background-repeat: no-repeat;
     }
     .hero .hero-video-bg { display: none; }
     .hero .hero-overlay { background: transparent; }
     @media (max-width: 720px) {
-      nav, .hero { background-size: 100% 100%, auto 100%; background-position: center top, center top; }
-      .hero { background-image: linear-gradient(180deg,rgba(255,255,255,.94),rgba(255,255,255,.80)),url('city.png'); }
+      .hero {
+        background-image:
+          linear-gradient(180deg, rgba(255,255,255,.76) 0%, rgba(255,255,255,.82) 26%, rgba(255,255,255,.78) 54%, rgba(255,255,255,.66) 100%),
+          url('city.png');
+        background-size: 100% 100%, cover;
+        background-position: center top, center top;
+      }
     }
     .tech .panel-row .aopx-node-link {
       color: inherit;
@@ -842,22 +838,27 @@
       max-width: 530px; margin-top: 30px; margin-bottom: 32px;
       color: rgba(236,242,251,.78); font-size: 17px; line-height: 1.75;
     }
-    /* Les cibles commerciales se lisent comme une signature, pas comme des boutons logiciels. */
-    .tech .chips { gap: 0; row-gap: 11px; align-items: center; }
-    .tech .chips::before {
-      content: ''; display: inline-block; width: 30px; height: 1px;
-      background: var(--gold); margin-right: 14px; flex: 0 0 30px;
+    /* Les cibles commerciales se lisent comme une grille éditoriale claire. */
+    .tech .chips {
+      display: grid;
+      grid-template-columns: repeat(3, max-content);
+      gap: 12px 14px;
+      align-items: stretch;
+      justify-content: start;
+      margin-top: 8px;
     }
+    .tech .chips::before { content: none; }
     .tech .chips span {
-      border: 0; padding: 0; background: none; color: #d8b474;
-      font-family: var(--f-mono); font-size: 10.5px;
-      letter-spacing: .09em; white-space: nowrap;
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 42px; padding: 0 16px;
+      border: 1px solid rgba(197,160,90,.32);
+      background: rgba(255,255,255,.03);
+      color: #e2c58d;
+      font-family: var(--f-mono); font-size: 10.2px;
+      letter-spacing: .10em; text-transform: uppercase; white-space: nowrap;
     }
-    .tech .chips span + span::before {
-      content: '/'; display: inline-block; margin: 0 11px;
-      color: rgba(197,160,90,.55);
-    }
-    .tech .chips span:hover { background: transparent; color: #f0d089; }
+    .tech .chips span + span::before { content: none; }
+    .tech .chips span:hover { background: rgba(255,255,255,.05); color: #f0d089; }
     .tech .panel-wrap { filter: drop-shadow(0 26px 38px rgba(0,0,0,.16)); }
     .tech .panel {
       padding: 42px 40px 28px;
@@ -890,8 +891,8 @@
       .tech .panel { padding: 28px 22px 18px; }
       .tech .panel-row { grid-template-columns: 22px minmax(0,1fr); gap: 9px; padding: 18px 0; }
       .tech .panel-tag { grid-column: 2; text-align: left; }
-      .tech .chips span { font-size: 9px; }
-      .tech .chips span + span::before { margin: 0 8px; }
+      .tech .chips { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+      .tech .chips span { min-height: 40px; font-size: 9px; white-space: normal; text-align: center; line-height: 1.35; padding: 8px 10px; }
     }
   </style>
 </head>
@@ -2061,10 +2062,12 @@
           <h2>Univers Data <span class="serif">&amp; IT</span><span class="dot-mark" aria-hidden="true"></span></h2>
           <p class="split-desc">Des prestations ciblées auprès des directions de TPE et de grands groupes, pour des cycles de vente plus longs.</p>
           <div class="chips">
-            <span>Supply Chain</span>
+            <span>Usine</span>
             <span>Production</span>
-            <span>Informatique</span>
+            <span>Supply Chain</span>
+            <span>Logistique</span>
             <span>Achats</span>
+            <span>Direction informatique</span>
           </div>
         </div>
         <div class="panel-wrap">
