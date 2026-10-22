@@ -3,21 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0B2143" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#08182F" media="(prefers-color-scheme: dark)">
 
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5PF6FCCW');</script>
-  <!-- End Google Tag Manager -->
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S2912LSCRX"></script>
+  <!-- Hudson : mesure uniquement apres consentement explicite -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-S2912LSCRX');
+    (function () {
+      'use strict';
+      var key = 'hudson_cookie_choice_v1';
+      var lifetime = 180 * 24 * 60 * 60 * 1000;
+      var loaded = false;
+      var current = null;
+      try {
+        var saved = JSON.parse(localStorage.getItem(key) || 'null');
+        if (saved && (saved.choice === 'accepted' || saved.choice === 'refused') &&
+            Date.now() - saved.date < lifetime) current = saved.choice;
+      } catch (error) {}
+
+      function loadAnalytics() {
+        if (loaded) return;
+        loaded = true;
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { window.dataLayer.push(arguments); };
+        window.gtag('js', new Date());
+        window.gtag('config', 'G-S2912LSCRX');
+
+        var ga = document.createElement('script');
+        ga.async = true;
+        ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-S2912LSCRX';
+        document.head.appendChild(ga);
+
+        window.dataLayer.push({'gtm.start': Date.now(), event: 'gtm.js'});
+        var gtm = document.createElement('script');
+        gtm.async = true;
+        gtm.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-5PF6FCCW';
+        document.head.appendChild(gtm);
+      }
+
+      function refreshBanner() {
+        var banner = document.getElementById('hudson-cookie-banner');
+        if (banner) banner.hidden = current !== null;
+      }
+
+      window.hudsonCookieConsent = {
+        get: function () { return current; },
+        choose: function (choice) {
+          if (choice !== 'accepted' && choice !== 'refused') return;
+          var wasAccepted = current === 'accepted';
+          current = choice;
+          try { localStorage.setItem(key, JSON.stringify({choice: choice, date: Date.now()})); } catch (error) {}
+          refreshBanner();
+          if (choice === 'accepted') loadAnalytics();
+          if (choice === 'refused' && wasAccepted) window.location.reload();
+        },
+        open: function () {
+          var banner = document.getElementById('hudson-cookie-banner');
+          if (banner) { banner.hidden = false; banner.querySelector('button').focus(); }
+        }
+      };
+      if (current === 'accepted') loadAnalytics();
+      document.addEventListener('DOMContentLoaded', refreshBanner);
+    })();
   </script>
 
   <!-- META PRINCIPALES SEO -->
@@ -907,14 +953,73 @@
       .tech .chips { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
       .tech .chips span { min-height: 40px; font-size: 9px; white-space: normal; text-align: center; line-height: 1.35; padding: 8px 10px; }
     }
+
+    /* HUDSON 2026 : filet signature bleu nuit et or, discret et anime */
+    nav { isolation: isolate; }
+    nav::before {
+      content: ''; display: block; height: 9px;
+      background:
+        linear-gradient(108deg, transparent 0%, transparent 41%, rgba(255,238,180,.68) 49%, transparent 57%, transparent 100%) -200% 0 / 200% 100% no-repeat,
+        repeating-linear-gradient(132deg, transparent 0 22px, rgba(197,160,90,.42) 22px 23px, transparent 23px 48px),
+        linear-gradient(90deg, #08182f 0%, #0b2143 52%, #17345a 100%);
+      border-bottom: 1px solid rgba(197,160,90,.65);
+      animation: hudson-rail-light 14s ease-in-out infinite;
+    }
+    @keyframes hudson-rail-light {
+      0%, 22%, 100% { background-position: -200% 0, 0 0, 0 0; }
+      50%, 68% { background-position: 200% 0, 0 0, 0 0; }
+    }
+    nav .nav-in { position: relative; }
+    nav .nav-links a { transition: color .2s ease; }
+    @media (prefers-reduced-motion: reduce) { nav::before { animation: none; } }
+
+    /* Consentement : compose comme une bande editoriale et non un pop-up publicitaire */
+    .hudson-cookie-banner[hidden] { display: none !important; }
+    .hudson-cookie-banner {
+      position: fixed; z-index: 120; left: 0; right: 0; bottom: 0;
+      padding: 17px 24px calc(17px + env(safe-area-inset-bottom, 0px));
+      background: rgba(255,255,255,.985);
+      border-top: 2px solid var(--gold);
+      box-shadow: 0 -12px 50px rgba(8,24,47,.15);
+      color: var(--navy);
+      -webkit-font-smoothing: antialiased;
+    }
+    .hudson-cookie-inner {
+      max-width: 1200px; margin: auto; display: flex; align-items: center;
+      justify-content: space-between; gap: 22px;
+    }
+    .hudson-cookie-copy { max-width: 760px; }
+    .hudson-cookie-eyebrow {
+      display: block; margin-bottom: 5px; color: var(--gold-deep);
+      font-family: var(--f-mono); font-size: 10px; letter-spacing: .17em; text-transform: uppercase;
+    }
+    .hudson-cookie-copy p { color: var(--t-mid); font-size: 13px; line-height: 1.55; margin: 0; }
+    .hudson-cookie-copy a { color: var(--navy); text-underline-offset: 3px; }
+    .hudson-cookie-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .hudson-cookie-actions button {
+      font-family: var(--f-body); font-size: 12px; font-weight: 600;
+      min-height: 45px; padding: 12px 21px; cursor: pointer;
+      transition: background .2s, border-color .2s;
+    }
+    .hudson-cookie-refuse { background: white; color: var(--navy); border: 1px solid rgba(11,33,68,.32); }
+    .hudson-cookie-refuse:hover { border-color: var(--navy); background: #f4f7fa; }
+    .hudson-cookie-accept { background: var(--navy); color: white; border: 1px solid var(--navy); }
+    .hudson-cookie-accept:hover { background: var(--navy-2); }
+    .hudson-cookie-actions button:focus-visible, .hudson-cookie-manage:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+    .hudson-cookie-manage { background: none; border: none; color: rgba(255,255,255,.62); font: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+    .hudson-cookie-manage:hover { color: white; }
+    @media (max-width: 720px) {
+      .hudson-cookie-banner { padding: 18px 20px calc(18px + env(safe-area-inset-bottom, 0px)); }
+      .hudson-cookie-inner { flex-direction: column; align-items: stretch; gap: 15px; }
+      .hudson-cookie-actions { display: grid; grid-template-columns: 1fr 1fr; }
+      .hudson-cookie-actions button { width: 100%; }
+      .hudson-cookie-copy p { font-size: 12.5px; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PF6FCCW"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+  <!-- GTM sans JavaScript desactive : absence de consentement possible -->
 
   <!-- NAVIGATION -->
   <nav>
@@ -2219,7 +2324,8 @@
         <span>© 2026 Hudson Ltd · Tous droits réservés</span>
         <span>
           <a href="/mentions-legales">Mentions légales</a> ·
-          <a href="/plan">Plan du site</a>
+          <a href="/plan">Plan du site</a> ·
+          <button class="hudson-cookie-manage" type="button" onclick="hudsonCookieConsent.open()">Gérer les cookies</button>
         </span>
       </div>
     </div>
@@ -2245,5 +2351,19 @@
     ]
   }
   </script>
+
+  <!-- Consentement cookies : premier acces, choix memorise 180 jours -->
+  <aside class="hudson-cookie-banner" id="hudson-cookie-banner" aria-label="Choix des cookies" hidden>
+    <div class="hudson-cookie-inner">
+      <div class="hudson-cookie-copy">
+        <span class="hudson-cookie-eyebrow">Confidentialite &amp; cookies</span>
+        <p>Nous utilisons des cookies de mesure d'audience uniquement avec votre accord. Vous pouvez accepter ou refuser, et modifier ce choix plus tard. <a href="/mentions-legales">En savoir plus</a>.</p>
+      </div>
+      <div class="hudson-cookie-actions">
+        <button type="button" class="hudson-cookie-refuse" onclick="hudsonCookieConsent.choose('refused')">Refuser</button>
+        <button type="button" class="hudson-cookie-accept" onclick="hudsonCookieConsent.choose('accepted')">Accepter</button>
+      </div>
+    </div>
+  </aside>
 </body>
 </html>
