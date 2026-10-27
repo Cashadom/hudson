@@ -1054,19 +1054,36 @@
       .tp-card + .tp-card { border-top: 1px solid var(--line); }
     }
 
-    /* Hudson CRM : présentation volontairement secondaire, en une seule fenêtre */
-    .crm { background: #f8f9fb; padding: 66px 0; border-top: 1px solid var(--line); }
-    .crm-window { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 38px;
-      align-items: center; background: #fff; border: 1px solid rgba(11,33,68,.16);
-      border-left: 3px solid var(--gold); padding: 36px 42px; }
-    .crm-window h2 { font-size: clamp(25px, 2.7vw, 37px); margin-bottom: 12px; }
-    .crm-window p { font-size: 15px; line-height: 1.75; color: var(--t-mid); max-width: 760px; }
-    .crm-window .crm-link { display: inline-flex; align-items: center; justify-content: center;
-      color: #fff; background: var(--navy); text-decoration: none; padding: 15px 22px;
-      font-size: 12px; font-weight: 600; letter-spacing: .05em; white-space: nowrap; }
-    .crm-window .crm-link:hover { background: var(--navy-2); }
-    @media (max-width: 760px) { .crm { padding: 48px 0; } .crm-window { grid-template-columns: 1fr; padding: 27px 24px; gap: 22px; }
-      .crm-window .crm-link { justify-self: start; white-space: normal; } }
+    /* Hudson Campaign : fenêtre sobre, blanche et or */
+    .crm { background: #fff; padding: 76px 0 84px; border-top: 1px solid var(--line-gold); }
+    .crm-window {
+      position: relative; isolation: isolate; overflow: hidden;
+      display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .9fr);
+      min-height: 350px; background: #fff;
+      border: 1px solid rgba(197,160,90,.6);
+      box-shadow: 0 14px 42px rgba(11,33,68,.055);
+    }
+    .crm-window::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--gold); z-index: 2; }
+    .crm-copy { padding: 48px 46px 46px 52px; position: relative; z-index: 1; }
+    .crm-copy .tag { margin-bottom: 17px; }
+    .crm-copy h2 { font-size: clamp(28px, 3vw, 41px); line-height: 1.12; margin-bottom: 19px; }
+    .crm-copy p { font-size: 15px; line-height: 1.75; color: var(--t-mid); max-width: 560px; }
+    .crm-features { display: flex; flex-wrap: wrap; gap: 9px; margin: 24px 0 28px; }
+    .crm-features span { font-family: var(--f-mono); font-size: 10px; letter-spacing: .04em; padding: 8px 10px; color: var(--gold-deep); background: #fff; border: 1px solid rgba(197,160,90,.4); }
+    .crm-window .crm-link { display: inline-flex; align-items: center; gap: 14px; color: var(--navy); background: var(--gold); text-decoration: none; padding: 15px 22px; font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; transition: background .2s, transform .2s; }
+    .crm-window .crm-link::after { content: ''; width: 20px; height: 1px; background: var(--navy); }
+    .crm-window .crm-link:hover { background: #dfbd7e; transform: translateY(-1px); }
+    .crm-visual { position: relative; min-height: 350px; border-left: 1px solid rgba(197,160,90,.4); overflow: hidden; background: #faf9f6; }
+    .crm-visual img { display: block; width: 100%; height: 100%; min-height: 350px; object-fit: cover; object-position: center; }
+    .crm-visual::after { content: ''; position: absolute; inset: 0; border: 16px solid rgba(255,255,255,.13); pointer-events: none; }
+    @media (max-width: 850px) {
+      .crm { padding: 55px 0 65px; }
+      .crm-window { grid-template-columns: 1fr; }
+      .crm-copy { padding: 36px 30px 34px; }
+      .crm-visual { min-height: 260px; border-left: 0; border-top: 1px solid var(--line-gold); }
+      .crm-visual img { min-height: 260px; max-height: 400px; }
+    }
+    @media (max-width: 480px) { .crm-copy { padding: 30px 24px; } .crm-visual { min-height: 210px; } .crm-visual img { min-height: 210px; } }
 
     .faq { background: var(--paper); padding: 112px 0 104px; border-top: 1px solid var(--line); }
     .faq-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 72px; align-items: start; }
@@ -1117,7 +1134,7 @@
         </span>
       </a>
       <ul class="nav-links">
-        <li><a href="#activite">Activité</a></li>
+        <li><a href="https://campaign.hudson-ltd.com/" target="_blank" rel="noopener noreferrer">Cockpit des campagnes - CRM</a></li>
         <li><a href="#healthcare">Healthcare</a></li>
         <li><a href="#technologies">Technologies</a></li>
         <li><a href="#airports">Airports</a></li>
@@ -1140,7 +1157,7 @@
           <h1>Hudson Business Development, <span class="serif">agence spécialisée</span> en téléprospection B2B<span class="dot-mark" aria-hidden="true"></span></h1>
           <p class="hero-sub">Nous externalisons vos actions de prospection et de suivi commercial : <strong>qualification de bases, prise de rendez-vous avec les directions, détection de projets</strong>, prise de commandes et réassort, suivi des plans de formation et invitations à vos événements. Un pipeline entretenu au quotidien, avec un interlocuteur humain.</p>
           <div class="hero-btns">
-            <a href="#activite" class="btn-p">Notre activité</a>
+            <a href="https://campaign.hudson-ltd.com/" class="btn-p" target="_blank" rel="noopener noreferrer">Cockpit des campagnes - CRM</a>
           </div>
         </div>
         <div class="h-panel">
@@ -1156,7 +1173,7 @@
     </div>
   </section>
 
-  <!-- ACTIVITÉ -->
+  <!-- MÉTHODE DE PROSPECTION HUDSON -->
   <section class="process" id="activite">
     <span class="arc" aria-hidden="true"></span>
     <span class="arc a2" aria-hidden="true"></span>
@@ -2166,21 +2183,6 @@
     </div>
   </section>
 
-  <!-- HUDSON CRM : un outil au service de nos prestations -->
-  <section class="crm" id="crm" aria-labelledby="crm-title">
-    <div class="wrap">
-      <div class="crm-window">
-        <span class="hudson-crm-runner" aria-hidden="true"></span>
-        <div>
-          <span class="tag">Notre outil de suivi commercial</span>
-          <h2 id="crm-title">Hudson CRM, le suivi de vos campagnes.</h2>
-          <p>Notre CRM centralise les prospects, les campagnes de téléprospection, les comptes rendus d'appels, les relances et les rendez-vous. Il permet de structurer le pipeline commercial, d'en assurer la mise à jour régulière et de garder une trace des opportunités et signaux détectés.</p>
-        </div>
-        <a class="crm-link" href="https://crm.hudson-ltd.com/" target="_blank" rel="noopener noreferrer">Découvrir Hudson CRM</a>
-      </div>
-    </div>
-  </section>
-
   <!-- LES DIVISIONS HUDSON : une seule carte par division -->
   <section class="offers on-navy" id="poles">
     <div class="wrap">
@@ -2189,6 +2191,27 @@
         <article class="o-card" id="healthcare"><img class="pole-icon" src="health.png" alt="" aria-hidden="true" loading="lazy"><div class="o-idx">01 · Healthcare</div><h3 class="o-title">Hudson Healthcare</h3><p class="o-tag">Développement commercial et représentation de solutions de santé auprès des acteurs du secteur.</p></article>
         <article class="o-card" id="technologies"><img class="pole-icon" src="tech.png" alt="" aria-hidden="true" loading="lazy"><div class="o-idx">02 · Technologies</div><h3 class="o-title">Hudson Technologies</h3><p class="o-tag">Accompagnement commercial de solutions Data, IT, agentique et technologies industrielles.</p></article>
         <article class="o-card" id="airports"><img class="pole-icon" src="plane.png" alt="" aria-hidden="true" loading="lazy"><div class="o-idx">03 · Airports</div><h3 class="o-title">Hudson Airports Solutions</h3><p class="o-tag">Veille, benchmark et développement de solutions destinées aux environnements aéroportuaires.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HUDSON CAMPAIGN : présentation du cockpit des campagnes -->
+  <section class="crm" id="crm" aria-labelledby="crm-title">
+    <div class="wrap">
+      <div class="crm-window">
+        <span class="hudson-crm-runner" aria-hidden="true"></span>
+        <div class="crm-copy">
+          <span class="tag">Hudson Campaign · Notre CRM</span>
+          <h2 id="crm-title">Le cockpit de vos <span class="serif">campagnes commerciales</span><span class="dot-mark" aria-hidden="true"></span></h2>
+          <p>Hudson Campaign est notre CRM de prospection B2B. Importez votre fichier Excel ou CSV, préparez votre liste d'appels, retrouvez vos relances au bon moment et centralisez les échanges, les rendez-vous et les opportunités dans un pipeline unique. L'enrichissement des fiches, l'emailing et l'historique des comptes facilitent le suivi quotidien de chaque campagne.</p>
+          <div class="crm-features" aria-label="Fonctions du CRM">
+            <span>Base de contacts</span><span>Appels et relances</span><span>Pipeline</span><span>Emailing</span><span>Fiches enrichies</span>
+          </div>
+          <a class="crm-link" href="https://campaign.hudson-ltd.com/" target="_blank" rel="noopener noreferrer" aria-label="Découvrir Hudson Campaign, notre CRM de prospection B2B">Découvrir notre CRM</a>
+        </div>
+        <div class="crm-visual">
+          <img src="crm.png" alt="Aperçu de l'interface de Hudson Campaign, le CRM de prospection B2B" loading="lazy" decoding="async">
+        </div>
       </div>
     </div>
   </section>
@@ -2241,7 +2264,7 @@
         <details open><summary>Quelles missions Hudson peut-il prendre en charge ?</summary>
           <p>Qualification de bases de données, téléprospection B2B, détection de projets et de signaux de marché, prise de rendez-vous avec les directions, prise de commandes et réassort, suivi des plans de formation, invitations à des séminaires et événements, suivi et relances.</p></details>
         <details><summary>Comment suivez-vous les campagnes ?</summary>
-          <p>Les échanges, statuts, relances et rendez-vous sont suivis dans un pipeline commercial. Hudson CRM est l'outil de centralisation utilisé pour organiser ces informations.</p></details>
+          <p>Les échanges, statuts, relances et rendez-vous sont suivis dans un pipeline commercial. Hudson Campaign est l'outil de centralisation utilisé pour organiser ces informations.</p></details>
         <details><summary>Dans quelles zones intervenez-vous ?</summary>
           <p>Notre communication commerciale se concentre sur la France, la Suisse et la Belgique. Pour les autres marchés, consultez notre page <a href="https://hudson-ltd.com/international">International</a>.</p></details>
       </div>
@@ -2383,7 +2406,7 @@
       "name": "Comment suivez-vous les campagnes ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Les échanges, statuts, relances et rendez-vous sont suivis dans un pipeline commercial, centralisé dans Hudson CRM."
+        "text": "Les échanges, statuts, relances et rendez-vous sont suivis dans un pipeline commercial, centralisé dans Hudson Campaign."
       }
     },
     {
