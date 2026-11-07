@@ -68,14 +68,14 @@
 
   <!-- META PRINCIPALES SEO -->
   <title>Agence de téléprospection B2B | Hudson Business Development</title>
-  <meta name="description" content="Hudson Business Development, agence spécialisée en téléprospection B2B : prise de rendez-vous, qualification de bases, détection de projets, prise de commandes et réassort, suivi des plans de formation, invitations et relances. France, Suisse, Belgique.">
+  <meta name="description" content="Hudson Business Development, agence de démarchage BtoB : création de pipeline sur mesure, prise de rendez-vous avec les directions, invitations à vos séminaires, conférences, journées techniques et événements. Facturation au forfait, au rendez-vous ou au chiffre d'affaires. France, Suisse, Belgique.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://hudson-ltd.com/">
   <link rel="icon" type="image/png" href="favicon.png">
 
   <!-- META SOCIALES -->
   <meta property="og:title" content="Hudson Business Development | Agence de téléprospection B2B">
-  <meta property="og:description" content="Téléprospection B2B, prise de rendez-vous, qualification, prise de commandes et réassort, suivi des plans de formation.">
+  <meta property="og:description" content="Pipeline sur mesure, démarchage BtoB, prise de rendez-vous et invitations à vos séminaires, conférences, journées techniques et événements.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hudson-ltd.com/">
   <meta property="og:image" content="https://hudson-ltd.com/og-cover.jpg">
@@ -1117,6 +1117,10 @@
     @media (prefers-reduced-motion: reduce) {
       .hudson-crm-runner { display: none; }
     }
+    /* Refonte nov. 2026 : facturation + univers en 2 box */
+    .tp-alt { background: var(--sky); }
+    .offers-grid.two { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
+    @media (max-width: 860px) { .offers-grid.two { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -1134,10 +1138,10 @@
         </span>
       </a>
       <ul class="nav-links">
-        <li><a href="https://campaign.hudson-ltd.com/" target="_blank" rel="noopener noreferrer">Cockpit des campagnes - CRM</a></li>
-        <li><a href="#healthcare">Healthcare</a></li>
-        <li><a href="#technologies">Technologies</a></li>
-        <li><a href="#airports">Airports</a></li>
+        <li><a href="https://campaign.hudson-ltd.com/app" target="_blank" rel="noopener noreferrer">Cockpit des campagnes - CRM</a></li>
+        <li><a href="#metiers">Nos métiers</a></li>
+        <li><a href="#facturation">Facturation</a></li>
+        <li><a href="#univers">Univers</a></li>
       </ul>
     </div>
   </nav>
@@ -1155,18 +1159,18 @@
         <div>
           <div class="h-eye"><b>Agence de téléprospection B2B</b> · France · Suisse · Belgique</div>
           <h1>Hudson Business Development, <span class="serif">agence spécialisée</span> en téléprospection B2B<span class="dot-mark" aria-hidden="true"></span></h1>
-          <p class="hero-sub">Nous externalisons vos actions de prospection et de suivi commercial : <strong>qualification de bases, prise de rendez-vous avec les directions, détection de projets</strong>, prise de commandes et réassort, suivi des plans de formation et invitations à vos événements. Un pipeline entretenu au quotidien, avec un interlocuteur humain.</p>
+          <p class="hero-sub">Nous construisons votre <strong>pipeline sur mesure</strong> et prenons en charge votre <strong>démarchage BtoB</strong> : ciblage, appels, prise de rendez-vous avec les dirigeants et les directions de grands groupes, invitations à vos séminaires, conférences, journées techniques et événements. Un pipeline entretenu au quotidien, avec un interlocuteur humain.</p>
           <div class="hero-btns">
-            <a href="https://campaign.hudson-ltd.com/" class="btn-p" target="_blank" rel="noopener noreferrer">Cockpit des campagnes - CRM</a>
+            <a href="https://campaign.hudson-ltd.com/app" class="btn-p" target="_blank" rel="noopener noreferrer">Cockpit des campagnes - CRM</a>
           </div>
         </div>
         <div class="h-panel">
           <span class="hatch" aria-hidden="true"></span>
-          <div class="h-panel-label">Nos missions de téléprospection</div>
+          <div class="h-panel-label">Nos métiers</div>
           <div class="h-panel-list">
-            <a href="#teleprospection" class="h-panel-item" data-n="01"><span><strong>Prospection et qualification</strong>Appels, qualification de bases et détection de projets</span></a>
-            <a href="#teleprospection" class="h-panel-item" data-n="02"><span><strong>Rendez-vous et événements</strong>Directions d’entreprise, séminaires et campagnes d’invitation</span></a>
-            <a href="#teleprospection" class="h-panel-item" data-n="03"><span><strong>Suivi commercial externalisé</strong>Commandes, réassort et suivi des plans de formation</span></a>
+            <a href="#metiers" class="h-panel-item" data-n="01"><span><strong>Pipeline sur mesure</strong>Ciblage, data, signaux et pipeline qualifié</span></a>
+            <a href="#metiers" class="h-panel-item" data-n="02"><span><strong>Démarchage BtoB</strong>TPE, PME, ETI et directions de grands groupes</span></a>
+            <a href="#metiers" class="h-panel-item" data-n="03"><span><strong>Invitations et événements</strong>Séminaires, conférences, journées techniques</span></a>
           </div>
         </div>
       </div>
@@ -2162,35 +2166,47 @@
 
 
 
-  <!-- MISSIONS DE TÉLÉPROSPECTION -->
-  <section class="tp" id="teleprospection" aria-labelledby="tp-title">
+  <!-- NOS MÉTIERS -->
+  <section class="tp" id="metiers" aria-labelledby="tp-title">
     <div class="wrap">
       <div class="tp-hd">
-        <div><span class="tag">Nos prestations · Téléprospection B2B</span>
+        <div><span class="tag">Nos métiers · Démarchage BtoB</span>
           <h2 id="tp-title">Votre développement commercial, <span class="serif">pris en charge</span><span class="dot-mark" aria-hidden="true"></span></h2></div>
-        <p>Hudson accompagne les entreprises dans l'externalisation de leurs opérations commerciales, de la <strong>qualification du fichier</strong> aux échanges avec les directions. Chaque campagne s'appuie sur un pipeline régulièrement enrichi et une remontée structurée des informations de terrain.</p>
+        <p>Hudson construit votre <strong>pipeline sur mesure</strong>, de la constitution du fichier aux échanges avec les directions. Chaque campagne s'appuie sur une base régulièrement enrichie et une remontée structurée des informations de terrain.</p>
       </div>
       <div class="tp-grid">
-        <article class="tp-card"><div class="tp-k">01 · Prospection</div><h3>Téléprospection et qualification</h3><p>Identification des interlocuteurs, qualification et enrichissement des bases, appels de découverte et relances ciblées.</p></article>
-        <article class="tp-card"><div class="tp-k">02 · Rendez-vous</div><h3>Prise de rendez-vous B2B</h3><p>Approche des directions et décideurs des TPE, PME, ETI et grands comptes, selon les secteurs et les cibles de chaque campagne.</p></article>
-        <article class="tp-card"><div class="tp-k">03 · Marché</div><h3>Détection de projets et de signaux</h3><p>Collecte et qualification des besoins, échéances, projets et signaux faibles ou forts révélés lors des échanges téléphoniques.</p></article>
-        <article class="tp-card"><div class="tp-k">04 · Événements</div><h3>Invitations et confirmations</h3><p>Invitations à des séminaires, salons, webinaires et événements, gestion des réponses et relances des participants.</p></article>
-        <article class="tp-card"><div class="tp-k">05 · Ventes récurrentes</div><h3>Prise de commandes et réassort</h3><p>Rappels de clients existants, recueil des besoins, prise de commandes et suivi des opérations de réassort selon vos procédures.</p></article>
-        <article class="tp-card"><div class="tp-k">06 · Formation</div><h3>Suivi des plans de formation</h3><p>Contact des entreprises concernées, recueil des besoins, invitations aux sessions et suivi téléphonique des inscriptions ou relances.</p></article>
+        <article class="tp-card"><div class="tp-k">01 · Pipeline</div><h3>Création d'un pipeline sur mesure</h3><p>Ciblage, constitution et qualification de la base, détection des signaux faibles et forts : un pipeline construit pour votre offre et mis à jour chaque jour.</p></article>
+        <article class="tp-card"><div class="tp-k">02 · Démarchage</div><h3>Démarchage BtoB et rendez-vous</h3><p>Approche des dirigeants de TPE, PME et ETI et des directions de grands groupes : appels de découverte, relances et rendez-vous qualifiés.</p></article>
+        <article class="tp-card"><div class="tp-k">03 · Événements</div><h3>Invitations à vos événements</h3><p>Séminaires, conférences, journées techniques et événements : invitations, confirmations, relances et suivi des participants.</p></article>
       </div>
-      <div class="tp-foot"><span><b>France · Suisse · Belgique</b> · <a href="https://hudson-ltd.com/international" style="color:var(--navy);text-underline-offset:4px;">International</a></span>
-        <span>Qualification · Téléprospection · Suivi</span><a href="#contact" class="btn-p">Présenter votre projet</a></div>
+      <div class="tp-foot"><span><b>Cibles</b> · TPE · PME · ETI · Directions de grands groupes</span>
+        <span><b>France · Suisse · Belgique</b> · <a href="https://hudson-ltd.com/international" style="color:var(--navy);text-underline-offset:4px;">International</a></span><a href="#contact" class="btn-p">Présenter votre projet</a></div>
     </div>
   </section>
 
-  <!-- LES DIVISIONS HUDSON : une seule carte par division -->
-  <section class="offers on-navy" id="poles">
+  <!-- FACTURATION -->
+  <section class="tp tp-alt" id="facturation" aria-labelledby="fact-title">
     <div class="wrap">
-      <div class="offers-hd"><span class="tag">Les divisions Hudson</span><h2>Nos <span class="serif">domaines d'activité</span></h2></div>
-      <div class="offers-grid">
-        <article class="o-card" id="healthcare"><img class="pole-icon" src="health.png" alt="" aria-hidden="true" loading="lazy"><div class="o-idx">01 · Healthcare</div><h3 class="o-title">Hudson Healthcare</h3><p class="o-tag">Développement commercial et représentation de solutions de santé auprès des acteurs du secteur.</p></article>
-        <article class="o-card" id="technologies"><img class="pole-icon" src="tech.png" alt="" aria-hidden="true" loading="lazy"><div class="o-idx">02 · Technologies</div><h3 class="o-title">Hudson Technologies</h3><p class="o-tag">Accompagnement commercial de solutions Data, IT, agentique et technologies industrielles.</p></article>
-        <article class="o-card" id="airports"><img class="pole-icon" src="plane.png" alt="" aria-hidden="true" loading="lazy"><div class="o-idx">03 · Airports</div><h3 class="o-title">Hudson Airports Solutions</h3><p class="o-tag">Veille, benchmark et développement de solutions destinées aux environnements aéroportuaires.</p></article>
+      <div class="tp-hd">
+        <div><span class="tag">Facturation</span>
+          <h2 id="fact-title">Trois façons de <span class="serif">travailler ensemble</span><span class="dot-mark" aria-hidden="true"></span></h2></div>
+        <p>Le mode de facturation est choisi avec vous avant le lancement, selon votre offre, vos cibles et le <strong>cycle de vente</strong> de vos produits.</p>
+      </div>
+      <div class="tp-grid">
+        <article class="tp-card"><div class="tp-k">01 · Forfait</div><h3>Au forfait</h3><p>Un volume d'actions mensuel défini ensemble : un budget connu à l'avance pour installer une prospection régulière.</p></article>
+        <article class="tp-card"><div class="tp-k">02 · Rendez-vous</div><h3>Au rendez-vous</h3><p>Vous payez les rendez-vous qualifiés obtenus avec les décideurs ciblés, selon des critères validés ensemble avant le lancement.</p></article>
+        <article class="tp-card"><div class="tp-k">03 · Chiffre d'affaires</div><h3>Au chiffre d'affaires</h3><p>Une commission sur le chiffre d'affaires encaissé, réservée aux produits et contrats à partir de 100 000 €.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- UNIVERS : BtoB regroupé dans une seule box + santé -->
+  <section class="offers on-navy" id="univers">
+    <div class="wrap">
+      <div class="offers-hd"><span class="tag">Cibles · TPE, PME, ETI et directions de grands groupes</span><h2>Nos <span class="serif">univers</span></h2></div>
+      <div class="offers-grid two">
+        <article class="o-card" id="btob"><img class="pole-icon" src="tech.png" alt="" aria-hidden="true" loading="lazy"><div class="o-idx">01 · Univers BtoB</div><h3 class="o-title">Démarchage BtoB</h3><p class="o-tag">BTP · Consulting · Finance · Services publics · Café, hôtel, restaurant · Grande distribution · Réseaux spécialisés</p></article>
+        <article class="o-card" id="healthcare"><img class="pole-icon" src="health.png" alt="" aria-hidden="true" loading="lazy"><div class="o-idx">02 · Pharmacie et santé</div><h3 class="o-title">Hudson Healthcare</h3><p class="o-tag">Représentation de laboratoires et de produits de santé auprès des pharmacies, des médecins et des centres hospitaliers.</p></article>
       </div>
     </div>
   </section>
@@ -2207,7 +2223,7 @@
           <div class="crm-features" aria-label="Fonctions du CRM">
             <span>Base de contacts</span><span>Appels et relances</span><span>Pipeline</span><span>Emailing</span><span>Fiches enrichies</span>
           </div>
-          <a class="crm-link" href="https://campaign.hudson-ltd.com/" target="_blank" rel="noopener noreferrer" aria-label="Découvrir Hudson Campaign, notre CRM de prospection B2B">Découvrir notre CRM</a>
+          <a class="crm-link" href="https://campaign.hudson-ltd.com/app" target="_blank" rel="noopener noreferrer" aria-label="Découvrir Hudson Campaign, notre CRM de prospection B2B">Découvrir notre CRM</a>
         </div>
         <div class="crm-visual">
           <img src="crm.png" alt="Aperçu de l'interface de Hudson Campaign, le CRM de prospection B2B" loading="lazy" decoding="async">
@@ -2223,7 +2239,7 @@
         <div class="rec-copy">
           <span class="rec-kicker">Distinction & reconnaissance</span>
           <h2 class="rec-title">Hudson dans le <span class="serif">top 10</span><br>des agences de téléprospection<br>en France<span class="dot-mark" aria-hidden="true"></span></h2>
-          <p class="rec-lead">Une présence remarquée dans le paysage français de la téléprospection B2B. Un signal simple pour illustrer la crédibilité commerciale de Hudson, dans un univers exigeant et concurrentiel.</p>
+          <p class="rec-lead">Hudson figure à la 7e place du classement 2026 des 10 meilleures agences de phoning B2B en France publié par Sorank. Le benchmark compare les agences sur quatre critères : la couverture de la chaîne de prospection, la localisation des équipes, le modèle de facturation et l'intégration aux outils du client, dont le CRM.</p>
           <div class="rec-badges">
             <a class="rec-ranking-label" href="https://www.sorank.com/fr/blog-geo-seo/phoning" target="_blank" rel="noopener noreferrer">Voir le classement</a>
           </div>
@@ -2262,7 +2278,11 @@
       </div>
       <div>
         <details open><summary>Quelles missions Hudson peut-il prendre en charge ?</summary>
-          <p>Qualification de bases de données, téléprospection B2B, détection de projets et de signaux de marché, prise de rendez-vous avec les directions, prise de commandes et réassort, suivi des plans de formation, invitations à des séminaires et événements, suivi et relances.</p></details>
+          <p>Création d'un pipeline sur mesure, démarchage BtoB et prise de rendez-vous avec les dirigeants de TPE, PME et ETI et les directions de grands groupes, invitations à vos séminaires, conférences, journées techniques et événements, suivi et relances.</p></details>
+        <details><summary>Comment Hudson facture-t-il ?</summary>
+          <p>Au forfait, au rendez-vous qualifié, ou à la commission sur le chiffre d'affaires pour les produits et contrats à partir de 100 000 €. Le mode de facturation est fixé avec vous avant le lancement.</p></details>
+        <details><summary>Dans quels secteurs intervenez-vous ?</summary>
+          <p>BTP, consulting, finance, services publics, café-hôtel-restaurant, grande distribution, réseaux spécialisés, ainsi que la pharmacie et la santé.</p></details>
         <details><summary>Comment suivez-vous les campagnes ?</summary>
           <p>Les échanges, statuts, relances et rendez-vous sont suivis dans un pipeline commercial. Hudson Campaign est l'outil de centralisation utilisé pour organiser ces informations.</p></details>
         <details><summary>Dans quelles zones intervenez-vous ?</summary>
@@ -2312,7 +2332,7 @@
           <div class="foot-text">Études de cas</div>
           <div class="foot-text"><a href="https://hudson-ltd.com/philosophie">Philosophie Hudson</a></div>
           <div class="foot-text">FAQ</div>
-          <div class="foot-text"><a href="https://campaign.hudson-ltd.com/" target="_blank" rel="noopener noreferrer">Un top CRM dès 9.99$ par mois</a></div>
+          <div class="foot-text"><a href="https://campaign.hudson-ltd.com/app" target="_blank" rel="noopener noreferrer">Un top CRM dès 9.99$ par mois</a></div>
         </div>
         <div class="foot-col">
           <div class="foot-title">Coordonnées</div>
