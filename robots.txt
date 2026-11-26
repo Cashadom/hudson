@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://campaign.hudson-ltd.com/sitemap.xml
